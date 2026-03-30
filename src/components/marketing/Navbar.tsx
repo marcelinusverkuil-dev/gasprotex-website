@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Sectoren', href: '/sectoren' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Cases', href: '/cases' },
-  { label: 'Portaal', href: '/portaal/dashboard' },
+  { label: 'Portaal', href: 'http://localhost:3000/login', external: true },
 ]
 
 export default function Navbar() {
@@ -55,13 +55,13 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/portaal/dashboard"
+            <a
+              href="http://localhost:3000/login"
               className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
               style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
             >
               Inloggen
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="clip-btn inline-flex items-center gap-2 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold text-sm tracking-widest uppercase px-6 py-3 transition-colors duration-200"
@@ -96,15 +96,27 @@ export default function Navbar() {
       >
         <div className="flex flex-col px-6 py-6 gap-1">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="font-display font-semibold text-xl tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] py-4 border-b border-white/7 transition-colors duration-200"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
-            >
-              {link.label}
-            </Link>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="font-display font-semibold text-xl tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] py-4 border-b border-white/7 transition-colors duration-200"
+                style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="font-display font-semibold text-xl tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] py-4 border-b border-white/7 transition-colors duration-200"
+                style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
           <Link
             href="/contact"
