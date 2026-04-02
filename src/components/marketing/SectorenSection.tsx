@@ -80,16 +80,16 @@ export default function SectorenSection() {
         {/* ROI banner */}
         <div
           className="mt-14 p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-          style={{ background: '#0F2D4B' }}
+          style={{ background: '#ffffff' }}
         >
           <div>
             <p
-              className="font-display font-black uppercase text-white mb-2"
+              className="font-display font-black uppercase text-[#0F2D4B] mb-2"
               style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}
             >
               Gemiddeld <span style={{ color: '#D97737' }}>30%</span> van perslucht gaat verloren door lekken.
             </p>
-            <p className="text-[#7AADCC]" style={{ fontSize: 15 }}>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
               Één gemiddeld lek kost uw bedrijf €1.200–€1.650 per jaar. Wij vinden ze allemaal.
             </p>
           </div>

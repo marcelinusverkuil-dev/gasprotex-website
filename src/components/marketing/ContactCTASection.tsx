@@ -15,7 +15,7 @@ export default function ContactCTASection() {
   }
 
   return (
-    <section className="bg-[#0F2D4B] py-24 lg:py-32 relative overflow-hidden">
+    <section className="bg-white py-24 lg:py-32 relative overflow-hidden">
       {/* Radial glow */}
       <div
         className="absolute left-1/2 top-0 -translate-x-1/2 w-[900px] h-[400px] pointer-events-none"
@@ -34,7 +34,7 @@ export default function ContactCTASection() {
               Contact
             </p>
             <h2
-              className="font-display font-black uppercase text-white leading-none mb-6"
+              className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-6"
               style={{
                 fontFamily: 'var(--font-barlow-condensed)',
                 fontSize: 'clamp(36px, 5vw, 56px)',
@@ -44,7 +44,7 @@ export default function ContactCTASection() {
               Klaar Voor Een<br />
               <span className="text-[#D97737]">Gratis Quickscan?</span>
             </h2>
-            <p className="text-[#C2DCE8] leading-relaxed mb-10" style={{ fontSize: 17, lineHeight: 1.75 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-10" style={{ fontSize: 17, lineHeight: 1.75 }}>
               Vertel ons kort over uw installatie. Wij nemen binnen één werkdag contact op
               voor het inplannen van een vrijblijvende inspectie.
             </p>
@@ -64,7 +64,7 @@ export default function ContactCTASection() {
                   >
                     ✓
                   </span>
-                  <span className="text-[#7AADCC]" style={{ fontSize: 15 }}>{item}</span>
+                  <span className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -92,7 +92,7 @@ export default function ContactCTASection() {
                 >
                   Bericht Ontvangen
                 </h3>
-                <p className="text-[#7AADCC]" style={{ fontSize: 15 }}>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
                   Wij nemen binnen één werkdag contact met u op.
                 </p>
               </div>
@@ -100,7 +100,7 @@ export default function ContactCTASection() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
                       Naam *
                     </label>
                     <input
@@ -113,7 +113,7 @@ export default function ContactCTASection() {
                     />
                   </div>
                   <div>
-                    <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
                       Bedrijf *
                     </label>
                     <input
@@ -127,7 +127,7 @@ export default function ContactCTASection() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
                     E-mailadres *
                   </label>
                   <input
@@ -141,7 +141,7 @@ export default function ContactCTASection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
                     Telefoon
                   </label>
                   <input
@@ -154,7 +154,7 @@ export default function ContactCTASection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
                     Uw situatie
                   </label>
                   <textarea
