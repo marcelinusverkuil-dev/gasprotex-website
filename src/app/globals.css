@@ -129,3 +129,9 @@ body {
   from { box-shadow: 0 0 20px rgba(217,119,55,0.4); }
   to   { box-shadow: 0 0 60px rgba(217,119,55,0.8); }
 }
+
+/* ── CONTAINER PADDING ── */
+.section-container {
+  padding-left: 80px;
+  padding-right: 80px;
+}

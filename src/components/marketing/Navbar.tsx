@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import GasProtexLogo from '@/components/ui/GasProtexLogo'
 
 const navLinks = [
@@ -15,6 +16,8 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20)
@@ -26,13 +29,15 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+          scrolled || !isHome
             ? 'bg-[#0A1E30]/97 shadow-lg shadow-black/20 backdrop-blur-md border-b border-[#D97737]/20'
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-18 flex items-center justify-between" style={{ height: 72 }}>
-
+        <div
+          className="max-w-7xl mx-auto flex items-center justify-between"
+          style={{ height: 72, paddingLeft: '80px', paddingRight: '80px' }}
+        >
           {/* Logo */}
           <Link href="/" aria-label="GasProtex homepage">
             <GasProtexLogo variant="light" size="md" />
@@ -94,7 +99,7 @@ export default function Navbar() {
           menuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
         }`}
       >
-        <div className="flex flex-col px-6 py-6 gap-1">
+        <div className="flex flex-col px-10 py-6 gap-1">
           {navLinks.map((link) => (
             link.external ? (
               <a

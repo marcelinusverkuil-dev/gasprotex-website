@@ -10,7 +10,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
           className="absolute right-0 top-0 w-[600px] h-full pointer-events-none"
           style={{ background: 'radial-gradient(ellipse at right, rgba(217,119,55,0.1) 0%, transparent 60%)' }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="relative z-10 max-w-7xl mx-auto section-container">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/sectoren" className="text-[#7AADCC] hover:text-white transition-colors" style={{ fontSize: 13 }}>
               Sectoren
@@ -68,7 +68,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
 
       {/* Uitdagingen */}
       <section className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
             <div>
               <p
@@ -160,7 +160,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
 
       {/* CTA */}
       <section style={{ background: '#0F2D4B' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto section-container py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div>
             <h2
               className="font-display font-black uppercase text-white mb-2"

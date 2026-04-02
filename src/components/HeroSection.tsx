@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { Shield, Clock, Calendar } from 'lucide-react';
 
 const badges = [
@@ -28,19 +27,23 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[600px] flex items-center overflow-hidden bg-steel">
 
-      <Image
-        src="/images/hero-bg.avif"
-        alt="Industriële installatie"
-        fill
-        className="object-cover object-center"
-        priority
-        quality={90}
-      />
+      {/* Achtergrond — vervang dit door een <Image> component als je de foto hebt */}
+      <div className="absolute inset-0 bg-gradient-to-br from-steel via-zinc to-iron" />
 
+      {/* Placeholder label — verwijder dit als je een echte foto gebruikt */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span className="text-xs tracking-widest uppercase text-fog/20">
+          [ Industriële foto — volgt later ]
+        </span>
+      </div>
+
+      {/* Donkere overlay van links naar rechts */}
       <div className="absolute inset-0 bg-gradient-to-r from-steel/95 via-steel/75 to-steel/20" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-12 py-24">
 
+        {/* Linker kolom — headline + knoppen */}
         <div className="max-w-xl animate-fade-up">
           <p className="text-xs tracking-widest uppercase text-orange font-medium mb-4">
             Akoestische gaslekdetectie
@@ -67,6 +70,7 @@ export default function HeroSection() {
           </div>
         </div>
 
+        {/* Rechter kolom — drijvende badges */}
         <div className="hidden lg:flex flex-col gap-4 animate-fade-up-2">
           {badges.map((badge) => (
             <StatBadge key={badge.value} {...badge} />
@@ -77,6 +81,7 @@ export default function HeroSection() {
   );
 }
 
+/* ── Stat Badge ── */
 type BadgeVariant = 'steel' | 'orange';
 
 interface StatBadgeProps {
@@ -97,6 +102,7 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
           : 'bg-steel/90 border-fog/20'
       }`}
     >
+      {/* Icoon cirkel */}
       <div
         className={`w-10 h-10 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
           isOrange ? 'border-white/60' : 'border-fog/60'
@@ -109,6 +115,7 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
         />
       </div>
 
+      {/* Tekst */}
       <div>
         <p
           className={`text-lg font-bold leading-tight ${

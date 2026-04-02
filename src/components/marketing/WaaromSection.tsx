@@ -33,7 +33,7 @@ const vergelijking = [
 export default function WaaromSection() {
   return (
     <section className="bg-[#F4F7FA] py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
 
         {/* Header */}
         <div className="text-center mb-16">

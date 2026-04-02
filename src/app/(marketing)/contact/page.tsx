@@ -29,8 +29,8 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#0F2D4B] pt-40 pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <section className="bg-[#0F2D4B] pb-20" style={{ paddingTop: "100px" }}>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
           <p
             className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4"
             style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}
@@ -47,7 +47,7 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
 
             {/* Left — info */}

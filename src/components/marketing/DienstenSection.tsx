@@ -41,7 +41,7 @@ export default function DienstenSection() {
         style={{ background: 'linear-gradient(90deg, transparent, #D97737, transparent)' }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
 
         {/* Header */}
         <div className="mb-14">

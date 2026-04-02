@@ -75,8 +75,8 @@ export default function DienstenPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-[#0F2D4B] pt-40 pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <section className="bg-[#0F2D4B] pb-20" style={{ paddingTop: '100px' }}>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
           <p
             className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4"
             style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}
@@ -108,7 +108,7 @@ export default function DienstenPage() {
             id={d.id}
             className={index % 2 === 1 ? 'bg-[#F4F7FA]' : 'bg-white'}
           >
-            <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
+            <div className="max-w-7xl mx-auto section-container py-20 lg:py-28">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
 
                 {/* Left */}
@@ -232,7 +232,7 @@ export default function DienstenPage() {
 
       {/* CTA banner */}
       <section style={{ background: '#0F2D4B' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto section-container py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div>
             <h2
               className="font-display font-black uppercase text-white mb-2"
