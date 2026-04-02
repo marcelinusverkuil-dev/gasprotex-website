@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <div
                     key={item.stap}
                     className="flex gap-5 py-5"
-                    style={{ borderBottom: i < arr.length - 1 ? '1px solid #E2EAF0' : 'none' }}
+                    style={{ borderBottom: 'none' }}
                   >
                     <span
                       className="font-display font-black text-[#D97737] flex-shrink-0"
@@ -141,7 +141,7 @@ export default function ContactPage() {
                       value={form.bericht}
                       onChange={set('bericht')}
                       placeholder="Beschrijf kort uw installatie: type gassen, oppervlakte, urgentie of specifieke zones..."
-                      className="w-full border border-[#D1DDE6] px-4 py-3 text-[#0F2D4B] outline-none focus:border-[#D97737] transition-colors resize-none"
+                      className="w-full border-0 border-b border-[#D1DDE6] px-4 py-3 text-[#0F2D4B] outline-none focus:border-[#D97737] transition-colors resize-none"
                       style={{ fontSize: 15 }}
                     />
                   </div>
@@ -186,7 +186,7 @@ function InputField({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full border border-[#D1DDE6] px-4 py-3 text-[#0F2D4B] outline-none focus:border-[#D97737] transition-colors"
+        className="w-full border-0 border-b border-[#D1DDE6] px-4 py-3 text-[#0F2D4B] outline-none focus:border-[#D97737] transition-colors"
         style={{ fontSize: 15 }}
       />
     </div>
@@ -207,7 +207,7 @@ function SelectField({
         required={required}
         value={value}
         onChange={onChange}
-        className="w-full border border-[#D1DDE6] px-4 py-3 text-[#0F2D4B] outline-none focus:border-[#D97737] transition-colors bg-white"
+        className="w-full border-0 border-b border-[#D1DDE6] px-4 py-3 text-[#0F2D4B] outline-none focus:border-[#D97737] transition-colors bg-white"
         style={{ fontSize: 15 }}
       >
         <option value="">{placeholder}</option>
