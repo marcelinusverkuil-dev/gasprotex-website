@@ -69,8 +69,8 @@ export default function Navbar() {
             </a>
             <Link
               href="/contact"
-              className="clip-btn inline-flex items-center gap-2 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold text-sm tracking-widest uppercase px-6 py-3 transition-colors duration-200"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+              className="inline-flex items-center gap-2 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold text-sm tracking-widest uppercase px-14 py-3 rounded-md transition-colors duration-200"
+              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px', minWidth: '220px', justifyContent: 'center' }}
             >
               Offerte Aanvragen
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
@@ -126,7 +126,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="clip-btn mt-4 text-center bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold text-lg tracking-widest uppercase py-4 transition-colors"
+            className="mt-4 text-center bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold text-lg tracking-widest uppercase py-4 rounded-md transition-colors"
             style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
           >
             Offerte Aanvragen

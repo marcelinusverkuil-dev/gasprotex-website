@@ -61,7 +61,7 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="clip-btn bg-orange text-white px-8 py-3.5 text-sm font-semibold hover:bg-orange-hot transition-colors">
+            <button className="bg-orange text-white px-8 py-3.5 text-sm font-semibold hover:bg-orange-hot transition-colors">
               Vraag een demo aan
             </button>
             <button className="border border-fog/30 text-mist px-8 py-3.5 text-sm font-medium hover:border-fog/60 hover:text-off-white transition-colors">

@@ -39,8 +39,10 @@ export default function HeroSection() {
 
       <div className="absolute inset-0 bg-gradient-to-r from-steel/95 via-steel/75 to-steel/20" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-
+      <div
+        className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24"
+        style={{ paddingLeft: '80px', paddingRight: '80px' }}
+      >
         <div className="max-w-xl animate-fade-up">
           <p className="text-xs tracking-widest uppercase text-orange font-medium mb-4">
             Akoestische gaslekdetectie
@@ -58,10 +60,16 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="clip-btn bg-orange text-white px-8 py-3.5 text-sm font-semibold hover:bg-orange-hot transition-colors">
+            <button
+              className="bg-orange text-white text-sm font-semibold hover:bg-orange-hot transition-colors rounded-md"
+              style={{ minWidth: '200px', padding: '14px 32px' }}
+            >
               Vraag een demo aan
             </button>
-            <button className="border border-fog/30 text-mist px-8 py-3.5 text-sm font-medium hover:border-fog/60 hover:text-off-white transition-colors">
+            <button
+              className="border border-fog/30 text-mist text-sm font-medium hover:border-fog/60 hover:text-off-white transition-colors rounded-md"
+              style={{ minWidth: '200px', padding: '14px 32px' }}
+            >
               Meer informatie
             </button>
           </div>
@@ -91,7 +99,7 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
 
   return (
     <div
-      className={`flex items-center gap-4 px-5 py-4 rounded-lg min-w-[220px] backdrop-blur-sm border ${
+      className={`flex items-center gap-4 px-5 py-4 rounded-md min-w-[220px] backdrop-blur-sm border ${
         isOrange
           ? 'bg-orange/90 border-orange-hot/30'
           : 'bg-steel/90 border-fog/20'
@@ -110,18 +118,10 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
       </div>
 
       <div>
-        <p
-          className={`text-lg font-bold leading-tight ${
-            isOrange ? 'text-white' : 'text-off-white'
-          }`}
-        >
+        <p className={`text-lg font-bold leading-tight ${isOrange ? 'text-white' : 'text-off-white'}`}>
           {value}
         </p>
-        <p
-          className={`text-xs leading-snug ${
-            isOrange ? 'text-white/75' : 'text-fog'
-          }`}
-        >
+        <p className={`text-xs leading-snug ${isOrange ? 'text-white/75' : 'text-fog'}`}>
           {label}
         </p>
       </div>

@@ -175,14 +175,14 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="clip-btn inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 transition-colors"
+              className="inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors"
               style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}
             >
               Quickscan Aanvragen
             </Link>
             <Link
               href="/diensten"
-              className="clip-btn inline-flex items-center gap-3 text-[#C2DCE8] hover:text-[#D97737] hover:border-[#D97737] font-display font-semibold uppercase tracking-widest px-8 py-4 transition-all"
+              className="inline-flex items-center gap-3 text-[#C2DCE8] hover:text-[#D97737] hover:border-[#D97737] font-display font-semibold uppercase tracking-widest px-8 py-4 transition-all"
               style={{
                 fontFamily: 'var(--font-barlow-condensed)',
                 fontSize: 14,

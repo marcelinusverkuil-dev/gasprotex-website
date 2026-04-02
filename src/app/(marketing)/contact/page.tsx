@@ -148,7 +148,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="clip-btn w-full inline-flex items-center justify-center gap-3 bg-[#D97737] hover:bg-[#E8893A] disabled:opacity-60 text-white font-display font-bold uppercase tracking-widest px-8 py-4 transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-3 bg-[#D97737] hover:bg-[#E8893A] disabled:opacity-60 text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors"
                     style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}
                   >
                     {status === 'sending' ? 'Verzenden...' : 'Aanvraag Versturen'}
