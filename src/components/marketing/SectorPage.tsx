@@ -135,7 +135,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
               {d.caseHighlight && (
                 <div
                   className="p-6"
-                  style={{ background: '#F4F7FA', border: '1px solid #E2EAF0', borderLeft: '3px solid #D97737' }}
+                  style={{ background: '#ffffff', border: '1px solid #E2EAF0', borderLeft: '3px solid #D97737' }}
                 >
                   <p
                     className="font-display font-bold uppercase text-[#D97737] mb-3"

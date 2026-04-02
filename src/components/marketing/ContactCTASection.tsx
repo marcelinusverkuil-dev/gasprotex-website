@@ -108,7 +108,7 @@ export default function ContactCTASection() {
                       value={form.naam}
                       onChange={(e) => setForm({ ...form, naam: e.target.value })}
                       className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                      style={{ border: '1px solid rgba(194,220,232,0.2)', fontSize: 15 }}
+                      style={{ fontSize: 15 }}
                       placeholder="Jan de Vries"
                     />
                   </div>
@@ -121,7 +121,7 @@ export default function ContactCTASection() {
                       value={form.bedrijf}
                       onChange={(e) => setForm({ ...form, bedrijf: e.target.value })}
                       className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                      style={{ border: '1px solid rgba(194,220,232,0.2)', fontSize: 15 }}
+                      style={{ fontSize: 15 }}
                       placeholder="Uw Bedrijf BV"
                     />
                   </div>
@@ -136,7 +136,7 @@ export default function ContactCTASection() {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                    style={{ border: '1px solid rgba(194,220,232,0.2)', fontSize: 15 }}
+                    style={{ fontSize: 15 }}
                     placeholder="jan@bedrijf.nl"
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function ContactCTASection() {
                     value={form.telefoon}
                     onChange={(e) => setForm({ ...form, telefoon: e.target.value })}
                     className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                    style={{ border: '1px solid rgba(194,220,232,0.2)', fontSize: 15 }}
+                    style={{ fontSize: 15 }}
                     placeholder="+31 6 12 34 56 78"
                   />
                 </div>
@@ -162,7 +162,7 @@ export default function ContactCTASection() {
                     value={form.bericht}
                     onChange={(e) => setForm({ ...form, bericht: e.target.value })}
                     className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors resize-none"
-                    style={{ border: '1px solid rgba(194,220,232,0.2)', fontSize: 15 }}
+                    style={{ fontSize: 15 }}
                     placeholder="Bijv. type installatie, oppervlakte, urgentie..."
                   />
                 </div>

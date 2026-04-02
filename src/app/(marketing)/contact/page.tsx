@@ -101,7 +101,7 @@ export default function ContactPage() {
               {status === 'sent' ? (
                 <div
                   className="p-10 text-center"
-                  style={{ background: '#F4F7FA', border: '1px solid #E2EAF0' }}
+                  style={{ background: '#ffffff', border: '1px solid #E2EAF0' }}
                 >
                   <div
                     className="w-16 h-16 mx-auto mb-6 flex items-center justify-center text-2xl text-[#D97737]"
