@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Sectoren', href: '/sectoren' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Cases', href: '/cases' },
-  { label: 'Portaal', href: 'http://localhost:3000/login', external: true },
+  { label: 'Portaal', href: 'https://gasprotex-portal.vercel.app/login', external: true },
 ]
 
 export default function Navbar() {
@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="http://localhost:3000/login"
+              href="https://gasprotex-portal.vercel.app/login"
               className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
               style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
             >
