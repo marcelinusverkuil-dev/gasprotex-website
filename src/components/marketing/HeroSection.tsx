@@ -32,12 +32,12 @@ export default function HeroSection() {
         src="/images/hero-bg.avif"
         alt="Industriële installatie"
         fill
-        className="object-cover object-center"
+        className="object-cover object-center" style={{filter: "brightness(0.6)"}}
         priority
         quality={90}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-steel/95 via-steel/75 to-steel/20" />
+      <div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(10,28,48,0.97) 0%, rgba(10,28,48,0.85) 50%, rgba(10,28,48,0.25) 100%)"}} />
 
       <div
         className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24"
