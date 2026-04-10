@@ -27,7 +27,13 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[600px] flex items-center overflow-hidden bg-steel">
 
-      {/* Achtergrond — vervang dit door een <Image> component als je de foto hebt */}
+      {/* Achtergrond foto */}
+      <img
+        src="/hero-image.jpg"
+        alt="GasProtex inspecteur bij industriele installatie"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: 'brightness(0.85)' }}
+      />
       
 
       {/* Placeholder label — verwijder dit als je een echte foto gebruikt */}
