@@ -3,7 +3,7 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }
-const sizes = { sm: { width: 100 }, md: { width: 140 }, lg: { width: 180 } }
+const sizes = { sm: { width: 160 }, md: { width: 220 }, lg: { width: 280 } }
 export default function GasProtexLogo({ variant = 'light', size = 'md', className = '' }: LogoProps) {
   const { width } = sizes[size]
   return (
