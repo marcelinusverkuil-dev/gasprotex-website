@@ -28,7 +28,7 @@ export default function HeroSection() {
     <section className="relative min-h-[600px] flex items-center overflow-hidden bg-steel">
 
       {/* Achtergrond — vervang dit door een <Image> component als je de foto hebt */}
-      <div className="absolute inset-0 bg-gradient-to-br from-steel via-zinc to-iron" />
+      
 
       {/* Placeholder label — verwijder dit als je een echte foto gebruikt */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -38,7 +38,7 @@ export default function HeroSection() {
       </div>
 
       {/* Donkere overlay van links naar rechts */}
-      <div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(15,45,75,0.97) 0%, rgba(15,45,75,0.88) 50%, rgba(15,45,75,0.20) 100%)"}} />
+      <div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(10,28,48,0.97) 0%, rgba(10,28,48,0.85) 50%, rgba(10,28,48,0.25) 100%)"}} />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-12 py-24">
