@@ -29,7 +29,7 @@ export default function HeroSection() {
 
       {/* Achtergrond foto */}
       <img
-        src="/hero-image.jpg"
+        src="/hero-image-v2.jpg"
         alt="GasProtex inspecteur bij industriele installatie"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: 'brightness(0.85)' }}
