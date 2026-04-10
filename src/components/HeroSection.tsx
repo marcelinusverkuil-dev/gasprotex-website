@@ -38,7 +38,7 @@ export default function HeroSection() {
       </div>
 
       {/* Donkere overlay van links naar rechts */}
-      <div className="absolute inset-0 bg-gradient-to-r from-steel/95 via-steel/75 to-steel/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/98 via-navy/80 to-navy/20" />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-12 py-24">
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
           <h1 className="font-display text-5xl font-bold text-off-white leading-tight mb-6">
             Detecteer elk gaslek.{' '}
-            <span className="text-brand-blue">Voordat het gevaarlijk</span>{' '}
+            <span className="text-blue">Voordat het gevaarlijk</span>{' '}
             wordt.
           </h1>
 
