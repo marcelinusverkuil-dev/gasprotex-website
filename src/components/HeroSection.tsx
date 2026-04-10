@@ -34,14 +34,6 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: 'brightness(0.35)' }}
       />
-      
-
-      {/* Placeholder label — verwijder dit als je een echte foto gebruikt */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <span className="text-xs tracking-widest uppercase text-fog/20">
-          [ Industriële foto — volgt later ]
-        </span>
-      </div>
 
       {/* Donkere overlay van links naar rechts */}
       <div className="absolute inset-0" style={{background: "rgba(10,28,48,0.75)"}} /><div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(10,28,48,0.96) 0%, rgba(10,28,48,0.80) 50%, rgba(10,28,48,0.10) 100%)"}} />
