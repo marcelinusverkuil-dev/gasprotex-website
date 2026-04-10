@@ -32,7 +32,7 @@ export default function HeroSection() {
         src="/hero-image.jpg"
         alt="GasProtex inspecteur bij industriele installatie"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: 'brightness(0.85)' }}
+        style={{ filter: 'brightness(0.55)' }}
       />
       
 
