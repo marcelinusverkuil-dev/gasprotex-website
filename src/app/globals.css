@@ -2,40 +2,29 @@
 
 /* ── GASPROTEX BRAND TOKENS ── */
 :root {
-  /* Brand colours — exact uit logo */
-  --steel:        #0F2D4B;
-  --iron:         #122840;
-  --zinc:         #1A3A5C;
-  --brand-blue:   #1E87B4;
-  --orange:       #D97737;
-  --orange-hot:   #E8893A;
-  --amber:        #E8A84A;
-  --fog:          #7AADCC;
-  --mist:         #C2DCE8;
-  --off-white:    #F0F6FA;
-  --pure:         #ffffff;
+  --navy:      #1E4A75;
+  --blue:      #1E87B4;
+  --orange:    #F07830;
+  --fog:       #7AADCC;
+  --off-white: #F0F6FA;
+  --white:     #ffffff;
 
-  /* Light section colours */
   --surface:      #F4F7FA;
-  --border-light: #E2EAF0;
-  --text-dark:    #0F2D4B;
+  --border:       #E2EAF0;
+  --text-dark:    #1E4A75;
   --text-body:    #3D5A6E;
   --text-muted:   #6B8FA6;
 }
 
 @theme inline {
-  --color-steel:       var(--steel);
-  --color-iron:        var(--iron);
-  --color-zinc:        var(--zinc);
-  --color-brand-blue:  var(--brand-blue);
-  --color-orange:      var(--orange);
-  --color-orange-hot:  var(--orange-hot);
-  --color-fog:         var(--fog);
-  --color-mist:        var(--mist);
-  --color-off-white:   var(--off-white);
-  --color-surface:     var(--surface);
-  --font-display:      var(--font-barlow-condensed);
-  --font-body:         var(--font-barlow);
+  --color-navy:      var(--navy);
+  --color-blue:      var(--blue);
+  --color-orange:    var(--orange);
+  --color-fog:       var(--fog);
+  --color-off-white: var(--off-white);
+  --color-surface:   var(--surface);
+  --font-display:    var(--font-barlow-condensed);
+  --font-body:       var(--font-barlow);
 }
 
 * {
@@ -78,8 +67,8 @@ body {
 /* ── ANIMATED GRID ACHTERGROND ── */
 .hero-grid {
   background-image:
-    linear-gradient(rgba(217,119,55,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(217,119,55,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(240,120,48,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240,120,48,0.06) 1px, transparent 1px);
   background-size: 80px 80px;
   animation: gridShift 20s linear infinite;
 }
@@ -101,13 +90,11 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-up {
-  animation: fadeUp 0.7s ease both;
-}
-.animate-fade-up-1 { animation: fadeUp 0.7s 0.1s ease both; }
-.animate-fade-up-2 { animation: fadeUp 0.7s 0.2s ease both; }
+.animate-fade-up   { animation: fadeUp 0.7s ease both; }
+.animate-fade-up-1 { animation: fadeUp 0.7s 0.1s  ease both; }
+.animate-fade-up-2 { animation: fadeUp 0.7s 0.2s  ease both; }
 .animate-fade-up-3 { animation: fadeUp 0.7s 0.35s ease both; }
-.animate-fade-up-4 { animation: fadeUp 0.7s 0.5s ease both; }
+.animate-fade-up-4 { animation: fadeUp 0.7s 0.5s  ease both; }
 
 /* ── TICKER ── */
 @keyframes ticker {
@@ -126,8 +113,8 @@ body {
 
 /* ── ORANGE GLOW ── */
 @keyframes glow {
-  from { box-shadow: 0 0 20px rgba(217,119,55,0.4); }
-  to   { box-shadow: 0 0 60px rgba(217,119,55,0.8); }
+  from { box-shadow: 0 0 20px rgba(240,120,48,0.4); }
+  to   { box-shadow: 0 0 60px rgba(240,120,48,0.8); }
 }
 
 /* ── CONTAINER PADDING ── */
