@@ -38,7 +38,7 @@ export default function HeroSection() {
       </div>
 
       {/* Donkere overlay van links naar rechts */}
-      <div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(10,28,48,0.98) 0%, rgba(10,28,48,0.92) 60%, rgba(10,28,48,0.55) 100%)"}} />
+      <div className="absolute inset-0" style={{background: "rgba(10,28,48,0.55)"}} /><div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(10,28,48,0.96) 0%, rgba(10,28,48,0.80) 50%, rgba(10,28,48,0.10) 100%)"}} />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-12 py-24">
