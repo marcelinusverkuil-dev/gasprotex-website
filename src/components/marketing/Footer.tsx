@@ -30,7 +30,6 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <GasProtexLogo variant="light" size="md" className="mb-5" />
             <p className="text-[#4A7A99] leading-relaxed max-w-xs" style={{ fontSize: 14, lineHeight: 1.75 }}>
               Akoestische gaslekdetectie voor de Nederlandse industrie.
               Sneller, veiliger, zonder productiestilstand.
@@ -42,12 +41,7 @@ export default function Footer() {
                 <span
                   key={cert}
                   className="inline-block text-[#4A7A99] uppercase tracking-widest"
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: '1.5px',
-                    border: '1px solid rgba(74,122,153,0.3)',
-                    padding: '4px 10px',
-                  }}
+                  style={{ fontSize: 10, letterSpacing: '1.5px' }}
                 >
                   {cert}
                 </span>
