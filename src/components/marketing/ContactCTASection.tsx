@@ -6,7 +6,7 @@ export default function ContactCTASection() {
   const [form, setForm] = useState({ naam: '', bedrijf: '', email: '', telefoon: '', bericht: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     setStatus('sending')
     // TODO: wire up to Resend / Supabase
@@ -15,81 +15,53 @@ export default function ContactCTASection() {
   }
 
   return (
-    <section className="bg-white py-24 lg:py-32 relative overflow-hidden">
-      {/* Radial glow */}
-      <div
-        className="absolute left-1/2 top-0 -translate-x-1/2 w-[900px] h-[400px] pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(217,119,55,0.1) 0%, transparent 70%)' }}
-      />
+    <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
+      <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-      <div className="relative z-10 max-w-7xl mx-auto section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
+            Contact
+          </p>
+          <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1 }}>
+            Klaar Voor Een Gratis Quickscan?
+          </h2>
+          <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
+            Vertel ons kort over uw installatie. Wij nemen binnen één werkdag contact op voor een vrijblijvende inspectie.
+          </p>
+        </div>
 
-          {/* Left — copy */}
-          <div>
-            <p
-              className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}
-            >
-              Contact
-            </p>
-            <h2
-              className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-6"
-              style={{
-                fontFamily: 'var(--font-barlow-condensed)',
-                fontSize: 'clamp(36px, 5vw, 56px)',
-                lineHeight: 1,
-              }}
-            >
-              Klaar Voor Een<br />
-              <span className="text-[#D97737]">Gratis Quickscan?</span>
-            </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-10" style={{ fontSize: 17, lineHeight: 1.75 }}>
-              Vertel ons kort over uw installatie. Wij nemen binnen één werkdag contact op
-              voor het inplannen van een vrijblijvende inspectie.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-            {/* Trust signals */}
-            <div className="space-y-4">
-              {[
-                'Reactie binnen 1 werkdag',
-                'Geheel vrijblijvend',
-                'ATEX-gecertificeerd team',
-                'NDA beschikbaar op verzoek',
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span
-                    className="w-5 h-5 flex-shrink-0 flex items-center justify-center text-[#D97737] font-bold"
-                    style={{ fontSize: 14 }}
-                  >
-                    ✓
-                  </span>
-                  <span className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{item}</span>
-                </div>
-              ))}
-            </div>
+          {/* Left — trust signals */}
+          <div className="flex flex-col gap-4 lg:pt-2">
+            {[
+              'Reactie binnen 1 werkdag',
+              'Geheel vrijblijvend',
+              'ATEX-gecertificeerd team',
+              'NDA beschikbaar op verzoek',
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-3">
+                <span className="w-5 h-5 flex-shrink-0 flex items-center justify-center font-bold" style={{ color: '#D97737', fontSize: 14 }}>✓</span>
+                <span className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{item}</span>
+              </div>
+            ))}
           </div>
 
           {/* Right — form */}
           <div
-            className="p-8 lg:p-10"
-            style={{
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(217,119,55,0.2)',
-            }}
+            className="p-8 lg:p-10 rounded-lg"
+            style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.08)', background: '#ffffff' }}
           >
             {status === 'sent' ? (
               <div className="text-center py-8">
                 <div
-                  className="w-14 h-14 mx-auto mb-5 flex items-center justify-center text-2xl"
-                  style={{ background: 'rgba(217,119,55,0.15)', border: '1px solid rgba(217,119,55,0.4)' }}
+                  className="w-14 h-14 mx-auto mb-5 flex items-center justify-center text-2xl rounded-lg"
+                  style={{ background: 'rgba(217,119,55,0.1)', border: '1px solid rgba(217,119,55,0.3)' }}
                 >
                   ✓
                 </div>
-                <h3
-                  className="font-display font-bold uppercase text-white mb-2"
-                  style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}
-                >
+                <h3 className="font-display font-bold uppercase text-[#0F2D4B] mb-2" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}>
                   Bericht Ontvangen
                 </h3>
                 <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
@@ -100,34 +72,34 @@ export default function ContactCTASection() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    <label className="block text-[#6B8FA6] mb-1.5" style={{ fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                       Naam *
                     </label>
                     <input
                       required
                       value={form.naam}
                       onChange={(e) => setForm({ ...form, naam: e.target.value })}
-                      className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                      style={{ fontSize: 15 }}
+                      className="w-full text-[#0F2D4B] px-4 py-3 outline-none rounded transition-colors"
+                      style={{ fontSize: 15, background: '#F4F7FA', border: '1px solid #E2EAF0' }}
                       placeholder="Jan de Vries"
                     />
                   </div>
                   <div>
-                    <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    <label className="block text-[#6B8FA6] mb-1.5" style={{ fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                       Bedrijf *
                     </label>
                     <input
                       required
                       value={form.bedrijf}
                       onChange={(e) => setForm({ ...form, bedrijf: e.target.value })}
-                      className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                      style={{ fontSize: 15 }}
+                      className="w-full text-[#0F2D4B] px-4 py-3 outline-none rounded transition-colors"
+                      style={{ fontSize: 15, background: '#F4F7FA', border: '1px solid #E2EAF0' }}
                       placeholder="Uw Bedrijf BV"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <label className="block text-[#6B8FA6] mb-1.5" style={{ fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                     E-mailadres *
                   </label>
                   <input
@@ -135,34 +107,34 @@ export default function ContactCTASection() {
                     type="email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                    style={{ fontSize: 15 }}
+                    className="w-full text-[#0F2D4B] px-4 py-3 outline-none rounded transition-colors"
+                    style={{ fontSize: 15, background: '#F4F7FA', border: '1px solid #E2EAF0' }}
                     placeholder="jan@bedrijf.nl"
                   />
                 </div>
                 <div>
-                  <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <label className="block text-[#6B8FA6] mb-1.5" style={{ fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                     Telefoon
                   </label>
                   <input
                     type="tel"
                     value={form.telefoon}
                     onChange={(e) => setForm({ ...form, telefoon: e.target.value })}
-                    className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors"
-                    style={{ fontSize: 15 }}
+                    className="w-full text-[#0F2D4B] px-4 py-3 outline-none rounded transition-colors"
+                    style={{ fontSize: 15, background: '#F4F7FA', border: '1px solid #E2EAF0' }}
                     placeholder="+31 6 12 34 56 78"
                   />
                 </div>
                 <div>
-                  <label className="block text-[#3D5A6E] mb-1.5" style={{ fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <label className="block text-[#6B8FA6] mb-1.5" style={{ fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                     Uw situatie
                   </label>
                   <textarea
                     rows={4}
                     value={form.bericht}
                     onChange={(e) => setForm({ ...form, bericht: e.target.value })}
-                    className="w-full bg-transparent text-white px-4 py-3 outline-none focus:border-[#D97737] transition-colors resize-none"
-                    style={{ fontSize: 15 }}
+                    className="w-full text-[#0F2D4B] px-4 py-3 outline-none rounded transition-colors resize-none"
+                    style={{ fontSize: 15, background: '#F4F7FA', border: '1px solid #E2EAF0' }}
                     placeholder="Bijv. type installatie, oppervlakte, urgentie..."
                   />
                 </div>

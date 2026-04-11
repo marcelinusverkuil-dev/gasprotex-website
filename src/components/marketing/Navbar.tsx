@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import GasProtexLogo from '@/components/ui/GasProtexLogo'
 
 const navLinks = [
   { label: 'Diensten', href: '/diensten' },
@@ -28,8 +27,8 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          true
-            ? 'bg-[#0A1E30]/97 shadow-lg shadow-black/20 backdrop-blur-md border-b border-[#D97737]/20'
+          scrolled || !isHome
+            ? 'bg-[#0A1E30]/97 shadow-lg shadow-black/20 backdrop-blur-md'
             : 'bg-transparent'
         }`}
       >
@@ -39,7 +38,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" aria-label="GasProtex homepage">
-            <GasProtexLogo variant="light" size="md" />
+            <img src="/images/GasProtex logo oranje.png" alt="GasProtex" style={{ height: '44px', width: 'auto', background: 'white', padding: '4px 12px', borderRadius: '4px' }} />
           </Link>
 
           {/* Desktop nav */}
