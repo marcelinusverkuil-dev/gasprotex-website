@@ -13,8 +13,8 @@ export default function CTABanner() {
               Gratis advies
             </p>
             <h2
-              className="font-display font-black uppercase text-[#0F2D4B] mb-2"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1 }}
+              className="font-bold text-[#0F2D4B] mb-2"
+              style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
             >
               Klaar Voor Een Gratis Quickscan?
             </h2>

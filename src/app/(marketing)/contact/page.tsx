@@ -34,7 +34,7 @@ export default function ContactPage() {
           <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Contact
           </p>
-          <h1 className="font-display font-black uppercase text-[#0F2D4B] leading-none" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}>
+          <h1 className="font-bold text-[#0F2D4B] leading-none" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Neem Contact Op
           </h1>
         </div>
@@ -47,8 +47,8 @@ export default function ContactPage() {
             {/* Left — info */}
             <div className="lg:col-span-2">
               <h2
-                className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-6"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 3vw, 38px)', lineHeight: 1 }}
+                className="font-bold text-[#0F2D4B] leading-none mb-6"
+                style={{ fontSize: 'clamp(28px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
                 Wij Reageren Binnen Één Werkdag
               </h2>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <p
-                        className="font-display font-bold uppercase text-[#0F2D4B] mb-1"
+                        className="font-bold text-[#0F2D4B] mb-1"
                         style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 16, letterSpacing: '0.5px' }}
                       >
                         {item.titel}
@@ -104,8 +104,8 @@ export default function ContactPage() {
                     ✓
                   </div>
                   <h3
-                    className="font-display font-black uppercase text-[#0F2D4B] mb-3"
-                    style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 28, lineHeight: 1 }}
+                    className="font-bold text-[#0F2D4B] mb-3"
+                    style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 28, lineHeight: 1.2, letterSpacing: '-0.02em' }}
                   >
                     Aanvraag Ontvangen
                   </h3>

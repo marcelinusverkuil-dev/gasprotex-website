@@ -32,17 +32,16 @@ export default function HeroSection() {
         src="/images/hero-bg.avif"
         alt="Industriële installatie"
         fill
-        className="object-cover object-center" style={{filter: "brightness(0.9)"}}
+
+        className="object-cover object-center"
         priority
         quality={90}
       />
 
-      <div className="absolute inset-0" style={{background: "linear-gradient(to right, rgba(10,28,48,0.92) 0%, rgba(10,28,48,0.65) 50%, rgba(10,28,48,0.10) 100%)"}} />
+      <div className="absolute inset-0 bg-gradient-to-r from-steel/95 via-steel/75 to-steel/20" />
 
-      <div
-        className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24"
-        style={{ paddingLeft: '80px', paddingRight: '80px' }}
-      >
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+
         <div className="max-w-xl animate-fade-up">
           <p className="text-xs tracking-widest uppercase text-orange font-medium mb-4">
             Akoestische gaslekdetectie
@@ -99,7 +98,7 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
 
   return (
     <div
-      className={`flex items-center gap-4 px-5 py-4 rounded-md min-w-[220px] backdrop-blur-sm border ${
+      className={`flex items-center gap-4 px-5 py-4 rounded-lg min-w-[220px] backdrop-blur-sm border ${
         isOrange
           ? 'bg-orange/90 border-orange-hot/30'
           : 'bg-steel/90 border-fog/20'
@@ -118,10 +117,18 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
       </div>
 
       <div>
-        <p className={`text-lg font-bold leading-tight ${isOrange ? 'text-white' : 'text-off-white'}`}>
+        <p
+          className={`text-lg font-bold leading-tight ${
+            isOrange ? 'text-white' : 'text-off-white'
+          }`}
+        >
           {value}
         </p>
-        <p className={`text-xs leading-snug ${isOrange ? 'text-white/75' : 'text-fog'}`}>
+        <p
+          className={`text-xs leading-snug ${
+            isOrange ? 'text-white/75' : 'text-fog'
+          }`}
+        >
           {label}
         </p>
       </div>

@@ -36,7 +36,7 @@ export default function DienstenSection() {
           <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Onze Diensten
           </p>
-          <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1 }}>
+          <h2 className="font-bold text-[#0F2D4B] mb-5" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Wat Wij Voor U Doen
           </h2>
           <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
@@ -54,7 +54,7 @@ export default function DienstenSection() {
               <p className="text-xs font-semibold uppercase text-[#D97737] mb-2" style={{ letterSpacing: '1.5px' }}>
                 {d.subtitle}
               </p>
-              <h3 className="font-display font-bold uppercase text-[#0F2D4B] mb-4" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}>
+              <h3 className="font-bold text-[#0F2D4B] mb-4" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
                 {d.title}
               </h3>
               <p className="text-[#3D5A6E] leading-relaxed flex-1 mb-6" style={{ fontSize: 15 }}>

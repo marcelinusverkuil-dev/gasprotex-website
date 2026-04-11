@@ -38,8 +38,8 @@ export default function SectorenSection() {
               style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}
             >
               <h3
-                className="font-display font-bold uppercase text-[#0F2D4B] mb-3 group-hover:text-[#D97737] transition-colors"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 18 }}
+                className="font-bold text-[#0F2D4B] mb-3 group-hover:text-[#D97737] transition-colors"
+                style={{ fontSize: 18, letterSpacing: '-0.02em' }}
               >
                 {s.title}
               </h3>
@@ -63,8 +63,8 @@ export default function SectorenSection() {
         >
           <div>
             <p
-              className="font-display font-black uppercase text-[#0F2D4B] mb-2"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}
+              className="font-bold text-[#0F2D4B] mb-2"
+              style={{ fontSize: 22, letterSpacing: '-0.02em' }}
             >
               Gemiddeld <span style={{ color: '#D97737' }}>30%</span> van perslucht gaat verloren door lekken.
             </p>

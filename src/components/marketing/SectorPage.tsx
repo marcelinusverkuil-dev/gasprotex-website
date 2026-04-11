@@ -28,8 +28,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
                 {d.hero.tagline}
               </p>
               <h1
-                className="font-display font-black uppercase text-white leading-none"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(36px, 5.5vw, 68px)', lineHeight: 1 }}
+                className="font-bold text-white leading-none"
+                style={{ fontSize: 'clamp(36px, 5.5vw, 68px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
                 {d.hero.headline}
               </h1>
@@ -78,8 +78,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
                 Uw Uitdagingen
               </p>
               <h2
-                className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-10"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1 }}
+                className="font-bold text-[#0F2D4B] leading-none mb-10"
+                style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
                 Wat Speelt Er In Uw Sector?
               </h2>
@@ -91,7 +91,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
                     style={{ borderBottom: i < d.uitdagingen.length - 1 ? '1px solid #E2EAF0' : 'none' }}
                   >
                     <h3
-                      className="font-display font-bold uppercase text-[#0F2D4B] mb-2"
+                      className="font-bold text-[#0F2D4B] mb-2"
                       style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 17, letterSpacing: '0.5px' }}
                     >
                       {u.titel}
@@ -112,8 +112,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
                 Onze Aanpak
               </p>
               <h2
-                className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-6"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1 }}
+                className="font-bold text-[#0F2D4B] leading-none mb-6"
+                style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
                 Hoe Wij Helpen
               </h2>
@@ -163,8 +163,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
         <div className="max-w-7xl mx-auto section-container py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div>
             <h2
-              className="font-display font-black uppercase text-white mb-2"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(24px, 3.5vw, 42px)', lineHeight: 1 }}
+              className="font-bold text-white mb-2"
+              style={{ fontSize: 'clamp(24px, 3.5vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
             >
               Klaar Voor Een Gratis Quickscan?
             </h2>

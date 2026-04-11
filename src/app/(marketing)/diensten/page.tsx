@@ -71,7 +71,7 @@ export default function DienstenPage() {
           <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Onze Diensten
           </p>
-          <h1 className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}>
+          <h1 className="font-bold text-[#0F2D4B] leading-none mb-5" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Wat Wij Voor U Doen
           </h1>
           <p className="text-[#3D5A6E] max-w-xl" style={{ fontSize: 17, lineHeight: 1.75 }}>
@@ -91,7 +91,7 @@ export default function DienstenPage() {
                 <p className="text-sm font-semibold uppercase text-[#D97737] mb-2" style={{ letterSpacing: '1.5px' }}>
                   {d.subtitle}
                 </p>
-                <h2 className="font-display font-bold uppercase text-[#0F2D4B] mb-6" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1 }}>
+                <h2 className="font-bold text-[#0F2D4B] mb-6" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                   {d.title}
                 </h2>
                 <p className="text-[#3D5A6E] leading-relaxed mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
@@ -118,7 +118,7 @@ export default function DienstenPage() {
                       <p className="font-semibold text-[#0F2D4B]" style={{ fontSize: 14 }}>{d.levertijd}</p>
                     </div>
                   </div>
-                  <p className="font-display font-bold uppercase text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, letterSpacing: '2px' }}>
+                  <p className="font-bold text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, letterSpacing: '2px' }}>
                     Inbegrepen
                   </p>
                   <ul className="space-y-3 mb-8">
@@ -151,7 +151,7 @@ export default function DienstenPage() {
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.08)' }}>
             <div>
-              <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-2" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1 }}>
+              <h2 className="font-bold text-[#0F2D4B] mb-2" style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                 Niet Zeker Welke Dienst Past?
               </h2>
               <p className="text-[#3D5A6E]" style={{ fontSize: 16 }}>

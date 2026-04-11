@@ -29,7 +29,7 @@ export default function OverOnsPage() {
           <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Over GasProtex
           </p>
-          <h1 className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-5 max-w-2xl" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}>
+          <h1 className="font-bold text-[#0F2D4B] leading-none mb-5 max-w-2xl" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Wij Maken Gaslekken Zichtbaar
           </h1>
           <p className="text-[#3D5A6E] max-w-xl" style={{ fontSize: 17, lineHeight: 1.75 }}>
@@ -47,7 +47,7 @@ export default function OverOnsPage() {
               <p className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}>
                 Onze Missie
               </p>
-              <h2 className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-6" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1 }}>
+              <h2 className="font-bold text-[#0F2D4B] leading-none mb-6" style={{ fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                 Geen Enkel Lek Onopgemerkt
               </h2>
               <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 16, lineHeight: 1.8 }}>
@@ -88,14 +88,14 @@ export default function OverOnsPage() {
             <p className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}>
               Onze Kernwaarden
             </p>
-            <h2 className="font-display font-black uppercase text-[#0F2D4B] leading-none" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1 }}>
+            <h2 className="font-bold text-[#0F2D4B] leading-none" style={{ fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
               Waarop U Ons Kunt Aanspreken
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {waarden.map((w) => (
               <div key={w.titel} className="bg-white p-7 rounded-lg" style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
-                <h3 className="font-display font-bold uppercase text-[#0F2D4B] mb-3" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 18 }}>
+                <h3 className="font-bold text-[#0F2D4B] mb-3" style={{ fontSize: 18, letterSpacing: '-0.02em' }}>
                   {w.titel}
                 </h3>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 14, lineHeight: 1.7 }}>
@@ -114,13 +114,13 @@ export default function OverOnsPage() {
             <p className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4 text-center" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}>
               Onze Geschiedenis
             </p>
-            <h2 className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-14 text-center" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1 }}>
+            <h2 className="font-bold text-[#0F2D4B] leading-none mb-14 text-center" style={{ fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
               Hoe GasProtex Ontstond
             </h2>
             <div className="space-y-0">
               {tijdlijn.map((item) => (
                 <div key={item.jaar} className="flex gap-8 py-6">
-                  <span className="font-display font-black text-[#D97737] flex-shrink-0 w-12" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}>
+                  <span className="font-display font-black text-[#D97737] flex-shrink-0 w-12" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
                     {item.jaar}
                   </span>
                   <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -138,7 +138,7 @@ export default function OverOnsPage() {
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.08)' }}>
             <div>
-              <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-2" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(24px, 3.5vw, 42px)', lineHeight: 1 }}>
+              <h2 className="font-bold text-[#0F2D4B] mb-2" style={{ fontSize: 'clamp(24px, 3.5vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                 Laat Ons Uw Installatie Scannen
               </h2>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>

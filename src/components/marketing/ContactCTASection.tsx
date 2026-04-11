@@ -23,7 +23,7 @@ export default function ContactCTASection() {
           <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Contact
           </p>
-          <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1 }}>
+          <h2 className="font-bold text-[#0F2D4B] mb-5" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Klaar Voor Een Gratis Quickscan?
           </h2>
           <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
@@ -61,7 +61,7 @@ export default function ContactCTASection() {
                 >
                   ✓
                 </div>
-                <h3 className="font-display font-bold uppercase text-[#0F2D4B] mb-2" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}>
+                <h3 className="font-bold text-[#0F2D4B] mb-2" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
                   Bericht Ontvangen
                 </h3>
                 <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>

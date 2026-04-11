@@ -25,7 +25,7 @@ export default function WaaromSection() {
           <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             De Technologie
           </p>
-          <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1 }}>
+          <h2 className="font-bold text-[#0F2D4B] mb-5" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Waarom Akoestisch?
           </h2>
           <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
@@ -41,7 +41,7 @@ export default function WaaromSection() {
               className="bg-white rounded-lg p-7 hover:-translate-y-1 transition-all duration-300"
               style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}
             >
-              <h4 className="font-display font-bold uppercase text-[#0F2D4B] mb-3" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 18 }}>
+              <h4 className="font-bold text-[#0F2D4B] mb-3" style={{ fontSize: 18, letterSpacing: '-0.02em' }}>
                 {v.title}
               </h4>
               <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 14 }}>
@@ -52,7 +52,7 @@ export default function WaaromSection() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <h3 className="font-display font-bold uppercase text-[#0F2D4B] mb-6 text-center" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 22 }}>
+          <h3 className="font-bold text-[#0F2D4B] mb-6 text-center" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
             Traditioneel vs. Akoestisch
           </h3>
           <div className="overflow-hidden rounded-lg" style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
