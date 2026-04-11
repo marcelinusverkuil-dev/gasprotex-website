@@ -28,27 +28,6 @@ export default function SectorenSection() {
     <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
-          <div>
-            <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
-              Doelgroepen
-            </p>
-            <h2 className="font-display font-black uppercase text-[#0F2D4B]" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1 }}>
-              Welke Sector Bent U?
-            </h2>
-          </div>
-          <Link
-            href="/sectoren"
-            className="self-start lg:self-auto inline-flex items-center gap-2 font-semibold text-[#D97737] hover:gap-4 transition-all text-sm"
-          >
-            Alle sectoren
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-              <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
-        </div>
-
         {/* Kaarten — clean zonder iconen en badges */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {sectoren.map((s) => (
