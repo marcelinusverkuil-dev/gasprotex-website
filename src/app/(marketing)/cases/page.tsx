@@ -54,15 +54,15 @@ export default function CasesPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#0F2D4B] pb-20" style={{ paddingTop: '100px' }}>
+      <section className="pb-0" style={{ paddingTop: '120px', background: '#ffffff' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <p className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}>
+          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Onze Cases
           </p>
-          <h1 className="font-display font-black uppercase text-white leading-none mb-6" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}>
+          <h1 className="font-display font-black uppercase text-[#0F2D4B] leading-none mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}>
             Resultaten In De Praktijk
           </h1>
-          <p className="text-[#C2DCE8] max-w-xl" style={{ fontSize: 17, lineHeight: 1.75 }}>
+          <p className="text-[#3D5A6E] max-w-xl" style={{ fontSize: 17, lineHeight: 1.75 }}>
             Bekijk hoe wij bedrijven helpen gaslekken te detecteren en kosten te besparen.
           </p>
         </div>
@@ -115,19 +115,21 @@ export default function CasesPage() {
       ))}
 
       {/* CTA */}
-      <section style={{ background: '#0F2D4B' }}>
-        <div className="max-w-7xl mx-auto py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <div>
-            <h2 className="font-display font-black uppercase text-white mb-2" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1 }}>
-              Benieuwd Wat Wij Voor U Kunnen Betekenen?
-            </h2>
-            <p className="text-[#7AADCC]" style={{ fontSize: 16 }}>
-              Neem vrijblijvend contact met ons op voor een kennismakingsgesprek.
-            </p>
+      <section className="py-12 lg:py-16" style={{ background: '#ffffff' }}>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+          <div className="p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.08)' }}>
+            <div>
+              <h2 className="font-display font-black uppercase text-[#0F2D4B] mb-2" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1 }}>
+                Benieuwd Wat Wij Voor U Kunnen Betekenen?
+              </h2>
+              <p className="text-[#3D5A6E]" style={{ fontSize: 16 }}>
+                Neem vrijblijvend contact met ons op voor een kennismakingsgesprek.
+              </p>
+            </div>
+            <a href="/contact" className="flex-shrink-0 inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}>
+              Neem Contact Op
+            </a>
           </div>
-          <a href="/contact" className="flex-shrink-0 inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}>
-            Neem Contact Op
-          </a>
         </div>
       </section>
     </>

@@ -15,7 +15,7 @@ export default function ContactPage() {
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     setStatus('sending')
     // TODO: POST to /api/contact → Resend
@@ -29,18 +29,12 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#0F2D4B] pb-20" style={{ paddingTop: "100px" }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
-          <p
-            className="font-display font-bold uppercase tracking-[4px] text-[#D97737] mb-4"
-            style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12 }}
-          >
+      <section className="pb-0" style={{ paddingTop: '120px', background: '#ffffff' }}>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Contact
           </p>
-          <h1
-            className="font-display font-black uppercase text-white leading-none"
-            style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}
-          >
+          <h1 className="font-display font-black uppercase text-[#0F2D4B] leading-none" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1 }}>
             Neem Contact Op
           </h1>
         </div>
