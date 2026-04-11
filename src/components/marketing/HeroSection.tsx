@@ -34,11 +34,12 @@ export default function HeroSection() {
         fill
 
         className="object-cover object-center"
+        style={{ filter: 'brightness(0.9)' }}
         priority
         quality={90}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-steel/95 via-steel/75 to-steel/20" />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,28,48,0.92) 0%, rgba(10,28,48,0.65) 50%, rgba(10,28,48,0.10) 100%)' }} />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between gap-12 py-24" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
@@ -48,14 +49,12 @@ export default function HeroSection() {
           </p>
 
           <h1 className="font-display text-5xl font-bold text-off-white leading-tight mb-6">
-            Detecteer elk gaslek.{' '}
-            <span className="text-brand-blue">Voordat het gevaarlijk</span>{' '}
-            wordt.
+            Detecteer elk gaslek.<br />
+            <span className="text-brand-blue">Voordat het gevaarlijk wordt.</span>
           </h1>
 
-          <p className="text-fog text-lg leading-relaxed mb-10 max-w-md">
-            Real-time bewaking van gasleidingen en industriële installaties —
-            zonder productieonderbreking.
+          <p className="text-fog text-lg leading-relaxed" style={{ marginBottom: '48px' }}>
+            Gaslekdetectie zonder productieonderbreking.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -64,12 +63,6 @@ export default function HeroSection() {
               style={{ minWidth: '200px', padding: '14px 32px' }}
             >
               Vraag een demo aan
-            </button>
-            <button
-              className="border border-fog/30 text-mist text-sm font-medium hover:border-fog/60 hover:text-off-white transition-colors rounded-md"
-              style={{ minWidth: '200px', padding: '14px 32px' }}
-            >
-              Meer informatie
             </button>
           </div>
         </div>
@@ -98,19 +91,19 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
 
   return (
     <div
-      className={`flex items-center gap-4 px-5 py-4 rounded-lg min-w-[220px] backdrop-blur-sm border ${
+      className={`flex items-center gap-6 px-7 py-6 rounded-lg min-w-[280px] backdrop-blur-sm border ${
         isOrange
           ? 'bg-orange/90 border-orange-hot/30'
           : 'bg-steel/90 border-fog/20'
       }`}
     >
       <div
-        className={`w-10 h-10 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
+        className={`w-14 h-14 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
           isOrange ? 'border-white/60' : 'border-fog/60'
         }`}
       >
         <Icon
-          size={16}
+          size={22}
           className={isOrange ? 'text-white' : 'text-fog'}
           strokeWidth={1.8}
         />
@@ -118,14 +111,14 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
 
       <div>
         <p
-          className={`text-lg font-bold leading-tight ${
+          className={`text-2xl font-bold leading-tight ${
             isOrange ? 'text-white' : 'text-off-white'
           }`}
         >
           {value}
         </p>
         <p
-          className={`text-xs leading-snug ${
+          className={`text-sm leading-snug ${
             isOrange ? 'text-white/75' : 'text-fog'
           }`}
         >

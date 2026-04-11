@@ -66,100 +66,95 @@ export default function DienstenPage() {
   return (
     <>
       {/* Header */}
-      <section className="pb-0" style={{ paddingTop: '120px', background: '#ffffff' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
-            Onze Diensten
-          </p>
-          <h1 className="font-bold text-[#0F2D4B] leading-none mb-5" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Wat Wij Voor U Doen
+          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+            Diensten
           </h1>
-          <p className="text-[#3D5A6E] max-w-xl" style={{ fontSize: 17, lineHeight: 1.75 }}>
-            Drie diensten — van snelle screening tot proactief jaarabonnement. Kies wat past bij uw situatie.
-          </p>
         </div>
       </section>
 
       {/* Diensten */}
-      {diensten.map((d, index) => (
-        <section key={d.id} id={d.id} style={{ background: '#ffffff' }}>
-          <div className="max-w-7xl mx-auto py-20 lg:py-28" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+      <section style={{ background: '#ffffff', paddingBottom: '40px' }}>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+          {diensten.map((d) => (
+            <div
+              key={d.id}
+              id={d.id}
+              style={{ borderTop: '1px solid #E2EAF0', paddingTop: '48px', paddingBottom: '48px' }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
 
-              {/* Links */}
-              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} p-8 lg:p-10 rounded-lg hover:-translate-y-1 transition-all duration-300`} style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
-                <p className="text-sm font-semibold uppercase text-[#D97737] mb-2" style={{ letterSpacing: '1.5px' }}>
-                  {d.subtitle}
-                </p>
-                <h2 className="font-bold text-[#0F2D4B] mb-6" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                  {d.title}
-                </h2>
-                <p className="text-[#3D5A6E] leading-relaxed mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                  {d.wat}
-                </p>
-                <div className="p-5 rounded-lg" style={{ background: 'rgba(217,119,55,0.06)', borderLeft: '3px solid #D97737' }}>
-                  <p className="font-display font-bold uppercase text-[#D97737] mb-1" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12, letterSpacing: '2px' }}>
-                    Gemiddeld Resultaat
-                  </p>
-                  <p className="text-[#0F2D4B]" style={{ fontSize: 15 }}>{d.resultaat}</p>
+                {/* Links: titel + meta */}
+                <div>
+                  <p className="text-[#6B8FA6] mb-2" style={{ fontSize: 13 }}>{d.subtitle}</p>
+                  <h2 className="font-bold text-[#0F2D4B] mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                    {d.title}
+                  </h2>
+                  <p className="text-[#0F2D4B] font-semibold mb-1" style={{ fontSize: 15 }}>{d.price}</p>
+                  <p className="text-[#6B8FA6]" style={{ fontSize: 13 }}>{d.levertijd}</p>
                 </div>
-              </div>
 
-              {/* Rechts */}
-              <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                <div className="p-8 lg:p-10 rounded-lg hover:-translate-y-1 transition-all duration-300" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
-                  <div className="flex items-start justify-between gap-4 mb-7">
-                    <div>
-                      <p className="text-[#6B8FA6] uppercase tracking-widest mb-1" style={{ fontSize: 11 }}>Investering</p>
-                      <p className="font-display font-black text-[#0F2D4B]" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 28 }}>{d.price}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-[#6B8FA6] uppercase tracking-widest mb-1" style={{ fontSize: 11 }}>Levertijd</p>
-                      <p className="font-semibold text-[#0F2D4B]" style={{ fontSize: 14 }}>{d.levertijd}</p>
-                    </div>
-                  </div>
-                  <p className="font-bold text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, letterSpacing: '2px' }}>
-                    Inbegrepen
+                {/* Midden: omschrijving + resultaat */}
+                <div>
+                  <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
+                    {d.wat}
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <p className="text-[#D97737]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                    {d.resultaat}
+                  </p>
+                </div>
+
+                {/* Rechts: inbegrepen + link */}
+                <div>
+                  <p className="text-[#6B8FA6] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Inbegrepen</p>
+                  <ul className="space-y-2 mb-8">
                     {d.inbegrepen.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="text-[#D97737] font-bold mt-0.5 flex-shrink-0" style={{ fontSize: 14 }}>✓</span>
-                        <span className="text-[#3D5A6E]" style={{ fontSize: 14, lineHeight: 1.6 }}>{item}</span>
+                      <li key={item} className="flex items-start gap-2 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D97737]" style={{ marginTop: '9px' }} />
+                        {item}
                       </li>
                     ))}
                   </ul>
                   <Link
                     href="/contact"
-                    className="w-full inline-flex items-center justify-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors"
-                    style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, letterSpacing: '2px' }}
+                    className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors"
+                    style={{ fontSize: 14 }}
                   >
-                    Offerte Aanvragen
+                    Offerte aanvragen
                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                       <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </Link>
                 </div>
+
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          ))}
+        </div>
+      </section>
 
       {/* CTA */}
-      <section className="py-12 lg:py-16" style={{ background: '#ffffff' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <div className="p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.08)' }}>
+      <section style={{ background: '#ffffff', paddingBottom: '60px' }}>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px', borderTop: '1px solid #E2EAF0', paddingTop: '48px' }}>
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div>
-              <h2 className="font-bold text-[#0F2D4B] mb-2" style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                Niet Zeker Welke Dienst Past?
+              <h2 className="font-bold text-[#0F2D4B] mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+                Niet zeker welke dienst past?
               </h2>
-              <p className="text-[#3D5A6E]" style={{ fontSize: 16 }}>
+              <p className="text-[#6B8FA6]" style={{ fontSize: 14 }}>
                 Wij adviseren u gratis op basis van uw installatie en situatie.
               </p>
             </div>
-            <Link href="/contact" className="flex-shrink-0 inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}>
-              Gratis Adviesgesprek
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors flex-shrink-0"
+              style={{ fontSize: 14 }}
+            >
+              Gratis adviesgesprek
+              <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
           </div>
         </div>

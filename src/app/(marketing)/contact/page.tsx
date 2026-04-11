@@ -29,13 +29,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="pb-0" style={{ paddingTop: '120px', background: '#ffffff' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
+          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Contact
-          </p>
-          <h1 className="font-bold text-[#0F2D4B] leading-none" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Neem Contact Op
           </h1>
         </div>
       </section>

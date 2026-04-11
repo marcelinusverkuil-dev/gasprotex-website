@@ -21,12 +21,9 @@ export default function WaaromSection() {
     <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
-            De Technologie
-          </p>
-          <h2 className="font-bold text-[#0F2D4B] mb-5" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Waarom Akoestisch?
+        <div className="mb-12">
+          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+            Waarom akoestisch?
           </h2>
           <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
             Traditionele methoden missen lekken die onhoorbaar zijn en moeilijk bereikbaar zijn.

@@ -54,17 +54,11 @@ export default function CasesPage() {
   return (
     <>
       {/* Header */}
-      <section className="pb-0" style={{ paddingTop: '120px', background: '#ffffff' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
-            Onze Cases
-          </p>
-          <h1 className="font-bold text-[#0F2D4B] leading-none mb-5" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Resultaten In De Praktijk
+          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+            Cases
           </h1>
-          <p className="text-[#3D5A6E] max-w-xl" style={{ fontSize: 17, lineHeight: 1.75 }}>
-            Bekijk hoe wij bedrijven helpen gaslekken te detecteren en kosten te besparen.
-          </p>
         </div>
       </section>
 

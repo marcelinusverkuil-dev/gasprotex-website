@@ -32,16 +32,10 @@ export default function DienstenSection() {
     <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
-            Onze Diensten
-          </p>
-          <h2 className="font-bold text-[#0F2D4B] mb-5" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Wat Wij Voor U Doen
+        <div className="mb-12">
+          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+            Wat wij voor u doen
           </h2>
-          <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
-            Drie diensten — van snelle screening tot proactief jaarabonnement. Kies wat past bij uw situatie.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
