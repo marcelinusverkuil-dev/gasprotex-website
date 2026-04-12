@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import GasProtexLogo from '@/components/ui/GasProtexLogo'
 
 const nav = {
   Diensten: [
@@ -30,7 +29,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <p className="text-[#7AADCC] leading-relaxed max-w-xs" style={{ fontSize: 14, lineHeight: 1.75 }}>
+            <p className="text-[#7AADCC] leading-relaxed max-w-xs" style={{ fontSize: 15, lineHeight: 1.8 }}>
               Akoestische gaslekdetectie voor de Nederlandse industrie.
               Sneller, veiliger, zonder productiestilstand.
             </p>
@@ -52,10 +51,7 @@ export default function Footer() {
           {/* Nav columns */}
           {Object.entries(nav).map(([category, links]) => (
             <div key={category}>
-              <p
-                className="font-display font-bold uppercase text-white mb-5"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, letterSpacing: '2px' }}
-              >
+              <p className="font-bold text-white mb-5" style={{ fontSize: 14, letterSpacing: '-0.02em' }}>
                 {category}
               </p>
               <ul className="space-y-3">
@@ -64,7 +60,7 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-[#7AADCC] hover:text-[#D97737] transition-colors"
-                      style={{ fontSize: 14 }}
+                      style={{ fontSize: 15 }}
                     >
                       {link.label}
                     </Link>

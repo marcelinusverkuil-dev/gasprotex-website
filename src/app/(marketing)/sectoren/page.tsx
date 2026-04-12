@@ -93,13 +93,13 @@ export default function SectorenPage() {
                   style={{ background: 'rgba(10,28,48,0.88)' }}
                 >
                   <div style={{ margin: '32px 24px' }}>
-                    <h2 className="font-bold text-white text-center mb-3" style={{ fontSize: 18, lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                    <h2 className="font-bold text-white mb-3" style={{ fontSize: 18, lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                       {s.title}
                     </h2>
-                    <p className="text-[#C2DCE8] mb-5" style={{ fontSize: 13, lineHeight: 1.7 }}>
+                    <p className="text-[#C2DCE8] mb-5" style={{ fontSize: 15, lineHeight: 1.8 }}>
                       {s.intro}
                     </p>
-                    <span className="inline-flex items-center justify-center w-full gap-2 font-semibold text-[#D97737] text-sm">
+                    <span className="inline-flex items-center gap-2 font-semibold text-[#D97737]" style={{ fontSize: 14 }}>
                       Meer lezen
                       <svg width="12" height="9" viewBox="0 0 14 10" fill="none">
                         <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

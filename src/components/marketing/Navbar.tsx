@@ -63,7 +63,7 @@ export default function Navbar() {
               className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
               style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
             >
-              Inloggen
+              Klantenportaal
             </a>
             <a
               href="https://calendly.com/gasprotex-info/30min"
