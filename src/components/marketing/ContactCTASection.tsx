@@ -50,11 +50,7 @@ export default function ContactCTASection() {
             {/* Rechts — formulier */}
             <div>
               {status === 'sent' ? (
-                <div className="rounded-xl p-10 text-center" style={{ background: 'rgba(255,255,255,0.07)' }}>
-                  <div className="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full text-xl text-[#D97737]"
-                    style={{ background: 'rgba(217,119,55,0.15)', border: '1px solid rgba(217,119,55,0.3)' }}>
-                    ✓
-                  </div>
+                <div className="text-center py-8">
                   <h3 className="font-bold text-white mb-2" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
                     Bericht ontvangen
                   </h3>
@@ -69,14 +65,14 @@ export default function ContactCTASection() {
                       <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Naam *</label>
                       <input required value={form.naam} onChange={(e) => setForm({ ...form, naam: e.target.value })}
                         className="w-full rounded-lg px-4 py-3 text-white placeholder-[#7AADCC] outline-none transition-colors"
-                        style={{ fontSize: 15, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+                        style={{ fontSize: 15, background: 'transparent', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0 }}
                         placeholder="Jan de Vries" />
                     </div>
                     <div>
                       <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Bedrijf *</label>
                       <input required value={form.bedrijf} onChange={(e) => setForm({ ...form, bedrijf: e.target.value })}
                         className="w-full rounded-lg px-4 py-3 text-white placeholder-[#7AADCC] outline-none transition-colors"
-                        style={{ fontSize: 15, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+                        style={{ fontSize: 15, background: 'transparent', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0 }}
                         placeholder="Uw Bedrijf BV" />
                     </div>
                   </div>
@@ -84,14 +80,14 @@ export default function ContactCTASection() {
                     <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>E-mailadres *</label>
                     <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className="w-full rounded-lg px-4 py-3 text-white placeholder-[#7AADCC] outline-none transition-colors"
-                      style={{ fontSize: 15, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+                      style={{ fontSize: 15, background: 'transparent', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0 }}
                       placeholder="jan@bedrijf.nl" />
                   </div>
                   <div>
                     <label className="block text-[#7AADCC] mb-1.5" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Uw situatie</label>
                     <textarea rows={4} value={form.bericht} onChange={(e) => setForm({ ...form, bericht: e.target.value })}
                       className="w-full rounded-lg px-4 py-3 text-white placeholder-[#7AADCC] outline-none transition-colors resize-none"
-                      style={{ fontSize: 15, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+                      style={{ fontSize: 15, background: 'transparent', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0 }}
                       placeholder="Bijv. type installatie, oppervlakte, urgentie..." />
                   </div>
                   <button type="submit" disabled={status === 'sending'}

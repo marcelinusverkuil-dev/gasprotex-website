@@ -166,11 +166,69 @@ Elke dienst staat in één zelfstandige container met gradient achtergrond — d
 - Prijs / resultaat / link: `text-[#D97737]` (orange)
 - Bullets: kleine oranje dot `bg-[#D97737]`
 
+### Lettertypes binnen gradient containers
+- Sectie-titel (h2): `clamp(26px, 3vw, 38px)`
+- Card-titel (h3/h4): `18px`
+- Body tekst: `15px`, lineHeight `1.7–1.8`
+- Labels / uppercase: `13px`
+- Vergelijkingstabel rijen: `15px`
+- Prijzen: `18–22px`, bold, oranje
+
+### Opbouw per pagina
+Elke pagina volgt dit patroon:
+1. **Witte header** — `paddingTop: 100px, paddingBottom: 40px`, simpele h1, geen eyebrow-label
+2. **Sectie met gradient containers** — `paddingTop: 32px, paddingBottom: 8px` (laatste sectie: `32px` onder)
+3. **CTA container** — zelfde gradient, kleinere padding `40px 48px`, tekst + pijl-link
+
+### Opbouw per container
+Elke container heeft:
+- Buitenste wrapper: `rounded-2xl overflow-hidden`, gradient achtergrond, `padding: 48px`
+- Optioneel: subtitle in `text-[#7AADCC]` boven de h2
+- h2 titel in `text-white`
+- Daarna grid met content (kolommen afhankelijk van inhoud)
+
+### Grid-varianten
+- **3 kolommen** (diensten): titel+meta / omschrijving+resultaat / inbegrepen+link
+- **2 kolommen** (over ons missie, contact): info links / content rechts
+- **4 kolommen** (sectoren, kernwaarden): gelijke kaartjes naast elkaar
+- **Vergelijkingstabel**: `grid-cols-3`, header-rij in `text-[#7AADCC]` + `text-[#D97737]`, geen borders
+
+### Lijst-stijl binnen containers
+```tsx
+<ul className="space-y-2">
+  <li className="flex items-start gap-2 text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D97737]" style={{ marginTop: '9px' }} />
+    Lijstitem tekst
+  </li>
+</ul>
+```
+
+### CTA-container (onderaan elke pagina)
+```tsx
+<div
+  className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+  style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+>
+  <div>
+    <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+      Titel
+    </h2>
+    <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>Subtekst</p>
+  </div>
+  <Link className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors" style={{ fontSize: 14 }}>
+    Linktext
+    <svg ...pijl... />
+  </Link>
+</div>
+```
+
 ### Regels
 - Gradient altijd: `linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)`
 - Hover: `hover:-translate-y-1 hover:shadow-xl`
 - Geen witte achtergrond, geen border — gradient is de container
+- Geen inner containers (`rgba(255,255,255,0.07)`) — content direct op gradient
 - CTA-blok onderaan volgt dezelfde gradient
+- Geen strepen/borders binnen tabelrijen
 
 ---
 

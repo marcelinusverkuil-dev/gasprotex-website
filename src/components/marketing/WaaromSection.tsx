@@ -37,10 +37,10 @@ export default function WaaromSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {voordelen.map((v, i) => (
                 <div key={i}>
-                  <h4 className="font-bold text-white mb-2" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
+                  <h4 className="font-bold text-white mb-2" style={{ fontSize: 18, letterSpacing: '-0.02em' }}>
                     {v.title}
                   </h4>
-                  <p className="text-[#C2DCE8]" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                  <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                     {v.description}
                   </p>
                 </div>
@@ -57,18 +57,18 @@ export default function WaaromSection() {
               Traditioneel vs. akoestisch
             </h3>
             <div>
-              <div className="grid grid-cols-3 pb-3 mb-2" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
-                <span className="text-[#7AADCC]" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}></span>
-                <span className="text-[#7AADCC]" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Traditioneel</span>
-                <span className="text-[#D97737]" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>GasProtex</span>
+              <div className="grid grid-cols-3 pb-3 mb-2" style={{  }}>
+                <span className="text-[#7AADCC]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}></span>
+                <span className="text-[#7AADCC]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Traditioneel</span>
+                <span className="text-[#D97737]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>GasProtex</span>
               </div>
               {vergelijking.map((row, i) => (
-                <div key={i} className="grid grid-cols-3 py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                  <span className="text-[#C2DCE8] font-medium" style={{ fontSize: 13 }}>{row.aspect}</span>
-                  <span className="text-[#7AADCC] flex items-center gap-1" style={{ fontSize: 13 }}>
+                <div key={i} className="grid grid-cols-3 py-3" style={{  }}>
+                  <span className="text-[#C2DCE8] font-medium" style={{ fontSize: 15 }}>{row.aspect}</span>
+                  <span className="text-[#7AADCC] flex items-center gap-1" style={{ fontSize: 15 }}>
                     <span className="text-red-400">✕</span> {row.traditioneel}
                   </span>
-                  <span className="text-white font-semibold flex items-center gap-1" style={{ fontSize: 13 }}>
+                  <span className="text-white font-semibold flex items-center gap-1" style={{ fontSize: 15 }}>
                     <span style={{ color: '#D97737' }}>✓</span> {row.akoestisch}
                   </span>
                 </div>
