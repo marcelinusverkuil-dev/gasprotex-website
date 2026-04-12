@@ -5,7 +5,6 @@ import WaaromSection from '@/components/marketing/WaaromSection'
 import SectorenSection from '@/components/marketing/SectorenSection'
 import ContactCTASection from '@/components/marketing/ContactCTASection'
 import Footer from '@/components/marketing/Footer'
-import CTABanner from '@/components/marketing/CTABanner'
 
 export default function HomePage() {
   return (
@@ -17,7 +16,6 @@ export default function HomePage() {
         <WaaromSection />
         <SectorenSection />
         <ContactCTASection />
-<CTABanner />
       </main>
       <Footer />
     </>

@@ -2,32 +2,26 @@ import Link from 'next/link'
 
 export default function CTABanner() {
   return (
-    <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
+    <section className="py-28 lg:py-36" style={{ background: '#ffffff' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
         <div
-          className="p-8 lg:p-12 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
-          style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.08)' }}
+          className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+          style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
         >
           <div>
-            <p className="text-sm font-semibold mb-3" style={{ color: '#D97737', letterSpacing: '2px', textTransform: 'uppercase' }}>
-              Gratis advies
-            </p>
-            <h2
-              className="font-bold text-[#0F2D4B] mb-2"
-              style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
-            >
-              Klaar Voor Een Gratis Quickscan?
+            <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+              Klaar voor een gratis quickscan?
             </h2>
-            <p className="text-[#3D5A6E]" style={{ fontSize: 16 }}>
+            <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
               Wij adviseren u gratis op basis van uw installatie en situatie.
             </p>
           </div>
           <Link
             href="/contact"
-            className="flex-shrink-0 inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors"
-            style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}
+            className="flex-shrink-0 inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors"
+            style={{ fontSize: 14 }}
           >
-            Gratis Adviesgesprek
+            Gratis adviesgesprek
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
               <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

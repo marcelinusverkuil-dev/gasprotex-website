@@ -23,14 +23,14 @@ const nav = {
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#08192A' }}>
+    <footer style={{ background: '#0F2D4B' }}>
       {/* Main footer */}
       <div className="max-w-7xl mx-auto section-container py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <p className="text-[#4A7A99] leading-relaxed max-w-xs" style={{ fontSize: 14, lineHeight: 1.75 }}>
+            <p className="text-[#7AADCC] leading-relaxed max-w-xs" style={{ fontSize: 14, lineHeight: 1.75 }}>
               Akoestische gaslekdetectie voor de Nederlandse industrie.
               Sneller, veiliger, zonder productiestilstand.
             </p>
@@ -40,7 +40,7 @@ export default function Footer() {
               {['ATEX Gecertificeerd', 'ISO 50001', 'HSE Compliant'].map((cert) => (
                 <span
                   key={cert}
-                  className="inline-block text-[#4A7A99] uppercase tracking-widest"
+                  className="inline-block text-[#7AADCC] uppercase tracking-widest"
                   style={{ fontSize: 10, letterSpacing: '1.5px' }}
                 >
                   {cert}
@@ -63,7 +63,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[#4A7A99] hover:text-[#D97737] transition-colors"
+                      className="text-[#7AADCC] hover:text-[#D97737] transition-colors"
                       style={{ fontSize: 14 }}
                     >
                       {link.label}
@@ -79,7 +79,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(74,122,153,0.15)' }}>
         <div className="max-w-7xl mx-auto section-container py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#2E5470]" style={{ fontSize: 13 }}>
+          <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>
             © {new Date().getFullYear()} GasProtex B.V. — Alle rechten voorbehouden.
           </p>
           <div className="flex items-center gap-6">
@@ -87,7 +87,7 @@ export default function Footer() {
               { label: 'Privacybeleid', href: '/privacy' },
               { label: 'Algemene Voorwaarden', href: '/voorwaarden' },
             ].map((l) => (
-              <Link key={l.label} href={l.href} className="text-[#2E5470] hover:text-[#4A7A99] transition-colors" style={{ fontSize: 13 }}>
+              <Link key={l.label} href={l.href} className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
                 {l.label}
               </Link>
             ))}

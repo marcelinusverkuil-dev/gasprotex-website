@@ -29,10 +29,10 @@ const diensten = [
 
 export default function DienstenSection() {
   return (
-    <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
+    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-        <div className="mb-12">
+        <div className="mb-10">
           <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Wat wij voor u doen
           </h2>
@@ -42,23 +42,21 @@ export default function DienstenSection() {
           {diensten.map((d) => (
             <div
               key={d.nr}
-              className="bg-white flex flex-col p-8 rounded-lg hover:-translate-y-1 transition-all duration-300"
-              style={{ boxShadow: '0 4px 20px rgba(15,45,75,0.08)' }}
+              className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col"
+              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '36px' }}
             >
-              <p className="text-xs font-semibold uppercase text-[#D97737] mb-2" style={{ letterSpacing: '1.5px' }}>
-                {d.subtitle}
-              </p>
-              <h3 className="font-bold text-[#0F2D4B] mb-4" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
+              <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>{d.subtitle}</p>
+              <h3 className="font-bold text-white mb-4" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
                 {d.title}
               </h3>
-              <p className="text-[#3D5A6E] leading-relaxed flex-1 mb-6" style={{ fontSize: 15 }}>
+              <p className="text-[#C2DCE8] flex-1 mb-6" style={{ fontSize: 15, lineHeight: 1.7 }}>
                 {d.description}
               </p>
-              <div className="flex items-center justify-between pt-4" >
-                <span className="font-bold text-[#0F2D4B]" style={{ fontSize: 15 }}>{d.price}</span>
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-[#D97737]" style={{ fontSize: 15 }}>{d.price}</span>
                 <Link
                   href={d.href}
-                  className="inline-flex items-center gap-2 font-semibold text-[#D97737] hover:gap-3 transition-all text-sm"
+                  className="inline-flex items-center gap-2 font-semibold text-[#D97737] hover:text-[#E8893A] transition-colors text-sm"
                 >
                   Meer info
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
@@ -68,16 +66,6 @@ export default function DienstenSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-10 py-4 rounded-lg transition-colors"
-            style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}
-          >
-            Vraag een Gratis Quickscan Aan
-          </Link>
         </div>
       </div>
     </section>

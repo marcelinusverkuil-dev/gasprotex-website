@@ -18,58 +18,64 @@ const vergelijking = [
 
 export default function WaaromSection() {
   return (
-    <section className="py-24 lg:py-32" style={{ background: '#ffffff' }}>
+    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-        <div className="mb-12">
+        <div className="mb-10">
           <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Waarom akoestisch?
           </h2>
-          <p className="text-[#3D5A6E] max-w-xl mx-auto leading-relaxed" style={{ fontSize: 17 }}>
-            Traditionele methoden missen lekken die onhoorbaar zijn en moeilijk bereikbaar zijn.
-            Onze akoestische camera ziet geluid — en maakt het zichtbaar.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {voordelen.map((v, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-lg p-7 hover:-translate-y-1 transition-all duration-300"
-              style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}
-            >
-              <h4 className="font-bold text-[#0F2D4B] mb-3" style={{ fontSize: 18, letterSpacing: '-0.02em' }}>
-                {v.title}
-              </h4>
-              <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 14 }}>
-                {v.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <div className="flex flex-col gap-6">
 
-        <div className="max-w-3xl mx-auto">
-          <h3 className="font-bold text-[#0F2D4B] mb-6 text-center" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
-            Traditioneel vs. Akoestisch
-          </h3>
-          <div className="overflow-hidden rounded-lg" style={{ boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
-            <div className="grid grid-cols-3 px-6 py-3" style={{ background: '#0F2D4B' }}>
-              <span className="font-display font-bold uppercase text-xs text-white" style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '1.5px' }}></span>
-              <span className="font-display font-bold uppercase text-xs text-white" style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '1.5px' }}>Traditioneel</span>
-              <span className="font-display font-bold uppercase text-xs" style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '1.5px', color: '#D97737' }}>GasProtex</span>
+          {/* Voordelen grid */}
+          <div
+            className="rounded-2xl overflow-hidden"
+            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {voordelen.map((v, i) => (
+                <div key={i}>
+                  <h4 className="font-bold text-white mb-2" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
+                    {v.title}
+                  </h4>
+                  <p className="text-[#C2DCE8]" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                    {v.description}
+                  </p>
+                </div>
+              ))}
             </div>
-            {vergelijking.map((row, i) => (
-              <div key={i} className="grid grid-cols-3 px-6 py-3.5 bg-white">
-                <span className="text-[#3D5A6E] font-medium" style={{ fontSize: 13 }}>{row.aspect}</span>
-                <span className="text-[#6B8FA6] flex items-center gap-1" style={{ fontSize: 13 }}>
-                  <span className="text-red-400">✕</span> {row.traditioneel}
-                </span>
-                <span className="text-[#0F2D4B] font-semibold flex items-center gap-1" style={{ fontSize: 13 }}>
-                  <span style={{ color: '#D97737' }}>✓</span> {row.akoestisch}
-                </span>
-              </div>
-            ))}
           </div>
+
+          {/* Vergelijkingstabel */}
+          <div
+            className="rounded-2xl overflow-hidden"
+            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+          >
+            <h3 className="font-bold text-white mb-8" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
+              Traditioneel vs. akoestisch
+            </h3>
+            <div>
+              <div className="grid grid-cols-3 pb-3 mb-2" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                <span className="text-[#7AADCC]" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}></span>
+                <span className="text-[#7AADCC]" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Traditioneel</span>
+                <span className="text-[#D97737]" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>GasProtex</span>
+              </div>
+              {vergelijking.map((row, i) => (
+                <div key={i} className="grid grid-cols-3 py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                  <span className="text-[#C2DCE8] font-medium" style={{ fontSize: 13 }}>{row.aspect}</span>
+                  <span className="text-[#7AADCC] flex items-center gap-1" style={{ fontSize: 13 }}>
+                    <span className="text-red-400">✕</span> {row.traditioneel}
+                  </span>
+                  <span className="text-white font-semibold flex items-center gap-1" style={{ fontSize: 13 }}>
+                    <span style={{ color: '#D97737' }}>✓</span> {row.akoestisch}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -91,6 +91,10 @@ Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#D97737]/20` 
 - Padding desktop: `px-[80px]` of `px-20`
 - Padding mobiel: `px-6`
 
+### Navbar
+- Achtergrond bij scrollen of op niet-homepagina: `bg-[#0F2D4B]/97` (= `--steel`) met `backdrop-blur-md`
+- Op de homepage transparant totdat gebruiker scrollt
+
 ### Donkere secties (default)
 - Achtergrond: `bg-steel` of `bg-iron`
 - Voeg altijd `noise-overlay` toe voor subtiele textuur (via `::before`)
@@ -134,6 +138,39 @@ Geïnspireerd op de services/nieuws-blokken van I-care: rustig, veel witruimte, 
 - Rand: `border border-[--border-light]` (subtiel, niet dikker dan 1px)
 - Geen grote afbeeldingen die de kaart domineren — tekst is primair
 - "Lees meer →" in `text-brand-blue`, hover naar `text-orange`
+
+---
+
+## Diensten-kaarten (gradient stijl)
+
+Elke dienst staat in één zelfstandige container met gradient achtergrond — donkerblauw links, lichterblauw rechts.
+
+### Structuur
+```tsx
+<div
+  className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+  style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+>
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+    {/* Kolom 1: titel, subtitle, prijs, levertijd */}
+    {/* Kolom 2: omschrijving + resultaat */}
+    {/* Kolom 3: inbegrepen lijst + link */}
+  </div>
+</div>
+```
+
+### Tekstkleuren op gradient
+- Titel: `text-white`
+- Subtitle / levertijd / labels: `text-[#7AADCC]` (fog)
+- Body: `text-[#C2DCE8]` (mist)
+- Prijs / resultaat / link: `text-[#D97737]` (orange)
+- Bullets: kleine oranje dot `bg-[#D97737]`
+
+### Regels
+- Gradient altijd: `linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)`
+- Hover: `hover:-translate-y-1 hover:shadow-xl`
+- Geen witte achtergrond, geen border — gradient is de container
+- CTA-blok onderaan volgt dezelfde gradient
 
 ---
 

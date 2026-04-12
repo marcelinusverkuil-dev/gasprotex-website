@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -62,67 +63,75 @@ export default function CasesPage() {
         </div>
       </section>
 
-      {/* Cases */}
-      {cases.map((c, index) => (
-        <section key={c.id} id={c.id} style={{ background: '#ffffff' }}>
-          <div className="max-w-7xl mx-auto py-20 lg:py-28" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
-
-              {/* Links */}
-              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} p-8 lg:p-10 rounded-lg hover:-translate-y-1 transition-all duration-300`} style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
-                <p className="text-sm font-semibold uppercase text-[#D97737] mb-2" style={{ letterSpacing: '1.5px' }}>
-                  {c.sector}
-                </p>
-                <h2 className="font-bold text-[#0F2D4B] mb-6" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                  {c.title}
-                </h2>
-                <p className="text-[#3D5A6E] leading-relaxed mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                  {c.omschrijving}
-                </p>
-                <div className="p-5 rounded-lg" style={{ background: 'rgba(217,119,55,0.06)', borderLeft: '3px solid #D97737' }}>
-                  <p className="font-display font-bold uppercase text-[#D97737] mb-1" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12, letterSpacing: '2px' }}>
-                    Conclusie
-                  </p>
-                  <p className="text-[#0F2D4B]" style={{ fontSize: 15 }}>{c.conclusie}</p>
-                </div>
-              </div>
-
-              {/* Rechts */}
-              <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                <div className="p-8 lg:p-10 rounded-lg hover:-translate-y-1 transition-all duration-300" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.06)' }}>
-                  <p className="font-bold text-[#0F2D4B] mb-5" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, letterSpacing: '2px' }}>
-                    Resultaten
-                  </p>
-                  <ul className="space-y-3 mb-8">
-                    {c.resultaten.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="text-[#D97737] font-bold mt-0.5 flex-shrink-0" style={{ fontSize: 14 }}>✓</span>
-                        <span className="text-[#3D5A6E]" style={{ fontSize: 14, lineHeight: 1.6 }}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      ))}
-
-      {/* CTA */}
-      <section className="py-12 lg:py-16" style={{ background: '#ffffff' }}>
+      <section style={{ background: '#ffffff', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <div className="p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" style={{ background: '#ffffff', boxShadow: '0 2px 12px rgba(15,45,75,0.08)' }}>
-            <div>
-              <h2 className="font-bold text-[#0F2D4B] mb-2" style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                Benieuwd Wat Wij Voor U Kunnen Betekenen?
-              </h2>
-              <p className="text-[#3D5A6E]" style={{ fontSize: 16 }}>
-                Neem vrijblijvend contact met ons op voor een kennismakingsgesprek.
-              </p>
+          <div className="flex flex-col gap-6">
+
+            {cases.map((c) => (
+              <div
+                key={c.id}
+                id={c.id}
+                className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+
+                  {/* Links: sector + titel + omschrijving */}
+                  <div className="lg:col-span-2">
+                    <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>{c.sector}</p>
+                    <h2 className="font-bold text-white mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                      {c.title}
+                    </h2>
+                    <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
+                      {c.omschrijving}
+                    </p>
+                    <p className="text-[#D97737]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                      {c.conclusie}
+                    </p>
+                  </div>
+
+                  {/* Rechts: resultaten */}
+                  <div>
+                    <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Resultaten</p>
+                    <ul className="space-y-2">
+                      {c.resultaten.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D97737]" style={{ marginTop: '9px' }} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            ))}
+
+            {/* CTA */}
+            <div
+              className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+            >
+              <div>
+                <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+                  Benieuwd wat wij voor u kunnen betekenen?
+                </h2>
+                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
+                  Neem vrijblijvend contact met ons op voor een kennismakingsgesprek.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors flex-shrink-0"
+                style={{ fontSize: 14 }}
+              >
+                Neem contact op
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
             </div>
-            <a href="/contact" className="flex-shrink-0 inline-flex items-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-colors" style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 14, letterSpacing: '2px' }}>
-              Neem Contact Op
-            </a>
+
           </div>
         </div>
       </section>
