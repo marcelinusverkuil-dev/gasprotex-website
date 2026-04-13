@@ -43,4 +43,39 @@ export async function sendContact(form: {
     console.error('[sendContact] Resend error:', JSON.stringify(error))
     throw new Error(error.message)
   }
+
+  // Bevestigingsmail naar klant
+  const voornaam = form.naam.split(' ')[0]
+  const bevestigingHtml = `
+    <div style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto">
+      <div style="background:#0F2D4B;padding:32px 40px;border-radius:8px 8px 0 0">
+        <img src="https://gasprotex-website.vercel.app/images/gasprotex-logo.png" alt="GasProtex" style="height:40px" />
+      </div>
+      <div style="background:#F4F7FA;padding:40px;border-radius:0 0 8px 8px">
+        <h2 style="color:#0F2D4B;margin:0 0 16px">Bedankt voor uw aanvraag, ${voornaam}</h2>
+        <p style="color:#3D5A6E;line-height:1.7;margin:0 0 16px">
+          Wij hebben uw aanvraag in goede orde ontvangen en nemen binnen <strong>één werkdag</strong> contact met u op.
+        </p>
+        <div style="background:#fff;border:1px solid #E8EDF2;border-radius:6px;padding:20px 24px;margin:24px 0">
+          <p style="color:#6B8FA6;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px">Uw aanvraag</p>
+          <table style="border-collapse:collapse;width:100%">
+            ${form.dienst ? `<tr><td style="padding:6px 0;color:#6B8FA6;font-size:13px;width:100px">Dienst</td><td style="padding:6px 0;color:#0F2D4B;font-size:13px">${form.dienst}</td></tr>` : ''}
+            ${form.bedrijf ? `<tr><td style="padding:6px 0;color:#6B8FA6;font-size:13px">Bedrijf</td><td style="padding:6px 0;color:#0F2D4B;font-size:13px">${form.bedrijf}</td></tr>` : ''}
+            ${form.bericht ? `<tr><td style="padding:6px 0;color:#6B8FA6;font-size:13px;vertical-align:top">Situatie</td><td style="padding:6px 0;color:#0F2D4B;font-size:13px;white-space:pre-wrap">${form.bericht}</td></tr>` : ''}
+          </table>
+        </div>
+        <p style="color:#3D5A6E;line-height:1.7;margin:0 0 8px">Met vriendelijke groet,</p>
+        <p style="color:#0F2D4B;font-weight:600;margin:0">Team GasProtex</p>
+        <p style="color:#6B8FA6;font-size:13px;margin:4px 0 0"><a href="mailto:info@gasprotex.nl" style="color:#D97737">info@gasprotex.nl</a></p>
+      </div>
+    </div>
+  `
+
+  await resend.emails.send({
+    from,
+    to: form.email,
+    replyTo: to,
+    subject: `Uw aanvraag bij GasProtex is ontvangen`,
+    html: bevestigingHtml,
+  })
 }
