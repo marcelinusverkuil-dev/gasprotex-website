@@ -1,25 +1,25 @@
 'use client';
 
 import Image from 'next/image';
-import { Shield, Clock, Calendar } from 'lucide-react';
+import { CircleGauge, ShieldAlert, Euro } from 'lucide-react';
 
 const badges = [
   {
-    icon: Shield,
-    value: 'Elke 17 min',
-    label: 'Productieverlies voorkomen',
+    icon: CircleGauge,
+    value: 'Lekdetectie',
+    label: 'Zonder productiestilstand',
     variant: 'steel' as const,
   },
   {
-    icon: Clock,
-    value: '+30%',
-    label: 'Beschikbaarheid installaties',
+    icon: ShieldAlert,
+    value: '30%',
+    label: 'Van perslucht gaat verloren door lekken',
     variant: 'orange' as const,
   },
   {
-    icon: Calendar,
-    value: '+50%',
-    label: 'Snellere onderhoudsplanning',
+    icon: Euro,
+    value: 'Directe',
+    label: 'Kostenindicatie',
     variant: 'steel' as const,
   },
 ];
