@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { sendContact } from '@/app/actions/sendContact'
 
 export default function ContactCTASection() {
   const [form, setForm] = useState({ naam: '', bedrijf: '', email: '', telefoon: '', bericht: '' })
@@ -9,8 +10,12 @@ export default function ContactCTASection() {
   async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     setStatus('sending')
-    await new Promise((r) => setTimeout(r, 800))
-    setStatus('sent')
+    try {
+      await sendContact({ ...form, functie: '', dienst: '', sector: '' })
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -90,6 +95,11 @@ export default function ContactCTASection() {
                       style={{ fontSize: 15, background: 'transparent', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0 }}
                       placeholder="Bijv. type installatie, oppervlakte, urgentie..." />
                   </div>
+                  {status === 'error' && (
+                    <p className="text-red-400 text-center" style={{ fontSize: 13 }}>
+                      Er is iets misgegaan. Probeer het opnieuw of mail ons op info@gasprotex.nl.
+                    </p>
+                  )}
                   <button type="submit" disabled={status === 'sending'}
                     className="w-full inline-flex items-center justify-center gap-3 bg-[#D97737] hover:bg-[#E8893A] disabled:opacity-60 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
                     style={{ fontSize: 15 }}>
