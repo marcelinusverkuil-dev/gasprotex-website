@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Barlow, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
+import AnalyticsWithConsent from '@/components/marketing/GoogleAnalytics'
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <AnalyticsWithConsent />
         <Script id="tawk-to" strategy="afterInteractive">{`
           var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           (function(){
