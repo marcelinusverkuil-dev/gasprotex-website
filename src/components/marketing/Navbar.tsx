@@ -59,13 +59,6 @@ export default function Navbar() {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://gasprotex-portal.vercel.app/login"
-              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
-            >
-              Klantenportaal
-            </a>
-            <a
               href="https://calendly.com/gasprotex-info/30min"
               target="_blank"
               rel="noopener noreferrer"
@@ -84,6 +77,13 @@ export default function Navbar() {
                 <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
+            <a
+              href="https://gasprotex-portal.vercel.app/login"
+              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
+              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+            >
+              Klantenportaal
+            </a>
           </div>
 
           {/* Mobile hamburger */}
