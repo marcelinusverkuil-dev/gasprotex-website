@@ -32,7 +32,8 @@ export default function CookieBanner({ onAccept }: { onAccept: () => void }) {
     }}>
       <p style={{ fontSize: 13, color: '#C2DCE8', lineHeight: 1.6, margin: 0, maxWidth: 700 }}>
         Wij gebruiken cookies om het websitebezoek te analyseren via Google Analytics.
-        Zo verbeteren wij onze dienstverlening. Uw gegevens worden anoniem verwerkt.
+        Zo verbeteren wij onze dienstverlening. Uw gegevens worden anoniem verwerkt.{' '}
+        <a href="/privacy" style={{ color: '#D97737', textDecoration: 'underline' }}>Meer informatie</a>.
       </p>
       <div style={{ display: 'flex', gap: 10, flexShrink: 0, marginRight: 80 }}>
         <button

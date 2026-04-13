@@ -73,12 +73,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(74,122,153,0.15)' }}>
-        <div className="max-w-7xl mx-auto section-container py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div style={{ marginTop: 32 }}>
+        <div className="max-w-7xl mx-auto section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>
             © {new Date().getFullYear()} GasProtex B.V. — Alle rechten voorbehouden.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-10">
             {[
               { label: 'Privacybeleid', href: '/privacy' },
               { label: 'Algemene Voorwaarden', href: '/voorwaarden' },
