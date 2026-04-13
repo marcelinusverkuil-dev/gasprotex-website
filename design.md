@@ -311,6 +311,23 @@ className="placeholder-[#7AADCC] outline-none transition-colors"
 - Geen achtergrond, geen border-radius — veld vloeit open in de sectie
 - Placeholder in `#7AADCC` (fog)
 
+### Autofill override (browser-autofill witte achtergrond voorkomen)
+Toevoegen aan `globals.css` van zowel website als portal:
+```css
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #0F2D4B inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+```
+- Kleur `#0F2D4B` (steel) voor donkere secties
+- Voor de gradient-container op de contactpagina: `#1E5C8C`
+
 ---
 
 ## Paginastructuur
