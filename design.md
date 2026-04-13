@@ -288,10 +288,28 @@ Geïnspireerd op I-care's statblokken — maar **zonder afleidende animaties**. 
 
 ## Formulieren
 
-- Geen zichtbare zware randen om invoervelden
-- Inputveld achtergrond: `rgba(255,255,255,0.08)` op donkere secties, `bg-surface` op lichte
+- Geen zichtbare zware randen om invoervelden — gebruik underline-stijl (alleen borderbottom)
 - Velden staan los van elkaar — geen rastereffect
 - Verzendknop altijd oranje (`bg-orange`)
+
+### Underline input stijl (standaard op donkere secties)
+```tsx
+// Input / Select / Textarea
+style={{
+  background: 'transparent',
+  border: 'none',
+  borderBottom: '1px solid rgba(255,255,255,0.25)',
+  borderRadius: 0,
+  padding: '8px 0',
+  fontSize: 15,
+  color: '#ffffff',
+}}
+className="placeholder-[#7AADCC] outline-none transition-colors"
+```
+
+- Label boven het veld: `text-[#7AADCC] font-medium`, `fontSize: 13`
+- Geen achtergrond, geen border-radius — veld vloeit open in de sectie
+- Placeholder in `#7AADCC` (fog)
 
 ---
 

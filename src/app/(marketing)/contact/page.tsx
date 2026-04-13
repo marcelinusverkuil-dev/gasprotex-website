@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { sendContact } from '@/app/actions/sendContact'
 
 const diensten = ['Quickscan (vanaf €2.500)', 'Fabrieksaudit (vanaf €5.000)', 'Serviceabonnement (vanaf €18.000/jaar)', 'Adviesgesprek (gratis)']
 const sectoren = ['Petrochemie & Chemie', 'Food & Beverage', 'Energie & Utilities', 'Algemene Industrie', 'Anders']
@@ -22,8 +23,12 @@ export default function ContactPage() {
   async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     setStatus('sending')
-    await new Promise((r) => setTimeout(r, 900))
-    setStatus('sent')
+    try {
+      await sendContact(form)
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
   }
 
   const set = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
@@ -31,16 +36,7 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Header */}
-      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Contact
-          </h1>
-        </div>
-      </section>
-
-      <section style={{ background: '#ffffff', paddingBottom: '60px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '60px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="flex flex-col gap-6">
 
@@ -112,8 +108,8 @@ export default function ContactPage() {
                           value={form.bericht}
                           onChange={set('bericht')}
                           placeholder="Beschrijf kort uw installatie: type gassen, oppervlakte, urgentie..."
-                          className="w-full rounded-lg px-4 py-3 outline-none transition-colors resize-none text-white placeholder-[#7AADCC]"
-                          style={{ fontSize: 15, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+                          className="w-full outline-none transition-colors resize-none text-white placeholder-[#7AADCC]"
+                          style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
                         />
                       </div>
                       <button
@@ -129,6 +125,11 @@ export default function ContactPage() {
                           </svg>
                         )}
                       </button>
+                      {status === 'error' && (
+                        <p className="text-red-400 text-center" style={{ fontSize: 13 }}>
+                          Er is iets misgegaan. Probeer het opnieuw of mail ons direct op info@gasprotex.nl.
+                        </p>
+                      )}
                       <p className="text-[#7AADCC] text-center" style={{ fontSize: 13 }}>
                         Uw gegevens worden alleen gebruikt voor het beantwoorden van uw aanvraag.
                       </p>
@@ -161,8 +162,8 @@ function InputField({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full rounded-lg px-4 py-3 text-white placeholder-[#7AADCC] outline-none transition-colors"
-        style={{ fontSize: 15, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+        className="w-full text-white placeholder-[#7AADCC] outline-none transition-colors"
+        style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
       />
     </div>
   )
@@ -182,8 +183,8 @@ function SelectField({
         required={required}
         value={value}
         onChange={onChange}
-        className="w-full rounded-lg px-4 py-3 text-white outline-none transition-colors"
-        style={{ fontSize: 15, background: 'rgba(30,90,138,0.8)', border: '1px solid rgba(255,255,255,0.12)' }}
+        className="w-full text-white outline-none transition-colors"
+        style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
       >
         <option value="" style={{ background: '#0F2D4B' }}>{placeholder}</option>
         {options.map((o) => <option key={o} value={o} style={{ background: '#0F2D4B' }}>{o}</option>)}
