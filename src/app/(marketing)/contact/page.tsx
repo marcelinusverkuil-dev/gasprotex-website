@@ -52,26 +52,21 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
                 {/* Links: logo + contactinfo */}
-                <div className="lg:col-span-2 flex flex-col gap-8">
-                  <div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/gasprotex_60_reduced_margin.png" alt="GasProtex" style={{ height: 48, width: 'auto' }} />
-                    <p className="font-bold text-white" style={{ fontSize: 18, marginTop: 12, letterSpacing: '-0.02em' }}>GasProtex</p>
-                  </div>
-                  <div className="flex flex-col gap-5">
-                    <a href="mailto:info@gasprotex.nl" className="flex items-center gap-3 text-[#C2DCE8] hover:text-white transition-colors" style={{ fontSize: 15, textDecoration: 'none' }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7AADCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                      </svg>
-                      info@gasprotex.nl
-                    </a>
-                    <a href="tel:+31613055282" className="flex items-center gap-3 text-[#C2DCE8] hover:text-white transition-colors" style={{ fontSize: 15, textDecoration: 'none' }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7AADCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
-                      </svg>
-                      +31 (0)6 13055282
-                    </a>
-                  </div>
+                <div className="lg:col-span-2 flex flex-col gap-5">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/gasprotex_60_reduced_margin.png" alt="GasProtex" style={{ height: 48, width: 'auto' }} />
+                  <a href="mailto:info@gasprotex.nl" className="flex items-center gap-3 text-[#C2DCE8] hover:text-white transition-colors" style={{ fontSize: 15, textDecoration: 'none' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7AADCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    info@gasprotex.nl
+                  </a>
+                  <a href="tel:+31613055282" className="flex items-center gap-3 text-[#C2DCE8] hover:text-white transition-colors" style={{ fontSize: 15, textDecoration: 'none' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7AADCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
+                    </svg>
+                    +31 (0)6 13055282
+                  </a>
                 </div>
 
                 {/* Rechts: formulier */}
