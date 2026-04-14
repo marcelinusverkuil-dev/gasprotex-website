@@ -42,23 +42,21 @@ export default function Navbar() {
             <img src="/images/gasprotex-logo.png" alt="GasProtex" style={{ height: '44px', width: 'auto' }} />
           </Link>
 
-          {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-8 list-none">
-            {navLinks.slice(0, 5).map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] transition-colors duration-200"
-                  style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* Desktop nav + Afspraak */}
+          <div className="hidden lg:flex items-center gap-12">
+            <ul className="flex items-center gap-8 list-none">
+              {navLinks.slice(0, 5).map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] transition-colors duration-200"
+                    style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <a
               href="https://calendly.com/gasprotex-info/30min"
               target="_blank"
@@ -68,14 +66,16 @@ export default function Navbar() {
             >
               Afspraak Inplannen
             </a>
-            <a
-              href="https://gasprotex-portal.vercel.app/login"
-              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
-            >
-              Klantenportaal
-            </a>
           </div>
+
+          {/* Klantenportaal rechts */}
+          <a
+            href="https://gasprotex-portal.vercel.app/login"
+            className="hidden lg:block font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
+            style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+          >
+            Klantenportaal
+          </a>
 
           {/* Mobile hamburger */}
           <button
