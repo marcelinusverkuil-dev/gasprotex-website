@@ -58,12 +58,13 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button
+            <a
+              href="/contact"
               className="bg-orange text-white text-sm font-semibold hover:bg-orange-hot transition-colors rounded-md"
-              style={{ minWidth: '200px', padding: '14px 32px' }}
+              style={{ minWidth: '200px', padding: '14px 32px', display: 'inline-block', textAlign: 'center' }}
             >
               Vraag een demo aan
-            </button>
+            </a>
           </div>
         </div>
 

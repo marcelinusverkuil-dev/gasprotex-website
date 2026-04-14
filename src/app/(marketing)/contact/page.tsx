@@ -37,12 +37,9 @@ export default function ContactPage() {
           <div className="flex flex-col gap-6">
 
             {/* Header */}
-            <div style={{ paddingBottom: 8 }}>
-              <p style={{ fontSize: 12, color: '#D97737', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600, marginBottom: 12 }}>Contact</p>
-              <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(28px, 3.5vw, 46px)', lineHeight: 1.2, letterSpacing: '-0.02em', margin: 0 }}>
-                Neem contact op
-              </h1>
-            </div>
+            <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+              Neem contact op
+            </h1>
 
             {/* Info + form container */}
             <div

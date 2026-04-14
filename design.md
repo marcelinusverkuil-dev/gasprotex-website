@@ -54,8 +54,8 @@ Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#D97737]/20` 
 
 ### Stijlregels
 - Koppen: `font-display font-bold`, grote tracking (`tracking-widest uppercase`) voor labels en nav
-- Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` boven de H1/H2
-- H1: `text-5xl` (desktop), `text-3xl` (mobiel), `font-bold`, `text-off-white` (donker) of `text-text-dark` (licht)
+- Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen secties**, nooit als eyebrow boven een pagina-H1
+- H1 (paginakop): `font-bold text-[#0F2D4B]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — geen label erboven
 - H2: `text-4xl font-bold`
 - Body: `text-fog` op donker, `text-text-body` op licht, `text-lg leading-relaxed`
 
@@ -94,6 +94,9 @@ Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#D97737]/20` 
 ### Navbar
 - Achtergrond bij scrollen of op niet-homepagina: `bg-[#0F2D4B]/97` (= `--steel`) met `backdrop-blur-md`
 - Op de homepage transparant totdat gebruiker scrollt
+- **Structuur desktop**: Logo (links) | nav-links + Afspraak Inplannen in één `<ul>` met `gap-8` (midden) | Klantenportaal (uiterst rechts, los element)
+- Nav-links: Diensten · Sectoren · Over Ons · Cases · Contact · Afspraak Inplannen — allemaal `gap-8`
+- Geen "Offerte Aanvragen" knop in de navbar
 
 ### Donkere secties (default)
 - Achtergrond: `bg-steel` of `bg-iron`
