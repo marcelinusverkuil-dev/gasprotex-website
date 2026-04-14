@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Sectoren', href: '/sectoren' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Cases', href: '/cases' },
+  { label: 'Contact', href: '/contact' },
   { label: 'Portaal', href: 'https://gasprotex-portal.vercel.app/login', external: true },
 ]
 
@@ -43,7 +44,7 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-8 list-none">
-            {navLinks.slice(0, 4).map((link) => (
+            {navLinks.slice(0, 5).map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}

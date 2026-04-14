@@ -6,16 +6,10 @@ import { sendContact } from '@/app/actions/sendContact'
 const diensten = ['Quickscan (vanaf €2.500)', 'Fabrieksaudit (vanaf €5.000)', 'Serviceabonnement (vanaf €18.000/jaar)', 'Adviesgesprek (gratis)']
 const sectoren = ['Petrochemie & Chemie', 'Food & Beverage', 'Energie & Utilities', 'Algemene Industrie', 'Anders']
 
-const stappen = [
-  { stap: '01', titel: 'Formulier invullen', tekst: 'Beschrijf kort uw situatie en kies een dienst.' },
-  { stap: '02', titel: 'Reactie binnen 1 werkdag', tekst: 'Wij nemen telefonisch of per mail contact op.' },
-  { stap: '03', titel: 'Inspectie inplannen', tekst: 'Op basis van uw installatie plannen wij een datum.' },
-  { stap: '04', titel: 'Rapportage ontvangen', tekst: 'U ontvangt dezelfde dag of binnen 3 werkdagen het rapport.' },
-]
 
 export default function ContactPage() {
   const [form, setForm] = useState({
-    naam: '', functie: '', bedrijf: '', email: '', telefoon: '',
+    naam: '', bedrijf: '', email: '', telefoon: '',
     dienst: '', sector: '', bericht: '',
   })
   const [honeypot, setHoneypot] = useState('')
@@ -26,7 +20,7 @@ export default function ContactPage() {
     if (honeypot) return // bot detected
     setStatus('sending')
     try {
-      await sendContact(form)
+      await sendContact({ ...form, functie: '' })
       setStatus('sent')
     } catch {
       setStatus('error')
@@ -42,6 +36,14 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="flex flex-col gap-6">
 
+            {/* Header */}
+            <div style={{ paddingBottom: 8 }}>
+              <p style={{ fontSize: 12, color: '#D97737', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600, marginBottom: 12 }}>Contact</p>
+              <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(28px, 3.5vw, 46px)', lineHeight: 1.2, letterSpacing: '-0.02em', margin: 0 }}>
+                Neem contact op
+              </h1>
+            </div>
+
             {/* Info + form container */}
             <div
               className="rounded-2xl overflow-hidden"
@@ -49,27 +51,26 @@ export default function ContactPage() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
-                {/* Links: info + stappen */}
-                <div className="lg:col-span-2">
-                  <h2 className="font-bold text-white mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 32px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                    Wij reageren binnen één werkdag
-                  </h2>
-                  <p className="text-[#C2DCE8] mb-10" style={{ fontSize: 15, lineHeight: 1.8 }}>
-                    Vertel ons over uw installatie en wij adviseren u welke dienst het beste past.
-                    Geen verplichtingen, gewoon eerlijk advies.
-                  </p>
-                  <div className="space-y-0">
-                    {stappen.map((item) => (
-                      <div key={item.stap} className="flex gap-5 py-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                        <span className="font-bold text-[#D97737] flex-shrink-0" style={{ fontSize: 18 }}>
-                          {item.stap}
-                        </span>
-                        <div>
-                          <p className="font-semibold text-white mb-0.5" style={{ fontSize: 14 }}>{item.titel}</p>
-                          <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>{item.tekst}</p>
-                        </div>
-                      </div>
-                    ))}
+                {/* Links: logo + contactinfo */}
+                <div className="lg:col-span-2 flex flex-col gap-8">
+                  <div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/gasprotex_60_reduced_margin.png" alt="GasProtex" style={{ height: 48, width: 'auto' }} />
+                    <p className="font-bold text-white" style={{ fontSize: 18, marginTop: 12, letterSpacing: '-0.02em' }}>GasProtex</p>
+                  </div>
+                  <div className="flex flex-col gap-5">
+                    <a href="mailto:info@gasprotex.nl" className="flex items-center gap-3 text-[#C2DCE8] hover:text-white transition-colors" style={{ fontSize: 15, textDecoration: 'none' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7AADCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                      </svg>
+                      info@gasprotex.nl
+                    </a>
+                    <a href="tel:+31613055282" className="flex items-center gap-3 text-[#C2DCE8] hover:text-white transition-colors" style={{ fontSize: 15, textDecoration: 'none' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7AADCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
+                      </svg>
+                      +31 (0)6 13055282
+                    </a>
                   </div>
                 </div>
 
@@ -102,12 +103,11 @@ export default function ContactPage() {
                       />
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <InputField label="Naam *" placeholder="Jan de Vries" required value={form.naam} onChange={set('naam')} />
-                        <InputField label="Functie" placeholder="HSE Manager" value={form.functie} onChange={set('functie')} />
+                        <InputField label="Bedrijf *" placeholder="Uw Bedrijf BV" required value={form.bedrijf} onChange={set('bedrijf')} />
                       </div>
-                      <InputField label="Bedrijf *" placeholder="Uw Bedrijf BV" required value={form.bedrijf} onChange={set('bedrijf')} />
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <InputField label="E-mailadres *" type="email" placeholder="jan@bedrijf.nl" required value={form.email} onChange={set('email')} />
-                        <InputField label="Telefoon" type="tel" placeholder="+31 6 12 34 56 78" value={form.telefoon} onChange={set('telefoon')} />
+                        <InputField label="Telefoon *" type="tel" placeholder="+31 6 12 34 56 78" required value={form.telefoon} onChange={set('telefoon')} />
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <SelectField label="Dienst *" required value={form.dienst} onChange={set('dienst')} options={diensten} placeholder="Kies een dienst" />
@@ -142,15 +142,13 @@ export default function ContactPage() {
                           Er is iets misgegaan. Probeer het opnieuw of mail ons direct op info@gasprotex.nl.
                         </p>
                       )}
-                      <p className="text-[#7AADCC] text-center" style={{ fontSize: 13 }}>
-                        Uw gegevens worden alleen gebruikt voor het beantwoorden van uw aanvraag.
-                      </p>
                     </form>
                   )}
                 </div>
 
               </div>
             </div>
+
 
           </div>
         </div>
