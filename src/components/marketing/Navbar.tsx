@@ -68,16 +68,6 @@ export default function Navbar() {
             >
               Afspraak Inplannen
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-[#D97737] hover:bg-[#E8893A] text-white font-display font-bold text-sm tracking-widest uppercase px-14 py-3 rounded-md transition-colors duration-200"
-              style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px', minWidth: '220px', justifyContent: 'center' }}
-            >
-              Offerte Aanvragen
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
-                <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
             <a
               href="https://gasprotex-portal.vercel.app/login"
               className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
@@ -128,14 +118,6 @@ export default function Navbar() {
           >
             Afspraak Inplannen
           </a>
-          <Link
-            href="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="inline-flex items-center gap-2 bg-[#D97737] text-white font-display font-bold text-sm tracking-widest uppercase px-8 py-3 rounded-md"
-            style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
-          >
-            Offerte Aanvragen
-          </Link>
         </div>
       </div>
     </>
