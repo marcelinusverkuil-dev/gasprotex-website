@@ -18,10 +18,12 @@ export default function ContactPage() {
     naam: '', functie: '', bedrijf: '', email: '', telefoon: '',
     dienst: '', sector: '', bericht: '',
   })
+  const [honeypot, setHoneypot] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
+    if (honeypot) return // bot detected
     setStatus('sending')
     try {
       await sendContact(form)
@@ -88,6 +90,16 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-4">
+                      {/* Honeypot — verborgen voor mensen, ingevuld door bots */}
+                      <input
+                        type="text"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                        style={{ display: 'none' }}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        aria-hidden="true"
+                      />
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <InputField label="Naam *" placeholder="Jan de Vries" required value={form.naam} onChange={set('naam')} />
                         <InputField label="Functie" placeholder="HSE Manager" value={form.functie} onChange={set('functie')} />
