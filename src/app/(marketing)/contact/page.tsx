@@ -156,13 +156,15 @@ export default function ContactPage() {
         </div>
 
         {/* Klachtenprocedure */}
-        <div style={{ marginTop: 24, padding: '20px 24px', background: '#F4F7FA', borderRadius: 10, borderLeft: '3px solid #D97737' }}>
-          <p style={{ fontSize: 13, color: '#3D5A6E', lineHeight: 1.8, margin: 0 }}>
-            <strong style={{ color: '#0F2D4B' }}>Klachten?</strong> Klachten over onze dienstverlening kunt u indienen via{' '}
-            <a href="mailto:info@gasprotex.nl" style={{ color: '#D97737' }}>info@gasprotex.nl</a>.
-            Wij streven ernaar uw klacht binnen 5 werkdagen te beantwoorden. Komt u er met ons niet uit,
-            dan kunt u zich wenden tot de bevoegde rechter in het arrondissement van onze vestigingsplaats.
-          </p>
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px', marginTop: 24 }}>
+          <div style={{ padding: '20px 24px', background: '#F4F7FA', borderRadius: 10, borderLeft: '3px solid #D97737' }}>
+            <p style={{ fontSize: 13, color: '#3D5A6E', lineHeight: 1.8, margin: 0 }}>
+              <strong style={{ color: '#0F2D4B' }}>Klachten?</strong> Klachten over onze dienstverlening kunt u indienen via{' '}
+              <a href="mailto:info@gasprotex.nl" style={{ color: '#D97737' }}>info@gasprotex.nl</a>.
+              Wij streven ernaar uw klacht binnen 5 werkdagen te beantwoorden. Komt u er met ons niet uit,
+              dan kunt u zich wenden tot de bevoegde rechter in het arrondissement van onze vestigingsplaats.
+            </p>
+          </div>
         </div>
 
       </section>
