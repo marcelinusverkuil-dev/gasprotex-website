@@ -54,6 +54,11 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <AnalyticsWithConsent />
+        <Script id="cal-embed" strategy="afterInteractive">{`
+          (function (C, A, L) { let p = function (a, ar) { ar.unshift(A); (a.q = a.q || []).push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://afspraken.gasprotex.nl/embed/embed.js", "init");
+          Cal("init", {origin:"https://afspraken.gasprotex.nl"});
+          Cal("ui", {"styles":{"branding":{"brandColor":"#D97737"}},"hideEventTypeDetails":false,"layout":"month_view"});
+        `}</Script>
         <Script id="tawk-to" strategy="afterInteractive">{`
           var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           (function(){

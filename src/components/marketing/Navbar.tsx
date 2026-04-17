@@ -56,15 +56,14 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a
-                href="https://calendly.com/gasprotex-info/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
+              <button
+                data-cal-link="gasprotex"
+                data-cal-origin="https://afspraken.gasprotex.nl"
+                className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0"
                 style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
               >
                 Afspraak Inplannen
-              </a>
+              </button>
             </li>
           </ul>
 
@@ -108,16 +107,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="https://calendly.com/gasprotex-info/30min"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            data-cal-link="gasprotex"
+            data-cal-origin="https://afspraken.gasprotex.nl"
             onClick={() => setMenuOpen(false)}
-            className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors py-2"
+            className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors py-2 bg-transparent border-0 cursor-pointer p-0 text-left"
             style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
           >
             Afspraak Inplannen
-          </a>
+          </button>
         </div>
       </div>
     </>
