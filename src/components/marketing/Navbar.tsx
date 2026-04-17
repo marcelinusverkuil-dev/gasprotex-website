@@ -12,13 +12,6 @@ const navLinks = [
   { label: 'Portaal', href: 'https://gasprotex-portal.vercel.app/login', external: true },
 ]
 
-function openCal() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Cal = (window as any).Cal
-  if (Cal) {
-    Cal('modal', { calLink: 'gasprotex', config: { layout: 'month_view' } })
-  }
-}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -64,13 +57,15 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <button
-                onClick={openCal}
-                className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0"
+              <a
+                href="https://afspraken.gasprotex.nl/gasprotex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
                 style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
               >
                 Afspraak Inplannen
-              </button>
+              </a>
             </li>
           </ul>
 
@@ -114,13 +109,16 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={() => { setMenuOpen(false); openCal() }}
-            className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors py-2 bg-transparent border-0 cursor-pointer p-0 text-left"
+          <a
+            href="https://afspraken.gasprotex.nl/gasprotex"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors py-2"
             style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
           >
             Afspraak Inplannen
-          </button>
+          </a>
         </div>
       </div>
     </>
