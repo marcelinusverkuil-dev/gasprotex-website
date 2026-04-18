@@ -56,6 +56,17 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://outlook.office365.com/owa/calendar/GasProtex1@gasprotex.nl/bookings/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
+                style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+              >
+                Afspraak Inplannen
+              </a>
+            </li>
           </ul>
 
           {/* Klantenportaal rechts */}
@@ -98,6 +109,16 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://outlook.office365.com/owa/calendar/GasProtex1@gasprotex.nl/bookings/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors py-2"
+            style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+          >
+            Afspraak Inplannen
+          </a>
         </div>
       </div>
     </>
