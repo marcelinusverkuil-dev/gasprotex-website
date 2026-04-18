@@ -58,7 +58,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="https://outlook.office365.com/owa/calendar/GasProtex1@gasprotex.nl/bookings/"
+                href="https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl/meetingtype/F699QzTdfkSovQ2Lxdnnbw2?anonymous&ismsaljsauthenabled&ep=mlink"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
@@ -110,7 +110,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://outlook.office365.com/owa/calendar/GasProtex1@gasprotex.nl/bookings/"
+            href="https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl/meetingtype/F699QzTdfkSovQ2Lxdnnbw2?anonymous&ismsaljsauthenabled&ep=mlink"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
