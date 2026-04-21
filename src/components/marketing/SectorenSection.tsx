@@ -126,7 +126,7 @@ export default function SectorenSection() {
               </p>
             </div>
             <Link
-              href="/lekkosten-calculator"
+              href="/bereken-uw-verlies"
               className="flex-shrink-0 inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors"
               style={{ fontSize: 14 }}
             >
