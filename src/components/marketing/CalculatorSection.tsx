@@ -8,6 +8,16 @@ const BEDRIJFSUREN_OPTIES = [
   { value: 2000, label: '250 werkdagen' },
 ]
 
+const inputStyle = {
+  background: 'transparent',
+  border: 'none',
+  borderBottom: '1px solid rgba(255,255,255,0.25)',
+  borderRadius: 0,
+  padding: '8px 0',
+  fontSize: 15,
+  color: '#ffffff',
+}
+
 export default function CalculatorSection() {
   const [lekdebiet, setLekdebiet] = useState('10')
   const [systeemdruk, setSysteemdruk] = useState('6')
@@ -36,7 +46,6 @@ export default function CalculatorSection() {
     <section style={{ background: '#ffffff', padding: '80px 0' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
-        {/* Kop */}
         <div className="mb-10">
           <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
             Gratis tool
@@ -51,34 +60,30 @@ export default function CalculatorSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-          {/* Invoer */}
-          <div className="rounded-2xl" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '40px' }}>
+          <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '40px' }}>
             <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-6">
 
               <div>
-                <label className="block text-[#C2DCE8] mb-2" style={{ fontSize: 14 }}>Lekdebiet (l/min)</label>
+                <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>Lekdebiet (l/min)</label>
                 <input type="number" min="0" value={lekdebiet} onChange={e => setLekdebiet(e.target.value)}
-                  className="w-full rounded-lg text-white font-semibold outline-none focus:ring-2 focus:ring-[#D97737]"
-                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', padding: '12px 16px', fontSize: 16 }}
-                  placeholder="bijv. 10" />
+                  className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} placeholder="bijv. 10" />
                 <p className="text-[#7AADCC] mt-1" style={{ fontSize: 12 }}>Afkomstig van detectietool of rapportage</p>
               </div>
 
               <div>
-                <label className="block text-[#C2DCE8] mb-2" style={{ fontSize: 14 }}>
-                  Systeemdruk (bar) <span className="text-[#7AADCC] ml-2" style={{ fontSize: 12 }}>standaard: 6</span>
+                <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
+                  Systeemdruk (bar) <span className="ml-1" style={{ fontSize: 12 }}>standaard: 6</span>
                 </label>
                 <input type="number" min="1" max="50" value={systeemdruk} onChange={e => setSysteemdruk(e.target.value)}
-                  className="w-full rounded-lg text-white font-semibold outline-none focus:ring-2 focus:ring-[#D97737]"
-                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', padding: '12px 16px', fontSize: 16 }} />
+                  className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
               </div>
 
               <div>
-                <label className="block text-[#C2DCE8] mb-2" style={{ fontSize: 14 }}>Bedrijfsuren per jaar</label>
+                <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>Bedrijfsuren per jaar</label>
                 <div className="flex gap-3">
                   {BEDRIJFSUREN_OPTIES.map(opt => (
-                    <button key={opt.value} onClick={() => setBedrijfsuren(opt.value)} className="flex-1 rounded-lg text-left transition-all"
+                    <button key={opt.value} onClick={() => setBedrijfsuren(opt.value)} className="flex-1 rounded-md text-left transition-all"
                       style={{ background: bedrijfsuren === opt.value ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: bedrijfsuren === opt.value ? '1px solid #D97737' : '1px solid rgba(255,255,255,0.12)', padding: '10px 12px' }}>
                       <span className="block font-semibold text-white" style={{ fontSize: 14 }}>{opt.value.toLocaleString('nl-NL')}</span>
                       <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>{opt.label}</span>
@@ -87,41 +92,37 @@ export default function CalculatorSection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[#C2DCE8] mb-2" style={{ fontSize: 14 }}>
-                    Tarief (€/kWh) <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>std. 0,20</span>
+                  <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
+                    Tarief (€/kWh) <span style={{ fontSize: 12 }}>std. 0,20</span>
                   </label>
                   <input type="text" inputMode="decimal" value={tarief} onChange={e => setTarief(e.target.value)}
-                    className="w-full rounded-lg text-white font-semibold outline-none focus:ring-2 focus:ring-[#D97737]"
-                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', padding: '12px 16px', fontSize: 16 }} />
+                    className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
                 </div>
                 <div>
-                  <label className="block text-[#C2DCE8] mb-2" style={{ fontSize: 14 }}>
-                    Spec. Power (kWh/m³) <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>std. 0,12</span>
+                  <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
+                    Spec. Power (kWh/m³) <span style={{ fontSize: 12 }}>std. 0,12</span>
                   </label>
                   <input type="text" inputMode="decimal" value={specificPower} onChange={e => setSpecificPower(e.target.value)}
-                    className="w-full rounded-lg text-white font-semibold outline-none focus:ring-2 focus:ring-[#D97737]"
-                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', padding: '12px 16px', fontSize: 16 }} />
+                    className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[#C2DCE8] mb-2" style={{ fontSize: 14 }}>
-                  Aantal lekkages <span className="text-[#7AADCC] ml-2" style={{ fontSize: 12 }}>standaard: 6</span>
+                <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
+                  Aantal lekkages <span style={{ fontSize: 12 }}>standaard: 6</span>
                 </label>
                 <input type="number" min="1" value={aantalLekken} onChange={e => setAantalLekken(e.target.value)}
-                  className="w-full rounded-lg text-white font-semibold outline-none focus:ring-2 focus:ring-[#D97737]"
-                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', padding: '12px 16px', fontSize: 16 }} />
+                  className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
               </div>
 
             </div>
           </div>
 
-          {/* Uitvoer */}
           <div className="flex flex-col gap-5">
 
-            <div className="rounded-2xl" style={{ background: 'linear-gradient(135deg, #D97737 0%, #C4631E 100%)', padding: '40px' }}>
+            <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #D97737 0%, #C4631E 100%)', padding: '40px' }}>
               <p className="text-orange-100 mb-2" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Totale kosten per jaar</p>
               <p className="font-bold text-white" style={{ fontSize: 'clamp(40px, 6vw, 68px)', lineHeight: 1, letterSpacing: '-0.03em' }}>
                 €{fmt(resultaat.euroJaar)}
@@ -137,7 +138,7 @@ export default function CalculatorSection() {
                 { label: 'CO₂-uitstoot', value: fmt(resultaat.co2ton, 2), unit: 'ton/jaar' },
                 { label: 'Auto-equivalent', value: fmt(resultaat.autoKm), unit: 'km/jaar' },
               ].map(k => (
-                <div key={k.label} className="rounded-2xl" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '24px 20px' }}>
+                <div key={k.label} className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '24px 20px' }}>
                   <p className="text-[#7AADCC] mb-1" style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase' }}>{k.label}</p>
                   <p className="font-bold text-white" style={{ fontSize: 'clamp(18px, 2.5vw, 26px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{k.value}</p>
                   <p className="text-[#7AADCC] mt-1" style={{ fontSize: 12 }}>{k.unit}</p>
@@ -145,8 +146,7 @@ export default function CalculatorSection() {
               ))}
             </div>
 
-            {/* Link naar andere gassen */}
-            <div className="rounded-2xl" style={{ background: '#ffffff', border: '1px solid #E2E8F0', padding: '24px 28px' }}>
+            <div className="rounded-md" style={{ background: '#ffffff', border: '1px solid #E2E8F0', padding: '24px 28px' }}>
               <p className="text-[#4A6880]" style={{ fontSize: 14, lineHeight: 1.7 }}>
                 Werkt u met stikstof, waterstof of CO₂?{' '}
                 <Link href="/bereken-uw-verlies" className="font-semibold transition-colors hover:text-[#C4631E]" style={{ color: '#D97737' }}>

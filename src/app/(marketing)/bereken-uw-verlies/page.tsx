@@ -12,7 +12,6 @@ const gassen = [
     titel: 'Perslucht',
     subtitel: 'Meest voorkomend',
     omschrijving: 'Perslucht is verantwoordelijk voor 20–30% van het totale energieverbruik in productieomgevingen. Zelfs kleine lekken kosten duizenden euro\'s per jaar.',
-    kleur: '#1E5A8A',
     tag: 'kWh-gebaseerd',
   },
   {
@@ -20,7 +19,6 @@ const gassen = [
     titel: 'Stikstof',
     subtitel: 'PSA on-site & bulk vloeibaar',
     omschrijving: 'Stikstof wordt breed ingezet voor inertering, verpakking en proceskoeling. Lekverliezen zijn direct zichtbaar in uw gasfactuur.',
-    kleur: '#1E5A8A',
     tag: '€/m³ gebaseerd',
   },
   {
@@ -28,7 +26,6 @@ const gassen = [
     titel: 'Waterstof',
     subtitel: 'Grijs, blauw & groen',
     omschrijving: 'Waterstof is het duurste industriële gas. Zelfs een kleine lekkage van enkele liters per minuut leidt tot aanzienlijke verliezen.',
-    kleur: '#1E5A8A',
     tag: '€/m³ gebaseerd',
   },
   {
@@ -36,7 +33,6 @@ const gassen = [
     titel: 'CO₂',
     subtitel: 'Bulk industrieel',
     omschrijving: 'Industrieel CO₂ wordt ingezet voor koeling, carbonisatie en procesapplicaties. Lekken betekenen directe materiaalkosten én nalevingsrisico\'s.',
-    kleur: '#1E5A8A',
     tag: '€/m³ gebaseerd',
   },
 ]
@@ -44,7 +40,6 @@ const gassen = [
 export default function BerekenUwVerliesPage() {
   return (
     <>
-      {/* Header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
@@ -60,7 +55,6 @@ export default function BerekenUwVerliesPage() {
         </div>
       </section>
 
-      {/* Kaarten */}
       <section style={{ background: '#ffffff', paddingBottom: '60px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -68,7 +62,7 @@ export default function BerekenUwVerliesPage() {
               <Link
                 key={g.slug}
                 href={`/bereken-uw-verlies/${g.slug}`}
-                className="group rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block"
+                className="group rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block"
                 style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '40px 44px' }}
               >
                 <div className="flex items-start justify-between mb-6">
@@ -80,10 +74,7 @@ export default function BerekenUwVerliesPage() {
                       {g.titel}
                     </h2>
                   </div>
-                  <span
-                    className="flex-shrink-0 rounded-full text-white"
-                    style={{ background: 'rgba(255,255,255,0.12)', padding: '4px 12px', fontSize: 12 }}
-                  >
+                  <span className="flex-shrink-0 rounded-md text-[#7AADCC]" style={{ background: 'rgba(255,255,255,0.08)', padding: '4px 10px', fontSize: 12 }}>
                     {g.tag}
                   </span>
                 </div>
@@ -102,11 +93,10 @@ export default function BerekenUwVerliesPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section style={{ background: '#ffffff', paddingBottom: '80px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div
-            className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
             style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
           >
             <div>
