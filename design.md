@@ -55,7 +55,7 @@ Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#D97737]/20` 
 ### Stijlregels
 - Koppen: `font-display font-bold`, grote tracking (`tracking-widest uppercase`) voor labels en nav
 - Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen secties**, nooit als eyebrow boven een pagina-H1
-- H1 (paginakop): `font-bold text-[#0F2D4B]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — geen label erboven
+- H1 (paginakop): `font-bold text-[#0F2D4B]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — **geen eyebrow/label erboven**
 - H2: `text-4xl font-bold`
 - Body: `text-fog` op donker, `text-text-body` op licht, `text-lg leading-relaxed`
 
@@ -352,6 +352,7 @@ Elke pagina volgt dit patroon:
 - Geen afleidende loopanimaties naast KPI-cijfers of statistieken — de inhoud moet centraal staan
 - Geen typewriter-effecten of roterende tekst in hero of stat-blokken
 - Nooit meer dan 3 kleuren per sectie
+- Geen eyebrow-labels boven H1 paginakoppen — de titel spreekt voor zichzelf
 - Geen gekleurde badges of tags
 - Geen "pill" knoppen — `border-radius` max `rounded-md` (6–8px)
 - Geen tekst in volledig capslock, behalve bij labels/eyebrows
