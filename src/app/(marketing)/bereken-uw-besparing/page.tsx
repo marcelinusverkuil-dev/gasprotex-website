@@ -45,10 +45,10 @@ export default function BerekenUwBesparingPage() {
           <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Bereken uw besparing
           </h1>
-          <p className="font-bold text-[#0F2D4B] mt-10" style={{ fontSize: 18 }}>
+          <p className="font-bold text-[#0F2D4B]" style={{ fontSize: 18, marginTop: 48 }}>
             Gratis calculator: bereken wat gaslekken uw bedrijf kosten
           </p>
-          <p className="text-[#4A6880] mt-5" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640 }}>
+          <p className="text-[#4A6880]" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640, marginTop: 32 }}>
             GasProtex detecteert lekken in alle industriële gassystemen, van perslucht tot waterstof.
             Selecteer uw gassoort en bereken wat lekken u jaarlijks kosten.
           </p>
