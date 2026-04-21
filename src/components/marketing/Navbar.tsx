@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 const navLinks = [
   { label: 'Diensten', href: '/diensten' },
   { label: 'Sectoren', href: '/sectoren' },
+  { label: 'Bereken uw besparing', href: '/bereken-uw-besparing' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Cases', href: '/cases' },
   { label: 'Contact', href: '/contact' },
@@ -45,7 +46,7 @@ export default function Navbar() {
 
           {/* Desktop nav + Afspraak */}
           <ul className="hidden lg:flex items-center gap-8 list-none">
-            {navLinks.slice(0, 5).map((link) => (
+            {navLinks.slice(0, 6).map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}

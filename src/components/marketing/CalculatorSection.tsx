@@ -149,7 +149,7 @@ export default function CalculatorSection() {
             <div className="rounded-md" style={{ background: '#ffffff', border: '1px solid #E2E8F0', padding: '24px 28px' }}>
               <p className="text-[#4A6880]" style={{ fontSize: 14, lineHeight: 1.7 }}>
                 Werkt u met stikstof, waterstof of CO₂?{' '}
-                <Link href="/bereken-uw-verlies" className="font-semibold transition-colors hover:text-[#C4631E]" style={{ color: '#D97737' }}>
+                <Link href="/bereken-uw-besparing" className="font-semibold transition-colors hover:text-[#C4631E]" style={{ color: '#D97737' }}>
                   Bereken ook de kosten voor andere gassoorten →
                 </Link>
               </p>
