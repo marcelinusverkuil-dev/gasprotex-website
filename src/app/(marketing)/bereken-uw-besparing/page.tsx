@@ -42,14 +42,14 @@ export default function BerekenUwBesparingPage() {
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-            Gratis tools
-          </p>
           <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Bereken uw besparing
           </h1>
-          <p className="text-[#4A6880] mt-4" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640 }}>
-            GasProtex detecteert lekken in alle industriële gassystemen — van perslucht tot waterstof.
+          <p className="font-bold text-[#0F2D4B] mt-4" style={{ fontSize: 18 }}>
+            Gratis calculator: bereken wat gaslekken uw bedrijf kosten
+          </p>
+          <p className="text-[#4A6880] mt-3" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640 }}>
+            GasProtex detecteert lekken in alle industriële gassystemen, van perslucht tot waterstof.
             Selecteer uw gassoort en bereken wat lekken u jaarlijks kosten.
           </p>
         </div>
@@ -100,11 +100,10 @@ export default function BerekenUwBesparingPage() {
             style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
           >
             <div>
-              <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                Wilt u weten hoeveel ú lekt?
-              </h2>
-              <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                Plan een gratis inspectie in — wij detecteren lekken in elk gassysteem.
+              <p className="text-[#C2DCE8] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>
+                Deze berekening geeft een indicatie op basis van marktgemiddelden en de door u ingevulde gegevens.
+                De werkelijke kosten kunnen afwijken door factoren zoals systeemdruk, leidinglengte en het aantal lekpunten.
+                Wilt u weten wat uw installatie precies verliest? Vraag een quickscan aan.
               </p>
             </div>
             <Link
