@@ -33,7 +33,7 @@ export default function CalculatorSection() {
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
 
   return (
-    <section style={{ background: '#F5F7FA', padding: '80px 0' }}>
+    <section style={{ background: '#ffffff', padding: '80px 0' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
         {/* Kop */}
