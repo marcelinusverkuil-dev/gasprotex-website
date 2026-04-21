@@ -45,10 +45,10 @@ export default function BerekenUwBesparingPage() {
           <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Bereken uw besparing
           </h1>
-          <p className="font-bold text-[#0F2D4B] mt-4" style={{ fontSize: 18 }}>
+          <p className="font-bold text-[#0F2D4B] mt-6" style={{ fontSize: 18 }}>
             Gratis calculator: bereken wat gaslekken uw bedrijf kosten
           </p>
-          <p className="text-[#4A6880] mt-3" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640 }}>
+          <p className="text-[#4A6880] mt-4" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640 }}>
             GasProtex detecteert lekken in alle industriële gassystemen, van perslucht tot waterstof.
             Selecteer uw gassoort en bereken wat lekken u jaarlijks kosten.
           </p>
@@ -103,7 +103,6 @@ export default function BerekenUwBesparingPage() {
               <p className="text-[#C2DCE8] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>
                 Deze berekening geeft een indicatie op basis van marktgemiddelden en de door u ingevulde gegevens.
                 De werkelijke kosten kunnen afwijken door factoren zoals systeemdruk, leidinglengte en het aantal lekpunten.
-                Wilt u weten wat uw installatie precies verliest? Vraag een quickscan aan.
               </p>
             </div>
             <Link
@@ -111,7 +110,7 @@ export default function BerekenUwBesparingPage() {
               className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors flex-shrink-0"
               style={{ fontSize: 14 }}
             >
-              Afspraak maken
+              Vraag een quickscan aan
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
