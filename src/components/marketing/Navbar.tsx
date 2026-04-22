@@ -73,7 +73,7 @@ export default function Navbar() {
           {/* Klantenportaal rechts */}
           <a
             href="https://gasprotex-portal.vercel.app/login"
-            className="hidden lg:block font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
+            className="hidden lg:flex items-center font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
             style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
           >
             Klantenportaal
