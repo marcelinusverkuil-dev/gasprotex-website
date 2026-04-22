@@ -1,10 +1,10 @@
 const voordelen = [
-  { title: 'Exacte Lokalisatie', description: 'Akoestische heatmap toont in één oogopslag precies waar het lek zit — tot op de centimeter nauwkeurig.' },
-  { title: '10× Sneller', description: '20 minuten met één operator vs. uren zoekwerk met snuffelaars. Productie blijft gewoon draaien.' },
-  { title: 'Veilig op Afstand', description: 'Detecteer tot 200 meter afstand. ATEX-gecertificeerd voor explosiegevaarlijke zones (petrochemie, chemie).' },
-  { title: 'Directe Kostenberekening', description: 'Elk lek wordt direct vertaald naar euro-verlies per jaar en CO₂-impact — kant-en-klaar voor uw ESG-rapportage.' },
-  { title: 'Zonder Productiestilstand', description: 'Onze technologie werkt non-invasief. Geen stilstand, geen productieverlies tijdens de inspectie.' },
-  { title: 'ISO 50001 Rapportage', description: 'Rapportages voldoen aan ISO 50001 en BRZO-eisen. Kant-en-klaar voor auditors en toezichthouders.' },
+  { title: 'Exacte lokalisatie', description: 'Heatmap toont precies waar het lek zit — tot op de centimeter.' },
+  { title: '10× sneller', description: '20 minuten per hal. Één operator. Productie draait door.' },
+  { title: 'Veilig op afstand', description: 'Detecteer tot 200 meter. ATEX-gecertificeerd voor explosiegevaarlijke zones.' },
+  { title: 'Directe kostenberekening', description: 'Elk lek vertaald naar €/jaar en CO₂-impact — klaar voor uw ESG-rapportage.' },
+  { title: 'Geen productiestilstand', description: 'Non-invasief. Geen stilstand, geen productieverlies.' },
+  { title: 'ISO 50001 rapportage', description: 'Voldoet aan ISO 50001 en BRZO. Klaar voor auditors.' },
 ]
 
 const vergelijking = [

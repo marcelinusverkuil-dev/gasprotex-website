@@ -20,7 +20,7 @@ export default function ContactCTASection() {
             {/* Links — trust signals */}
             <div className="flex flex-col gap-4">
               <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.8 }}>
-                Vertel ons kort over uw installatie. Wij nemen binnen één werkdag contact op voor een vrijblijvende inspectie.
+                Vertel ons kort over uw installatie. Wij nemen binnen één werkdag contact op.
               </p>
               {[
                 'Reactie binnen 1 werkdag',

@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 }
 
 const waarden = [
-  { titel: 'Precisie', tekst: 'Tot op de centimeter nauwkeurig. Geen schattingen, geen vage zones — exacte locaties die uw onderhoudsdienst direct kan opvolgen.' },
-  { titel: 'Veiligheid', tekst: 'ATEX-gecertificeerd voor explosiegevaarlijke zones. Detectie op afstand, zonder uw team of installatie te riskeren.' },
-  { titel: 'Transparantie', tekst: 'Elk lek krijgt een euro-waarde. Uw directie ziet direct wat lekken kosten — en wat de besparing is na herstel.' },
-  { titel: 'Snelheid', tekst: '10× sneller dan traditionele methoden. Één specialist, één dag, complete rapportage. Terwijl uw productie doorloopt.' },
+  { titel: 'Precisie', tekst: 'Exacte locaties tot op de centimeter. Uw onderhoudsdienst kan direct aan de slag.' },
+  { titel: 'Veiligheid', tekst: 'ATEX-gecertificeerd. Detectie op afstand, zonder uw team te riskeren.' },
+  { titel: 'Transparantie', tekst: 'Elk lek krijgt een euro-waarde. Directie ziet direct de kosten én besparing.' },
+  { titel: 'Snelheid', tekst: 'Één specialist, één dag, complete rapportage. Productie blijft draaien.' },
 ]
 
 const tijdlijn = [
@@ -55,12 +55,10 @@ export default function OverOnsPage() {
                     Geen enkel lek onopgemerkt
                   </h2>
                   <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                    De Nederlandse industrie verliest jaarlijks honderden miljoenen euro&apos;s aan gaslekken.
-                    Niet omdat niemand ze wil aanpakken — maar omdat ze tot nu toe onmogelijk snel en veilig te detecteren waren.
+                    De industrie verliest jaarlijks miljoenen aan gaslekken — niet door gebrek aan aandacht, maar door gebrek aan detectiemiddelen.
                   </p>
                   <p className="text-[#C2DCE8]" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                    Met akoestische camera-technologie brengen wij elk lek in kaart. Snel, veilig en
-                    met directe kostenberekening — zodat uw maintenance-team exact weet waar te beginnen.
+                    Met akoestische camera-technologie brengen wij elk lek snel en veilig in kaart, met directe kostenberekening.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">

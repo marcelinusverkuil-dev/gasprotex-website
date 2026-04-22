@@ -13,7 +13,7 @@ const diensten = [
     subtitle: 'Snelle screening',
     price: 'Vanaf €2.500',
     levertijd: 'Resultaat dezelfde dag',
-    wat: 'In één dag brengen wij alle actieve gaslekken in uw installatie in kaart met onze akoestische camera. U ontvangt dezelfde dag een rapportage met exacte locaties, lekgrootte en geschatte kostenimpact per lek.',
+    wat: 'In één dag alle actieve gaslekken in kaart. Dezelfde dag ontvangt u een rapportage met locaties, lekgrootte en kostenimpact.',
     inbegrepen: [
       'Volledige scan van aangewezen installatiegebieden',
       'Akoestische heatmap per zone',
@@ -22,7 +22,7 @@ const diensten = [
       'CO₂-impact berekening',
       'Digitale levering dezelfde dag',
     ],
-    resultaat: 'Gemiddeld identificeren wij 8–24 lekken per dagdeel inspectie. Bij een gemiddeld productieproces bespaart dit €12.000–€40.000 per jaar.',
+    resultaat: 'Gemiddeld 8–24 lekken per dagdeel. Besparing: €12.000–€40.000/jaar.',
   },
   {
     id: 'audit',
@@ -30,7 +30,7 @@ const diensten = [
     subtitle: 'Volledige inspectie',
     price: 'Vanaf €5.000',
     levertijd: 'Rapportage binnen 3 werkdagen',
-    wat: 'Een diepgaande meerdaagse audit van uw gehele productielocatie. Inclusief BRZO-proof rapportage, emissiereductieberekening en een prioriteitenmatrix waarmee uw onderhoudsdienst direct aan de slag kan.',
+    wat: 'Meerdaagse audit van uw gehele locatie. BRZO-proof rapportage en prioriteitenmatrix voor onderhoud.',
     inbegrepen: [
       'Meerdaagse on-site inspectie (afhankelijk van locatiegrootte)',
       'Scan van alle systemen: perslucht, procesgassen, stikstof, CO₂',
@@ -40,7 +40,7 @@ const diensten = [
       'Managementsamenvatting (1 pagina)',
       'Presentatie van bevindingen aan uw team',
     ],
-    resultaat: 'Gemiddeld ROI van 3–8 maanden. Geschikt als basis voor uw ISO 50001-implementatie of BRZO-rapportage.',
+    resultaat: 'ROI gemiddeld 3–8 maanden. Basis voor ISO 50001 of BRZO-rapportage.',
   },
   {
     id: 'abonnement',
@@ -48,7 +48,7 @@ const diensten = [
     subtitle: 'Periodiek & proactief',
     price: 'Vanaf €18.000/jaar',
     levertijd: 'Kwartaal- of halfjaarsronde',
-    wat: 'Kwartaal- of halfjaarscontroles met toegang tot uw persoonlijk klantportaal. Realtime inzicht in open lekken, gedichte lekken en gerealiseerde besparingen. Inclusief QR-tagging van installatieonderdelen.',
+    wat: 'Kwartaal- of halfjaarscontroles met klantportaal. Realtime inzicht in lekken en gerealiseerde besparingen.',
     inbegrepen: [
       '2× of 4× per jaar volledige locatie-inspectie',
       'Toegang tot klantportaal (realtime lekstatus)',
@@ -58,7 +58,7 @@ const diensten = [
       'Directe notificatie bij kritieke lekken',
       'Dedicated contactpersoon bij GasProtex',
     ],
-    resultaat: 'Klanten met een abonnement realiseren gemiddeld 23% meer besparing dan eenmalige inspecties, door proactieve opvolging van gedichte lekken.',
+    resultaat: 'Abonnementsklanten besparen gemiddeld 23% meer door proactieve opvolging.',
   },
 ]
 
