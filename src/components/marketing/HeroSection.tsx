@@ -29,7 +29,7 @@ export default function HeroSection() {
     <section className="relative min-h-[480px] flex items-center overflow-hidden bg-steel">
 
       <Image
-        src="/images/hero-bg.avif"
+        src="/images/hero-bg.jpg"
         alt="Industriële installatie"
         fill
 
