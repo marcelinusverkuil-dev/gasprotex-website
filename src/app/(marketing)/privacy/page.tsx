@@ -1,7 +1,7 @@
 ﻿export default function PrivacyPage() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
-      <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+      <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
         <div style={{ maxWidth: 800 }}>
 
           <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(28px, 3vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 8 }}>

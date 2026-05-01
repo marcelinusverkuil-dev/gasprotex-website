@@ -56,7 +56,7 @@ export default function CasesPage() {
     <>
       {/* Header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Cases
           </h1>
@@ -64,7 +64,7 @@ export default function CasesPage() {
       </section>
 
       <section style={{ background: '#ffffff', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="flex flex-col gap-6">
 
             {cases.map((c) => (

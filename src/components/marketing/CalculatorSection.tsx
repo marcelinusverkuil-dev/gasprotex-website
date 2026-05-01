@@ -44,7 +44,7 @@ export default function CalculatorSection() {
 
   return (
     <section style={{ background: '#ffffff', padding: '80px 0' }}>
-      <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+      <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
 
         <div className="mb-10">
           <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>

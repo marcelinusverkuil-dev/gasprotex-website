@@ -19,7 +19,7 @@ const vergelijking = [
 export default function WaaromSection() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
-      <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+      <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
 
         <div className="mb-10">
           <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
