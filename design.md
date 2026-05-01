@@ -16,9 +16,7 @@ De balans: donkere hero + nav (GasProtex-identiteit) + lichte content-secties me
 ### Primair (donker — voor achtergronden)
 | Token           | Hex       | Gebruik                              |
 |-----------------|-----------|--------------------------------------|
-| `--navy`        | `#0A2238` | Primaire donkere achtergrond         |
-| `--iron`        | `#0E2940` | Iets donkerder variant van navy      |
-| `--zinc`        | `#193353` | Subtiele contrast op navy secties    |
+| `--navy`        | `#0A2238` | Donkere achtergrond (alle secties)   |
 | `--brand-blue`  | `#1E87B4` | Accentkleur, highlights in koppen    |
 
 ### Accent (oranje — voor CTA's en energie)
@@ -99,7 +97,7 @@ Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#F07830]/20` 
 - Geen "Offerte Aanvragen" knop in de navbar
 
 ### Donkere secties (default)
-- Achtergrond: `bg-navy` of `bg-iron`
+- Achtergrond: `bg-navy` of `bg-[#0A2238]/95` voor subtiele variatie
 - Voeg altijd `noise-overlay` toe voor subtiele textuur (via `::before`)
 - Gebruik `hero-grid` voor het geanimeerde grid-patroon (oranje lijnen, 6% opacity)
 
