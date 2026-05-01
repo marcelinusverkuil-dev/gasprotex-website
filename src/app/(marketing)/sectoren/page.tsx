@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { useRef } from 'react'
@@ -44,7 +44,7 @@ export default function SectorenPage() {
       {/* Header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Sectoren
           </h1>
         </div>
@@ -74,7 +74,7 @@ export default function SectorenPage() {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="absolute inset-0" style={{ background: '#1A3A5C' }} />
+                  <div className="absolute inset-0" style={{ background: '#193353' }} />
                 )}
 
                 {/* Standaard: titelbalk onderaan */}
@@ -99,7 +99,7 @@ export default function SectorenPage() {
                     <p className="text-[#C2DCE8] mb-5" style={{ fontSize: 15, lineHeight: 1.8 }}>
                       {s.intro}
                     </p>
-                    <span className="inline-flex items-center gap-2 font-semibold text-[#D97737]" style={{ fontSize: 14 }}>
+                    <span className="inline-flex items-center gap-2 font-semibold text-[#F07830]" style={{ fontSize: 14 }}>
                       Meer lezen
                       <svg width="12" height="9" viewBox="0 0 14 10" fill="none">
                         <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -124,7 +124,7 @@ export default function SectorenPage() {
             <button
               onClick={() => scroll('left')}
               className="w-9 h-9 flex items-center justify-center rounded-full transition-colors"
-              style={{ background: '#F4F7FA', border: '1px solid #E2EAF0', color: '#0F2D4B' }}
+              style={{ background: '#F4F7FA', border: '1px solid #E2EAF0', color: '#0A2238' }}
             >
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M5.5 1L1 5L5.5 9M13 5H1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -133,7 +133,7 @@ export default function SectorenPage() {
             <button
               onClick={() => scroll('right')}
               className="w-9 h-9 flex items-center justify-center rounded-full transition-colors"
-              style={{ background: '#F4F7FA', border: '1px solid #E2EAF0', color: '#0F2D4B' }}
+              style={{ background: '#F4F7FA', border: '1px solid #E2EAF0', color: '#0A2238' }}
             >
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

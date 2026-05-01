@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
@@ -63,7 +63,7 @@ export default function StikstofCalculatorPage() {
             Alle gassoorten
           </Link>
           <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Stikstof</p>
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Lekkostencalculator stikstof
           </h1>
           <p className="text-[#4A6880] mt-4" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 620 }}>
@@ -76,7 +76,7 @@ export default function StikstofCalculatorPage() {
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '48px' }}>
+            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>
               <p className="text-[#7AADCC] mb-8" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
               <div className="flex flex-col gap-6">
 
@@ -85,7 +85,7 @@ export default function StikstofCalculatorPage() {
                   <div className="flex gap-3">
                     {STIKSTOF_TYPES.map(t => (
                       <button key={t.id} onClick={() => handleTypeChange(t.id)} className="flex-1 rounded-md text-left transition-all"
-                        style={{ background: type === t.id ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: type === t.id ? '1px solid #D97737' : '1px solid rgba(255,255,255,0.12)', padding: '12px 14px' }}>
+                        style={{ background: type === t.id ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: type === t.id ? '1px solid #F07830' : '1px solid rgba(255,255,255,0.12)', padding: '12px 14px' }}>
                         <span className="block font-semibold text-white" style={{ fontSize: 15 }}>{t.label}</span>
                         <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>gem. €{t.prijs.toFixed(2)}/m³</span>
                       </button>
@@ -113,7 +113,7 @@ export default function StikstofCalculatorPage() {
                   <div className="flex gap-3">
                     {BEDRIJFSUREN_OPTIES.map(opt => (
                       <button key={opt.value} onClick={() => setBedrijfsuren(opt.value)} className="flex-1 rounded-md text-left transition-all"
-                        style={{ background: bedrijfsuren === opt.value ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: bedrijfsuren === opt.value ? '1px solid #D97737' : '1px solid rgba(255,255,255,0.12)', padding: '12px 14px' }}>
+                        style={{ background: bedrijfsuren === opt.value ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: bedrijfsuren === opt.value ? '1px solid #F07830' : '1px solid rgba(255,255,255,0.12)', padding: '12px 14px' }}>
                         <span className="block font-semibold text-white" style={{ fontSize: 15 }}>{opt.value.toLocaleString('nl-NL')}</span>
                         <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>{opt.label}</span>
                       </button>
@@ -141,7 +141,7 @@ export default function StikstofCalculatorPage() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #D97737 0%, #C4631E 100%)', padding: '48px' }}>
+              <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #F07830 0%, #C4631E 100%)', padding: '48px' }}>
                 <p className="text-orange-100 mb-2" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Totale kosten per jaar</p>
                 <p className="font-bold text-white" style={{ fontSize: 'clamp(44px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.03em' }}>
                   €{fmt(resultaat.euroJaar)}
@@ -151,7 +151,7 @@ export default function StikstofCalculatorPage() {
                 </p>
               </div>
 
-              <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '28px 32px' }}>
+              <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '28px 32px' }}>
                 <p className="text-[#7AADCC] mb-1" style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase' }}>Gasverlies</p>
                 <p className="font-bold text-white" style={{ fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{fmt(resultaat.m3jaar)}</p>
                 <p className="text-[#7AADCC] mt-1" style={{ fontSize: 13 }}>m³ stikstof per jaar</p>
@@ -160,10 +160,10 @@ export default function StikstofCalculatorPage() {
               <div className="rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
                 style={{ background: '#F5F7FA', border: '1px solid #E2E8F0', padding: '28px 32px' }}>
                 <div>
-                  <p className="font-semibold text-[#0F2D4B]" style={{ fontSize: 16 }}>Wilt u weten hoeveel ú lekt?</p>
+                  <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel ú lekt?</p>
                   <p className="text-[#4A6880] mt-1" style={{ fontSize: 14 }}>Plan een gratis inspectie in — resultaat dezelfde dag.</p>
                 </div>
-                <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#D97737', fontSize: 14 }}>
+                <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
                   Afspraak maken
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </Link>
@@ -173,7 +173,7 @@ export default function StikstofCalculatorPage() {
 
           <div className="mt-8" style={{ borderTop: '1px solid #E2E8F0', paddingTop: '32px' }}>
             <p className="text-[#4A6880]" style={{ fontSize: 13, lineHeight: 1.8 }}>
-              <span className="font-semibold text-[#0F2D4B]">Rekenmethode:</span>{' '}
+              <span className="font-semibold text-[#0A2238]">Rekenmethode:</span>{' '}
               Kosten = (l/min ÷ 1.000 × 60) × bedrijfsuren × (1 + bar ÷ 10) × gasprijs × aantal lekken.{' '}
               <span className="italic">Indicatieve m³-kostprijs op basis van gangbare industriële leveringsvormen. Werkelijke prijs hangt af van druk, temperatuur, zuiverheid, contractvorm en logistiek.</span>
             </p>

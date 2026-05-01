@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { sendContact } from '@/app/actions/sendContact'
@@ -37,14 +37,14 @@ export default function ContactPage() {
           <div className="flex flex-col gap-6">
 
             {/* Header */}
-            <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+            <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
               Neem contact op
             </h1>
 
             {/* Info + form container */}
             <div
               className="rounded-2xl overflow-hidden"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
             >
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 <div className="lg:col-span-3">
                   {status === 'sent' ? (
                     <div className="rounded-xl p-10 text-center" style={{ background: 'rgba(255,255,255,0.07)' }}>
-                      <div className="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full text-xl text-[#D97737]"
+                      <div className="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full text-xl text-[#F07830]"
                         style={{ background: 'rgba(217,119,55,0.15)', border: '1px solid rgba(217,119,55,0.3)' }}>
                         ✓
                       </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={status === 'sending'}
-                        className="w-full inline-flex items-center justify-center gap-3 bg-[#D97737] hover:bg-[#E8893A] disabled:opacity-60 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+                        className="w-full inline-flex items-center justify-center gap-3 bg-[#F07830] hover:bg-[#FF8A40] disabled:opacity-60 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
                         style={{ fontSize: 15 }}
                       >
                         {status === 'sending' ? 'Verzenden...' : 'Aanvraag versturen'}
@@ -189,8 +189,8 @@ function SelectField({
         className="w-full text-white outline-none transition-colors"
         style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
       >
-        <option value="" style={{ background: '#0F2D4B' }}>{placeholder}</option>
-        {options.map((o) => <option key={o} value={o} style={{ background: '#0F2D4B' }}>{o}</option>)}
+        <option value="" style={{ background: '#0A2238' }}>{placeholder}</option>
+        {options.map((o) => <option key={o} value={o} style={{ background: '#0A2238' }}>{o}</option>)}
       </select>
     </div>
   )

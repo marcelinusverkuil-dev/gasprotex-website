@@ -1,22 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { Barlow, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
 import AnalyticsWithConsent from '@/components/marketing/GoogleAnalytics'
-
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-barlow',
-  display: 'swap',
-})
-
-const barlowCondensed = Barlow_Condensed({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
-  variable: '--font-barlow-condensed',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'GasProtex – Akoestische Gaslekdetectie | Nederland',
@@ -49,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="nl"
-      className={`${barlow.variable} ${barlowCondensed.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
         {children}

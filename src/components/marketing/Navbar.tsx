@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled || !isHome
-            ? 'bg-[#0F2D4B]/97 shadow-lg shadow-black/20 backdrop-blur-md'
+            ? 'bg-[#0A2238]/97 shadow-lg shadow-black/20 backdrop-blur-md'
             : 'bg-transparent'
         }`}
       >
@@ -50,7 +50,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] transition-colors duration-200"
+                  className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200"
                   style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
                 >
                   {link.label}
@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden fixed top-[72px] left-0 right-0 z-40 bg-[#0A1E30]/98 backdrop-blur-xl border-b-2 border-[#D97737] transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden fixed top-[72px] left-0 right-0 z-40 bg-[#0A1E30]/98 backdrop-blur-xl border-b-2 border-[#F07830] transition-all duration-300 overflow-hidden ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none -translate-y-2'
         }`}
       >
@@ -104,7 +104,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#D97737] transition-colors py-2"
+              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors py-2"
               style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
             >
               {link.label}

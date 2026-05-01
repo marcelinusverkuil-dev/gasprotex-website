@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export default function ContactCTASection() {
   return (
@@ -6,14 +6,14 @@ export default function ContactCTASection() {
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
         <div className="mb-10">
-          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Klaar voor een gratis quickscan?
           </h2>
         </div>
 
         <div
           className="rounded-2xl"
-          style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+          style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -29,7 +29,7 @@ export default function ContactCTASection() {
                 'NDA beschikbaar op verzoek',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D97737]" style={{ marginTop: '1px' }} />
+                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '1px' }} />
                   <span className="text-[#C2DCE8]" style={{ fontSize: 15 }}>{item}</span>
                 </div>
               ))}
@@ -39,7 +39,7 @@ export default function ContactCTASection() {
             <div className="flex flex-col gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-[#D97737] hover:bg-[#E8893A] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+                className="inline-flex items-center justify-center gap-3 bg-[#F07830] hover:bg-[#FF8A40] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
                 style={{ fontSize: 15 }}
               >
                 Quickscan aanvragen

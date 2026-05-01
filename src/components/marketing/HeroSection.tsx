@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import { CircleGauge, ShieldAlert, Euro } from 'lucide-react';
@@ -8,7 +8,7 @@ const badges = [
     icon: CircleGauge,
     value: 'Lekdetectie',
     label: 'Zonder productiestilstand',
-    variant: 'steel' as const,
+    variant: 'navy' as const,
   },
   {
     icon: ShieldAlert,
@@ -20,13 +20,13 @@ const badges = [
     icon: Euro,
     value: 'Directe',
     label: 'Kostenindicatie',
-    variant: 'steel' as const,
+    variant: 'navy' as const,
   },
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[480px] flex items-center overflow-hidden bg-steel">
+    <section className="relative min-h-[480px] flex items-center overflow-hidden bg-navy">
 
       <Image
         src="/images/hero-bg.jpg"
@@ -78,7 +78,7 @@ export default function HeroSection() {
   );
 }
 
-type BadgeVariant = 'steel' | 'orange';
+type BadgeVariant = 'navy' | 'orange';
 
 interface StatBadgeProps {
   icon: React.ElementType;
@@ -95,7 +95,7 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
       className={`flex items-center gap-6 px-7 py-6 rounded-lg min-w-[280px] backdrop-blur-sm border ${
         isOrange
           ? 'bg-orange/90 border-orange-hot/30'
-          : 'bg-steel/90 border-fog/20'
+          : 'bg-navy/90 border-fog/20'
       }`}
     >
       <div

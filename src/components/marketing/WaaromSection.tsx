@@ -1,4 +1,4 @@
-const voordelen = [
+﻿const voordelen = [
   { title: 'Exacte lokalisatie', description: 'Heatmap toont precies waar het lek zit — tot op de centimeter.' },
   { title: '10× sneller', description: '20 minuten per hal. Één operator. Productie draait door.' },
   { title: 'Veilig op afstand', description: 'Detecteer tot 200 meter. ATEX-gecertificeerd voor explosiegevaarlijke zones.' },
@@ -22,7 +22,7 @@ export default function WaaromSection() {
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
         <div className="mb-10">
-          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Waarom akoestisch?
           </h2>
         </div>
@@ -32,7 +32,7 @@ export default function WaaromSection() {
           {/* Voordelen grid */}
           <div
             className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {voordelen.map((v, i) => (
@@ -51,7 +51,7 @@ export default function WaaromSection() {
           {/* Vergelijkingstabel */}
           <div
             className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
           >
             <h3 className="font-bold text-white mb-8" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
               Traditioneel vs. akoestisch
@@ -60,7 +60,7 @@ export default function WaaromSection() {
               <div className="grid grid-cols-3 pb-3 mb-2" style={{  }}>
                 <span className="text-[#7AADCC]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}></span>
                 <span className="text-[#7AADCC]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Traditioneel</span>
-                <span className="text-[#D97737]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>GasProtex</span>
+                <span className="text-[#F07830]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>GasProtex</span>
               </div>
               {vergelijking.map((row, i) => (
                 <div key={i} className="grid grid-cols-3 py-3" style={{  }}>
@@ -69,7 +69,7 @@ export default function WaaromSection() {
                     <span className="text-red-400">✕</span> {row.traditioneel}
                   </span>
                   <span className="text-white font-semibold flex items-center gap-1" style={{ fontSize: 15 }}>
-                    <span style={{ color: '#D97737' }}>✓</span> {row.akoestisch}
+                    <span style={{ color: '#F07830' }}>✓</span> {row.akoestisch}
                   </span>
                 </div>
               ))}

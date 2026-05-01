@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 const diensten = [
   {
@@ -33,7 +33,7 @@ export default function DienstenSection() {
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
         <div className="mb-10">
-          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Wat wij voor u doen
           </h2>
         </div>
@@ -43,7 +43,7 @@ export default function DienstenSection() {
             <div
               key={d.nr}
               className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '36px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '36px' }}
             >
               <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>{d.subtitle}</p>
               <h3 className="font-bold text-white mb-4" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
@@ -53,10 +53,10 @@ export default function DienstenSection() {
                 {d.description}
               </p>
               <div className="flex items-center justify-between">
-                <span className="font-bold text-[#D97737]" style={{ fontSize: 15 }}>{d.price}</span>
+                <span className="font-bold text-[#F07830]" style={{ fontSize: 15 }}>{d.price}</span>
                 <Link
                   href={d.href}
-                  className="inline-flex items-center gap-2 font-semibold text-[#D97737] hover:text-[#E8893A] transition-colors text-sm"
+                  className="inline-flex items-center gap-2 font-semibold text-[#F07830] hover:text-[#FF8A40] transition-colors text-sm"
                 >
                   Meer info
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">

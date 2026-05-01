@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Shield, Clock, Calendar } from 'lucide-react';
 
@@ -7,7 +7,7 @@ const badges = [
     icon: Shield,
     value: 'Elke 17 min',
     label: 'Productieverlies voorkomen',
-    variant: 'steel' as const,
+    variant: 'navy' as const,
   },
   {
     icon: Clock,
@@ -19,13 +19,13 @@ const badges = [
     icon: Calendar,
     value: '+50%',
     label: 'Snellere onderhoudsplanning',
-    variant: 'steel' as const,
+    variant: 'navy' as const,
   },
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[600px] flex items-center overflow-hidden bg-steel">
+    <section className="relative min-h-[600px] flex items-center overflow-hidden bg-navy">
 
       {/* Achtergrond foto */}
       <img
@@ -80,7 +80,7 @@ export default function HeroSection() {
 }
 
 /* ── Stat Badge ── */
-type BadgeVariant = 'steel' | 'orange';
+type BadgeVariant = 'navy' | 'orange';
 
 interface StatBadgeProps {
   icon: React.ElementType;
@@ -97,7 +97,7 @@ function StatBadge({ icon: Icon, value, label, variant }: StatBadgeProps) {
       className={`flex items-center gap-4 px-5 py-4 rounded-lg min-w-[220px] backdrop-blur-sm border ${
         isOrange
           ? 'bg-orange/90 border-orange-hot/30'
-          : 'bg-steel/90 border-fog/20'
+          : 'bg-navy/90 border-fog/20'
       }`}
     >
       {/* Icoon cirkel */}

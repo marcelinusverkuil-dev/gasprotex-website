@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function OverOnsPage() {
       {/* Header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Over Ons
           </h1>
         </div>
@@ -46,7 +46,7 @@ export default function OverOnsPage() {
             {/* Missie */}
             <div
               className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                 <div>
@@ -64,7 +64,7 @@ export default function OverOnsPage() {
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat) => (
                     <div key={stat.label} className="p-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                      <div className="font-bold text-[#D97737] leading-none mb-1" style={{ fontSize: 36 }}>
+                      <div className="font-bold text-[#F07830] leading-none mb-1" style={{ fontSize: 36 }}>
                         {stat.value}
                       </div>
                       <div className="font-semibold text-white mb-0.5" style={{ fontSize: 14 }}>{stat.label}</div>
@@ -78,7 +78,7 @@ export default function OverOnsPage() {
             {/* Kernwaarden */}
             <div
               className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
             >
               <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>Kernwaarden</p>
               <h2 className="font-bold text-white mb-10" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
@@ -101,7 +101,7 @@ export default function OverOnsPage() {
             {/* Tijdlijn */}
             <div
               className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
             >
               <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>Geschiedenis</p>
               <h2 className="font-bold text-white mb-10" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
@@ -110,7 +110,7 @@ export default function OverOnsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16">
                 {tijdlijn.map((item) => (
                   <div key={item.jaar} className="flex gap-8 py-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                    <span className="font-bold text-[#D97737] flex-shrink-0 w-12" style={{ fontSize: 20 }}>
+                    <span className="font-bold text-[#F07830] flex-shrink-0 w-12" style={{ fontSize: 20 }}>
                       {item.jaar}
                     </span>
                     <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -124,7 +124,7 @@ export default function OverOnsPage() {
             {/* CTA */}
             <div
               className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
             >
               <div>
                 <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
@@ -136,7 +136,7 @@ export default function OverOnsPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors flex-shrink-0"
+                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
                 style={{ fontSize: 14 }}
               >
                 Contact opnemen

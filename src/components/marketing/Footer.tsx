@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 const nav = {
   Diensten: [
@@ -22,7 +22,7 @@ const nav = {
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#0F2D4B' }}>
+    <footer style={{ background: '#0A2238' }}>
       {/* Main footer */}
       <div className="max-w-7xl mx-auto section-container py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
@@ -59,7 +59,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[#7AADCC] hover:text-[#D97737] transition-colors"
+                      className="text-[#7AADCC] hover:text-[#F07830] transition-colors"
                       style={{ fontSize: 15 }}
                     >
                       {link.label}

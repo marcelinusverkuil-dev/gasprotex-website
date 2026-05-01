@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default function CasesPage() {
       {/* Header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Cases
           </h1>
         </div>
@@ -72,7 +72,7 @@ export default function CasesPage() {
                 key={c.id}
                 id={c.id}
                 className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+                style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
 
@@ -85,7 +85,7 @@ export default function CasesPage() {
                     <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
                       {c.omschrijving}
                     </p>
-                    <p className="text-[#D97737]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                    <p className="text-[#F07830]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                       {c.conclusie}
                     </p>
                   </div>
@@ -96,7 +96,7 @@ export default function CasesPage() {
                     <ul className="space-y-2">
                       {c.resultaten.map((item) => (
                         <li key={item} className="flex items-start gap-2 text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D97737]" style={{ marginTop: '9px' }} />
+                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
                           {item}
                         </li>
                       ))}
@@ -110,7 +110,7 @@ export default function CasesPage() {
             {/* CTA */}
             <div
               className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-              style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
             >
               <div>
                 <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
@@ -122,7 +122,7 @@ export default function CasesPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors flex-shrink-0"
+                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
                 style={{ fontSize: 14 }}
               >
                 Neem contact op

@@ -1,10 +1,10 @@
-export default function PrivacyPage() {
+﻿export default function PrivacyPage() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
         <div style={{ maxWidth: 800 }}>
 
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(28px, 3vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 8 }}>
+          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(28px, 3vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 8 }}>
             Privacybeleid
           </h1>
           <p style={{ fontSize: 13, color: '#6B8FA6', marginBottom: 48 }}>Laatst bijgewerkt: april 2026</p>
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
               <p>GasProtex is een onderneming gespecialiseerd in akoestische gas- en lekdetectie voor de Nederlandse industrie.</p>
               <p style={{ marginTop: 12 }}>
                 <strong>Adres:</strong> Hoogstraat 87, Nederland<br />
-                <strong>E-mail:</strong> <a href="mailto:info@gasprotex.nl" style={{ color: '#D97737' }}>info@gasprotex.nl</a><br />
+                <strong>E-mail:</strong> <a href="mailto:info@gasprotex.nl" style={{ color: '#F07830' }}>info@gasprotex.nl</a><br />
                 <strong>KVK:</strong> Aanvraag in behandeling
               </p>
             </Sectie>
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
               </ul>
               <p style={{ marginTop: 12 }}>
                 U kunt uw rechten uitoefenen door een e-mail te sturen naar{' '}
-                <a href="mailto:info@gasprotex.nl" style={{ color: '#D97737' }}>info@gasprotex.nl</a>.
+                <a href="mailto:info@gasprotex.nl" style={{ color: '#F07830' }}>info@gasprotex.nl</a>.
                 Wij reageren binnen 30 dagen.
               </p>
             </Sectie>
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
             <Sectie titel="8. Klachten">
               <p>
                 Heeft u een klacht over de verwerking van uw persoonsgegevens? Dan kunt u een klacht indienen bij de{' '}
-                <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" style={{ color: '#D97737' }}>
+                <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" style={{ color: '#F07830' }}>
                   Autoriteit Persoonsgegevens
                 </a>.
               </p>
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
 function Sectie({ titel, children }: { titel: string; children: React.ReactNode }) {
   return (
     <div style={{ borderTop: '1px solid #E8EDF2', paddingTop: 32 }}>
-      <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 18, marginBottom: 16 }}>{titel}</h2>
+      <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 18, marginBottom: 16 }}>{titel}</h2>
       <div style={{ fontSize: 15, color: '#3D5A6E', lineHeight: 1.8 }}>
         {children}
       </div>

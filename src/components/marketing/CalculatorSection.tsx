@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
@@ -50,7 +50,7 @@ export default function CalculatorSection() {
           <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
             Gratis tool
           </p>
-          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Wat kosten uw persluchtlekken?
           </h2>
           <p className="text-[#4A6880] mt-3" style={{ fontSize: 16, lineHeight: 1.7, maxWidth: 560 }}>
@@ -60,7 +60,7 @@ export default function CalculatorSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-          <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '40px' }}>
+          <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
             <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
             <div className="flex flex-col gap-6">
 
@@ -84,7 +84,7 @@ export default function CalculatorSection() {
                 <div className="flex gap-3">
                   {BEDRIJFSUREN_OPTIES.map(opt => (
                     <button key={opt.value} onClick={() => setBedrijfsuren(opt.value)} className="flex-1 rounded-md text-left transition-all"
-                      style={{ background: bedrijfsuren === opt.value ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: bedrijfsuren === opt.value ? '1px solid #D97737' : '1px solid rgba(255,255,255,0.12)', padding: '10px 12px' }}>
+                      style={{ background: bedrijfsuren === opt.value ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: bedrijfsuren === opt.value ? '1px solid #F07830' : '1px solid rgba(255,255,255,0.12)', padding: '10px 12px' }}>
                       <span className="block font-semibold text-white" style={{ fontSize: 14 }}>{opt.value.toLocaleString('nl-NL')}</span>
                       <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>{opt.label}</span>
                     </button>
@@ -122,7 +122,7 @@ export default function CalculatorSection() {
 
           <div className="flex flex-col gap-5">
 
-            <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #D97737 0%, #C4631E 100%)', padding: '40px' }}>
+            <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #F07830 0%, #C4631E 100%)', padding: '40px' }}>
               <p className="text-orange-100 mb-2" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Totale kosten per jaar</p>
               <p className="font-bold text-white" style={{ fontSize: 'clamp(40px, 6vw, 68px)', lineHeight: 1, letterSpacing: '-0.03em' }}>
                 €{fmt(resultaat.euroJaar)}
@@ -138,7 +138,7 @@ export default function CalculatorSection() {
                 { label: 'CO₂-uitstoot', value: fmt(resultaat.co2ton, 2), unit: 'ton/jaar' },
                 { label: 'Auto-equivalent', value: fmt(resultaat.autoKm), unit: 'km/jaar' },
               ].map(k => (
-                <div key={k.label} className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '24px 20px' }}>
+                <div key={k.label} className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '24px 20px' }}>
                   <p className="text-[#7AADCC] mb-1" style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase' }}>{k.label}</p>
                   <p className="font-bold text-white" style={{ fontSize: 'clamp(18px, 2.5vw, 26px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{k.value}</p>
                   <p className="text-[#7AADCC] mt-1" style={{ fontSize: 12 }}>{k.unit}</p>
@@ -149,7 +149,7 @@ export default function CalculatorSection() {
             <div className="rounded-md" style={{ background: '#ffffff', border: '1px solid #E2E8F0', padding: '24px 28px' }}>
               <p className="text-[#4A6880]" style={{ fontSize: 14, lineHeight: 1.7 }}>
                 Werkt u met stikstof, waterstof of CO₂?{' '}
-                <Link href="/bereken-uw-besparing" className="font-semibold transition-colors hover:text-[#C4631E]" style={{ color: '#D97737' }}>
+                <Link href="/bereken-uw-besparing" className="font-semibold transition-colors hover:text-[#C4631E]" style={{ color: '#F07830' }}>
                   Bereken ook de kosten voor andere gassoorten →
                 </Link>
               </p>

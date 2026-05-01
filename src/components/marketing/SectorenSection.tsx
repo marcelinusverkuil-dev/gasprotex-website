@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { useRef } from 'react'
@@ -40,7 +40,7 @@ export default function SectorenSection() {
       <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
 
         <div className="mb-10">
-          <h2 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Sectoren
           </h2>
         </div>
@@ -50,7 +50,7 @@ export default function SectorenSection() {
           {/* Sectoren container */}
           <div
             className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '48px' }}
+            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
           >
             {/* Pijltjes — alleen op kleine schermen */}
             <div className="flex items-center justify-end gap-2 mb-4 lg:hidden">
@@ -87,13 +87,13 @@ export default function SectorenSection() {
                   className="group flex flex-col transition-all duration-300 flex-shrink-0 lg:flex-shrink"
                   style={{ scrollSnapAlign: 'start', minWidth: '220px' }}
                 >
-                  <h3 className="font-bold text-white mb-3 group-hover:text-[#D97737] transition-colors" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
+                  <h3 className="font-bold text-white mb-3 group-hover:text-[#F07830] transition-colors" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
                     {s.title}
                   </h3>
                   <p className="text-[#C2DCE8] flex-1 mb-4" style={{ fontSize: 14, lineHeight: 1.7 }}>
                     {s.description}
                   </p>
-                  <div className="inline-flex items-center gap-2 font-semibold text-[#D97737] group-hover:gap-3 transition-all text-sm">
+                  <div className="inline-flex items-center gap-2 font-semibold text-[#F07830] group-hover:gap-3 transition-all text-sm">
                     Meer lezen
                     <svg width="12" height="9" viewBox="0 0 14 10" fill="none">
                       <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -115,11 +115,11 @@ export default function SectorenSection() {
           {/* ROI banner */}
           <div
             className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
           >
             <div>
               <p className="font-bold text-white mb-1" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>
-                Gemiddeld <span style={{ color: '#D97737' }}>30%</span> van perslucht gaat verloren door lekken.
+                Gemiddeld <span style={{ color: '#F07830' }}>30%</span> van perslucht gaat verloren door lekken.
               </p>
               <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
                 Één gemiddeld lek kost uw bedrijf €1.200–€1.650 per jaar. Wij vinden ze allemaal.
@@ -127,7 +127,7 @@ export default function SectorenSection() {
             </div>
             <Link
               href="/bereken-uw-besparing"
-              className="flex-shrink-0 inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors"
+              className="flex-shrink-0 inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
               style={{ fontSize: 14 }}
             >
               Bereken mijn besparing

@@ -35,8 +35,10 @@ select:-webkit-autofill {
   --color-fog:       var(--fog);
   --color-off-white: var(--off-white);
   --color-surface:   var(--surface);
-  --font-display:    var(--font-barlow-condensed);
-  --font-body:       var(--font-barlow);
+  --font-display:    'Aptos', system-ui, sans-serif;
+  --font-body:       'Aptos', system-ui, sans-serif;
+  --font-barlow-condensed: 'Aptos', system-ui, sans-serif;
+  --font-barlow:     'Aptos', system-ui, sans-serif;
 }
 
 * {
@@ -50,7 +52,7 @@ html {
 }
 
 body {
-  font-family: var(--font-barlow), 'Barlow', system-ui, sans-serif;
+  font-family: 'Aptos', system-ui, sans-serif;
   background: #ffffff;
   color: var(--text-dark);
   -webkit-font-smoothing: antialiased;

@@ -1,4 +1,4 @@
-const items = [
+﻿const items = [
   'Akoestische Gaslekdetectie',
   'ATEX Gecertificeerd',
   '10× Sneller dan Traditioneel',
@@ -13,7 +13,7 @@ export default function TickerStrip() {
   const doubled = [...items, ...items]
 
   return (
-    <div className="bg-[#D97737] py-4 overflow-hidden" aria-hidden="true">
+    <div className="bg-[#F07830] py-4 overflow-hidden" aria-hidden="true">
       <div className="ticker-animate inline-block whitespace-nowrap">
         {doubled.map((item, i) => (
           <span

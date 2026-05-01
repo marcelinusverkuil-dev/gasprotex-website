@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -42,10 +42,10 @@ export default function BerekenUwBesparingPage() {
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <h1 className="font-bold text-[#0F2D4B]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Bereken uw besparing
           </h1>
-          <p className="font-bold text-[#0F2D4B]" style={{ fontSize: 18, marginTop: 48 }}>
+          <p className="font-bold text-[#0A2238]" style={{ fontSize: 18, marginTop: 48 }}>
             Gratis calculator: bereken wat gaslekken uw bedrijf kosten
           </p>
           <p className="text-[#4A6880]" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640, marginTop: 32 }}>
@@ -63,7 +63,7 @@ export default function BerekenUwBesparingPage() {
                 key={g.slug}
                 href={`/bereken-uw-besparing/${g.slug}`}
                 className="group rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block"
-                style={{ background: 'linear-gradient(to bottom right, #0F2D4B, #1E5A8A)', padding: '40px 44px' }}
+                style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 44px' }}
               >
                 <div className="flex items-start justify-between mb-6">
                   <div>
@@ -81,7 +81,7 @@ export default function BerekenUwBesparingPage() {
                 <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 15, lineHeight: 1.8 }}>
                   {g.omschrijving}
                 </p>
-                <span className="inline-flex items-center gap-2 font-semibold transition-colors group-hover:text-[#E8893A]" style={{ color: '#D97737', fontSize: 14 }}>
+                <span className="inline-flex items-center gap-2 font-semibold transition-colors group-hover:text-[#FF8A40]" style={{ color: '#F07830', fontSize: 14 }}>
                   Bereken nu
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                     <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -97,7 +97,7 @@ export default function BerekenUwBesparingPage() {
         <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
           <div
             className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to right, #0F2D4B 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
           >
             <div>
               <p className="text-[#C2DCE8] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>
@@ -107,7 +107,7 @@ export default function BerekenUwBesparingPage() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-[#D97737] hover:text-[#E8893A] font-semibold transition-colors flex-shrink-0"
+              className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
               style={{ fontSize: 14 }}
             >
               Vraag een quickscan aan

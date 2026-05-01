@@ -1,4 +1,4 @@
-export type SectorData = {
+﻿export type SectorData = {
   slug: string
   icon: string
   title: string
@@ -133,7 +133,7 @@ export const sectorenData: Record<string, SectorData> = {
     icon: '🏭',
     title: 'Algemene Industrie',
     urgentie: 'ROI',
-    urgentieColor: 'bg-orange-50 text-[#D97737] border-orange-200',
+    urgentieColor: 'bg-orange-50 text-[#F07830] border-orange-200',
     metaDescription: 'Snelle ROI door perslucht-lekdetectie in productiebedrijven. Één dag inspectie, directe kostenbesparing.',
     hero: {
       tagline: 'Algemene Industrie',
