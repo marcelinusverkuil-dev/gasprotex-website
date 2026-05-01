@@ -33,7 +33,7 @@ export default function ContactPage() {
   return (
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '60px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="flex flex-col gap-6">
 
             {/* Header */}

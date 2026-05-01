@@ -41,7 +41,7 @@ export default function BerekenUwBesparingPage() {
   return (
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
             Bereken uw besparing
           </h1>
@@ -56,7 +56,7 @@ export default function BerekenUwBesparingPage() {
       </section>
 
       <section style={{ background: '#ffffff', paddingBottom: '60px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {gassen.map((g) => (
               <Link
@@ -94,7 +94,7 @@ export default function BerekenUwBesparingPage() {
       </section>
 
       <section style={{ background: '#ffffff', paddingBottom: '80px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
             style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}

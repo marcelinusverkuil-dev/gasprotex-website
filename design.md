@@ -1,4 +1,4 @@
-﻿# GasProtex — Design System
+# GasProtex — Design System
 
 ## Merkgevoel
 Industrieel, betrouwbaar, technisch. Donker staal, oranje accenten, scherpe typografie. Het voelt als een bedrijf dat écht op industriële locaties werkt.
@@ -14,33 +14,36 @@ De balans: donkere hero + nav (GasProtex-identiteit) + lichte content-secties me
 ## Kleurenpalet
 
 ### Primair (donker — voor achtergronden)
-| Token           | Hex       | Gebruik                              |
-|-----------------|-----------|--------------------------------------|
-| `--navy`        | `#0A2238` | Donkere achtergrond (alle secties)   |
-| `--brand-blue`  | `#1E87B4` | Accentkleur, highlights in koppen    |
+| Token / hex       | Waarde    | Gebruik                                      |
+|-------------------|-----------|----------------------------------------------|
+| `#0A2238`         | —         | Donkere sectie-achtergrond, navbar, gradient  |
+| `--blue` / `#1E87B4` | CSS-var | Accentkleur, highlights, links op gradient   |
+
+> `--navy` in globals.css is `#1E4A75` en wordt gebruikt als `--text-dark`. Voor donkere achtergronden gebruik altijd hardcoded `#0A2238`.
 
 ### Accent (oranje — voor CTA's en energie)
-| Token           | Hex       | Gebruik                              |
-|-----------------|-----------|--------------------------------------|
-| `--orange`      | `#F07830` | Primaire CTA-kleur, actieve states   |
-| `--orange-hot`  | `#FF8A40` | Hover state van orange               |
-| `--amber`       | `#F5A555` | Subtiel warm accent                  |
+| Token          | Hex       | Gebruik                              |
+|----------------|-----------|--------------------------------------|
+| `--orange`     | `#F07830` | Primaire CTA-kleur, actieve states   |
+| `#FF8A40`      | —         | Hover state van orange (geen token)  |
+| `#F5A555`      | —         | Subtiel warm accent (incidenteel)    |
 
 ### Licht (voor tekst en lichte secties)
-| Token           | Hex       | Gebruik                              |
-|-----------------|-----------|--------------------------------------|
-| `--fog`         | `#7AADCC` | Body-tekst op donker, iconen         |
-| `--mist`        | `#C2DCE8` | Nav-links, subtiele tekst op donker  |
-| `--off-white`   | `#F0F6FA` | Koppen op donkere secties            |
-| `--pure`        | `#ffffff` | Tekst op oranje knoppen              |
-| `--surface`     | `#F4F7FA` | Achtergrond lichte secties           |
-| `--text-dark`   | `#0A2238` | Koppen op lichte secties             |
-| `--text-body`   | `#3D5A6E` | Body-tekst op lichte secties         |
-| `--text-muted`  | `#6B8FA6` | Subkoppen / labels op lichte secties |
+| Token            | Hex       | Gebruik                              |
+|------------------|-----------|--------------------------------------|
+| `--fog`          | `#7AADCC` | Body-tekst op donker, iconen         |
+| `#C2DCE8`        | —         | Nav-links, subtiele tekst op donker (geen token) |
+| `--off-white`    | `#F0F6FA` | Koppen op donkere secties            |
+| `#ffffff`        | —         | Tekst op oranje knoppen              |
+| `--surface`      | `#F4F7FA` | Achtergrond lichte secties           |
+| `#0A2238`        | —         | Koppen op lichte secties             |
+| `#3D5A6E`        | —         | Body-tekst op lichte secties         |
+| `#6B8FA6`        | —         | Subkoppen / labels op lichte secties |
 
-### Gebruik in Tailwind
-Alle tokens zijn beschikbaar via `text-navy`, `bg-orange`, `border-fog`, etc. Gebruik **nooit** hardcoded hex in className — gebruik altijd de CSS-variabelen of Tailwind-tokens.  
-Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#F07830]/20` of `rgba()` in een `style`-prop.
+### Beschikbare Tailwind-tokens (via `@theme inline` in globals.css)
+`text-navy`, `bg-navy`, `text-blue`, `bg-blue`, `text-orange`, `bg-orange`, `text-fog`, `bg-fog`, `text-off-white`, `bg-surface`
+
+Ontbrekende tokens (gebruik hardcoded hex): `#FF8A40`, `#C2DCE8`, `#0A2238`, `#3D5A6E`, `#6B8FA6`.
 
 ---
 
@@ -51,150 +54,146 @@ Uitzondering: als een kleur met opacity nodig is, gebruik dan `bg-[#F07830]/20` 
 - **Body**: `font-body` → Aptos (Regular/Medium)
 
 ### Stijlregels
-- Koppen: `font-display font-bold`, grote tracking (`tracking-widest uppercase`) voor labels en nav
 - Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen secties**, nooit als eyebrow boven een pagina-H1
 - H1 (paginakop): `font-bold text-[#0A2238]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — **geen eyebrow/label erboven**
-- H2: `text-4xl font-bold`
-- Body: `text-fog` op donker, `text-text-body` op licht, `text-lg leading-relaxed`
+- H2: `font-bold`, `fontSize: clamp(26px, 3vw, 38px)` of `text-4xl`
+- Body: `text-fog` op donker, `text-[#3D5A6E]` op licht, `text-lg leading-relaxed`
 
 ---
 
 ## Knoppen
 
-### Primaire CTA (oranje)
+### Primaire CTA (oranje) — lichte achtergrond
 ```tsx
-<button className="bg-orange hover:bg-orange-hot text-white font-display font-bold text-sm tracking-widest uppercase px-8 py-3 rounded-md transition-colors clip-btn">
+<a
+  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
+  style={{ padding: '14px 32px' }}
+>
+  Label
+</a>
+```
+> Geen `clip-btn` op lichte achtergronden. Referentie: homepage "Vraag een demo aan".
+
+### Primaire CTA (oranje) — donkere achtergrond
+Zelfde stijl. `clip-btn` optioneel voor industrieel karakter.
+
+### Secundaire (outline) — lichte achtergrond
+```tsx
+<a
+  className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors"
+  style={{ padding: '14px 32px' }}
+>
+  Label
+</a>
+```
+
+### Secundaire (outline) — donkere achtergrond
+```tsx
+<button className="border border-fog/30 text-[#C2DCE8] hover:border-fog/60 hover:text-white text-sm font-medium rounded-md px-8 py-3 transition-colors">
   Label
 </button>
 ```
 
-### Secundaire (outline)
-```tsx
-<button className="border border-fog/30 text-mist hover:border-fog/60 hover:text-off-white text-sm font-medium rounded-md px-8 py-3 transition-colors">
-  Label
-</button>
-```
-
-### Industriële hoekige knopvorm
-- Gebruik `.clip-btn` voor de kenmerkende scheve clip-path: `polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)`
-- Gebruik `.clip-btn-sm` voor kleinere knoppen (6px offset)
-- Op mobiel (`max-width: 640px`) valt clip-path weg → `border-radius: 2px` als fallback
+### Industriële hoekige knopvorm (optioneel)
+- `.clip-btn`: `polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)`
+- `.clip-btn-sm`: kleinere versie (6px offset)
+- Gebruik alleen op donkere secties of als bewuste stijlkeuze
 
 ---
 
 ## Secties & Layout
 
 ### Container
-- Max breedte: `max-w-7xl mx-auto`
-- Padding desktop: `px-[80px]` of `px-20`
-- Padding mobiel: `px-6`
+Gebruik altijd de `.container-main` CSS klasse (gedefinieerd in `globals.css`):
+```tsx
+<div className="container-main">
+  {/* content */}
+</div>
+```
+- Max breedte: `1440px`, gecentreerd via `margin: auto`
+- Padding: `var(--container-pad)` = `clamp(24px, 5vw, 80px)` — schaalt mee met schermbreedte
+- Gebruik **nooit** `max-w-7xl mx-auto` met inline padding — vervangen door `.container-main`
+- Gebruik **nooit** Tailwind `px-6 lg:px-20` — veroorzaakt uitlijningsproblemen
+
+Als een container extra klassen nodig heeft (zoals `flex`, `items-center`):
+```tsx
+<div className="container-main flex items-center justify-between">
+```
+
+### Sectie-spacing (vertical padding)
+| Positie | paddingTop | paddingBottom |
+|---------|-----------|--------------|
+| Header / hero (eerste sectie na navbar) | `100px` | `40px` |
+| Tussenliggende secties met gradient containers | `32px` | `8px` |
+| Laatste sectie / CTA | `32px` | `32px` |
+
+- Navbar is ~80px hoog (fixed) — hero-sectie compenseert met `paddingTop: 100px`
 
 ### Navbar
-- Achtergrond bij scrollen of op niet-homepagina: `bg-[#0A2238]/97` (= `--navy`) met `backdrop-blur-md`
+- Achtergrond bij scrollen of op niet-homepagina: `bg-[#0A2238]/97` met `backdrop-blur-md`
 - Op de homepage transparant totdat gebruiker scrollt
-- **Structuur desktop**: Logo (links) | nav-links + Afspraak Inplannen in één `<ul>` met `gap-8` (midden) | Klantenportaal (uiterst rechts, los element)
-- Nav-links: Diensten · Sectoren · Over Ons · Cases · Contact · Afspraak Inplannen — allemaal `gap-8`
+- **Structuur desktop**: Logo (links) | nav-links + Afspraak Inplannen in één `<ul>` met `gap-5` (midden) | Klantenportaal (uiterst rechts)
+- Nav-links: `uppercase text-sm font-semibold`, `letterSpacing: 1px`, `whitespace-nowrap`
 - Geen "Offerte Aanvragen" knop in de navbar
 
-### Donkere secties (default)
-- Achtergrond: `bg-navy` of `bg-[#0A2238]/95` voor subtiele variatie
-- Voeg altijd `noise-overlay` toe voor subtiele textuur (via `::before`)
-- Gebruik `hero-grid` voor het geanimeerde grid-patroon (oranje lijnen, 6% opacity)
+### Donkere secties
+- Achtergrond: `#0A2238` of `rgba(10,34,56,0.95)` voor subtiele variatie
+- Optioneel: `noise-overlay` voor subtiele textuur, `hero-grid` voor geanimeerd grid
 
 ### Lichte secties
-- Achtergrond: `bg-surface` of `bg-white`
-- Tekst: `text-text-dark` voor koppen, `text-text-body` voor body
+- Achtergrond: `#F4F7FA` (surface) of `#ffffff`
+- Tekst: `#0A2238` voor koppen, `#3D5A6E` voor body
 
 ### Sectieverdeling patroon
-Wissel af: donker → licht → donker. Begin altijd donker (hero).
+Standaard: donker → licht → donker. Content-pagina's (zoals Diensten) mogen starten met een lichte hero als de homepage al een donkere hero heeft.
 
 ---
 
-## Dienstenkaarten / Nieuws-blokken (I-care stijl)
+## Gradient containers
 
-Geïnspireerd op de services/nieuws-blokken van I-care: rustig, veel witruimte, kaarten op een lichte achtergrond.
+Gradient containers zijn de primaire kaart-component voor diensten, FAQ-alternatieven, etc.
 
-### Structuur
-- Grid: 3 kolommen desktop, 2 tablet, 1 mobiel (`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`)
-- Sectieachtergrond: `bg-white` of `bg-surface`
-- Boven de grid: sectionlabel (oranje, uppercase) + H2
-
-### Kaart-stijl
-```tsx
-<div className="bg-white border border-[--border-light] rounded-md overflow-hidden hover:shadow-md transition-shadow duration-200">
-  {/* Optioneel: afbeelding of icoon-blok bovenaan */}
-  <div className="p-6">
-    <p className="text-xs tracking-widest uppercase text-orange font-medium mb-2">Categorie</p>
-    <h3 className="font-display font-bold text-xl text-text-dark mb-3 leading-snug">Diensttitel</h3>
-    <p className="text-text-body text-sm leading-relaxed mb-4">Korte beschrijving van de dienst of het nieuws.</p>
-    <a className="text-brand-blue text-sm font-semibold hover:text-orange transition-colors">
-      Lees meer →
-    </a>
-  </div>
-</div>
-```
-
-### Regels
-- Geen zware schaduwen — alleen `hover:shadow-md` voor interactie-feedback
-- Rand: `border border-[--border-light]` (subtiel, niet dikker dan 1px)
-- Geen grote afbeeldingen die de kaart domineren — tekst is primair
-- "Lees meer →" in `text-brand-blue`, hover naar `text-orange`
-
----
-
-## Diensten-kaarten (gradient stijl)
-
-Elke dienst staat in één zelfstandige container met gradient achtergrond — donkerblauw links, lichterblauw rechts.
-
-### Structuur
+### Stijl
 ```tsx
 <div
-  className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-  style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+  className="rounded-md"
+  style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
 >
-  <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-    {/* Kolom 1: titel, subtitle, prijs, levertijd */}
-    {/* Kolom 2: omschrijving + resultaat */}
-    {/* Kolom 3: inbegrepen lijst + link */}
+```
+- Richting: altijd `to bottom right`
+- Border-radius: `rounded-md` — **nooit** `rounded-2xl`
+- Geen hover-animatie vereist; optioneel: `hover:-translate-y-1 hover:shadow-xl`
+
+### Tekstkleuren op gradient
+- Koppen (h2): `text-white`, `font-bold`
+- Labels / uppercase: `text-[#7AADCC]` (fog), `fontSize: 12`, `letterSpacing: 1.5px`
+- Body: `text-[#C2DCE8]`
+- Links / accenten: `text-[#F07830]` hover `text-[#FF8A40]`
+
+### Opbouw per pagina (met gradient containers)
+1. **Lichte header** — `paddingTop: 100px, paddingBottom: 40px`, H1, geen label erboven
+2. **Secties met gradient containers** — witte achtergrond, `paddingTop: 32px, paddingBottom: 8px`
+3. **CTA** — gradient container of eenvoudige lichte banner, `paddingTop: 32px, paddingBottom: 32px`
+
+### CTA-container (gradient, onderaan pagina)
+```tsx
+<div
+  className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+  style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+>
+  <div>
+    <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+      Titel
+    </h2>
+    <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>Subtekst</p>
   </div>
+  <a className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md flex-shrink-0" style={{ padding: '14px 32px' }}>
+    Label
+  </a>
 </div>
 ```
 
-### Tekstkleuren op gradient
-- Titel: `text-white`
-- Subtitle / levertijd / labels: `text-[#7AADCC]` (fog)
-- Body: `text-[#C2DCE8]` (mist)
-- Prijs / resultaat / link: `text-[#F07830]` (orange)
-- Bullets: kleine oranje dot `bg-[#F07830]`
-
-### Lettertypes binnen gradient containers
-- Sectie-titel (h2): `clamp(26px, 3vw, 38px)`
-- Card-titel (h3/h4): `18px`
-- Body tekst: `15px`, lineHeight `1.7–1.8`
-- Labels / uppercase: `13px`
-- Vergelijkingstabel rijen: `15px`
-- Prijzen: `18–22px`, bold, oranje
-
-### Opbouw per pagina
-Elke pagina volgt dit patroon:
-1. **Witte header** — `paddingTop: 100px, paddingBottom: 40px`, simpele h1, geen eyebrow-label
-2. **Sectie met gradient containers** — `paddingTop: 32px, paddingBottom: 8px` (laatste sectie: `32px` onder)
-3. **CTA container** — zelfde gradient, kleinere padding `40px 48px`, tekst + pijl-link
-
-### Opbouw per container
-Elke container heeft:
-- Buitenste wrapper: `rounded-2xl overflow-hidden`, gradient achtergrond, `padding: 48px`
-- Optioneel: subtitle in `text-[#7AADCC]` boven de h2
-- h2 titel in `text-white`
-- Daarna grid met content (kolommen afhankelijk van inhoud)
-
-### Grid-varianten
-- **3 kolommen** (diensten): titel+meta / omschrijving+resultaat / inbegrepen+link
-- **2 kolommen** (over ons missie, contact): info links / content rechts
-- **4 kolommen** (sectoren, kernwaarden): gelijke kaartjes naast elkaar
-- **Vergelijkingstabel**: `grid-cols-3`, header-rij in `text-[#7AADCC]` + `text-[#F07830]`, geen borders
-
-### Lijst-stijl binnen containers
+### Lijst-stijl binnen gradient containers
 ```tsx
 <ul className="space-y-2">
   <li className="flex items-start gap-2 text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -204,65 +203,29 @@ Elke container heeft:
 </ul>
 ```
 
-### CTA-container (onderaan elke pagina)
-```tsx
-<div
-  className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-  style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
->
-  <div>
-    <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-      Titel
-    </h2>
-    <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>Subtekst</p>
-  </div>
-  <Link className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors" style={{ fontSize: 14 }}>
-    Linktext
-    <svg ...pijl... />
-  </Link>
-</div>
-```
-
-### Regels
-- Gradient altijd: `linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)`
-- Hover: `hover:-translate-y-1 hover:shadow-xl`
-- Geen witte achtergrond, geen border — gradient is de container
-- Geen inner containers (`rgba(255,255,255,0.07)`) — content direct op gradient
-- CTA-blok onderaan volgt dezelfde gradient
-- Geen strepen/borders binnen tabelrijen
-
 ---
 
 ## Statistieken / KPI-blokken
-
-Geïnspireerd op I-care's statblokken — maar **zonder afleidende animaties**. De cijfers spreken voor zich.
-
-### Structuur
-- Rij van 3–4 blokken, horizontaal op desktop, gestapeld op mobiel
-- Achtergrond: donkere sectie (`bg-navy`) of lichte sectie (`bg-surface`) — beide werken
-- Geen roterende tekst of typewriter-effecten
 
 ### Blok-stijl (donkere variant)
 ```tsx
 <div className="flex flex-col gap-1 px-8 py-6 border-l border-fog/20 first:border-l-0">
   <p className="font-display font-bold text-4xl text-off-white">+30%</p>
-  <p className="text-fog text-sm leading-snug">Uptime van installaties</p>
+  <p className="text-fog text-sm leading-snug">Label</p>
 </div>
 ```
 
 ### Blok-stijl (lichte variant)
 ```tsx
-<div className="flex flex-col gap-1 px-8 py-6 border-l border-[--border-light] first:border-l-0">
-  <p className="font-display font-bold text-4xl text-navy">+30%</p>
-  <p className="text-text-muted text-sm leading-snug">Uptime van installaties</p>
+<div className="flex flex-col gap-1 px-8 py-6 border-l border-[#E2EAF0] first:border-l-0">
+  <p className="font-display font-bold text-4xl text-[#0A2238]">+30%</p>
+  <p className="text-[#6B8FA6] text-sm leading-snug">Label</p>
 </div>
 ```
 
 ### Regels
-- Cijfer altijd in `font-display font-bold text-4xl`
-- Label eronder in `text-sm`, gedempte kleur
-- Scheidingslijn via `border-l` (niet via kaarten of achtergrondblokken)
 - **Geen animaties** — geen tellers die optellen, geen fade-in per cijfer
+- Scheidingslijn via `border-l`, niet via kaarten of achtergrondblokken
 
 ---
 
@@ -289,13 +252,11 @@ Geïnspireerd op I-care's statblokken — maar **zonder afleidende animaties**. 
 
 ## Formulieren
 
-- Geen zichtbare zware randen om invoervelden — gebruik underline-stijl (alleen borderbottom)
-- Velden staan los van elkaar — geen rastereffect
+- Geen zichtbare zware randen — gebruik underline-stijl (alleen `borderBottom`)
 - Verzendknop altijd oranje (`bg-orange`)
 
-### Underline input stijl (standaard op donkere secties)
+### Underline input stijl (donkere secties)
 ```tsx
-// Input / Select / Textarea
 style={{
   background: 'transparent',
   border: 'none',
@@ -307,13 +268,9 @@ style={{
 }}
 className="placeholder-[#7AADCC] outline-none transition-colors"
 ```
+- Label: `text-[#7AADCC] font-medium`, `fontSize: 13`
 
-- Label boven het veld: `text-[#7AADCC] font-medium`, `fontSize: 13`
-- Geen achtergrond, geen border-radius — veld vloeit open in de sectie
-- Placeholder in `#7AADCC` (fog)
-
-### Autofill override (browser-autofill witte achtergrond voorkomen)
-Toevoegen aan `globals.css` van zowel website als portal:
+### Autofill override
 ```css
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -326,31 +283,19 @@ select:-webkit-autofill {
   transition: background-color 0s 600000s, color 0s 600000s !important;
 }
 ```
-- Kleur `#0A2238` (steel) voor donkere secties
-- Voor de gradient-container op de contactpagina: `#1E5C8C`
-
----
-
-## Paginastructuur
-
-Elke pagina volgt dit patroon:
-1. **Hero** — donkere achtergrond (`bg-navy`), grote kop, oranje CTA-knop
-2. **Hoofdsectie(s)** — lichte achtergrond (`bg-white` of `bg-surface`), kaartgrid of tekst
-3. **CTA-banner** — donkere achtergrond (`bg-navy`), korte tekst, oranje knop
-4. **Footer** — donker
+- Voor gradient-containers: vervang `#0A2238` door `#1E5C8C`
 
 ---
 
 ## Wat te vermijden
 - Geen zachte pastelkleuren of gradient-rainbows
-- Geen afgeronde grote border-radius (gebruik `rounded-md`, nooit `rounded-2xl` of `rounded-full` voor blokken)
+- Geen grote border-radius: gebruik `rounded-md`, **nooit** `rounded-2xl` of `rounded-full` voor blokken
 - Geen generieke SaaS-look (blauwe #3B82F6 knoppen, witte kaartjes met zware slagschaduw)
 - Geen extra commentaar of docstrings toevoegen aan bestaande code
-- Geen onnodige animaties — alleen fade-up bij initieel laden, geen hover-shake etc.
-- Geen afleidende loopanimaties naast KPI-cijfers of statistieken — de inhoud moet centraal staan
-- Geen typewriter-effecten of roterende tekst in hero of stat-blokken
+- Geen onnodige animaties — alleen fade-up bij initieel laden
+- Geen typewriter-effecten of roterende tekst
 - Nooit meer dan 3 kleuren per sectie
-- Geen eyebrow-labels boven H1 paginakoppen — de titel spreekt voor zichzelf
+- Geen eyebrow-labels boven H1 paginakoppen
 - Geen gekleurde badges of tags
-- Geen "pill" knoppen — `border-radius` max `rounded-md` (6–8px)
+- Geen "pill" knoppen — `border-radius` max `rounded-md`
 - Geen tekst in volledig capslock, behalve bij labels/eyebrows

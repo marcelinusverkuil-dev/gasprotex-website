@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#0A2238' }}>
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto section-container py-16 lg:py-20">
+      <div className="container-main section-container py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
           {/* Brand */}
@@ -74,7 +74,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div style={{ marginTop: 32 }}>
-        <div className="max-w-7xl mx-auto section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="container-main section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>
             © {new Date().getFullYear()} GasProtex B.V. — Alle rechten voorbehouden.
           </p>

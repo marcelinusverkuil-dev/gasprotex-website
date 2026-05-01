@@ -36,8 +36,8 @@ export default function Navbar() {
         }`}
       >
         <div
-          className="max-w-7xl mx-auto flex items-center justify-between"
-          style={{ height: 72, paddingLeft: '80px', paddingRight: '80px' }}
+          className="container-main flex items-center justify-between"
+          style={{ height: 72, paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}
         >
           {/* Logo */}
           <Link href="/" aria-label="GasProtex homepage">
@@ -45,13 +45,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav + Afspraak */}
-          <ul className="hidden lg:flex items-center gap-8 list-none">
+          <ul className="hidden lg:flex items-center gap-5 list-none">
             {navLinks.slice(0, 6).map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200"
-                  style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+                  className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap"
+                  style={{ letterSpacing: '1px' }}
                 >
                   {link.label}
                 </Link>
@@ -62,8 +62,8 @@ export default function Navbar() {
                 href="https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
-                style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+                className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-white transition-colors whitespace-nowrap"
+                style={{ letterSpacing: '1px' }}
               >
                 Afspraak Inplannen
               </a>
@@ -73,8 +73,8 @@ export default function Navbar() {
           {/* Klantenportaal rechts */}
           <a
             href="https://gasprotex-portal.vercel.app/login"
-            className="hidden lg:inline-flex items-center self-center font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-white transition-colors"
-            style={{ fontFamily: 'var(--font-barlow-condensed)', letterSpacing: '2px' }}
+            className="hidden lg:inline-flex items-center self-center font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-white transition-colors whitespace-nowrap"
+            style={{ letterSpacing: '1px' }}
           >
             Klantenportaal
           </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none -translate-y-2'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-8 py-6 flex flex-col gap-4">
+        <div className="container-main py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}

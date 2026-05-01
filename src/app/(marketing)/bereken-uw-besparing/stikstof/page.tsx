@@ -55,7 +55,7 @@ export default function StikstofCalculatorPage() {
   return (
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <Link href="/bereken-uw-besparing" className="inline-flex items-center gap-2 text-[#7AADCC] hover:text-[#C2DCE8] mb-6 transition-colors" style={{ fontSize: 13 }}>
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" style={{ transform: 'rotate(180deg)' }}>
               <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -73,7 +73,7 @@ export default function StikstofCalculatorPage() {
       </section>
 
       <section style={{ background: '#ffffff', paddingBottom: '60px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
             <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>

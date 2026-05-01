@@ -26,6 +26,8 @@ select:-webkit-autofill {
   --text-dark:    #1E4A75;
   --text-body:    #3D5A6E;
   --text-muted:   #6B8FA6;
+
+  --container-pad: clamp(24px, 5vw, 80px);
 }
 
 @theme inline {
@@ -131,8 +133,17 @@ body {
   to   { box-shadow: 0 0 60px rgba(240,120,48,0.8); }
 }
 
-/* ── CONTAINER PADDING ── */
+/* ── CONTAINER ── */
+.container-main {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
 .section-container {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
 }

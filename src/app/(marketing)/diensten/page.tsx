@@ -1,170 +1,342 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 
+const BOOKINGS_URL =
+  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
+
 export const metadata: Metadata = {
-  title: 'Diensten – GasProtex',
-  description: 'Quickscan, Fabrieksaudit en Serviceabonnement. Akoestische gaslekdetectie op maat voor uw situatie.',
+  title: 'Gas- en persluchtlekdetectie als dienst | GasProtex',
+  description:
+    'Ultrasone gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Rapport met euro-impact per lek. Vraag een Quickscan aan.',
+  alternates: {
+    canonical: 'https://gasprotex.nl/diensten/',
+  },
 }
 
-const diensten = [
+const faqItems = [
   {
-    id: 'quickscan',
-    title: 'Quickscan',
-    subtitle: 'Snelle screening',
-    price: 'Vanaf €2.500',
-    levertijd: 'Resultaat dezelfde dag',
-    wat: 'In één dag alle actieve gaslekken in kaart. Dezelfde dag ontvangt u een rapportage met locaties, lekgrootte en kostenimpact.',
-    inbegrepen: [
-      'Volledige scan van aangewezen installatiegebieden',
-      'Akoestische heatmap per zone',
-      'Rapportage met locatie, grootte en prioriteit per lek',
-      'Kostenberekening (€/jaar) per lek',
-      'CO₂-impact berekening',
-      'Digitale levering dezelfde dag',
-    ],
-    resultaat: 'Gemiddeld 8–24 lekken per dagdeel. Besparing: €12.000–€40.000/jaar.',
+    question: 'Hoe werkt ultrasone lekdetectie?',
+    answer:
+      'Elk lek onder druk produceert ultrasone geluidsgolven. Onze camera vangt die op en toont de exacte locatie — ook in lawaaierige productieomgevingen.',
   },
   {
-    id: 'audit',
-    title: 'Fabrieksaudit',
-    subtitle: 'Volledige inspectie',
-    price: 'Vanaf €5.000',
-    levertijd: 'Rapportage binnen 3 werkdagen',
-    wat: 'Meerdaagse audit van uw gehele locatie. BRZO-proof rapportage en prioriteitenmatrix voor onderhoud.',
-    inbegrepen: [
-      'Meerdaagse on-site inspectie (afhankelijk van locatiegrootte)',
-      'Scan van alle systemen: perslucht, procesgassen, stikstof, CO₂',
-      'BRZO-proof rapportage geschikt voor toezichthouders',
-      'Emissiereductieberekening voor ESG/CO₂-rapportage',
-      'Prioriteitenmatrix: urgentie × kostenbesparing',
-      'Managementsamenvatting (1 pagina)',
-      'Presentatie van bevindingen aan uw team',
-    ],
-    resultaat: 'ROI gemiddeld 3–8 maanden. Basis voor ISO 50001 of BRZO-rapportage.',
+    question: 'Hoe lang duurt een scan?',
+    answer:
+      'Meestal een dagdeel (3–4 uur). Geen stilstand nodig — we meten tijdens normale productie.',
   },
   {
-    id: 'abonnement',
-    title: 'Serviceabonnement',
-    subtitle: 'Periodiek & proactief',
-    price: 'Vanaf €18.000/jaar',
-    levertijd: 'Kwartaal- of halfjaarsronde',
-    wat: 'Kwartaal- of halfjaarscontroles met klantportaal. Realtime inzicht in lekken en gerealiseerde besparingen.',
-    inbegrepen: [
-      '2× of 4× per jaar volledige locatie-inspectie',
-      'Toegang tot klantportaal (realtime lekstatus)',
-      'QR-tagging van leklocaties voor onderhoudsdienst',
-      'Maandelijkse KPI-rapportage (PDF of portaal)',
-      'Gerealiseerde besparingen dashboard',
-      'Directe notificatie bij kritieke lekken',
-      'Dedicated contactpersoon bij GasProtex',
-    ],
-    resultaat: 'Abonnementsklanten besparen gemiddeld 23% meer door proactieve opvolging.',
+    question: 'Wat kost een persluchtlek per jaar?',
+    answer:
+      'Afhankelijk van druk en debiet. Een lek van 1 mm kost al €500–€1.500 per jaar aan energie. Bij 20–30 lekken loopt dat snel op.',
+  },
+  {
+    question: 'Is gasdetectie met ultrasoon ATEX-gecertificeerd?',
+    answer:
+      'Ja. Onze Crysound 8125 is gecertificeerd voor ATEX zone 1. Wij zijn VCA-vol gecertificeerd als operator.',
+  },
+  {
+    question: 'Vervangt dit onze vaste gasdetectie?',
+    answer:
+      'Nee. Wij vullen aan waar vaste detectoren blinde vlekken hebben. Je bestaande systeem blijft gewoon draaien.',
+  },
+  {
+    question: 'Wat als jullie wegvallen?',
+    answer: 'Je data en rapportage zijn van jou. Crysound als backup bij noodgevallen.',
   },
 ]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Gas- en persluchtlekdetectie',
+  provider: {
+    '@type': 'Organization',
+    name: 'GasProtex',
+    url: 'https://gasprotex.nl',
+  },
+  description:
+    'Ultrasone gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd.',
+  areaServed: 'NL',
+}
+
+function ArrowRight() {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+      <path
+        d="M8.5 1L13 5L8.5 9M1 5H13"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 export default function DienstenPage() {
   return (
     <>
-      {/* Header */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
+      {/* Sectie 1 — Hero (licht) */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Diensten
-          </h1>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h1
+                className="font-bold text-[#0A2238] mb-6"
+                style={{
+                  fontSize: 'clamp(32px, 4vw, 52px)',
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Gas- en persluchtlekdetectie als dienst.
+              </h1>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 18, lineHeight: 1.75 }}>
+                Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera
+                lokaliseren we elk lek — tijdens normale productie, zonder stilstand.
+              </p>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 18, lineHeight: 1.75 }}>
+                Geen apparatuur kopen of eigen operator opleiden. Wij komen langs, scannen, en
+                leveren een rapport met exacte locaties en euro-impact per lek.
+              </p>
+              <p className="text-[#6B8FA6] mb-8" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                ATEX-gecertificeerd. VCA-vol. Voor industrie en voedingsmiddelensector.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href={BOOKINGS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Vraag een Quickscan aan
+                  <ArrowRight />
+                </a>
+                <a
+                  href={BOOKINGS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Plan kennismakingsgesprek
+                </a>
+              </div>
+            </div>
+
+            <div
+              className="relative rounded-xl overflow-hidden"
+              style={{ aspectRatio: '4/3' }}
+            >
+              <Image
+                src="/hero-image-v2.jpg"
+                alt="Operator met Crysound ultrasone camera in industriële setting"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Diensten */}
-      <section style={{ background: '#ffffff', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <div className="flex flex-col gap-6">
-            {diensten.map((d) => (
-              <div
-                key={d.id}
-                id={d.id}
-                className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                style={{
-                  background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)',
-                  padding: '48px',
-                }}
+      {/* Sectie 2 — Twee kaarten */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Kaart: Perslucht */}
+            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>
+              <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Perslucht</p>
+              <h2
+                className="font-bold text-white mb-6"
+                style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+                20–30% perslucht gaat verloren. Bij 200&nbsp;kW is dat €15.000–€25.000 per jaar.
+              </h2>
+              <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                Een gemiddeld productiebedrijf verliest 20–30% van zijn perslucht door lekken.
+                Bij een installatie van 200&nbsp;kW is dat €15.000–€25.000 per jaar aan
+                verloren energie.
+              </p>
+              <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                Je hebt al een onderhoudspartner? Wij vervangen die niet — wij vullen aan met
+                ultrasone inspectie die sneller en gerichter is dan zeepsop of handmatige
+                controle.
+              </p>
+              <Link
+                href="/bereken-uw-besparing/perslucht/"
+                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
+                style={{ fontSize: 14 }}
+              >
+                Bereken jouw besparing
+                <ArrowRight />
+              </Link>
+            </div>
 
-                  {/* Links: titel + meta */}
-                  <div>
-                    <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>{d.subtitle}</p>
-                    <h2 className="font-bold text-white mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                      {d.title}
-                    </h2>
-                    <p className="text-[#F07830] font-bold mb-1" style={{ fontSize: 18 }}>{d.price}</p>
-                    <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>{d.levertijd}</p>
-                  </div>
+            {/* Kaart: Gevaarlijke gassen */}
+            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>
+              <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Gevaarlijke gassen</p>
+              <h2
+                className="font-bold text-white mb-6"
+                style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+              >
+                Vaste detectoren hebben blinde vlekken. Wij vinden wat zij missen.
+              </h2>
+              <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                Vaste gasdetectie ziet hoge concentraties op vaste plekken. Wat het mist: lage
+                concentraties, intermitterende lekken, blinde vlekken tussen sensors. Daar komen
+                wij.
+              </p>
+              <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan, propaan — elk gas onder
+                druk. ATEX-gecertificeerd voor zone&nbsp;1.
+              </p>
+              <Link
+                href="/kennisbank/atex-zones-uitgelegd/"
+                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
+                style={{ fontSize: 14 }}
+              >
+                Meer over ATEX en zones
+                <ArrowRight />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                  {/* Midden: omschrijving + resultaat */}
-                  <div>
-                    <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                      {d.wat}
-                    </p>
-                    <p className="text-[#F07830]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                      {d.resultaat}
-                    </p>
-                  </div>
+      {/* Sectie 3 — Wat krijg je */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-3">
+            Wat je krijgt
+          </p>
+          <h2
+            className="font-bold text-[#0A2238] mb-10"
+            style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+          >
+            Wat krijg je?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
+              <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Rapport</p>
+              <p className="text-[#C2DCE8] mb-6" style={{ fontSize: 15, lineHeight: 1.75 }}>
+                Per lek: locatie, foto, jaarverlies in euro&apos;s, herstelprioriteit.
+              </p>
+              <a
+                href="/voorbeeldrapport.pdf"
+                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
+                style={{ fontSize: 14 }}
+              >
+                Bekijk voorbeeld
+                <ArrowRight />
+              </a>
+            </div>
 
-                  {/* Rechts: inbegrepen + link */}
-                  <div>
-                    <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Inbegrepen</p>
-                    <ul className="space-y-2 mb-8">
-                      {d.inbegrepen.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
-                      style={{ fontSize: 14 }}
-                    >
-                      Offerte aanvragen
-                      <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                        <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
+            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
+              <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Klantportaal</p>
+              <p className="text-[#C2DCE8] mb-6" style={{ fontSize: 15, lineHeight: 1.75 }}>
+                Alle lekken online. Status per lek. QR-code op de plek zelf.
+              </p>
+              <Link
+                href="/klantportaal/"
+                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
+                style={{ fontSize: 14 }}
+              >
+                Bekijk het portaal
+                <ArrowRight />
+              </Link>
+            </div>
 
-                </div>
+            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
+              <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Herstelplan</p>
+              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.75 }}>
+                Gesorteerd op impact. Je onderhoudsteam weet direct waar te beginnen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie 4 — FAQ */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <h2
+            className="font-bold text-[#0A2238] mb-10"
+            style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+          >
+            Veelgestelde vragen
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
+            {faqItems.map((item) => (
+              <div key={item.question}>
+                <h3
+                  className="font-semibold text-[#0A2238] mb-2"
+                  style={{ fontSize: 16, lineHeight: 1.4 }}
+                >
+                  {item.question}
+                </h3>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
+                  {item.answer}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ background: '#ffffff', paddingBottom: '60px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-          <div
-            className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
-          >
+      {/* Sectie 5 — CTA (licht) */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div>
-              <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                Niet zeker welke dienst past?
+              <h2
+                className="font-bold text-[#0A2238] mb-1"
+                style={{
+                  fontSize: 'clamp(20px, 2.5vw, 32px)',
+                  lineHeight: 1.3,
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Weten waar je lekken zitten?
               </h2>
-              <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                Wij adviseren u gratis op basis van uw installatie en situatie.
+              <p className="text-[#6B8FA6]" style={{ fontSize: 15 }}>
+                Een Quickscan geeft je binnen een dagdeel concreet antwoord.
               </p>
             </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
-              style={{ fontSize: 14 }}
+            <a
+              href={BOOKINGS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md flex-shrink-0"
+              style={{ padding: '14px 32px' }}
             >
-              Gratis adviesgesprek
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
+              Vraag een Quickscan aan
+              <ArrowRight />
+            </a>
           </div>
         </div>
       </section>

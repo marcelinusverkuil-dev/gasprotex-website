@@ -6,7 +6,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
     <>
       {/* Witte header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="flex items-center gap-3 mb-4">
             <Link href="/sectoren" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
               Sectoren
@@ -22,7 +22,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
 
       {/* Intro + KPI stats */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-2xl overflow-hidden"
             style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
@@ -55,7 +55,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
 
       {/* Uitdagingen + Aanpak */}
       <section style={{ background: '#ffffff', paddingTop: '8px', paddingBottom: '8px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-2xl overflow-hidden"
             style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
@@ -124,7 +124,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
 
       {/* CTA */}
       <section style={{ background: '#ffffff', paddingTop: '8px', paddingBottom: '32px' }}>
-        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
             style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
