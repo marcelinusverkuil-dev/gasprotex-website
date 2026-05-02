@@ -12,8 +12,8 @@ export default function ContactCTASection() {
         </div>
 
         <div
-          className="rounded-2xl"
-          style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+          className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 

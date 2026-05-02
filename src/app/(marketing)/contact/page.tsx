@@ -43,8 +43,8 @@ export default function ContactPage() {
 
             {/* Info + form container */}
             <div
-              className="rounded-2xl overflow-hidden"
-              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+              className="rounded-md overflow-hidden"
+              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
             >
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 

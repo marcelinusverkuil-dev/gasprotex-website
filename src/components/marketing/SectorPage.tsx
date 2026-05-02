@@ -24,8 +24,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
               <div>
@@ -57,8 +57,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
       <section style={{ background: '#ffffff', paddingTop: '8px', paddingBottom: '8px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
@@ -126,8 +126,8 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
       <section style={{ background: '#ffffff', paddingTop: '8px', paddingBottom: '32px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+            className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
           >
             <div>
               <p className="font-bold text-white mb-1" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>

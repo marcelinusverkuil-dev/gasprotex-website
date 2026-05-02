@@ -42,8 +42,8 @@ export default function DienstenSection() {
           {diensten.map((d) => (
             <div
               key={d.nr}
-              className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col"
-              style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '36px' }}
+              className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col"
+              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '36px' }}
             >
               <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>{d.subtitle}</p>
               <h3 className="font-bold text-white mb-4" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>

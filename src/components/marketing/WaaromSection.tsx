@@ -31,8 +31,8 @@ export default function WaaromSection() {
 
           {/* Voordelen grid */}
           <div
-            className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {voordelen.map((v, i) => (
@@ -50,8 +50,8 @@ export default function WaaromSection() {
 
           {/* Vergelijkingstabel */}
           <div
-            className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
           >
             <h3 className="font-bold text-white mb-8" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
               Traditioneel vs. akoestisch

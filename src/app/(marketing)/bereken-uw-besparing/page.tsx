@@ -97,7 +97,7 @@ export default function BerekenUwBesparingPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
           >
             <div>
               <p className="text-[#C2DCE8] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>

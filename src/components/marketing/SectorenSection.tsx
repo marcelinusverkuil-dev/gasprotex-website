@@ -49,8 +49,8 @@ export default function SectorenSection() {
 
           {/* Sectoren container */}
           <div
-            className="rounded-2xl overflow-hidden"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '48px' }}
+            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
           >
             {/* Pijltjes — alleen op kleine schermen */}
             <div className="flex items-center justify-end gap-2 mb-4 lg:hidden">
@@ -114,8 +114,8 @@ export default function SectorenSection() {
 
           {/* ROI banner */}
           <div
-            className="rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to right, #0A2238 0%, #1E5A8A 100%)', padding: '40px 48px' }}
+            className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
           >
             <div>
               <p className="font-bold text-white mb-1" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>
