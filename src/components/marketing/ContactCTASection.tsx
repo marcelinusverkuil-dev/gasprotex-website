@@ -1,57 +1,28 @@
-﻿import Link from 'next/link'
+const BOOKINGS_URL =
+  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink';
 
 export default function ContactCTASection() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
-      <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-
-        <div className="mb-10">
-          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Klaar voor een gratis quickscan?
-          </h2>
-        </div>
-
-        <div
-          className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-          style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-            {/* Links — trust signals */}
-            <div className="flex flex-col gap-4">
-              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.8 }}>
-                Vertel ons kort over uw installatie. Wij nemen binnen één werkdag contact op.
-              </p>
-              {[
-                'Reactie binnen 1 werkdag',
-                'Geheel vrijblijvend',
-                'ATEX-gecertificeerd team',
-                'NDA beschikbaar op verzoek',
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '1px' }} />
-                  <span className="text-[#C2DCE8]" style={{ fontSize: 15 }}>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Rechts — CTA knop */}
-            <div className="flex flex-col gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-[#F07830] hover:bg-[#FF8A40] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
-                style={{ fontSize: 15 }}
-              >
-                Quickscan aanvragen
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                  <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </div>
-
+      <div className="container-main">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+          <div>
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
+              Weten waar je lekken zitten?
+            </h2>
+            <p className="text-[#3D5A6E]">
+              Een Quickscan geeft je binnen een dagdeel concreet antwoord.
+            </p>
           </div>
+          <a
+            href={BOOKINGS_URL}
+            className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+            style={{ padding: '14px 32px' }}
+          >
+            Vraag een Quickscan aan →
+          </a>
         </div>
       </div>
     </section>
-  )
+  );
 }

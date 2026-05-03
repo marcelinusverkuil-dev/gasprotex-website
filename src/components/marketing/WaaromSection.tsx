@@ -1,83 +1,58 @@
-﻿const voordelen = [
-  { title: 'Exacte lokalisatie', description: 'Heatmap toont precies waar het lek zit — tot op de centimeter.' },
-  { title: '10× sneller', description: '20 minuten per hal. Één operator. Productie draait door.' },
-  { title: 'Veilig op afstand', description: 'Detecteer tot 200 meter. ATEX-gecertificeerd voor explosiegevaarlijke zones.' },
-  { title: 'Directe kostenberekening', description: 'Elk lek vertaald naar €/jaar en CO₂-impact — klaar voor uw ESG-rapportage.' },
-  { title: 'Geen productiestilstand', description: 'Non-invasief. Geen stilstand, geen productieverlies.' },
-  { title: 'ISO 50001 rapportage', description: 'Voldoet aan ISO 50001 en BRZO. Klaar voor auditors.' },
-]
-
-const vergelijking = [
-  { aspect: 'Inspectietijd per hal', traditioneel: '4–8 uur', akoestisch: '20–40 min' },
-  { aspect: 'Personeel nodig', traditioneel: '2–3 technici', akoestisch: '1 specialist' },
-  { aspect: 'Productiestilstand', traditioneel: 'Vaak nodig', akoestisch: 'Niet nodig' },
-  { aspect: 'Exacte locatie', traditioneel: 'Niet altijd', akoestisch: 'Altijd' },
-  { aspect: 'ATEX zone inzetbaar', traditioneel: 'Beperkt', akoestisch: 'Volledig' },
-  { aspect: 'Kostenrapportage', traditioneel: 'Handmatig', akoestisch: 'Automatisch' },
-]
-
 export default function WaaromSection() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
-      <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+      <div className="container-main">
+        <div
+          className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-        <div className="mb-10">
-          <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Waarom akoestisch?
-          </h2>
-        </div>
+            <div>
+              <p
+                className="text-[#7AADCC] mb-4"
+                style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}
+              >
+                Waarom dienst in plaats van apparatuur
+              </p>
+              <h2
+                className="text-white font-bold text-3xl mb-4"
+                style={{ lineHeight: 1.2 }}
+              >
+                Apparatuur kopen of dienst inkopen?
+              </h2>
+              <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                Een ultrasone camera met ATEX-kit kost €60-100k, plus opleiding en jaarlijks
+                onderhoud. Een Quickscan bij ons begint bij €2.500. Voor de prijs van één eigen
+                camera doen we 24 scans of 3+ jaar abonnement.
+              </p>
+              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                Gasdetectie als dienst in plaats van als investering. Wij komen, meten,
+                rapporteren. Jij krijgt het resultaat zonder de overhead.
+              </p>
+            </div>
 
-        <div className="flex flex-col gap-6">
-
-          {/* Voordelen grid */}
-          <div
-            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {voordelen.map((v, i) => (
-                <div key={i}>
-                  <h4 className="font-bold text-white mb-2" style={{ fontSize: 18, letterSpacing: '-0.02em' }}>
-                    {v.title}
-                  </h4>
-                  <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                    {v.description}
+            <div className="flex flex-col justify-center gap-6">
+              {[
+                'Geen operator opleiden — wij zijn gecertificeerd',
+                'Geen kalibratie, geen onderhoud — dat regelen wij',
+                'Rapport met euro-impact per lek — niet alleen locaties',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-4">
+                  <span
+                    className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830]"
+                    style={{ marginTop: '8px' }}
+                  />
+                  <p className="text-[#C2DCE8]" style={{ fontSize: 15 }}>
+                    {item}
                   </p>
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Vergelijkingstabel */}
-          <div
-            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
-          >
-            <h3 className="font-bold text-white mb-8" style={{ fontSize: 22, letterSpacing: '-0.02em' }}>
-              Traditioneel vs. akoestisch
-            </h3>
-            <div>
-              <div className="grid grid-cols-3 pb-3 mb-2" style={{  }}>
-                <span className="text-[#7AADCC]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}></span>
-                <span className="text-[#7AADCC]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Traditioneel</span>
-                <span className="text-[#F07830]" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>GasProtex</span>
-              </div>
-              {vergelijking.map((row, i) => (
-                <div key={i} className="grid grid-cols-3 py-3" style={{  }}>
-                  <span className="text-[#C2DCE8] font-medium" style={{ fontSize: 15 }}>{row.aspect}</span>
-                  <span className="text-[#7AADCC] flex items-center gap-1" style={{ fontSize: 15 }}>
-                    <span className="text-red-400">✕</span> {row.traditioneel}
-                  </span>
-                  <span className="text-white font-semibold flex items-center gap-1" style={{ fontSize: 15 }}>
-                    <span style={{ color: '#F07830' }}>✓</span> {row.akoestisch}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }

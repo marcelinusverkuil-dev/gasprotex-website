@@ -136,25 +136,19 @@ Als een container extra klassen nodig heeft (zoals `flex`, `items-center`):
 - Nav-links: `uppercase text-sm font-semibold`, `letterSpacing: 1px`, `whitespace-nowrap`
 - Geen "Offerte Aanvragen" knop in de navbar
 
-### Donkere secties
-- Achtergrond: `#0A2238` of `rgba(10,34,56,0.95)` voor subtiele variatie
-- Optioneel: `noise-overlay` voor subtiele textuur, `hero-grid` voor geanimeerd grid
-
 ### Standaard paginaachtergrond
-De standaard achtergrond van elke sectie is **`#ffffff` (wit)**. Uitzonderingen:
+De standaard achtergrond van **elke sectie** is altijd **`#ffffff` (wit)**. Uitzonderingen:
 - **Navbar** — `#0A2238/97` (bij scrollen of niet-homepage)
-- **Hero** — donker (`#0A2238`) of licht (`#ffffff`), afhankelijk van de pagina
+- **Hero** — `#0A2238` (donkere hero, homepage) of `#ffffff` (lichte hero, subpagina's)
 - **Footer** — `#0A2238`
-- **Gradient containers** — `linear-gradient(to bottom right, #0A2238, #1E5A8A)`
+- **Gradient containers** — `linear-gradient(to bottom right, #0A2238, #1E5A8A)`, altijd ín een witte sectie
 
 Gebruik `#F4F7FA` (surface) alleen als bewuste keuze voor subtiele afwisseling binnen lichte secties.
 
-### Lichte secties
-- Achtergrond: `#ffffff` (standaard) of `#F4F7FA` (surface, incidenteel)
-- Tekst: `#0A2238` voor koppen, `#3D5A6E` voor body
-
 ### Sectieverdeling patroon
-Standaard: donker → licht → donker. Content-pagina's (zoals Diensten) mogen starten met een lichte hero als de homepage al een donkere hero heeft.
+Alle secties hebben een witte achtergrond. Het donker-licht-ritme ontstaat door de gradient containers bínnen de secties. Secties zónder gradient container ogen licht; secties mét een grote gradient container ogen donker — maar de sectie zelf is altijd wit.
+
+Content-pagina's mogen starten met een lichte hero als de homepage al een donkere hero heeft.
 
 ### Hero-varianten
 
