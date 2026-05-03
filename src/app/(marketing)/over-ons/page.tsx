@@ -1,151 +1,248 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
+import Script from 'next/script'
+
+const BOOKINGS_URL =
+  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
-  title: 'Over Ons – GasProtex',
-  description: 'GasProtex brengt akoestische gaslekdetectie naar de Nederlandse industrie. Sneller, veiliger, zonder productiestilstand.',
+  title: 'Over GasProtex — Specialist in lekdetectie | Marcelinus Verkuil',
+  description:
+    '10+ jaar ervaring in industriële instrumentatie en lekdetectie. Bij Hitma de apparatuur-kant, bij GasProtex de dienst-kant. ATEX-gecertificeerd.',
+  alternates: {
+    canonical: 'https://gasprotex.nl/over-ons/',
+  },
 }
 
-const waarden = [
-  { titel: 'Precisie', tekst: 'Exacte locaties tot op de centimeter. Uw onderhoudsdienst kan direct aan de slag.' },
-  { titel: 'Veiligheid', tekst: 'ATEX-gecertificeerd. Detectie op afstand, zonder uw team te riskeren.' },
-  { titel: 'Transparantie', tekst: 'Elk lek krijgt een euro-waarde. Directie ziet direct de kosten én besparing.' },
-  { titel: 'Snelheid', tekst: 'Één specialist, één dag, complete rapportage. Productie blijft draaien.' },
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      name: 'Marcelinus Verkuil',
+      jobTitle: 'Oprichter',
+      worksFor: { '@type': 'Organization', name: 'GasProtex' },
+    },
+    {
+      '@type': 'Organization',
+      name: 'GasProtex',
+      url: 'https://gasprotex.nl',
+      founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
+    },
+  ],
+}
+
+const certificeringen = [
+  {
+    titel: 'ATEX-gecertificeerd',
+    tekst: 'Onze Crysound 8125 is gecertificeerd voor ATEX zone 1. Wij mogen meten in explosiegevaarlijke omgevingen.',
+  },
+  {
+    titel: 'VCA-vol',
+    tekst: 'Veiligheidscertificering voor werken op industriële locaties.',
+  },
+  {
+    titel: 'Crysound-gecertificeerd',
+    tekst: 'Getraind en gecertificeerd operator op de Crysound 8125 ultrasone camera.',
+  },
 ]
 
-const tijdlijn = [
-  { jaar: '2022', tekst: 'Oprichting GasProtex na ervaring met perslucht-energieverlies in de procesindustrie.' },
-  { jaar: '2023', tekst: 'Eerste akoestische camera-inspecties bij chemische producenten in Rotterdam en Zeeland.' },
-  { jaar: '2024', tekst: 'ATEX-certificering behaald. Uitbreiding naar food & beverage en energiesector.' },
-  { jaar: '2025', tekst: 'Lancering klantportaal met realtime lekstatus en kostenrapportage voor abonnementsklanten.' },
-]
-
-const stats = [
-  { value: '30%', label: 'Gem. perslucht verlies', sub: 'Gemiddeld in de industrie' },
-  { value: '10×', label: 'Sneller', sub: 'Vs. traditionele methoden' },
-  { value: '200m', label: 'Detectiebereik', sub: 'Veilige afstandsdetectie' },
-  { value: 'ATEX', label: 'Gecertificeerd', sub: 'Zone 1 & Zone 2' },
+const werkwijze = [
+  {
+    titel: 'Werkgebied: Nederland',
+    tekst: 'We werken door heel Nederland. Geen reiskosten-toeslag.',
+    link: null,
+  },
+  {
+    titel: 'Specialist met focus',
+    tekst: 'Lekdetectie als dienst — niets anders. Geen breed onderhoudsbedrijf, geen apparatuur-verkoop.',
+    link: { href: '/diensten/', label: 'Bekijk wat we doen →' },
+  },
+  {
+    titel: 'Klantportaal voor opvolging',
+    tekst: 'Elke scan levert een rapport op dat je terugziet in het klantportaal. QR-code per lek, status-tracking, trend-overzicht.',
+    link: null,
+  },
+  {
+    titel: 'Naast je bestaande onderhoud',
+    tekst: 'Wij vervangen je onderhoudspartner niet. Wij vullen aan — specifiek op lekdetectie, met QR-code per lek en opvolging via het klantportaal.',
+    link: { href: '/diensten/', label: 'Bekijk wat we doen →' },
+  },
 ]
 
 export default function OverOnsPage() {
   return (
     <>
-      {/* Header */}
+      <Script
+        id="over-ons-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
-        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Over Ons
-          </h1>
+        <div className="container-main">
+
+          <div className="flex items-center gap-3 mb-6">
+            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
+              Home
+            </Link>
+            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
+            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Over ons</span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h1
+                className="font-bold text-[#0A2238] mb-4"
+                style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+              >
+                Over GasProtex
+              </h1>
+              <p className="text-[#3D5A6E] text-lg leading-relaxed">
+                Specialist met focus: lekdetectie als dienst, niets anders.
+              </p>
+            </div>
+
+            <div
+              className="relative rounded-xl overflow-hidden"
+              style={{ aspectRatio: '4/3', background: '#F4F7FA' }}
+            />
+          </div>
+
         </div>
       </section>
 
-      <section style={{ background: '#ffffff', paddingBottom: '40px' }}>
-        <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <div className="flex flex-col gap-6">
+      {/* Sectie 2 — Wie en waarom */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+        <div className="container-main">
+          <div
+            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-            {/* Missie */}
-            <div
-              className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                <div>
-                  <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>Onze missie</p>
-                  <h2 className="font-bold text-white mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                    Geen enkel lek onopgemerkt
-                  </h2>
-                  <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                    De industrie verliest jaarlijks miljoenen aan gaslekken — niet door gebrek aan aandacht, maar door gebrek aan detectiemiddelen.
-                  </p>
-                  <p className="text-[#C2DCE8]" style={{ fontSize: 16, lineHeight: 1.8 }}>
-                    Met akoestische camera-technologie brengen wij elk lek snel en veilig in kaart, met directe kostenberekening.
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="p-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                      <div className="font-bold text-[#F07830] leading-none mb-1" style={{ fontSize: 36 }}>
-                        {stat.value}
-                      </div>
-                      <div className="font-semibold text-white mb-0.5" style={{ fontSize: 14 }}>{stat.label}</div>
-                      <div className="text-[#7AADCC]" style={{ fontSize: 12 }}>{stat.sub}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Kernwaarden */}
-            <div
-              className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
-            >
-              <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>Kernwaarden</p>
-              <h2 className="font-bold text-white mb-10" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                Waarop u ons kunt aanspreken
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {waarden.map((w) => (
-                  <div key={w.titel} className="pt-2">
-                    <h3 className="font-bold text-white mb-3" style={{ fontSize: 18, letterSpacing: '-0.02em' }}>
-                      {w.titel}
-                    </h3>
-                    <p className="text-[#C2DCE8]" style={{ fontSize: 14, lineHeight: 1.7 }}>
-                      {w.tekst}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Tijdlijn */}
-            <div
-              className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
-            >
-              <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>Geschiedenis</p>
-              <h2 className="font-bold text-white mb-10" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-                Hoe GasProtex ontstond
-              </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16">
-                {tijdlijn.map((item) => (
-                  <div key={item.jaar} className="flex gap-8 py-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                    <span className="font-bold text-[#F07830] flex-shrink-0 w-12" style={{ fontSize: 20 }}>
-                      {item.jaar}
-                    </span>
-                    <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                      {item.tekst}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div
-              className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
-            >
               <div>
-                <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                  Laat ons uw installatie scannen
+                <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">Wie</p>
+                <h2 className="text-white font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+                  Marcelinus Verkuil
                 </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Gratis quickscan-advies. Reactie binnen één werkdag.
+                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  10+ jaar ervaring in industriële instrumentatie en lekdetectie.
+                  Bij Hitma zat ik vooral aan de apparatuur-kant — verkoop en
+                  implementatie van ultrasone camera's en gasdetectiesystemen.
+                </p>
+                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Wat ik daar zag: bedrijven kochten apparatuur, kregen een
+                  training, en moesten het daarna zelf uitzoeken. De meeste
+                  hadden daar geen capaciteit voor. De camera verdween in de kast.
+                </p>
+                <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Bij GasProtex draai ik het om. Geen apparatuur verkopen —
+                  wel de dienst leveren. Ik kom langs, vind de lekken, lever
+                  het rapport, en zorg via het klantportaal dat er ook iets mee gebeurt.
                 </p>
               </div>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
-                style={{ fontSize: 14 }}
-              >
-                Contact opnemen
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                  <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+
+              <div>
+                <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">Waarom GasProtex bestaat</p>
+                <h2 className="text-white font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+                  Apparatuur kopen lost geen lekken op.
+                </h2>
+                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  De markt zit vol apparatuur-verkopers. Hitma, Sorama,
+                  Atlas Copco, Festo — allemaal leveren ze goede camera's
+                  en detectiesystemen. Maar wie komt er daadwerkelijk langs
+                  om de lekken te vinden?
+                </p>
+                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Een ultrasone camera met ATEX-kit kost €60-100k. Plus
+                  opleiding, kalibratie, onderhoud, operator-tijd. Voor de
+                  meeste bedrijven is dat geen reële investering.
+                </p>
+                <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Een Quickscan bij ons begint bij €2.500. Wij brengen de
+                  apparatuur, de ervaring en de rapportage. Jij krijgt het resultaat.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie 3 — Certificeringen + werkwijze */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+        <div className="container-main">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <div>
+              <h2 className="text-[#0A2238] font-bold text-2xl mb-6">Certificeringen</h2>
+              <div className="space-y-4">
+                {certificeringen.map((c) => (
+                  <div key={c.titel} className="flex items-start gap-4">
+                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
+                    <div>
+                      <p className="text-[#0A2238] font-semibold mb-1">{c.titel}</p>
+                      <p className="text-[#3D5A6E] text-sm">{c.tekst}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
+            <div>
+              <h2 className="text-[#0A2238] font-bold text-2xl mb-6">Hoe we werken</h2>
+              <div className="space-y-4">
+                {werkwijze.map((w) => (
+                  <div key={w.titel} className="flex items-start gap-4">
+                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
+                    <div>
+                      <p className="text-[#0A2238] font-semibold mb-1">{w.titel}</p>
+                      <p className="text-[#3D5A6E] text-sm">{w.tekst}</p>
+                      {w.link && (
+                        <Link
+                          href={w.link.href}
+                          className="inline-block text-[#1E87B4] hover:text-[#0A2238] transition-colors"
+                          style={{ fontSize: 13, marginTop: '6px' }}
+                        >
+                          {w.link.label}
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie 4 — CTA-banner */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+        <div className="container-main">
+          <div
+            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+          >
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+              <div>
+                <h2 className="text-white font-bold text-2xl mb-1">
+                  Wil je weten wat we voor jou kunnen doen?
+                </h2>
+                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
+                  Plan een vrijblijvend kennismakingsgesprek.
+                </p>
+              </div>
+              <a
+                href={BOOKINGS_URL}
+                className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                style={{ padding: '14px 32px' }}
+              >
+                Plan kennismakingsgesprek →
+              </a>
+            </div>
           </div>
         </div>
       </section>
