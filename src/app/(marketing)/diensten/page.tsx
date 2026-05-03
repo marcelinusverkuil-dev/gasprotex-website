@@ -44,6 +44,12 @@ const faqItems = [
     question: 'Wat als jullie wegvallen?',
     answer: 'Je data en rapportage zijn van jou. Crysound als backup bij noodgevallen.',
   },
+  {
+    question: 'Hoe gaat het na een Quickscan verder?',
+    answer:
+      'Van Quickscan naar doorlopend abonnement — je beslist zelf of en wanneer je verder wilt.',
+    link: { href: '/diensten/lekdetectie-abonnement/', label: 'Bekijk het volledige pad →' },
+  },
 ]
 
 const faqJsonLd = {
@@ -102,6 +108,18 @@ export default function DienstenPage() {
       {/* Sectie 1 — Hero (licht) */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
+              Home
+            </Link>
+            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
+            <Link href="/diensten/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
+              Diensten
+            </Link>
+            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
+            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Gas- en persluchtlekdetectie</span>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h1
@@ -302,6 +320,15 @@ export default function DienstenPage() {
                 <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                   {item.answer}
                 </p>
+                {'link' in item && item.link && (
+                  <Link
+                    href={item.link.href}
+                    className="inline-block text-[#1E87B4] hover:text-[#0A2238] transition-colors"
+                    style={{ fontSize: 14, marginTop: '8px' }}
+                  >
+                    {item.link.label}
+                  </Link>
+                )}
               </div>
             ))}
           </div>
