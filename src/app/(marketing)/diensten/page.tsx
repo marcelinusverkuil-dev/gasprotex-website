@@ -187,7 +187,7 @@ export default function DienstenPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Kaart: Perslucht */}
-            <div className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '48px' }}>
+            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '48px' }}>
               <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Perslucht</p>
               <h2
                 className="font-bold text-[#0A2238] mb-6"
@@ -216,7 +216,7 @@ export default function DienstenPage() {
             </div>
 
             {/* Kaart: Gevaarlijke gassen */}
-            <div className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '48px' }}>
+            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '48px' }}>
               <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Gevaarlijke gassen</p>
               <h2
                 className="font-bold text-[#0A2238] mb-6"
@@ -256,21 +256,21 @@ export default function DienstenPage() {
             Wat krijg je?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '40px' }}>
+            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Rapport</p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Per lek: locatie, foto, jaarverlies in euro&apos;s, herstelprioriteit.
               </p>
             </div>
 
-            <div className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '40px' }}>
+            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Klantportaal</p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Alle lekken online. Status per lek. QR-code op de plek zelf.
               </p>
             </div>
 
-            <div className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '40px' }}>
+            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Herstelplan</p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Gesorteerd op impact. Je onderhoudsteam weet direct waar te beginnen.
