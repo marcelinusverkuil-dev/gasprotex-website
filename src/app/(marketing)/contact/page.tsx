@@ -111,7 +111,7 @@ export default function ContactPage() {
 
             <div
               className="rounded-md"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}
+              style={{ background: '#ffffff', padding: '40px' }}
             >
               <ContactForm />
             </div>
@@ -125,11 +125,11 @@ export default function ContactPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Liever eerst zien wat het kost?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
@@ -138,7 +138,7 @@ export default function ContactPage() {
               </div>
               <Link
                 href="/bereken-uw-besparing/perslucht/"
-                className="inline-flex items-center gap-2 border border-white/30 text-white hover:border-white/60 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                className="inline-flex items-center gap-2 border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >
                 Bereken jouw besparing →

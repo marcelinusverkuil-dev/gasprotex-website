@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const cards = [
   {
@@ -6,12 +7,16 @@ const cards = [
     title: '20-30% van je perslucht gaat verloren door lekken.',
     body: 'Bij een installatie van 200 kW is dat €15.000-€25.000 per jaar. Wij vinden elk lek in een dagdeel.',
     href: '/diensten/',
+    image: '/images/home/perslucht-lekkages.jpg',
+    alt: 'Perslucht lekkages detectie',
   },
   {
     label: 'Gaslekdetectie',
     title: 'Naast je vaste gasdetectie — wij vinden wat sensoren missen.',
     body: 'ATEX-gecertificeerd voor zone 1. CO₂, NH₃, N₂, H₂, methaan en meer.',
     href: '/diensten/',
+    image: '/images/home/gaslekdetectie.jpg',
+    alt: 'Akoestische gaslekdetectie',
   },
 ]
 
@@ -33,7 +38,15 @@ export default function DienstenSection() {
               key={card.label}
               className="bg-white border border-[#0A2238]/10 rounded-md overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
-              <div className="h-48 bg-[#F4F7FA]" />
+              <div className="relative h-48 bg-[#F4F7FA]">
+                <Image
+                  src={card.image}
+                  alt={card.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
               <div className="p-6">
                 <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">
                   {card.label}

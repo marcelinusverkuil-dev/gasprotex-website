@@ -47,11 +47,11 @@ export default function KennisbankFilter() {
             className="rounded-md text-sm transition-colors"
             style={{
               padding: '8px 16px',
-              border: '1px solid rgba(10,34,56,0.15)',
-              background: actief === cat ? '#0A2238' : 'transparent',
-              color: actief === cat ? '#ffffff' : '#3D5A6E',
+              border: actief === cat ? '1px solid #0A2238' : '1px solid #E8EDF2',
+              background: '#ffffff',
+              color: '#0A2238',
               cursor: 'pointer',
-              fontWeight: actief === cat ? 600 : 400,
+              fontWeight: 700,
             }}
           >
             {cat}
@@ -65,20 +65,20 @@ export default function KennisbankFilter() {
           <div
             key={artikel.slug}
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '32px' }}
+            style={{ background: '#ffffff', padding: '32px' }}
           >
             <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-3">
               {artikel.categorie}
             </p>
-            <h3 className="font-bold text-lg text-white mb-3 leading-snug">
+            <h3 className="font-bold text-lg text-[#0A2238] mb-3 leading-snug">
               {artikel.titel}
             </h3>
-            <p className="text-[#C2DCE8] text-sm leading-relaxed mb-6 flex-1">
+            <p className="text-[#3D5A6E] text-sm leading-relaxed mb-6 flex-1">
               {artikel.preview}
             </p>
             <Link
               href={`/kennisbank/${artikel.slug}/`}
-              className="text-[#F07830] text-sm font-semibold hover:text-white transition-colors"
+              className="text-[#F07830] text-sm font-semibold hover:text-[#C4631E] transition-colors"
             >
               Lees meer →
             </Link>

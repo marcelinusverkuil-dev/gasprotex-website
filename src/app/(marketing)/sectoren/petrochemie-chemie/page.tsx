@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
@@ -100,7 +101,16 @@ export default function PetrochemieChemiePage() {
             <div
               className="relative rounded-xl overflow-hidden"
               style={{ aspectRatio: '4/3', background: '#F4F7FA' }}
-            />
+            >
+              <Image
+                src="/images/sectoren/petrochemie-chemie.jpg"
+                alt="Lekdetectie voor petrochemie en chemie"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
 
         </div>
@@ -111,7 +121,7 @@ export default function PetrochemieChemiePage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '48px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
@@ -119,15 +129,15 @@ export default function PetrochemieChemiePage() {
                 <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">
                   ATEX zone 1 gecertificeerd
                 </p>
-                <h2 className="text-white font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
                   Meten waar het ertoe doet.
                 </h2>
-                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Onze Crysound 8125 is ATEX-gecertificeerd voor zone 1. We meten in
                   explosiegevaarlijke omgevingen waar de meeste inspectie-apparatuur
                   niet mag komen.
                 </p>
-                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   VCA-vol gecertificeerd als operator. Bekend met de VNCI-handreiking
                   voor tijdelijke mobiele apparatuur in ATEX-gezoneerde gebieden.
                 </p>
@@ -144,14 +154,14 @@ export default function PetrochemieChemiePage() {
                 <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">
                   Welke gassen
                 </p>
-                <h2 className="text-white font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
                   Elk gas onder druk is meetbaar.
                 </h2>
                 <div className="space-y-3">
                   {gassen.map((gas) => (
                     <div key={gas.tekst} className="flex items-start gap-3">
                       <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
-                      <p className="text-[#C2DCE8]" style={{ fontSize: 15 }}>
+                      <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
                         {gas.tekst}
                       </p>
                     </div>
@@ -169,9 +179,9 @@ export default function PetrochemieChemiePage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '48px' }}
           >
-            <h2 className="text-white font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
               Hoe onze scan jouw compliance ondersteunt
             </h2>
 
@@ -180,21 +190,21 @@ export default function PetrochemieChemiePage() {
                 <div key={item.titel} className="flex items-start gap-4">
                   <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
                   <div>
-                    <p className="text-white font-semibold mb-1">{item.titel}</p>
-                    <p className="text-[#C2DCE8] text-sm leading-relaxed">{item.tekst}</p>
+                    <p className="text-[#0A2238] font-semibold mb-1">{item.titel}</p>
+                    <p className="text-[#3D5A6E] text-sm leading-relaxed">{item.tekst}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <p className="text-[#C2DCE8] mt-8" style={{ fontSize: 15 }}>
+            <p className="text-[#3D5A6E] mt-8" style={{ fontSize: 15 }}>
               Wij zijn geen auditor en geen certificeerder. Wij leveren de feitelijke lekdata — jij gebruikt
               die in je eigen compliance-traject.
             </p>
 
             <Link
               href="/diensten/"
-              className="inline-block text-[#F07830] hover:text-white font-semibold transition-colors mt-4"
+              className="inline-block text-[#F07830] hover:text-[#C4631E] font-semibold transition-colors mt-4"
               style={{ fontSize: 14 }}
             >
               Bekijk onze diensten →
@@ -208,11 +218,11 @@ export default function PetrochemieChemiePage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   ATEX-gecertificeerde inspectie nodig?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

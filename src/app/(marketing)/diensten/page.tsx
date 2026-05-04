@@ -187,20 +187,20 @@ export default function DienstenPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Kaart: Perslucht */}
-            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>
+            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '48px' }}>
               <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Perslucht</p>
               <h2
-                className="font-bold text-white mb-6"
+                className="font-bold text-[#0A2238] mb-6"
                 style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
                 20–30% perslucht gaat verloren. Bij 200&nbsp;kW is dat €15.000–€25.000 per jaar.
               </h2>
-              <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
                 Een gemiddeld productiebedrijf verliest 20–30% van zijn perslucht door lekken.
                 Bij een installatie van 200&nbsp;kW is dat €15.000–€25.000 per jaar aan
                 verloren energie.
               </p>
-              <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
                 Je hebt al een onderhoudspartner? Wij vervangen die niet — wij vullen aan met
                 ultrasone inspectie die sneller en gerichter is dan zeepsop of handmatige
                 controle.
@@ -216,20 +216,20 @@ export default function DienstenPage() {
             </div>
 
             {/* Kaart: Gevaarlijke gassen */}
-            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>
+            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '48px' }}>
               <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Gevaarlijke gassen</p>
               <h2
-                className="font-bold text-white mb-6"
+                className="font-bold text-[#0A2238] mb-6"
                 style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
                 Vaste detectoren hebben blinde vlekken. Wij vinden wat zij missen.
               </h2>
-              <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
                 Vaste gasdetectie ziet hoge concentraties op vaste plekken. Wat het mist: lage
                 concentraties, intermitterende lekken, blinde vlekken tussen sensors. Daar komen
                 wij.
               </p>
-              <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
                 Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan, propaan — elk gas onder
                 druk. ATEX-gecertificeerd voor zone&nbsp;1.
               </p>
@@ -256,23 +256,23 @@ export default function DienstenPage() {
             Wat krijg je?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
+            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Rapport</p>
-              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Per lek: locatie, foto, jaarverlies in euro&apos;s, herstelprioriteit.
               </p>
             </div>
 
-            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
+            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Klantportaal</p>
-              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Alle lekken online. Status per lek. QR-code op de plek zelf.
               </p>
             </div>
 
-            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
+            <div className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl" style={{ background: '#ffffff', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Herstelplan</p>
-              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Gesorteerd op impact. Je onderhoudsteam weet direct waar te beginnen.
               </p>
             </div>

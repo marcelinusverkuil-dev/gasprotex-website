@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -72,17 +72,17 @@ export default function CasesPage() {
                 key={c.id}
                 id={c.id}
                 className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+                style={{ background: '#ffffff', padding: '48px' }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
 
                   {/* Links: sector + titel + omschrijving */}
                   <div className="lg:col-span-2">
                     <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13 }}>{c.sector}</p>
-                    <h2 className="font-bold text-white mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                    <h2 className="font-bold text-[#0A2238] mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                       {c.title}
                     </h2>
-                    <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
+                    <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
                       {c.omschrijving}
                     </p>
                     <p className="text-[#F07830]" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -95,7 +95,7 @@ export default function CasesPage() {
                     <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Resultaten</p>
                     <ul className="space-y-2">
                       {c.resultaten.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                        <li key={item} className="flex items-start gap-2 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                           <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
                           {item}
                         </li>
@@ -110,10 +110,10 @@ export default function CasesPage() {
             {/* CTA */}
             <div
               className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+              style={{ background: '#ffffff', padding: '40px 48px' }}
             >
               <div>
-                <h2 className="font-bold text-white mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+                <h2 className="font-bold text-[#0A2238] mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   Benieuwd wat wij voor u kunnen betekenen?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

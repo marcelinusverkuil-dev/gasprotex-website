@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { useRef } from 'react'
@@ -50,14 +50,14 @@ export default function SectorenSection() {
           {/* Sectoren container */}
           <div
             className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '48px' }}
           >
             {/* Pijltjes — alleen op kleine schermen */}
             <div className="flex items-center justify-end gap-2 mb-4 lg:hidden">
               <button
                 onClick={() => scroll('left')}
                 className="w-8 h-8 flex items-center justify-center rounded-full transition-colors"
-                style={{ background: 'rgba(255,255,255,0.1)', color: '#C2DCE8' }}
+                style={{ background: '#F4F7FA', color: '#6B8FA6' }}
               >
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                   <path d="M5.5 1L1 5L5.5 9M13 5H1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -66,7 +66,7 @@ export default function SectorenSection() {
               <button
                 onClick={() => scroll('right')}
                 className="w-8 h-8 flex items-center justify-center rounded-full transition-colors"
-                style={{ background: 'rgba(255,255,255,0.1)', color: '#C2DCE8' }}
+                style={{ background: '#F4F7FA', color: '#6B8FA6' }}
               >
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
                   <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -87,10 +87,10 @@ export default function SectorenSection() {
                   className="group flex flex-col transition-all duration-300 flex-shrink-0 lg:flex-shrink"
                   style={{ scrollSnapAlign: 'start', minWidth: '220px' }}
                 >
-                  <h3 className="font-bold text-white mb-3 group-hover:text-[#F07830] transition-colors" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
+                  <h3 className="font-bold text-[#0A2238] mb-3 group-hover:text-[#F07830] transition-colors" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
                     {s.title}
                   </h3>
-                  <p className="text-[#C2DCE8] flex-1 mb-4" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                  <p className="text-[#3D5A6E] flex-1 mb-4" style={{ fontSize: 14, lineHeight: 1.7 }}>
                     {s.description}
                   </p>
                   <div className="inline-flex items-center gap-2 font-semibold text-[#F07830] group-hover:gap-3 transition-all text-sm">
@@ -105,7 +105,7 @@ export default function SectorenSection() {
               {/* Foto placeholder */}
               <div
                 className="rounded-xl flex items-center justify-center flex-shrink-0 lg:flex-shrink"
-                style={{ scrollSnapAlign: 'start', minWidth: '220px', minHeight: '160px', background: 'rgba(255,255,255,0.07)' }}
+                style={{ scrollSnapAlign: 'start', minWidth: '220px', minHeight: '160px', background: '#F4F7FA' }}
               >
                 <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>Foto volgt</p>
               </div>
@@ -115,10 +115,10 @@ export default function SectorenSection() {
           {/* ROI banner */}
           <div
             className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div>
-              <p className="font-bold text-white mb-1" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>
+              <p className="font-bold text-[#0A2238] mb-1" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>
                 Gemiddeld <span style={{ color: '#F07830' }}>30%</span> van perslucht gaat verloren door lekken.
               </p>
               <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

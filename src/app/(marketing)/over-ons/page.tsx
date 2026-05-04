@@ -118,26 +118,26 @@ export default function OverOnsPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '48px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
               <div>
                 <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">Wie</p>
-                <h2 className="text-white font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
                   Marcelinus Verkuil
                 </h2>
-                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   10+ jaar ervaring in industriële instrumentatie en lekdetectie.
                   Bij Hitma zat ik vooral aan de apparatuur-kant — verkoop en
                   implementatie van ultrasone camera's en gasdetectiesystemen.
                 </p>
-                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Wat ik daar zag: bedrijven kochten apparatuur, kregen een
                   training, en moesten het daarna zelf uitzoeken. De meeste
                   hadden daar geen capaciteit voor. De camera verdween in de kast.
                 </p>
-                <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Bij GasProtex draai ik het om. Geen apparatuur verkopen —
                   wel de dienst leveren. Ik kom langs, vind de lekken, lever
                   het rapport, en zorg via het klantportaal dat er ook iets mee gebeurt.
@@ -146,21 +146,21 @@ export default function OverOnsPage() {
 
               <div>
                 <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">Waarom GasProtex bestaat</p>
-                <h2 className="text-white font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
                   Apparatuur kopen lost geen lekken op.
                 </h2>
-                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   De markt zit vol apparatuur-verkopers. Hitma, Sorama,
                   Atlas Copco, Festo — allemaal leveren ze goede camera's
                   en detectiesystemen. Maar wie komt er daadwerkelijk langs
                   om de lekken te vinden?
                 </p>
-                <p className="text-[#C2DCE8] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een ultrasone camera met ATEX-kit kost €60-100k. Plus
                   opleiding, kalibratie, onderhoud, operator-tijd. Voor de
                   meeste bedrijven is dat geen reële investering.
                 </p>
-                <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een Quickscan bij ons begint bij €2.500. Wij brengen de
                   apparatuur, de ervaring en de rapportage. Jij krijgt het resultaat.
                 </p>
@@ -224,11 +224,11 @@ export default function OverOnsPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Wil je weten wat we voor jou kunnen doen?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

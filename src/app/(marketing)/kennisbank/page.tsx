@@ -71,11 +71,11 @@ export default function KennisbankPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Vragen over jouw situatie?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

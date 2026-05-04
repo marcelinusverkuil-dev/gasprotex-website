@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
@@ -112,7 +113,16 @@ export default function VoedingsmiddelensectorPage() {
             <div
               className="relative rounded-xl overflow-hidden"
               style={{ aspectRatio: '4/3', background: '#F4F7FA' }}
-            />
+            >
+              <Image
+                src="/images/sectoren/voedingsmiddelensector.jpg"
+                alt="Lekdetectie in de voedingsmiddelensector"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
 
         </div>
@@ -123,9 +133,9 @@ export default function VoedingsmiddelensectorPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '48px' }}
           >
-            <h2 className="text-white font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
               Welke lekken vinden we in de voedingsmiddelensector?
             </h2>
 
@@ -133,7 +143,7 @@ export default function VoedingsmiddelensectorPage() {
               {gassen.map((gas) => (
                 <div key={gas.label}>
                   <p className="text-[#F07830] text-sm font-semibold mb-2">{gas.label}</p>
-                  <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                     {gas.tekst}
                   </p>
                 </div>
@@ -148,31 +158,31 @@ export default function VoedingsmiddelensectorPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '48px' }}
           >
-            <h2 className="text-white font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
               Wat we tegenkomen in de praktijk
             </h2>
 
             <div className="space-y-8">
               {voorbeelden.map((v) => (
-                <div key={v.titel} className="border-l-2 border-[#F07830] pl-6">
-                  <p className="text-white font-semibold mb-2">{v.titel}</p>
-                  <p className="text-[#C2DCE8] leading-relaxed" style={{ fontSize: 15 }}>
+                <div key={v.titel} className="pl-6">
+                  <p className="text-[#0A2238] font-semibold mb-2">{v.titel}</p>
+                  <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15 }}>
                     {v.tekst}
                   </p>
                 </div>
               ))}
             </div>
 
-            <p className="text-[#C2DCE8] mt-8" style={{ fontSize: 15 }}>
+            <p className="text-[#3D5A6E] mt-8" style={{ fontSize: 15 }}>
               Herkenbaar? De meeste voedingsbedrijven hebben lekken die bij regulier onderhoud niet worden
               gevonden. Een ultrasone scan brengt ze in een dagdeel in kaart.
             </p>
 
             <Link
               href="/diensten/"
-              className="inline-block text-[#F07830] hover:text-white font-semibold transition-colors mt-4"
+              className="inline-block text-[#F07830] hover:text-[#C4631E] font-semibold transition-colors mt-4"
               style={{ fontSize: 14 }}
             >
               Bekijk onze diensten →
@@ -186,11 +196,11 @@ export default function VoedingsmiddelensectorPage() {
         <div className="container-main">
           <div
             className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Bereken wat persluchtlekken jouw bedrijf kosten.
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

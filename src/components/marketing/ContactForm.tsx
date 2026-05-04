@@ -31,17 +31,17 @@ export default function ContactForm() {
 
   if (status === 'sent') {
     return (
-      <div className="rounded-md p-10 text-center" style={{ background: 'rgba(255,255,255,0.07)' }}>
+      <div className="rounded-md p-10 text-center" style={{ background: '#F4F7FA' }}>
         <div
           className="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full text-xl text-[#F07830]"
           style={{ background: 'rgba(240,120,48,0.15)', border: '1px solid rgba(240,120,48,0.3)' }}
         >
           ✓
         </div>
-        <h3 className="font-bold text-white mb-3" style={{ fontSize: 22, lineHeight: 1.2 }}>
+        <h3 className="font-bold text-[#0A2238] mb-3" style={{ fontSize: 22, lineHeight: 1.2 }}>
           Aanvraag ontvangen
         </h3>
-        <p className="text-[#C2DCE8]" style={{ fontSize: 15 }}>
+        <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
           Bedankt, {form.naam.split(' ')[0]}. Wij nemen binnen één werkdag contact met u op.
         </p>
       </div>
@@ -72,14 +72,14 @@ export default function ContactForm() {
         <SelectField label="Sector" value={form.sector} onChange={set('sector')} options={sectoren} placeholder="Kies uw sector" />
       </div>
       <div>
-        <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>Uw situatie</label>
+        <label className="block text-[#6B8FA6] font-medium mb-2" style={{ fontSize: 13 }}>Uw situatie</label>
         <textarea
           rows={4}
           value={form.bericht}
           onChange={set('bericht')}
           placeholder="Beschrijf kort uw installatie: type gassen, oppervlakte, urgentie..."
-          className="w-full outline-none transition-colors resize-none text-white placeholder-[#7AADCC]"
-          style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
+          className="w-full outline-none transition-colors resize-none text-[#0A2238] placeholder-[#6B8FA6]"
+          style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', borderRadius: 0, padding: '8px 0' }}
         />
       </div>
       <button
@@ -110,15 +110,15 @@ function InputField({ label, placeholder, required, type = 'text', value, onChan
 }) {
   return (
     <div>
-      <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>{label}</label>
+      <label className="block text-[#6B8FA6] font-medium mb-2" style={{ fontSize: 13 }}>{label}</label>
       <input
         type={type}
         required={required}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full text-white placeholder-[#7AADCC] outline-none transition-colors"
-        style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
+        className="w-full text-[#0A2238] placeholder-[#6B8FA6] outline-none transition-colors"
+        style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', borderRadius: 0, padding: '8px 0' }}
       />
     </div>
   )
@@ -131,16 +131,16 @@ function SelectField({ label, required, value, onChange, options, placeholder }:
 }) {
   return (
     <div>
-      <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>{label}</label>
+      <label className="block text-[#6B8FA6] font-medium mb-2" style={{ fontSize: 13 }}>{label}</label>
       <select
         required={required}
         value={value}
         onChange={onChange}
-        className="w-full text-white outline-none transition-colors"
-        style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.25)', borderRadius: 0, padding: '8px 0' }}
+        className="w-full text-[#0A2238] outline-none transition-colors"
+        style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', borderRadius: 0, padding: '8px 0' }}
       >
-        <option value="" style={{ background: '#0A2238' }}>{placeholder}</option>
-        {options.map((o) => <option key={o} value={o} style={{ background: '#0A2238' }}>{o}</option>)}
+        <option value="" style={{ background: '#ffffff', color: '#0A2238' }}>{placeholder}</option>
+        {options.map((o) => <option key={o} value={o} style={{ background: '#ffffff', color: '#0A2238' }}>{o}</option>)}
       </select>
     </div>
   )

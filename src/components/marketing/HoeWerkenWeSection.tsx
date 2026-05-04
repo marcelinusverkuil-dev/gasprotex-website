@@ -22,10 +22,10 @@ export default function HoeWerkenWeSection() {
       <div className="container-main">
         <div
           className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-          style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+          style={{ background: '#ffffff', padding: '48px' }}
         >
           <h2
-            className="text-white font-bold text-3xl mb-8"
+            className="text-[#0A2238] font-bold text-3xl mb-8"
             style={{ lineHeight: 1.2 }}
           >
             Begin met een Quickscan
@@ -35,8 +35,8 @@ export default function HoeWerkenWeSection() {
             {stappen.map((stap) => (
               <div key={stap.nr}>
                 <p className="text-[#F07830] text-sm font-semibold mb-2">{stap.nr}</p>
-                <h3 className="text-white font-bold text-lg mb-2">{stap.title}</h3>
-                <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <h3 className="text-[#0A2238] font-bold text-lg mb-2">{stap.title}</h3>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   {stap.body}
                 </p>
               </div>

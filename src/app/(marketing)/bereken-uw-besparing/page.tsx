@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -63,22 +63,22 @@ export default function BerekenUwBesparingPage() {
                 key={g.slug}
                 href={`/bereken-uw-besparing/${g.slug}`}
                 className="group rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block"
-                style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 44px' }}
+                style={{ background: '#ffffff', padding: '40px 44px' }}
               >
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <p className="text-[#7AADCC] mb-1" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                       {g.subtitel}
                     </p>
-                    <h2 className="font-bold text-white" style={{ fontSize: 'clamp(26px, 3vw, 36px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                    <h2 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(26px, 3vw, 36px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                       {g.titel}
                     </h2>
                   </div>
-                  <span className="flex-shrink-0 rounded-md text-[#7AADCC]" style={{ background: 'rgba(255,255,255,0.08)', padding: '4px 10px', fontSize: 12 }}>
+                  <span className="flex-shrink-0 rounded-md text-[#6B8FA6]" style={{ background: '#F4F7FA', padding: '4px 10px', fontSize: 12 }}>
                     {g.tag}
                   </span>
                 </div>
-                <p className="text-[#C2DCE8] mb-8" style={{ fontSize: 15, lineHeight: 1.8 }}>
+                <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 15, lineHeight: 1.8 }}>
                   {g.omschrijving}
                 </p>
                 <span className="inline-flex items-center gap-2 font-semibold transition-colors group-hover:text-[#FF8A40]" style={{ color: '#F07830', fontSize: 14 }}>
@@ -97,10 +97,10 @@ export default function BerekenUwBesparingPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div>
-              <p className="text-[#C2DCE8] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>
+              <p className="text-[#3D5A6E] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>
                 Deze berekening geeft een indicatie op basis van marktgemiddelden en de door u ingevulde gegevens.
                 De werkelijke kosten kunnen afwijken door factoren zoals systeemdruk, leidinglengte en het aantal lekpunten.
               </p>
