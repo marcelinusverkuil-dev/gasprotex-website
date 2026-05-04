@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import ContactForm from '@/components/marketing/ContactForm'
 
 const BOOKINGS_URL =
   'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
@@ -108,20 +109,11 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div>
-              <div
-                className="rounded-md"
-                style={{ border: '1px solid rgba(10,34,56,0.1)', padding: '32px' }}
-              >
-                <p className="text-[#0A2238] font-semibold mb-3">GasProtex</p>
-                <p className="text-[#3D5A6E] text-sm leading-relaxed mb-4">
-                  Marcelinus Verkuil
-                </p>
-                <p className="text-[#3D5A6E] text-sm leading-relaxed">
-                  Werkgebied: heel Nederland<br />
-                  Geen reiskosten-toeslag
-                </p>
-              </div>
+            <div
+              className="rounded-md"
+              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}
+            >
+              <ContactForm />
             </div>
 
           </div>
