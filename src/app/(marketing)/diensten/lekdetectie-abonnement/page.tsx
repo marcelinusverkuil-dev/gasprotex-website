@@ -23,7 +23,6 @@ const stappen = [
       'We komen langs voor een dagdeel en scannen je installatie met de ultrasone camera. Je krijgt een rapport met exacte locaties, geschat verlies per lek in euro\'s, en een herstelprioriteit. Geen verplichtingen daarna.',
       'Dit is het bewijs. Als de scan niets oplevert, ben je klaar. Als het wél wat oplevert — en dat doet het vrijwel altijd — beslis je zelf wat je ermee doet.',
     ],
-    link: null,
   },
   {
     nr: 'Stap 2',
@@ -33,7 +32,6 @@ const stappen = [
       'Na de Quickscan weet je dat er lekken zijn. De Fabrieksaudit brengt je hele locatie systematisch in kaart. Elk perslucht- of gaslek wordt gelokaliseerd, gefotografeerd en voorzien van een QR-code op de plek zelf.',
       'Het eindrapport voldoet aan ISO 11011-vereisten en levert directe input voor je energie-audit of BRZO-rapportage.',
     ],
-    link: null,
   },
   {
     nr: 'Stap 3',
@@ -43,7 +41,6 @@ const stappen = [
       'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen — elk jaar ontstaan er nieuwe lekpunten. Met een abonnement herhalen we de scan jaarlijks en houden we je klantportaal actueel.',
       'In het portaal zie je per lek: status (open, in herstel, opgelost), jaarverlies, trend over de jaren. Je onderhoudsteam weet altijd waar ze moeten zijn.',
     ],
-    link: null,
   },
 ]
 
@@ -173,20 +170,11 @@ export default function AbonnementPage() {
                         <p
                           key={j}
                           className="text-[#C2DCE8]"
-                          style={{ fontSize: 15, lineHeight: 1.7, marginBottom: j < stap.body.length - 1 ? '16px' : stap.link ? '16px' : 0 }}
+                          style={{ fontSize: 15, lineHeight: 1.7, marginBottom: j < stap.body.length - 1 ? '16px' : 0 }}
                         >
                           {alinea}
                         </p>
                       ))}
-                      {stap.link && (
-                        <a
-                          href={stap.link.href}
-                          className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
-                          style={{ fontSize: 14 }}
-                        >
-                          {stap.link.label}
-                        </a>
-                      )}
                     </div>
                   </div>
                   {i < stappen.length - 1 && (

@@ -54,7 +54,7 @@ Ontbrekende tokens (gebruik hardcoded hex): `#FF8A40`, `#C2DCE8`, `#0A2238`, `#3
 - **Body**: `font-body` → Aptos (Regular/Medium)
 
 ### Stijlregels
-- Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen secties**, nooit als eyebrow boven een pagina-H1
+- Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen gradient containers** (als contextuele aanduiding naast een h2), nooit als standalone eyebrow boven een H1 of H2 in content-secties
 - H1 (paginakop): `font-bold text-[#0A2238]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — **geen eyebrow/label erboven**
 - H2: `font-bold`, `fontSize: clamp(26px, 3vw, 38px)` of `text-4xl`
 - Body: `text-fog` op donker, `text-[#3D5A6E]` op licht, `text-lg leading-relaxed`
@@ -631,7 +631,7 @@ Horizontale KPI-rij (3 kolommen, borderLeft-scheiding) — zie ook KPI-blokken s
 - Geen onnodige animaties — alleen fade-up bij initieel laden
 - Geen typewriter-effecten of roterende tekst
 - Nooit meer dan 3 kleuren per sectie
-- Geen eyebrow-labels boven H1 paginakoppen
+- Geen eyebrow-labels (oranje uppercase) boven H1 of H2 in content-secties — alleen toegestaan als label bínnen een gradient container naast een h2
 - Geen gekleurde badges of tags
 - Geen "pill" knoppen — `border-radius` max `rounded-md`
 - Geen tekst in volledig capslock, behalve bij labels/eyebrows
