@@ -15,6 +15,7 @@ const sectorenDropdown = [
 
 const navLinks = [
   { label: 'Bereken uw besparing', href: '/bereken-uw-besparing' },
+  { label: 'Kennisbank', href: '/kennisbank' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Cases', href: '/cases' },
   { label: 'Contact', href: '/contact' },
