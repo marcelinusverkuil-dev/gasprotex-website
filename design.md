@@ -25,7 +25,7 @@ De balans: donkere hero + nav (GasProtex-identiteit) + lichte content-secties me
 | Token          | Hex       | Gebruik                              |
 |----------------|-----------|--------------------------------------|
 | `--orange`     | `#F07830` | Primaire CTA-kleur, actieve states   |
-| `#FF8A40`      | —         | Hover state van orange (geen token)  |
+| `--orange-hot` | `#FF8A40` | Hover state van orange               |
 | `#F5A555`      | —         | Subtiel warm accent (incidenteel)    |
 
 ### Licht (voor tekst en lichte secties)
@@ -41,9 +41,9 @@ De balans: donkere hero + nav (GasProtex-identiteit) + lichte content-secties me
 | `#6B8FA6`        | —         | Subkoppen / labels op lichte secties |
 
 ### Beschikbare Tailwind-tokens (via `@theme inline` in globals.css)
-`text-navy`, `bg-navy`, `text-blue`, `bg-blue`, `text-orange`, `bg-orange`, `text-fog`, `bg-fog`, `text-off-white`, `bg-surface`
+`text-navy`, `bg-navy`, `text-blue`, `bg-blue`, `text-orange`, `bg-orange`, `bg-orange-hot`, `text-fog`, `bg-fog`, `text-off-white`, `bg-surface`
 
-Ontbrekende tokens (gebruik hardcoded hex): `#FF8A40`, `#C2DCE8`, `#0A2238`, `#3D5A6E`, `#6B8FA6`.
+Ontbrekende tokens (gebruik hardcoded hex): `#C2DCE8`, `#0A2238`, `#3D5A6E`, `#6B8FA6`.
 
 ---
 

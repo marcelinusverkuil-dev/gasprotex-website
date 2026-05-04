@@ -17,6 +17,7 @@ select:-webkit-autofill {
   --navy:      #1E4A75;
   --blue:      #1E87B4;
   --orange:    #F07830;
+  --orange-hot: #FF8A40;
   --fog:       #7AADCC;
   --off-white: #F0F6FA;
   --white:     #ffffff;
@@ -34,6 +35,7 @@ select:-webkit-autofill {
   --color-navy:      var(--navy);
   --color-blue:      var(--blue);
   --color-orange:    var(--orange);
+  --color-orange-hot: var(--orange-hot);
   --color-fog:       var(--fog);
   --color-off-white: var(--off-white);
   --color-surface:   var(--surface);
