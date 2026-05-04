@@ -64,7 +64,7 @@ export default function KennisbankFilter() {
         {gefilterd.map((artikel) => (
           <div
             key={artikel.slug}
-            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col"
+            className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl flex flex-col"
             style={{ background: '#ffffff', padding: '32px' }}
           >
             <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-3">

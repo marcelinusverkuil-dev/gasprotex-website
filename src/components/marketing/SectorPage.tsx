@@ -24,7 +24,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className="rounded-md overflow-hidden transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl"
             style={{ background: '#ffffff', padding: '48px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -57,7 +57,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
       <section style={{ background: '#ffffff', paddingTop: '8px', paddingBottom: '8px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className="rounded-md overflow-hidden transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl"
             style={{ background: '#ffffff', padding: '48px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
@@ -126,7 +126,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
       <section style={{ background: '#ffffff', paddingTop: '8px', paddingBottom: '32px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            className="rounded-md transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
             style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div>

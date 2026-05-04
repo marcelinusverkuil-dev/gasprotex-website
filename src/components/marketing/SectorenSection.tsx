@@ -49,7 +49,7 @@ export default function SectorenSection() {
 
           {/* Sectoren container */}
           <div
-            className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className="rounded-md overflow-hidden transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl"
             style={{ background: '#ffffff', padding: '48px' }}
           >
             {/* Pijltjes — alleen op kleine schermen */}
@@ -114,7 +114,7 @@ export default function SectorenSection() {
 
           {/* ROI banner */}
           <div
-            className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            className="rounded-md transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
             style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div>

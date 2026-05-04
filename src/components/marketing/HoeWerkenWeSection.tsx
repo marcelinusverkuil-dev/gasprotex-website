@@ -21,7 +21,7 @@ export default function HoeWerkenWeSection() {
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
       <div className="container-main">
         <div
-          className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+          className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl"
           style={{ background: '#ffffff', padding: '48px' }}
         >
           <h2

@@ -192,7 +192,7 @@ export default function AtexZonesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="block">
                   <div
-                    className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl p-6"
+                    className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl p-6"
                     style={{ background: '#ffffff' }}
                   >
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Perslucht</p>
@@ -206,7 +206,7 @@ export default function AtexZonesPage() {
                 </Link>
                 <Link href="/sectoren/petrochemie-chemie/" className="block">
                   <div
-                    className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl p-6"
+                    className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl p-6"
                     style={{ background: '#ffffff' }}
                   >
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Sector</p>

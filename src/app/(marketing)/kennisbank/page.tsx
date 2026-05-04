@@ -70,7 +70,7 @@ export default function KennisbankPage() {
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
         <div className="container-main">
           <div
-            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+            className="rounded-md transition-transform duration-200 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl"
             style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">

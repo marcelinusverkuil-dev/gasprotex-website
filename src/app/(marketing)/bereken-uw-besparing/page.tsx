@@ -62,7 +62,7 @@ export default function BerekenUwBesparingPage() {
               <Link
                 key={g.slug}
                 href={`/bereken-uw-besparing/${g.slug}`}
-                className="group rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block"
+                className="group rounded-md overflow-hidden transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl block"
                 style={{ background: '#ffffff', padding: '40px 44px' }}
               >
                 <div className="flex items-start justify-between mb-6">

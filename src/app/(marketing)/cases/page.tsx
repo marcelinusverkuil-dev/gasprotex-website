@@ -71,7 +71,7 @@ export default function CasesPage() {
               <div
                 key={c.id}
                 id={c.id}
-                className="rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="rounded-md overflow-hidden transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl"
                 style={{ background: '#ffffff', padding: '48px' }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
@@ -109,7 +109,7 @@ export default function CasesPage() {
 
             {/* CTA */}
             <div
-              className="rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+              className="rounded-md transition-all duration-300 border border-[#C2DCE8] hover:-translate-y-1 hover:shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
               style={{ background: '#ffffff', padding: '40px 48px' }}
             >
               <div>
