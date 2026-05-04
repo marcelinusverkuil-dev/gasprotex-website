@@ -5,16 +5,16 @@ import { useRef } from 'react'
 
 const sectoren = [
   {
-    slug: 'chemie',
+    slug: 'voedingsmiddelensector',
+    title: 'Voedingsmiddelensector',
+    intro: 'Perslucht is de duurste nutsvoorziening in de food-industrie. Lekken in compressorsystemen en verpakkingslijnen leiden direct tot hogere energiekosten en CO₂-uitstoot.',
+    image: '/images/sectoren/food.jpg',
+  },
+  {
+    slug: 'petrochemie-chemie',
     title: 'Petrochemie & Chemie',
     intro: 'BRZO-bedrijven en ATEX-zones vereisen de hoogste standaard van veiligheid. Gaslekken in procesgassen betekenen direct compliance-risico en potentieel gevaar voor mens en omgeving.',
     image: '/images/sectoren/chemie.jpg',
-  },
-  {
-    slug: 'food',
-    title: 'Food & Beverage',
-    intro: 'Perslucht is de duurste nutsvoorziening in de food-industrie. Lekken in compressorsystemen en verpakkingslijnen leiden direct tot hogere energiekosten en CO₂-uitstoot.',
-    image: '/images/sectoren/food.jpg',
   },
   {
     slug: 'energie',

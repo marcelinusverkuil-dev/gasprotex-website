@@ -8,8 +8,12 @@ const dienstenDropdown = [
   { label: 'Lekdetectie-abonnement', href: '/diensten/lekdetectie-abonnement/' },
 ]
 
+const sectorenDropdown = [
+  { label: 'Voedingsmiddelensector', href: '/sectoren/voedingsmiddelensector/' },
+  { label: 'Petrochemie & Chemie', href: '/sectoren/petrochemie-chemie/' },
+]
+
 const navLinks = [
-  { label: 'Sectoren', href: '/sectoren' },
   { label: 'Bereken uw besparing', href: '/bereken-uw-besparing' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Cases', href: '/cases' },
@@ -20,6 +24,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [sectorenOpen, setSectorenOpen] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
 
@@ -76,6 +81,46 @@ export default function Navbar() {
                     style={{ background: '#0A2238', border: '1px solid rgba(122,173,204,0.15)' }}
                   >
                     {dienstenDropdown.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-5 py-3 text-[#C2DCE8] hover:text-[#F07830] hover:bg-white/5 transition-colors"
+                        style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.5px' }}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </li>
+
+            {/* Sectoren dropdown */}
+            <li
+              className="relative"
+              onMouseEnter={() => setSectorenOpen(true)}
+              onMouseLeave={() => setSectorenOpen(false)}
+            >
+              <button
+                className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap flex items-center gap-1"
+                style={{ letterSpacing: '1px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+              >
+                Sectoren
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginTop: '1px', opacity: 0.7 }}>
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+
+              {sectorenOpen && (
+                <div
+                  className="absolute top-full left-0 pt-3"
+                  style={{ minWidth: '240px' }}
+                >
+                  <div
+                    className="rounded-md overflow-hidden shadow-xl"
+                    style={{ background: '#0A2238', border: '1px solid rgba(122,173,204,0.15)' }}
+                  >
+                    {sectorenDropdown.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
@@ -152,6 +197,25 @@ export default function Navbar() {
             Diensten
           </span>
           {dienstenDropdown.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors py-1 pl-3"
+              style={{ letterSpacing: '1.5px' }}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          {/* Sectoren sub-items */}
+          <span
+            className="font-display font-semibold text-xs tracking-widest uppercase text-[#7AADCC] py-1"
+            style={{ letterSpacing: '2px' }}
+          >
+            Sectoren
+          </span>
+          {sectorenDropdown.map((item) => (
             <Link
               key={item.href}
               href={item.href}
