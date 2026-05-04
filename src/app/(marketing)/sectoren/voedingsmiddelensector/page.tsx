@@ -146,28 +146,33 @@ export default function VoedingsmiddelensectorPage() {
       {/* Sectie 3 — Concrete voorbeelden */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main">
-          <div style={{ maxWidth: '640px' }}>
-            <h2 className="text-[#0A2238] font-bold text-2xl mb-8">Wat we tegenkomen in de praktijk</h2>
+          <div
+            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+          >
+            <h2 className="text-white font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
+              Wat we tegenkomen in de praktijk
+            </h2>
 
             <div className="space-y-8">
               {voorbeelden.map((v) => (
                 <div key={v.titel} className="border-l-2 border-[#F07830] pl-6">
-                  <p className="text-[#0A2238] font-semibold mb-2">{v.titel}</p>
-                  <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15 }}>
+                  <p className="text-white font-semibold mb-2">{v.titel}</p>
+                  <p className="text-[#C2DCE8] leading-relaxed" style={{ fontSize: 15 }}>
                     {v.tekst}
                   </p>
                 </div>
               ))}
             </div>
 
-            <p className="text-[#3D5A6E] mt-8" style={{ fontSize: 15 }}>
+            <p className="text-[#C2DCE8] mt-8" style={{ fontSize: 15 }}>
               Herkenbaar? De meeste voedingsbedrijven hebben lekken die bij regulier onderhoud niet worden
               gevonden. Een ultrasone scan brengt ze in een dagdeel in kaart.
             </p>
 
             <Link
               href="/diensten/"
-              className="inline-block text-[#1E87B4] hover:text-[#0A2238] font-semibold transition-colors mt-4"
+              className="inline-block text-[#F07830] hover:text-white font-semibold transition-colors mt-4"
               style={{ fontSize: 14 }}
             >
               Bekijk onze diensten →

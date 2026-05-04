@@ -230,6 +230,33 @@ Gradient containers zijn de primaire kaart-component voor diensten, FAQ-alternat
 </div>
 ```
 
+### Artikel- en content-kaarten
+Alle kaarten op de site (artikel-overzichten, gerelateerde artikelen, case-kaarten) gebruiken gradient containers — **nooit** witte kaarten met border. Dit geldt zowel voor kennisbank-kaarten als voor gerelateerde-artikelen-blokken binnen artikelpagina's.
+
+```tsx
+<div
+  className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col"
+  style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '32px' }}
+>
+  <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-3">Categorie</p>
+  <h3 className="font-bold text-lg text-white mb-3 leading-snug">Titel</h3>
+  <p className="text-[#C2DCE8] text-sm leading-relaxed mb-6 flex-1">Preview-tekst</p>
+  <Link href="..." className="text-[#F07830] text-sm font-semibold hover:text-white transition-colors">
+    Lees meer →
+  </Link>
+</div>
+```
+
+### Case-blokken binnen gradient containers
+Praktijkvoorbeelden (border-left stijl) — altijd bínnen een gradient container, nooit los op witte achtergrond:
+
+```tsx
+<div className="border-l-2 border-[#F07830] pl-6">
+  <p className="text-white font-semibold mb-2">Locatie / bedrijfstype</p>
+  <p className="text-[#C2DCE8] leading-relaxed" style={{ fontSize: 15 }}>Beschrijving van de situatie.</p>
+</div>
+```
+
 ### Lijst-stijl binnen gradient containers
 ```tsx
 <ul className="space-y-2">
@@ -627,6 +654,7 @@ Horizontale KPI-rij (3 kolommen, borderLeft-scheiding) — zie ook KPI-blokken s
 - Geen zachte pastelkleuren of gradient-rainbows
 - Geen grote border-radius: gebruik `rounded-md`, **nooit** `rounded-2xl` of `rounded-full` voor blokken
 - Geen generieke SaaS-look (blauwe #3B82F6 knoppen, witte kaartjes met zware slagschaduw)
+- Geen witte border-kaarten (`bg-white border border-[#0A2238]/10`) voor content-kaarten of artikel-overzichten — gebruik altijd gradient containers
 - Geen extra commentaar of docstrings toevoegen aan bestaande code
 - Geen onnodige animaties — alleen fade-up bij initieel laden
 - Geen typewriter-effecten of roterende tekst

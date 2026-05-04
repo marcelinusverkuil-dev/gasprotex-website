@@ -167,8 +167,11 @@ export default function PetrochemieChemiePage() {
       {/* Sectie 3 — Compliance ondersteuning */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main">
-          <div style={{ maxWidth: '640px' }}>
-            <h2 className="text-[#0A2238] font-bold text-2xl mb-8">
+          <div
+            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}
+          >
+            <h2 className="text-white font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
               Hoe onze scan jouw compliance ondersteunt
             </h2>
 
@@ -177,21 +180,21 @@ export default function PetrochemieChemiePage() {
                 <div key={item.titel} className="flex items-start gap-4">
                   <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
                   <div>
-                    <p className="text-[#0A2238] font-semibold mb-1">{item.titel}</p>
-                    <p className="text-[#3D5A6E] text-sm leading-relaxed">{item.tekst}</p>
+                    <p className="text-white font-semibold mb-1">{item.titel}</p>
+                    <p className="text-[#C2DCE8] text-sm leading-relaxed">{item.tekst}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <p className="text-[#3D5A6E] mt-8" style={{ fontSize: 15 }}>
+            <p className="text-[#C2DCE8] mt-8" style={{ fontSize: 15 }}>
               Wij zijn geen auditor en geen certificeerder. Wij leveren de feitelijke lekdata — jij gebruikt
               die in je eigen compliance-traject.
             </p>
 
             <Link
               href="/diensten/"
-              className="inline-block text-[#1E87B4] hover:text-[#0A2238] font-semibold transition-colors mt-4"
+              className="inline-block text-[#F07830] hover:text-white font-semibold transition-colors mt-4"
               style={{ fontSize: 14 }}
             >
               Bekijk onze diensten →
