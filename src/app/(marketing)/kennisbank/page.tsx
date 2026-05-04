@@ -3,6 +3,9 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import KennisbankFilter from '@/components/marketing/KennisbankFilter'
 
+const BOOKINGS_URL =
+  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
+
 export const metadata: Metadata = {
   title: 'Kennisbank | Lekdetectie, ATEX, ISO | GasProtex',
   description:
@@ -35,8 +38,8 @@ export default function KennisbankPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Sectie 1 — Hero + filter + CTA */}
-      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>
+      {/* Sectie 1 — Hero + filter */}
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
 
           <div className="flex items-center gap-3 mb-6">
@@ -60,6 +63,34 @@ export default function KennisbankPage() {
 
           <KennisbankFilter />
 
+        </div>
+      </section>
+
+      {/* Sectie 2 — CTA */}
+      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+        <div className="container-main">
+          <div
+            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
+            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+          >
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+              <div>
+                <h2 className="text-white font-bold text-2xl mb-1">
+                  Vragen over jouw situatie?
+                </h2>
+                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
+                  Plan een vrijblijvend kennismakingsgesprek. 30 minuten, zonder verplichtingen.
+                </p>
+              </div>
+              <a
+                href={BOOKINGS_URL}
+                className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                style={{ padding: '14px 32px' }}
+              >
+                Plan kennismakingsgesprek →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

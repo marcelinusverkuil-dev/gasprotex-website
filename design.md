@@ -128,6 +128,17 @@ Als een container extra klassen nodig heeft (zoals `flex`, `items-center`):
 | Laatste sectie / CTA | `32px` | `32px` |
 
 - Navbar is ~80px hoog (fixed) — hero-sectie compenseert met `paddingTop: 100px`
+- De ruimte **tussen** twee secties bedraagt altijd `paddingBottom` + `paddingTop` van de volgende = doorgaans **40px** (8px + 32px) of **72px** (40px + 32px bij hero-sectie → eerste content-sectie)
+
+### Interne spacing binnen een sectie
+| Element | Tailwind | px |
+|---------|----------|----|
+| H2 → content eronder | `mb-8` | 32 |
+| Subtitel / intro → filter-/controlebalk | `mt-8` | 32 |
+| Filter-/controlebalk → kaartgrid | `mt-8` | 32 |
+| Kopje → paragraaf | `mb-4` | 16 |
+
+Regel: **gebruik altijd `mt-8` (32px) voor spacing tussen opeenvolgende elementen binnen een sectie.** Grotere gaps (CTA, sterke visuele breuk) los je op door de CTA in een eigen sectie te zetten — niet door `mt-14` of hoger te gebruiken.
 
 ### Navbar
 - Achtergrond bij scrollen of op niet-homepagina: `bg-[#0A2238]/97` met `backdrop-blur-md`

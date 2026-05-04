@@ -3,9 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
-
 const categorieen = ['Alles', 'Perslucht', 'Gaslekdetectie', 'ATEX & Compliance', 'Sector']
 
 const artikelen = [
@@ -63,7 +60,7 @@ export default function KennisbankFilter() {
       </div>
 
       {/* Artikel-grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {gefilterd.map((artikel) => (
           <div
             key={artikel.slug}
@@ -87,30 +84,6 @@ export default function KennisbankFilter() {
             </Link>
           </div>
         ))}
-      </div>
-
-      {/* CTA */}
-      <div
-        className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl mt-14"
-        style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
-      >
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-          <div>
-            <h2 className="text-white font-bold text-2xl mb-1">
-              Vragen over jouw situatie?
-            </h2>
-            <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-              Plan een vrijblijvend kennismakingsgesprek. 30 minuten, zonder verplichtingen.
-            </p>
-          </div>
-          <a
-            href={BOOKINGS_URL}
-            className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
-            style={{ padding: '14px 32px' }}
-          >
-            Plan kennismakingsgesprek →
-          </a>
-        </div>
       </div>
     </>
   )
