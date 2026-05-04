@@ -54,8 +54,8 @@ Ontbrekende tokens (gebruik hardcoded hex): `#C2DCE8`, `#0A2238`, `#3D5A6E`, `#6
 - **Body**: `font-body` → Aptos (Regular/Medium)
 
 ### Stijlregels
-- Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen gradient containers** (als contextuele aanduiding naast een h2), nooit als standalone eyebrow boven een H1 of H2 in content-secties
-- H1 (paginakop): `font-bold text-[#0A2238]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — **geen eyebrow/label erboven**
+- Sectionlabels: `text-xs tracking-widest uppercase text-orange font-medium` — **alleen binnen gradient containers** (als contextuele aanduiding naast een h2), nooit als standalone eyebrow boven een H1 of H2 in content-secties. Uitzonderingen: calculator-subpagina's en kennisbank-artikelpagina's mogen een categorie-label boven de H1 plaatsen als contextuele markering.
+- H1 (paginakop): `font-bold text-[#0A2238]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — **geen eyebrow/label erboven**, behalve bij calculator- en artikelpagina's (zie uitzonderingen sectionlabels)
 - H2: `font-bold`, `fontSize: clamp(26px, 3vw, 38px)` of `text-4xl`
 - Body: `text-fog` op donker, `text-[#3D5A6E]` op licht, `text-lg leading-relaxed`
 
@@ -199,7 +199,7 @@ Gradient containers zijn de primaire kaart-component voor diensten, FAQ-alternat
 ```
 - Richting: altijd `to bottom right`
 - Border-radius: `rounded-md` — **nooit** `rounded-2xl`
-- Hover: **altijd** `hover:-translate-y-1 hover:shadow-xl transition-transform duration-200` — consequent op alle gradient containers
+- Hover: **altijd** `hover:-translate-y-1 hover:shadow-xl transition-transform duration-200` — consequent op alle gradient containers. **Uitzondering:** gradient containers die een formulier bevatten krijgen geen hover (translate op een formulier is slechte UX).
 
 ### Tekstkleuren op gradient
 - Koppen (h2): `text-white`, `font-bold`
@@ -499,7 +499,7 @@ Op detailpagina's (bijv. calculator-subpagina's), boven de H1:
 ```
 
 ### Sectionlabel bóven H1 (uitzondering)
-Op calculator-subpagina's mag een label boven de H1 staan als contextuele aanduiding (bijv. "Perslucht" boven "Lekkostencalculator perslucht"). Dit is een uitzondering op de algemene regel — alleen bij calculator/tool-pagina's.
+Op calculator-subpagina's en kennisbank-artikelpagina's mag een categorie-label boven de H1 staan als contextuele aanduiding (bijv. "Perslucht" boven "Lekkostencalculator perslucht", of "ATEX & Compliance" boven het ATEX-artikel). Alleen bij calculator/tool-pagina's en kennisbank-artikelen.
 
 ---
 
@@ -631,7 +631,7 @@ Horizontale KPI-rij (3 kolommen, borderLeft-scheiding) — zie ook KPI-blokken s
 - Geen onnodige animaties — alleen fade-up bij initieel laden
 - Geen typewriter-effecten of roterende tekst
 - Nooit meer dan 3 kleuren per sectie
-- Geen eyebrow-labels (oranje uppercase) boven H1 of H2 in content-secties — alleen toegestaan als label bínnen een gradient container naast een h2
+- Geen eyebrow-labels (oranje uppercase) boven H1 of H2 in content-secties — alleen toegestaan als label bínnen een gradient container naast een h2, of als categorie-aanduiding boven H1 op calculator/artikel-pagina's
 - Geen gekleurde badges of tags
 - Geen "pill" knoppen — `border-radius` max `rounded-md`
 - Geen tekst in volledig capslock, behalve bij labels/eyebrows

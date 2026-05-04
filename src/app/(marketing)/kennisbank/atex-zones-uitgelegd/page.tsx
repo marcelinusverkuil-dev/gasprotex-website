@@ -39,7 +39,7 @@ export default function AtexZonesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>
         <div className="container-main">
 
           {/* Breadcrumb */}
