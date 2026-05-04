@@ -261,32 +261,16 @@ export default function DienstenPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Rapport</p>
-              <p className="text-[#C2DCE8] mb-6" style={{ fontSize: 15, lineHeight: 1.75 }}>
+              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Per lek: locatie, foto, jaarverlies in euro&apos;s, herstelprioriteit.
               </p>
-              <a
-                href="/voorbeeldrapport.pdf"
-                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
-                style={{ fontSize: 14 }}
-              >
-                Bekijk voorbeeld
-                <ArrowRight />
-              </a>
             </div>
 
             <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Klantportaal</p>
-              <p className="text-[#C2DCE8] mb-6" style={{ fontSize: 15, lineHeight: 1.75 }}>
+              <p className="text-[#C2DCE8]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Alle lekken online. Status per lek. QR-code op de plek zelf.
               </p>
-              <Link
-                href="/klantportaal/"
-                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
-                style={{ fontSize: 14 }}
-              >
-                Bekijk het portaal
-                <ArrowRight />
-              </Link>
             </div>
 
             <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}>

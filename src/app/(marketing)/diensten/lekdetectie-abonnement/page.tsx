@@ -43,7 +43,7 @@ const stappen = [
       'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen — elk jaar ontstaan er nieuwe lekpunten. Met een abonnement herhalen we de scan jaarlijks en houden we je klantportaal actueel.',
       'In het portaal zie je per lek: status (open, in herstel, opgelost), jaarverlies, trend over de jaren. Je onderhoudsteam weet altijd waar ze moeten zijn.',
     ],
-    link: { href: '/klantportaal/', label: 'Bekijk het klantportaal →' },
+    link: null,
   },
 ]
 
