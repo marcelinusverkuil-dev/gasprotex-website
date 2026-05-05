@@ -16,7 +16,7 @@ const nav = {
     { label: 'Over GasProtex', href: '/over-ons' },
     { label: 'Cases', href: '/cases' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Klantportaal', href: 'https://gasprotex-portal.vercel.app/login' },
+    { label: 'Klantportaal', href: 'https://portaal.gasprotex.nl/login' },
   ],
 }
 
