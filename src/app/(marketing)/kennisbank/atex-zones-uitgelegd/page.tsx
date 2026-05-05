@@ -192,28 +192,28 @@ export default function AtexZonesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="block">
                   <div
-                    className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl p-6"
-                    style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)' }}
+                    className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6"
+                    style={{ background: '#ffffff' }}
                   >
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Perslucht</p>
-                    <h3 className="font-bold text-base text-white mb-3 leading-snug">
+                    <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
                       Wat kost een persluchtlek per jaar?
                     </h3>
-                    <span className="text-[#F07830] text-sm font-semibold hover:text-white transition-colors">
+                    <span className="text-[#F07830] text-sm font-semibold hover:text-[#C4631E] transition-colors">
                       Lees meer →
                     </span>
                   </div>
                 </Link>
                 <Link href="/sectoren/petrochemie-chemie/" className="block">
                   <div
-                    className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl p-6"
-                    style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)' }}
+                    className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6"
+                    style={{ background: '#ffffff' }}
                   >
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Sector</p>
-                    <h3 className="font-bold text-base text-white mb-3 leading-snug">
+                    <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
                       Lekdetectie voor petrochemie en chemie
                     </h3>
-                    <span className="text-[#F07830] text-sm font-semibold hover:text-white transition-colors">
+                    <span className="text-[#F07830] text-sm font-semibold hover:text-[#C4631E] transition-colors">
                       Bekijk sectorpagina →
                     </span>
                   </div>

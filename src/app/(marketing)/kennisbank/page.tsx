@@ -39,7 +39,7 @@ export default function KennisbankPage() {
       />
 
       {/* Sectie 1 — Hero + filter */}
-      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '60px' }}>
         <div className="container-main">
 
           <div className="flex items-center gap-3 mb-6">
@@ -67,15 +67,15 @@ export default function KennisbankPage() {
       </section>
 
       {/* Sectie 2 — CTA */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '60px', paddingBottom: '32px' }}>
         <div className="container-main">
           <div
-            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Vragen over jouw situatie?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>

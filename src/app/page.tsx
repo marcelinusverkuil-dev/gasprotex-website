@@ -3,7 +3,6 @@ import Script from 'next/script'
 import Navbar from '@/components/marketing/Navbar'
 import HeroSection from '@/components/marketing/HeroSection'
 import DienstenSection from '@/components/marketing/DienstenSection'
-import WaaromSection from '@/components/marketing/WaaromSection'
 import CalculatorSection from '@/components/marketing/CalculatorSection'
 import HoeWerkenWeSection from '@/components/marketing/HoeWerkenWeSection'
 import ContactCTASection from '@/components/marketing/ContactCTASection'
@@ -54,7 +53,6 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <DienstenSection />
-        <WaaromSection />
         <CalculatorSection />
         <HoeWerkenWeSection />
         <ContactCTASection />

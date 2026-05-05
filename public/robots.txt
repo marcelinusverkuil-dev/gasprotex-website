@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /toegang
+
+Sitemap: https://gasprotex.nl/sitemap.xml

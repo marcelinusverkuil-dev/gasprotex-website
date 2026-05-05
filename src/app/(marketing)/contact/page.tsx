@@ -110,8 +110,8 @@ export default function ContactPage() {
             </div>
 
             <div
-              className="rounded-md"
-              style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px' }}
+              className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+              style={{ background: '#ffffff', padding: '40px' }}
             >
               <ContactForm />
             </div>
@@ -124,12 +124,12 @@ export default function ContactPage() {
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
         <div className="container-main">
           <div
-            className="rounded-md transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl"
-            style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '40px 48px' }}
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+            style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
-                <h2 className="text-white font-bold text-2xl mb-1">
+                <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Liever eerst zien wat het kost?
                 </h2>
                 <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
@@ -138,7 +138,7 @@ export default function ContactPage() {
               </div>
               <Link
                 href="/bereken-uw-besparing/perslucht/"
-                className="inline-flex items-center gap-2 border border-white/30 text-white hover:border-white/60 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >
                 Bereken jouw besparing →

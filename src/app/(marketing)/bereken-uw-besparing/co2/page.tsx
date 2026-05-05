@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
@@ -11,11 +11,11 @@ const BEDRIJFSUREN_OPTIES = [
 const inputStyle = {
   background: 'transparent',
   border: 'none',
-  borderBottom: '1px solid rgba(255,255,255,0.25)',
+  borderBottom: '1px solid rgba(10,34,56,0.2)',
   borderRadius: 0,
   padding: '8px 0',
   fontSize: 15,
-  color: '#ffffff',
+  color: '#0A2238',
 }
 
 export default function Co2CalculatorPage() {
@@ -42,7 +42,7 @@ export default function Co2CalculatorPage() {
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <Link href="/bereken-uw-besparing" className="inline-flex items-center gap-2 text-[#7AADCC] hover:text-[#C2DCE8] mb-6 transition-colors" style={{ fontSize: 13 }}>
+          <Link href="/bereken-uw-besparing" className="inline-flex items-center gap-2 text-[#7AADCC] hover:text-[#3D5A6E] mb-6 transition-colors" style={{ fontSize: 13 }}>
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" style={{ transform: 'rotate(180deg)' }}>
               <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -62,7 +62,7 @@ export default function Co2CalculatorPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-            <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '48px' }}>
+            <div className="rounded-md" style={{ background: '#ffffff', padding: '48px' }}>
               <p className="text-[#7AADCC] mb-8" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
               <div className="flex flex-col gap-6">
 
@@ -85,8 +85,8 @@ export default function Co2CalculatorPage() {
                   <div className="flex gap-3">
                     {BEDRIJFSUREN_OPTIES.map(opt => (
                       <button key={opt.value} onClick={() => setBedrijfsuren(opt.value)} className="flex-1 rounded-md text-left transition-all"
-                        style={{ background: bedrijfsuren === opt.value ? 'rgba(217,119,55,0.25)' : 'rgba(255,255,255,0.06)', border: bedrijfsuren === opt.value ? '1px solid #F07830' : '1px solid rgba(255,255,255,0.12)', padding: '12px 14px' }}>
-                        <span className="block font-semibold text-white" style={{ fontSize: 15 }}>{opt.value.toLocaleString('nl-NL')}</span>
+                        style={{ background: bedrijfsuren === opt.value ? 'rgba(240,120,48,0.1)' : '#F4F7FA', border: bedrijfsuren === opt.value ? '1px solid #F07830' : '1px solid #E8EDF2', padding: '12px 14px' }}>
+                        <span className="block font-semibold text-[#0A2238]" style={{ fontSize: 15 }}>{opt.value.toLocaleString('nl-NL')}</span>
                         <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>{opt.label}</span>
                       </button>
                     ))}
@@ -115,7 +115,7 @@ export default function Co2CalculatorPage() {
             <div className="flex flex-col gap-6">
               <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #F07830 0%, #C4631E 100%)', padding: '48px' }}>
                 <p className="text-orange-100 mb-2" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Totale kosten per jaar</p>
-                <p className="font-bold text-white" style={{ fontSize: 'clamp(44px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.03em' }}>
+                <p className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(44px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.03em' }}>
                   €{fmt(resultaat.euroJaar)}
                 </p>
                 <p className="text-orange-100 mt-3" style={{ fontSize: 14 }}>
@@ -125,7 +125,7 @@ export default function Co2CalculatorPage() {
 
               <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '28px 32px' }}>
                 <p className="text-[#7AADCC] mb-1" style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase' }}>Gasverlies</p>
-                <p className="font-bold text-white" style={{ fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{fmt(resultaat.m3jaar)}</p>
+                <p className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{fmt(resultaat.m3jaar)}</p>
                 <p className="text-[#7AADCC] mt-1" style={{ fontSize: 13 }}>m³ CO₂ per jaar</p>
               </div>
 
