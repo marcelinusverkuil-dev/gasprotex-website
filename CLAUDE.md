@@ -64,11 +64,16 @@ public/
     GasProtex logo oranje.png
     hero-bg.jpg             ← homepage hero background
     hero-bg V1.avif
+    home/
+      perslucht-lekkages.jpg  ← DienstenSection, Perslucht-kaart
+      gaslekdetectie.jpg      ← DienstenSection, Gaslekdetectie-kaart
     sectoren/
       chemie.jpg
       energie.avif
       food.jpg
       industrie.jpg
+      voedingsmiddelensector.jpg  ← hero voedingsmiddelensector-pagina
+      petrochemie-chemie.jpg      ← hero petrochemie-chemie-pagina
   hero-image.jpg
   hero-image-v2.jpg
 ```
@@ -177,5 +182,31 @@ Redirect naar `/bereken-uw-verlies/perslucht`.
 
 ---
 
+## Containerpatroon
+Alle secties gebruiken een consistent containerpatroon:
+- **Outer section**: `background: '#ffffff'`, `paddingTop/paddingBottom` per sectie
+- **Container div**: `className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"` + `style={{ padding: '48px' }}`
+- **CTA-containers** (smaller): `style={{ padding: '40px 48px' }}` ipv 48px
+- Tekst/content begint dus altijd 48px van de containerborder — consistent op alle pagina's
+- Individuele kaarten (DienstenSection, bereken-uw-besparing) zitten BINNEN een outer container
+
+## Secties per component (homepage)
+| Component | Bestand | Inhoud |
+|---|---|---|
+| `HeroSection` | `components/marketing/HeroSection.tsx` | Hero met `hero-bg.jpg` achtergrond |
+| `DienstenSection` | `components/marketing/DienstenSection.tsx` | "Wat doen wij?" — Perslucht + Gaslekdetectie kaarten met foto |
+| `WaaromSection` | `components/marketing/WaaromSection.tsx` | "Apparatuur kopen of dienst inkopen?" — 2-koloms tekst |
+| `CalculatorSection` | `components/marketing/CalculatorSection.tsx` | "Bereken wat je verliest" — link naar calculator + mock KPI-box |
+| `HoeWerkenWeSection` | `components/marketing/HoeWerkenWeSection.tsx` | "Begin met een Quickscan" — 3 stappen |
+| `ContactCTASection` | `components/marketing/ContactCTASection.tsx` | "Weten waar je lekken zitten?" — oranje knop Bookings |
+| `KennisbankFilter` | `components/marketing/KennisbankFilter.tsx` | Filter + artikelgrid (client component) |
+| `SectorPage` | `components/marketing/SectorPage.tsx` | Template voor chemie/food/energie/industrie-sectoren |
+| `ContactForm` | `components/marketing/ContactForm.tsx` | Contactformulier met server action `sendContact` |
+
+## Sectorpagina's
+- `/sectoren/[chemie|food|energie|industrie]` — gebruik `SectorPage`-component met data uit `lib/sectoren-data.ts`
+- `/sectoren/voedingsmiddelensector` — eigen volledige pagina (geen SectorPage template)
+- `/sectoren/petrochemie-chemie` — eigen volledige pagina (geen SectorPage template)
+
 ## Ontwerpregels
-Zie `design.md` voor het volledige design system. Geen hardcoded hex in className — gebruik CSS-variabelen of Tailwind-tokens. Geen eyebrow-labels boven H1 paginakoppen.
+Zie `design.md` voor het volledige design system. Geen eyebrow-labels boven H1 paginakoppen.

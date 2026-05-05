@@ -4,6 +4,7 @@ export default function CalculatorSection() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
       <div className="container-main">
+        <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '48px' }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <div>
@@ -26,13 +27,14 @@ export default function CalculatorSection() {
             </Link>
           </div>
 
-          <div className="border border-[#0A2238]/10 rounded-md p-6">
+          <div className="border border-[#0A2238]/10 rounded-md p-8">
             <p className="text-[#6B8FA6] text-sm mb-2">Compressorvermogen</p>
             <div className="h-10 bg-[#F4F7FA] rounded-md border border-[#0A2238]/10 mb-6" />
             <p className="text-[#6B8FA6] text-sm mb-1">Geschat verlies per jaar</p>
             <p className="text-[#0A2238] font-bold text-4xl">€18.500</p>
           </div>
 
+        </div>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export default function ContactCTASection() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
       <div className="container-main">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+        <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6" style={{ padding: '40px 48px' }}>
           <div>
             <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
               Weten waar je lekken zitten?

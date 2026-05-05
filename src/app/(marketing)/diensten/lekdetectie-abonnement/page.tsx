@@ -190,6 +190,10 @@ export default function AbonnementPage() {
       {/* Sectie 3 — FAQ */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main">
+          <div
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+            style={{ background: '#ffffff', padding: '48px' }}
+          >
 
           <h2
             className="font-bold text-[#0A2238] text-4xl mb-8"
@@ -211,6 +215,7 @@ export default function AbonnementPage() {
             ))}
           </div>
 
+          </div>
         </div>
       </section>
 

@@ -39,7 +39,7 @@ export default function KennisbankPage() {
       />
 
       {/* Sectie 1 — Hero + filter */}
-      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '60px' }}>
         <div className="container-main">
 
           <div className="flex items-center gap-3 mb-6">
@@ -67,7 +67,7 @@ export default function KennisbankPage() {
       </section>
 
       {/* Sectie 2 — CTA */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '60px', paddingBottom: '32px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"

@@ -174,6 +174,7 @@ export default function OverOnsPage() {
       {/* Sectie 3 — Certificeringen + werkwijze */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main">
+          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '48px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             <div>
@@ -215,6 +216,7 @@ export default function OverOnsPage() {
               </div>
             </div>
 
+          </div>
           </div>
         </div>
       </section>

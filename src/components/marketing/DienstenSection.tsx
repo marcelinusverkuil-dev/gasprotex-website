@@ -24,30 +24,30 @@ export default function DienstenSection() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
       <div className="container-main">
-
-        <h2
-          className="font-bold text-[#0A2238] text-4xl mb-8"
-          style={{ letterSpacing: '-0.02em' }}
+        <div
+          className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+          style={{ padding: '48px' }}
         >
-          Wat doen wij?
-        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {cards.map((card) => (
-            <div
-              key={card.label}
-              className="bg-white border border-[#0A2238]/10 rounded-md overflow-hidden hover:shadow-md transition-shadow duration-200"
-            >
-              <div className="relative h-48 bg-[#F4F7FA]">
-                <Image
-                  src={card.image}
-                  alt={card.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="p-6">
+          <h2
+            className="font-bold text-[#0A2238] text-4xl mb-8"
+            style={{ letterSpacing: '-0.02em' }}
+          >
+            Wat doen wij?
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {cards.map((card) => (
+              <div key={card.label}>
+                <div className="relative h-48 bg-[#F4F7FA] rounded-md overflow-hidden mb-6">
+                  <Image
+                    src={card.image}
+                    alt={card.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">
                   {card.label}
                 </p>
@@ -64,10 +64,10 @@ export default function DienstenSection() {
                   Bekijk de dienst →
                 </Link>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
+        </div>
       </div>
     </section>
   )

@@ -110,7 +110,7 @@ export default function ContactPage() {
             </div>
 
             <div
-              className="rounded-md"
+              className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
               style={{ background: '#ffffff', padding: '40px' }}
             >
               <ContactForm />
@@ -138,7 +138,7 @@ export default function ContactPage() {
               </div>
               <Link
                 href="/bereken-uw-besparing/perslucht/"
-                className="inline-flex items-center gap-2 border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >
                 Bereken jouw besparing →

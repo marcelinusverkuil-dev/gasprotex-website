@@ -283,6 +283,7 @@ export default function DienstenPage() {
       {/* Sectie 4 — FAQ */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
+          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '48px' }}>
           <h2
             className="font-bold text-[#0A2238] mb-10"
             style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
@@ -313,13 +314,14 @@ export default function DienstenPage() {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
       {/* Sectie 5 — CTA (licht) */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6" style={{ padding: '40px 48px' }}>
             <div>
               <h2
                 className="font-bold text-[#0A2238] mb-1"

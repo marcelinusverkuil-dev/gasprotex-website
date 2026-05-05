@@ -96,7 +96,7 @@ export default function BerekenUwBesparingPage() {
       <section style={{ background: '#ffffff', paddingBottom: '80px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
-            className="rounded-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
             style={{ background: '#ffffff', padding: '40px 48px' }}
           >
             <div>
