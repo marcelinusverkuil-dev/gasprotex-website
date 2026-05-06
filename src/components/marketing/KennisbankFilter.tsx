@@ -27,6 +27,13 @@ const artikelen = [
     preview:
       'Zeepsop, vaste detectoren, sniffer-buizen — allemaal worden ze nog gebruikt. Wat ultrasone detectie anders maakt en wanneer je welke methode inzet.',
   },
+  {
+    slug: 'lekdetectie-methoden-vergeleken',
+    categorie: 'Gaslekdetectie',
+    titel: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie?',
+    preview:
+      'Er zijn meerdere manieren om gas- en persluchtlekken op te sporen. Elk met eigen sterke en zwakke kanten. In dit artikel vergelijken we de vijf meest gebruikte methoden.',
+  },
 ]
 
 export default function KennisbankFilter() {
