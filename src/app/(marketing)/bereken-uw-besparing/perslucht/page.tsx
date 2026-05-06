@@ -37,7 +37,7 @@ export default function PersluchtCalculatorPage() {
     const kWhJaar = m3jaar * sp * drukFactor * aantal
     const euroJaar = kWhJaar * euro
     const co2kg = kWhJaar * 0.22
-    return { kWhJaar, euroJaar, co2ton: co2kg / 1000, autoKm: co2kg / 0.12 }
+    return { kWhJaar, euroJaar, co2ton: co2kg / 1000, autoKm: co2kg * 6.5 }
   }, [lekdebiet, systeemdruk, bedrijfsuren, tarief, specificPower, aantalLekken])
 
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
@@ -168,7 +168,7 @@ export default function PersluchtCalculatorPage() {
             <p className="text-[#4A6880]" style={{ fontSize: 13, lineHeight: 1.8 }}>
               <span className="font-semibold text-[#0A2238]">Rekenmethode:</span>{' '}
               Kosten = (l/min ÷ 1.000 × 60) × bedrijfsuren × Specific Power × (1 + bar ÷ 10) × €/kWh × aantal lekken.
-              CO₂-factor: 0,22 kg CO₂/kWh (Nederlandse stroommix). Auto-equivalent: 120 g CO₂/km.
+              CO₂-factor: 0,22 kg CO₂/kWh (Nederlandse stroommix). Auto-equivalent: 6,5 km per kg CO₂ (gem. personenauto).
             </p>
           </div>
         </div>
