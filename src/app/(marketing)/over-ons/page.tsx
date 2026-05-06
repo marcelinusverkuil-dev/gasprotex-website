@@ -35,7 +35,7 @@ const jsonLd = {
 const certificeringen = [
   {
     titel: 'ATEX-gecertificeerd',
-    tekst: 'Onze Crysound 8125 is gecertificeerd voor ATEX zone 1. Wij mogen meten in explosiegevaarlijke omgevingen.',
+    tekst: 'Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 en zone 22. Het is \'s werelds eerste TÜV-gecertificeerde intrinsiek veilige akoestische camera.',
   },
   {
     titel: 'VCA-vol',

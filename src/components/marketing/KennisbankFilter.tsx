@@ -9,7 +9,7 @@ const artikelen = [
   {
     slug: 'atex-zones-uitgelegd',
     categorie: 'ATEX & Compliance',
-    titel: 'ATEX-zones uitgelegd: wat betekent zone 1 voor lekdetectie?',
+    titel: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?',
     preview:
       'Zone 0, 1 en 2 bepalen welke apparatuur je mag inzetten. Niet elke camera mag in elke zone. Wat ATEX-certificering voor lekdetectie betekent en waarom het ertoe doet.',
   },

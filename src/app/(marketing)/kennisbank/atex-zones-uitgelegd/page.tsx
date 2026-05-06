@@ -6,7 +6,7 @@ const BOOKINGS_URL =
   'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
-  title: 'ATEX-zones uitgelegd: zone 1 en lekdetectie | GasProtex',
+  title: 'ATEX-zones uitgelegd: zone 2 en lekdetectie | GasProtex',
   description:
     'Zone 0, 1 en 2 bepalen welke apparatuur je in explosiegevaarlijke omgevingen mag inzetten. Wat ATEX-certificering voor lekdetectie betekent en hoe GasProtex hiermee werkt.',
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'ATEX-zones uitgelegd: wat betekent zone 1 voor lekdetectie?',
+  headline: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?',
   author: {
     '@type': 'Person',
     name: 'Marcelinus Verkuil',
@@ -64,13 +64,13 @@ export default function AtexZonesPage() {
               className="font-bold text-[#0A2238] mb-6"
               style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
             >
-              ATEX-zones uitgelegd: wat betekent zone 1 voor lekdetectie?
+              ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
             </h1>
             <p className="text-[#3D5A6E] text-lg leading-relaxed">
               In de petrochemie, chemie en voedingsmiddelenindustrie kom je ze overal tegen: ATEX-zones.
               Ze bepalen welke apparatuur je mag inzetten — en dus ook welke camera's voor lekdetectie
-              geschikt zijn. Niet elke ultrasone camera mag in elke zone. Dit artikel legt uit wat
-              ATEX-zones zijn en waarom certificering voor zone 1 ertoe doet.
+              geschikt zijn. Niet elke ultrasone camera is ATEX-gecertificeerd. Dit artikel legt uit wat
+              ATEX-zones zijn en wat zone 2-certificering voor lekdetectie betekent.
             </p>
           </div>
 
@@ -131,46 +131,49 @@ export default function AtexZonesPage() {
             </div>
 
             <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
-              Zone 1 is de meest voorkomende zone bij lekdetectie-inspecties. De lekken zitten juist
-              bij flenzen, kleppen en koppelingen — en dat zijn precies de plekken die in zone 1 vallen.
+              Zone 2 is de meest voorkomende zone op industriële productievloeren — de ruimere omgeving
+              rond procesinstallaties waar een explosieve atmosfeer zelden optreedt. Zone 1 betreft
+              de directe nabijheid van pompen, kleppen en flenzen, en vereist strengere certificering.
             </p>
 
             <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
-              Waarom zone 1-certificering belangrijk is
+              Waarom ATEX-certificering belangrijk is
             </h2>
             <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              Apparatuur die niet ATEX-gecertificeerd is, mag een zone 1-gebied niet in. Dat geldt ook
-              voor laptops, telefoons en meetinstrumenten. Een niet-gecertificeerde ultrasone camera
-              meenemen in een zone 1-omgeving is een overtreding — en een veiligheidsrisico.
+              Apparatuur die niet ATEX-gecertificeerd is, mag een gezoneerd gebied niet in. Dat geldt
+              ook voor laptops, telefoons en meetinstrumenten. Een niet-gecertificeerde ultrasone camera
+              meenemen in een ATEX-zone is een overtreding — en een veiligheidsrisico.
             </p>
             <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
-              Veel lekdetectie-dienstverleners werken alleen in zone 2 of buiten gezoneerde gebieden.
-              Daardoor missen ze juist de plekken waar de meeste lekken zitten.
+              Veel lekdetectie-dienstverleners hebben helemaal geen ATEX-certificering en werken
+              uitsluitend buiten gezoneerde gebieden. Daardoor missen ze een aanzienlijk deel
+              van de installatie.
             </p>
 
             <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
-              De Crysound 8125: gecertificeerd voor zone 1
+              De Crysound 8125: gecertificeerd voor zone 2
             </h2>
             <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              De Crysound 8125 die GasProtex inzet is ATEX-gecertificeerd voor zone 1 (gas en damp,
-              groep IIB, temperatuurklasse T4). Dat betekent dat we mogen meten op de plekken die
-              er het meest toe doen — direct bij pompen, kleppen en leidingverbindingen in
-              explosiegevaarlijke omgevingen.
+              De Crysound 8125 die GasProtex inzet is ATEX-gecertificeerd voor zone 2 (gas en damp)
+              en zone 22 (stof). Het is 's werelds eerste TÜV-gecertificeerde intrinsiek veilige
+              akoestische camera — conform ATEX en IECEx. Dat betekent dat we mogen meten in de meeste
+              industriële productieomgevingen, ook waar andere aanbieders niet mogen komen.
             </p>
             <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
-              Daarnaast is GasProtex VCA-vol gecertificeerd en bekend met de VNCI-handreiking voor
-              tijdelijke mobiele apparatuur in ATEX-gezoneerde gebieden. Alle benodigde documenten
-              (certificaten, veiligheidsinstructies) worden standaard meegeleverd bij een offerteaanvraag.
+              Voor zone 1-gebieden (direct rond reactoren, kleppen en leidingdoorvoeren) is strengere
+              apparatuur vereist. We zijn hierover eerlijk: zone 2 dekt de meeste productievloeren,
+              maar niet de zwaarste risicozones. GasProtex is daarnaast VCA-vol gecertificeerd en
+              bekend met de VNCI-handreiking voor tijdelijke mobiele apparatuur in ATEX-gezoneerde gebieden.
             </p>
 
             <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
               Conclusie
             </h2>
             <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              ATEX-zones bepalen wat er in een industriële omgeving mag worden ingezet. Voor lekdetectie
-              betekent zone 1-certificering dat je kunt meten waar de lekken daadwerkelijk zitten — niet
-              alleen in de veilige periferie. Als je werkt met een dienstverlener die alleen in zone 2
-              kan meten, mis je een groot deel van je installatie.
+              ATEX-zones bepalen wat er in een industriële omgeving mag worden ingezet. Zone 2-certificering
+              dekt de meeste productievloeren en is al een significante drempel — de meeste ultrasone
+              camera's voor lekdetectie hebben geen ATEX-certificering. Voor zone 1-omgevingen is
+              zwaardere certificering nodig; dat zeggen we er eerlijk bij.
             </p>
 
             {/* CTA */}

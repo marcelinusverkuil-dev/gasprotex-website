@@ -139,7 +139,7 @@ Afbeeldingen: `public/images/sectoren/chemie.jpg`, `food.jpg`, `energie.avif`, `
 
 ### `/sectoren/petrochemie-chemie`
 1. Hero + breadcrumb — afbeelding: `sectoren/petrochemie-chemie.jpg`
-2. ATEX + Gassen — twee kolommen: ATEX zone 1 uitleg + gassoorten
+2. ATEX + Gassen — twee kolommen: ATEX zone 2 gecertificeerd + gassoorten
 3. Compliance ondersteuning — BRZO, F-gassen, ISO 11011, ESG
 4. CTA banner — Kennismakingsgesprek
 

@@ -34,7 +34,7 @@ export const sectorenData: Record<string, SectorData> = {
     ],
     hoeWijHelpen: 'Onze ATEX-gecertificeerde inspecteurs scannen uw gehele installatie met de akoestische camera. Elk lek verschijnt als een heatmap op het scherm — tot op 200 meter afstand, zonder toegang tot gevaarlijke zones. U ontvangt dezelfde dag een BRZO-proof rapport.',
     voordelen: [
-      'ATEX Zone 1 & 2 gecertificeerd',
+      'ATEX Zone 2 gecertificeerd',
       'Detectie op 200 meter afstand',
       'BRZO-proof rapportage',
       'Geen productiestilstand',
@@ -43,7 +43,7 @@ export const sectorenData: Record<string, SectorData> = {
     ],
     kpiStats: [
       { value: '200m', label: 'Detectiebereik' },
-      { value: 'ATEX', label: 'Zone 1 & 2' },
+      { value: 'ATEX', label: 'Zone 2' },
       { value: '1 dag', label: 'Inspectie + rapport' },
     ],
     caseHighlight: {

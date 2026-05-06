@@ -13,7 +13,7 @@ const cards = [
   {
     label: 'Gaslekdetectie',
     title: 'Naast je vaste gasdetectie — wij vinden wat sensoren missen.',
-    body: 'ATEX-gecertificeerd voor zone 1. CO₂, NH₃, N₂, H₂, methaan en meer.',
+    body: 'ATEX-gecertificeerd (zone 2). CO₂, NH₃, N₂, H₂, methaan en meer.',
     href: '/diensten/',
     image: '/images/home/gaslekdetectie.jpg',
     alt: 'Akoestische gaslekdetectie',

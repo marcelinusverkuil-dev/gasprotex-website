@@ -94,7 +94,7 @@ blinde vlekken tussen sensors. Daar komen wij.
 
 Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan,
 propaan — elk gas onder druk. ATEX-gecertificeerd voor
-zone 1.
+zone 2 (gas) en zone 22 (stof).
 
 Meer over ATEX en zones → (/kennisbank/atex-zones-uitgelegd/)
 ```
@@ -154,8 +154,8 @@ A: Afhankelijk van druk en debiet. Een lek van 1 mm kost
 [Kolom rechts]
 
 V: Is gasdetectie met ultrasoon ATEX-gecertificeerd?
-A: Ja. Onze Crysound 8125 is gecertificeerd voor ATEX
-   zone 1. Wij zijn VCA-vol gecertificeerd als operator.
+A: Ja. Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof).
+   Wij zijn VCA-vol gecertificeerd als operator.
 
 V: Vervangt dit onze vaste gasdetectie?
 A: Nee. Wij vullen aan waar vaste detectoren blinde vlekken

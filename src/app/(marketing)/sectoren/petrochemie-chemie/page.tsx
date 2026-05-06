@@ -9,7 +9,7 @@ const BOOKINGS_URL =
 export const metadata: Metadata = {
   title: 'Lekdetectie voor petrochemie en chemie | ATEX | GasProtex',
   description:
-    'ATEX-gecertificeerde lekdetectie voor chemie, petrochemie en tankterminals. Zone 1 inspectie. Levert input voor BRZO-rapportage en F-gassenverordening.',
+    'ATEX-gecertificeerde lekdetectie voor chemie, petrochemie en tankterminals. Zone 2 inspectie. Levert input voor BRZO-rapportage en F-gassenverordening.',
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
   },
@@ -26,7 +26,7 @@ const jsonLd = {
   },
   areaServed: 'NL',
   description:
-    'ATEX-gecertificeerde akoestische lekdetectie voor petrochemie, chemieclusters en tankterminals. Zone 1. Input voor BRZO en F-gassenverordening.',
+    'ATEX-gecertificeerde akoestische lekdetectie voor petrochemie, chemieclusters en tankterminals. Zone 2. Input voor BRZO en F-gassenverordening.',
   url: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
 }
 
@@ -93,7 +93,7 @@ export default function PetrochemieChemiePage() {
                 Lekdetectie voor petrochemie en chemie.
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed">
-                ATEX-gecertificeerd voor zone 1. Voor BRZO-bedrijven,
+                ATEX-gecertificeerd voor zone 2 en zone 22. Voor BRZO-bedrijven,
                 chemieclusters en tankterminals in heel Nederland.
               </p>
             </div>
@@ -127,15 +127,13 @@ export default function PetrochemieChemiePage() {
 
               <div>
                 <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">
-                  ATEX zone 1 gecertificeerd
+                  ATEX zone 2 gecertificeerd
                 </p>
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
                   Meten waar het ertoe doet.
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  Onze Crysound 8125 is ATEX-gecertificeerd voor zone 1. We meten in
-                  explosiegevaarlijke omgevingen waar de meeste inspectie-apparatuur
-                  niet mag komen.
+                  Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof) — 's werelds eerste TÜV-gecertificeerde intrinsiek veilige akoestische camera. Geschikt voor de meeste industriële productieomgevingen in de chemie.
                 </p>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   VCA-vol gecertificeerd als operator. Bekend met de VNCI-handreiking

@@ -33,7 +33,7 @@ const faqItems = [
   {
     question: 'Is gasdetectie met ultrasoon ATEX-gecertificeerd?',
     answer:
-      'Ja. Onze Crysound 8125 is gecertificeerd voor ATEX zone 1. Wij zijn VCA-vol gecertificeerd als operator.',
+      'Ja. Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof). Dat dekt de meeste industriële productieomgevingen. Wij zijn VCA-vol gecertificeerd als operator.',
   },
   {
     question: 'Vervangt dit onze vaste gasdetectie?',
