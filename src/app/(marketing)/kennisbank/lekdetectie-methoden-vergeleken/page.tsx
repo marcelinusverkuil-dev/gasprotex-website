@@ -226,6 +226,12 @@ export default function LekdetectieMethodenPage() {
                   Vacuümlekdetectie (zonder aanvullende bron) en kleine lekken onder zeer lage druk.
                 </p>
               </div>
+              <p className="mt-3 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                Lees ook:{' '}
+                <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  Welke gassen kun je met akoestische lekdetectie opsporen?
+                </Link>
+              </p>
             </div>
 
             {/* H2: Vergelijkingstabel */}

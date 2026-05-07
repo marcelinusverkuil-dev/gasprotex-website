@@ -209,6 +209,12 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               Perslucht, stikstof, waterstof, CO₂, ammoniak, methaan, propaan: elk gas dat onder druk
               door een opening ontsnapt, produceert ultrasoon geluid. Één instrument dekt alle gastypen.
             </p>
+            <p className="mt-1 mb-4 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Welke gassen kun je met akoestische lekdetectie opsporen?
+              </Link>
+            </p>
             <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 16, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">Op afstand, zonder stilstand.</strong>{' '}
               Detectie tot tientallen meters afstand, zonder dat je het proces hoeft te onderbreken.

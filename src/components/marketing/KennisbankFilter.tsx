@@ -41,6 +41,13 @@ const artikelen = [
     preview:
       'Vaste gasdetectie heeft blinde vlekken. Lees waar ze zitten en hoe akoestische lekdetectie (ultrasoon) ze aanvult. Niet als vervanging, maar als aanvulling.',
   },
+  {
+    slug: 'welke-gassen-akoestische-lekdetectie',
+    categorie: 'Gaslekdetectie',
+    titel: 'Welke gassen kun je met akoestische lekdetectie opsporen?',
+    preview:
+      'Akoestische lekdetectie werkt op elk gas onder druk — van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
+  },
 ]
 
 export default function KennisbankFilter() {
