@@ -55,10 +55,10 @@
             <Sectie titel="6. Derde partijen">
               <p>Wij maken gebruik van de volgende verwerkers:</p>
               <ul style={{ paddingLeft: 20, marginTop: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <li><strong>Resend</strong> — voor het verzenden van e-mails via het contactformulier</li>
-                <li><strong>Supabase</strong> — voor de opslag van portaaldata</li>
-                <li><strong>Google Analytics</strong> — voor anonieme websitestatistieken (alleen met toestemming)</li>
-                <li><strong>Vercel</strong> — voor hosting van de website en het portaal</li>
+                <li><strong>Resend</strong>: voor het verzenden van e-mails via het contactformulier</li>
+                <li><strong>Supabase</strong>: voor de opslag van portaaldata</li>
+                <li><strong>Google Analytics</strong>: voor anonieme websitestatistieken (alleen met toestemming)</li>
+                <li><strong>Vercel</strong>: voor hosting van de website en het portaal</li>
               </ul>
               <p style={{ marginTop: 12 }}>Met alle verwerkers zijn verwerkersovereenkomsten afgesloten.</p>
             </Sectie>

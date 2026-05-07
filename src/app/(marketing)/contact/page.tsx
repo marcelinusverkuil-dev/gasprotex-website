@@ -48,14 +48,6 @@ export default function ContactPage() {
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
 
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Contact</span>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             <div>
@@ -65,18 +57,34 @@ export default function ContactPage() {
               >
                 Contact
               </h1>
-              <p className="text-[#3D5A6E] text-lg leading-relaxed mb-8">
+              <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ marginBottom: '32px' }}>
                 Wil je weten wat lekdetectie voor jouw bedrijf kan betekenen?
-                Plan een vrijblijvend gesprek of neem direct contact op.
               </p>
 
-              <div className="space-y-8">
+              <div className="flex flex-col gap-3">
 
-                <div>
-                  <p className="text-[#0A2238] font-semibold mb-1">Plan een gesprek</p>
-                  <p className="text-[#3D5A6E] text-sm mb-4">
-                    Kies een moment dat jou uitkomt. Vrijblijvend, 30 minuten.
-                  </p>
+                <div className="flex items-start gap-6">
+                  <p className="text-[#0A2238] font-semibold" style={{ minWidth: '150px' }}>Bel direct:</p>
+                  <a
+                    href="tel:+31613055282"
+                    className="text-[#1E87B4] hover:text-[#F07830] font-semibold transition-colors"
+                  >
+                    +31 6 1305 5282
+                  </a>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <p className="text-[#0A2238] font-semibold" style={{ minWidth: '150px' }}>E-mail:</p>
+                  <a
+                    href="mailto:info@gasprotex.nl"
+                    className="text-[#1E87B4] hover:text-[#F07830] font-semibold transition-colors"
+                  >
+                    info@gasprotex.nl
+                  </a>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <p className="text-[#0A2238] font-semibold" style={{ minWidth: '150px' }}>Plan een gesprek</p>
                   <a
                     href={BOOKINGS_URL}
                     className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold rounded-md transition-colors"
@@ -86,32 +94,12 @@ export default function ContactPage() {
                   </a>
                 </div>
 
-                <div>
-                  <p className="text-[#0A2238] font-semibold mb-1">Bel direct</p>
-                  <a
-                    href="tel:+31613055282"
-                    className="text-[#1E87B4] hover:text-[#F07830] font-semibold transition-colors"
-                  >
-                    +31 6 1305 5282
-                  </a>
-                </div>
-
-                <div>
-                  <p className="text-[#0A2238] font-semibold mb-1">E-mail</p>
-                  <a
-                    href="mailto:info@gasprotex.nl"
-                    className="text-[#1E87B4] hover:text-[#F07830] font-semibold transition-colors"
-                  >
-                    info@gasprotex.nl
-                  </a>
-                </div>
-
               </div>
             </div>
 
             <div
               className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-              style={{ background: '#ffffff', padding: '40px' }}
+              style={{ background: '#ffffff', padding: '24px' }}
             >
               <ContactForm />
             </div>
@@ -132,9 +120,6 @@ export default function ContactPage() {
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Liever eerst zien wat het kost?
                 </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Bereken in 2 minuten wat persluchtlekken jouw bedrijf kosten.
-                </p>
               </div>
               <Link
                 href="/bereken-uw-besparing/perslucht/"

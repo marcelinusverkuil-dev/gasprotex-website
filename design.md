@@ -675,3 +675,4 @@ Horizontale KPI-rij (3 kolommen, borderLeft-scheiding) — zie ook KPI-blokken s
 - Geen gekleurde badges of tags
 - Geen "pill" knoppen — `border-radius` max `rounded-md`
 - Geen tekst in volledig capslock, behalve bij labels/eyebrows
+- Geen em-dashes (—) in lopende tekst: gebruik een komma of punt, of een dubbele punt bij opsommingen/verduidelijkingen

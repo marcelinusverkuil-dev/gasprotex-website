@@ -55,7 +55,7 @@ const werkwijze = [
   },
   {
     titel: 'Specialist met focus',
-    tekst: 'Lekdetectie als dienst — niets anders. Geen breed onderhoudsbedrijf, geen apparatuur-verkoop.',
+    tekst: 'Lekdetectie als dienst: niets anders. Geen breed onderhoudsbedrijf, geen apparatuur-verkoop.',
     link: { href: '/diensten/', label: 'Bekijk wat we doen →' },
   },
   {
@@ -65,7 +65,7 @@ const werkwijze = [
   },
   {
     titel: 'Naast je bestaande onderhoud',
-    tekst: 'Wij vervangen je onderhoudspartner niet. Wij vullen aan — specifiek op lekdetectie, met QR-code per lek en opvolging via het klantportaal.',
+    tekst: 'Wij vervangen je onderhoudspartner niet. Wij vullen aan, specifiek op lekdetectie, met QR-code per lek en opvolging via het klantportaal.',
     link: { href: '/diensten/', label: 'Bekijk wat we doen →' },
   },
 ]
@@ -82,14 +82,6 @@ export default function OverOnsPage() {
       {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
-
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Over ons</span>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -129,7 +121,7 @@ export default function OverOnsPage() {
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   10+ jaar ervaring in industriële instrumentatie en lekdetectie.
-                  Bij Hitma zat ik vooral aan de apparatuur-kant — verkoop en
+                  Bij Hitma zat ik vooral aan de apparatuur-kant: verkoop en
                   implementatie van ultrasone camera's en gasdetectiesystemen.
                 </p>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -138,7 +130,7 @@ export default function OverOnsPage() {
                   hadden daar geen capaciteit voor. De camera verdween in de kast.
                 </p>
                 <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  Bij GasProtex draai ik het om. Geen apparatuur verkopen —
+                  Bij GasProtex draai ik het om. Geen apparatuur verkopen,
                   wel de dienst leveren. Ik kom langs, vind de lekken, lever
                   het rapport, en zorg via het klantportaal dat er ook iets mee gebeurt.
                 </p>
@@ -151,7 +143,7 @@ export default function OverOnsPage() {
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   De markt zit vol apparatuur-verkopers. Hitma, Sorama,
-                  Atlas Copco, Festo — allemaal leveren ze goede camera's
+                  Atlas Copco, Festo: allemaal leveren ze goede camera's
                   en detectiesystemen. Maar wie komt er daadwerkelijk langs
                   om de lekken te vinden?
                 </p>
@@ -182,7 +174,6 @@ export default function OverOnsPage() {
               <div className="space-y-4">
                 {certificeringen.map((c) => (
                   <div key={c.titel} className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
                     <div>
                       <p className="text-[#0A2238] font-semibold mb-1">{c.titel}</p>
                       <p className="text-[#3D5A6E] text-sm">{c.tekst}</p>
@@ -197,7 +188,6 @@ export default function OverOnsPage() {
               <div className="space-y-4">
                 {werkwijze.map((w) => (
                   <div key={w.titel} className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
                     <div>
                       <p className="text-[#0A2238] font-semibold mb-1">{w.titel}</p>
                       <p className="text-[#3D5A6E] text-sm">{w.tekst}</p>
@@ -233,9 +223,6 @@ export default function OverOnsPage() {
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Wil je weten wat we voor jou kunnen doen?
                 </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Plan een vrijblijvend kennismakingsgesprek.
-                </p>
               </div>
               <a
                 href={BOOKINGS_URL}

@@ -34,9 +34,9 @@ export default function WaaromSection() {
 
             <div className="flex flex-col justify-center gap-6">
               {[
-                'Geen operator opleiden — wij zijn gecertificeerd',
-                'Geen kalibratie, geen onderhoud — dat regelen wij',
-                'Rapport met euro-impact per lek — niet alleen locaties',
+                'Geen operator opleiden: wij zijn gecertificeerd',
+                'Geen kalibratie, geen onderhoud: dat regelen wij',
+                'Rapport met euro-impact per lek, niet alleen locaties',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <span

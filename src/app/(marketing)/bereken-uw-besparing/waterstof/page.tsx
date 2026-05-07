@@ -68,7 +68,7 @@ export default function WaterstofCalculatorPage() {
             Lekkostencalculator waterstof
           </h1>
           <p className="text-[#4A6880] mt-4" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 620 }}>
-            Bereken wat waterstoflekkages u jaarlijks kosten — voor grijs, blauw én groen waterstof.
+            Bereken wat waterstoflekkages u jaarlijks kosten: voor grijs, blauw én groen waterstof.
           </p>
         </div>
       </section>
@@ -162,7 +162,7 @@ export default function WaterstofCalculatorPage() {
                 style={{ background: '#F5F7FA', border: '1px solid #E2E8F0', padding: '28px 32px' }}>
                 <div>
                   <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel ú lekt?</p>
-                  <p className="text-[#4A6880] mt-1" style={{ fontSize: 14 }}>Plan een gratis inspectie in — resultaat dezelfde dag.</p>
+                  <p className="text-[#4A6880] mt-1" style={{ fontSize: 14 }}>Plan een gratis inspectie in. Resultaat dezelfde dag.</p>
                 </div>
                 <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
                   Afspraak maken

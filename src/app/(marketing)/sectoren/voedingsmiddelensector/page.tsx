@@ -3,8 +3,6 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Lekdetectie voor voedingsmiddelenindustrie | GasProtex',
@@ -34,7 +32,7 @@ const gassen = [
   {
     label: 'Perslucht',
     tekst:
-      'Verpakkingslijnen, transportbanden, instrumentatie, pneumatische aandrijving. Bij de meeste voedingsbedrijven is perslucht de grootste verborgen energiekostenpost — 20-30% gaat verloren door lekken.',
+      'Verpakkingslijnen, transportbanden, instrumentatie, pneumatische aandrijving. Bij de meeste voedingsbedrijven is perslucht de grootste verborgen energiekostenpost: 20-30% gaat verloren door lekken.',
   },
   {
     label: 'CO₂',
@@ -44,7 +42,7 @@ const gassen = [
   {
     label: 'Ammoniak (NH₃)',
     tekst:
-      'Koelinstallaties en vriestunnels in zuivel, vleeswaren en diepvriesproductie. Ammoniak is giftig — vroegtijdige detectie voorkomt productiestilstand en incidenten.',
+      'Koelinstallaties en vriestunnels in zuivel, vleeswaren en diepvriesproductie. Ammoniak is giftig: vroegtijdige detectie voorkomt productiestilstand en incidenten.',
   },
   {
     label: 'Stikstof (N₂)',
@@ -55,17 +53,17 @@ const gassen = [
 
 const voorbeelden = [
   {
-    titel: 'Zuivelbedrijf — Friesland',
+    titel: 'Zuivelbedrijf, Friesland',
     tekst:
       'Bij een zuivelbedrijf met meerdere productielocaties vonden we in één ochtend ruim 30 persluchtlekken. Samen goed voor meer dan €35.000 verloren energie per jaar. De meeste lekken zaten op koppelingen die bij regulier onderhoud niet worden gecontroleerd.',
   },
   {
-    titel: 'Brouwerij — Noord-Brabant',
+    titel: 'Brouwerij, Noord-Brabant',
     tekst:
-      'CO₂-distributielijn lekte op meerdere plekken tussen kelder en taplijn. Niet hoorbaar, niet zichtbaar — wel meetbaar met ultrasoon. Na herstel: merkbaar lagere CO₂-inkoopkosten.',
+      'CO₂-distributielijn lekte op meerdere plekken tussen kelder en taplijn. Niet hoorbaar, niet zichtbaar. Wel meetbaar met ultrasoon. Na herstel: merkbaar lagere CO₂-inkoopkosten.',
   },
   {
-    titel: 'Vleesverwerker — Gelderland',
+    titel: 'Vleesverwerker, Gelderland',
     tekst:
       'NH₃-koelinstallatie met een intermitterend lek dat door vaste detectoren niet werd opgepikt. Ultrasone scan lokaliseerde het lek in 20 minuten.',
   },
@@ -84,18 +82,6 @@ export default function VoedingsmiddelensectorPage() {
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
 
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/sectoren/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Sectoren
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Voedingsmiddelensector</span>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h1
@@ -105,7 +91,7 @@ export default function VoedingsmiddelensectorPage() {
                 Lekdetectie voor de voedingsmiddelensector.
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed">
-                Perslucht, CO₂, ammoniak en stikstof — wij vinden de lekken
+                Perslucht, CO₂, ammoniak en stikstof: wij vinden de lekken
                 die je productie geld kosten of je installatie in gevaar brengen.
               </p>
             </div>
@@ -216,7 +202,7 @@ export default function VoedingsmiddelensectorPage() {
                   Bereken jouw besparing →
                 </Link>
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   className="inline-flex items-center gap-2 border border-white/30 text-white hover:border-white/60 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                   style={{ padding: '14px 32px' }}
                 >

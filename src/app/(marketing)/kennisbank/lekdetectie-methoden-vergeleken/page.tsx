@@ -2,8 +2,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie? | GasProtex',
@@ -68,7 +66,7 @@ const methoden = [
     werkt:
       'Om vast te stellen dát je een probleem hebt. Op een vrachtwagen productielocatie had men via een drukverliesberekening vastgesteld dat ze ongeveer 15% van hun perslucht verloren. Dat is een duidelijk signaal. Het bereik dekt het hele systeem in één meting.',
     tekortschiet:
-      'Je weet hoevéél, maar niet wáár. Geen lokalisatie. Die 15% kan in één groot lek zitten of verspreid over 30 kleine. Zonder aanvullende inspectie weet je niet waar je moet repareren. De gevoeligheid is laag tot gemiddeld — zeer kleine lekken vallen binnen de meetonnauwkeurigheid. Belangrijk: het systeem moet afgesloten worden. Tijdens productie is een drukverliestest in de praktijk niet uitvoerbaar.',
+      'Je weet hoevéél, maar niet wáár. Geen lokalisatie. Die 15% kan in één groot lek zitten of verspreid over 30 kleine. Zonder aanvullende inspectie weet je niet waar je moet repareren. De gevoeligheid is laag tot gemiddeld: zeer kleine lekken vallen binnen de meetonnauwkeurigheid. Belangrijk: het systeem moet afgesloten worden. Tijdens productie is een drukverliestest in de praktijk niet uitvoerbaar.',
     geschikt: 'Vaststellen of lekdetectie nodig is.',
     nietGeschikt: 'Lokaliseren van individuele lekken.',
   },
@@ -108,17 +106,6 @@ export default function LekdetectieMethodenPage() {
         <div className="container-main">
 
           {/* Breadcrumb */}
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/kennisbank/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Kennisbank
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Lekdetectie methoden vergeleken</span>
-          </div>
 
           {/* Header */}
           <div style={{ maxWidth: '720px' }}>
@@ -201,7 +188,7 @@ export default function LekdetectieMethodenPage() {
 
               <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>Wanneer het werkt</p>
               <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                Periodiek inzetbaar en geschikt tijdens normale productie — geen stilstand nodig. Scannen van
+                Periodiek inzetbaar en geschikt tijdens normale productie: geen stilstand nodig. Scannen van
                 een heel systeem in één inspectieronde. Hoge lokalisatie en hoge gevoeligheid: de camera
                 detecteert lekken op afstand, tot tientallen meters afhankelijk van omgeving en lekgrootte.
                 Werkt in lawaaierige omgevingen. Per gevonden lek: exacte locatie, geschat debiet, jaarverlies
@@ -372,7 +359,7 @@ export default function LekdetectieMethodenPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >

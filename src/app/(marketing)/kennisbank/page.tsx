@@ -3,8 +3,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import KennisbankFilter from '@/components/marketing/KennisbankFilter'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Kennisbank | Lekdetectie, ATEX, ISO | GasProtex',
@@ -42,14 +40,6 @@ export default function KennisbankPage() {
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '60px' }}>
         <div className="container-main">
 
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Kennisbank</span>
-          </div>
-
           <h1
             className="font-bold text-[#0A2238] mb-4"
             style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
@@ -83,7 +73,7 @@ export default function KennisbankPage() {
                 </p>
               </div>
               <a
-                href={BOOKINGS_URL}
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

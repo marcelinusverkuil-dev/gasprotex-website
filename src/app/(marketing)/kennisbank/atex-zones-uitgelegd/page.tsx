@@ -2,8 +2,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie? | GasProtex',
@@ -52,13 +50,6 @@ export default function AtexZonesPage() {
         <div className="container-main">
 
           {/* Breadcrumb */}
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Home</Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/kennisbank/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Kennisbank</Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>ATEX-zones uitgelegd</span>
-          </div>
 
           {/* Header */}
           <div style={{ maxWidth: '720px' }}>
@@ -89,7 +80,7 @@ export default function AtexZonesPage() {
               Wat is ATEX?
             </h2>
             <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
-              ATEX staat voor <em>ATmosphère EXplosible</em> — explosieve atmosfeer. Er zijn twee Europese
+              ATEX staat voor <em>ATmosphère EXplosible</em>, explosieve atmosfeer. Er zijn twee Europese
               ATEX-richtlijnen: ATEX 114 (2014/34/EU) bepaalt welke apparatuur in omgevingen met
               explosiegevaar gebruikt mag worden. ATEX 153 (1999/92/EG) richt zich op de werkgever en
               verplicht tot zonering, risicobeoordeling en het gebruik van gecertificeerde apparatuur.
@@ -192,7 +183,7 @@ export default function AtexZonesPage() {
               <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Lekdetectie methoden vergeleken
               </Link>
-              {' '}— ATEX-geschiktheid is een van de acht criteria waarop methoden worden vergeleken.
+              {'. '}ATEX-geschiktheid is een van de acht criteria waarop methoden worden vergeleken.
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
@@ -229,7 +220,7 @@ export default function AtexZonesPage() {
               <Link href="/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Akoestische lekdetectie naast je vaste gasdetectie
               </Link>
-              {' '}— voor meer achtergrond over hoe akoestische detectie werkt in ATEX-omgevingen.
+              {'. Voor meer achtergrond over hoe akoestische detectie werkt in ATEX-omgevingen.'}
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
@@ -282,7 +273,7 @@ export default function AtexZonesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >

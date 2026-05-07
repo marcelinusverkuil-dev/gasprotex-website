@@ -2,8 +2,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Welke gassen kun je met akoestische lekdetectie opsporen? | GasProtex',
@@ -51,13 +49,6 @@ export default function WelkeGassenPage() {
         <div className="container-main">
 
           {/* Breadcrumb */}
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Home</Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/kennisbank/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Kennisbank</Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Welke gassen kun je met akoestische lekdetectie opsporen?</span>
-          </div>
 
           {/* Header */}
           <div style={{ maxWidth: '720px' }}>
@@ -304,7 +295,7 @@ export default function WelkeGassenPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >

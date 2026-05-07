@@ -2,8 +2,6 @@
 import Link from 'next/link'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Lekdetectie-abonnement | Quickscan tot doorlopend | GasProtex',
@@ -21,7 +19,7 @@ const stappen = [
     duur: 'Een dagdeel',
     body: [
       'We komen langs voor een dagdeel en scannen je installatie met de ultrasone camera. Je krijgt een rapport met exacte locaties, geschat verlies per lek in euro\'s, en een herstelprioriteit. Geen verplichtingen daarna.',
-      'Dit is het bewijs. Als de scan niets oplevert, ben je klaar. Als het wél wat oplevert — en dat doet het vrijwel altijd — beslis je zelf wat je ermee doet.',
+      'Dit is het bewijs. Als de scan niets oplevert, ben je klaar. Als het wél wat oplevert (en dat doet het vrijwel altijd) beslis je zelf wat je ermee doet.',
     ],
   },
   {
@@ -38,7 +36,7 @@ const stappen = [
     title: 'Abonnement',
     duur: 'Doorlopend, jaarlijkse herhaling',
     body: [
-      'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen — elk jaar ontstaan er nieuwe lekpunten. Met een abonnement herhalen we de scan jaarlijks en houden we je klantportaal actueel.',
+      'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen: elk jaar ontstaan er nieuwe lekpunten. Met een abonnement herhalen we de scan jaarlijks en houden we je klantportaal actueel.',
       'In het portaal zie je per lek: status (open, in herstel, opgelost), jaarverlies, trend over de jaren. Je onderhoudsteam weet altijd waar ze moeten zijn.',
     ],
   },
@@ -115,18 +113,6 @@ export default function AbonnementPage() {
       {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
-
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/diensten/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Diensten
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Lekdetectie-abonnement</span>
-          </div>
 
           <h1
             className="font-bold text-[#0A2238]"
@@ -231,12 +217,9 @@ export default function AbonnementPage() {
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Klein beginnen, zelf beslissen.
                 </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Een Quickscan is het startpunt. Geen verplichtingen, wel concreet bewijs.
-                </p>
               </div>
               <a
-                href={BOOKINGS_URL}
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

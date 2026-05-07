@@ -3,8 +3,6 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Lekdetectie voor petrochemie en chemie | ATEX | GasProtex',
@@ -31,17 +29,17 @@ const jsonLd = {
 }
 
 const gassen = [
-  { tekst: 'Procesgassen — methaan, ethyleen, waterstof, H₂S' },
-  { tekst: 'F-gassen — koelinstallaties, F-gassenverordening' },
-  { tekst: 'Perslucht — instrumentatie, pneumatische aandrijving' },
-  { tekst: 'Stikstof, CO₂, ammoniak — procesgebonden' },
+  { tekst: 'Procesgassen: methaan, ethyleen, waterstof, H₂S' },
+  { tekst: 'F-gassen: koelinstallaties, F-gassenverordening' },
+  { tekst: 'Perslucht: instrumentatie, pneumatische aandrijving' },
+  { tekst: 'Stikstof, CO₂, ammoniak (procesgebonden)' },
 ]
 
 const compliance = [
   {
     titel: 'BRZO-rapportage',
     tekst:
-      'Wij leveren input voor jouw BRZO-rapport. Geen audit — wel de feitelijke lekdata die je nodig hebt voor je emissie-inventarisatie.',
+      'Wij leveren input voor jouw BRZO-rapport. Geen audit, wel de feitelijke lekdata die je nodig hebt voor je emissie-inventarisatie.',
   },
   {
     titel: 'F-gassenverordening',
@@ -71,18 +69,6 @@ export default function PetrochemieChemiePage() {
       {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
-
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/sectoren/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Sectoren
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Petrochemie & Chemie</span>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -133,7 +119,7 @@ export default function PetrochemieChemiePage() {
                   Meten waar het ertoe doet.
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof) — 's werelds eerste TÜV-gecertificeerde intrinsiek veilige akoestische camera. Geschikt voor de meeste industriële productieomgevingen in de chemie.
+                  Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof): 's werelds eerste TÜV-gecertificeerde intrinsiek veilige akoestische camera. Geschikt voor de meeste industriële productieomgevingen in de chemie.
                 </p>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   VCA-vol gecertificeerd als operator. Bekend met de VNCI-handreiking
@@ -196,7 +182,7 @@ export default function PetrochemieChemiePage() {
             </div>
 
             <p className="text-[#3D5A6E] mt-8" style={{ fontSize: 15 }}>
-              Wij zijn geen auditor en geen certificeerder. Wij leveren de feitelijke lekdata — jij gebruikt
+              Wij zijn geen auditor en geen certificeerder. Wij leveren de feitelijke lekdata: jij gebruikt
               die in je eigen compliance-traject.
             </p>
 
@@ -228,7 +214,7 @@ export default function PetrochemieChemiePage() {
                 </p>
               </div>
               <a
-                href={BOOKINGS_URL}
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

@@ -25,7 +25,7 @@ const artikelen = [
     categorie: 'Gaslekdetectie',
     titel: 'Ultrasone vs. traditionele lekdetectie: wat is het verschil?',
     preview:
-      'Zeepsop, vaste detectoren, sniffer-buizen — allemaal worden ze nog gebruikt. Wat ultrasone detectie anders maakt en wanneer je welke methode inzet.',
+      'Zeepsop, vaste detectoren, sniffer-buizen: allemaal worden ze nog gebruikt. Wat ultrasone detectie anders maakt en wanneer je welke methode inzet.',
   },
   {
     slug: 'lekdetectie-methoden-vergeleken',
@@ -46,7 +46,7 @@ const artikelen = [
     categorie: 'Gaslekdetectie',
     titel: 'Welke gassen kun je met akoestische lekdetectie opsporen?',
     preview:
-      'Akoestische lekdetectie werkt op elk gas onder druk — van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
+      'Akoestische lekdetectie werkt op elk gas onder druk: van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
   },
 ]
 

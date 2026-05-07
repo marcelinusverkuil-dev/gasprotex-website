@@ -2,8 +2,6 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Gas- en persluchtlekdetectie als dienst | GasProtex',
@@ -18,12 +16,12 @@ const faqItems = [
   {
     question: 'Hoe werkt ultrasone lekdetectie?',
     answer:
-      'Elk lek onder druk produceert ultrasone geluidsgolven. Onze camera vangt die op en toont de exacte locatie — ook in lawaaierige productieomgevingen.',
+      'Elk lek onder druk produceert ultrasone geluidsgolven. Onze camera vangt die op en toont de exacte locatie, ook in lawaaierige productieomgevingen.',
   },
   {
     question: 'Hoe lang duurt een scan?',
     answer:
-      'Meestal een dagdeel (3–4 uur). Geen stilstand nodig — we meten tijdens normale productie.',
+      'Meestal een dagdeel (3–4 uur). Geen stilstand nodig: we meten tijdens normale productie.',
   },
   {
     question: 'Wat kost een persluchtlek per jaar?',
@@ -47,7 +45,7 @@ const faqItems = [
   {
     question: 'Hoe gaat het na een Quickscan verder?',
     answer:
-      'Van Quickscan naar doorlopend abonnement — je beslist zelf of en wanneer je verder wilt.',
+      'Van Quickscan naar doorlopend abonnement: je beslist zelf of en wanneer je verder wilt.',
     link: { href: '/diensten/lekdetectie-abonnement/', label: 'Bekijk het volledige pad →' },
   },
 ]
@@ -108,17 +106,6 @@ export default function DienstenPage() {
       {/* Sectie 1 — Hero (licht) */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/diensten/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Diensten
-            </Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Gas- en persluchtlekdetectie</span>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -134,7 +121,7 @@ export default function DienstenPage() {
               </h1>
               <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 18, lineHeight: 1.75 }}>
                 Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera
-                lokaliseren we elk lek — tijdens normale productie, zonder stilstand.
+                lokaliseren we elk lek, tijdens normale productie, zonder stilstand.
               </p>
               <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 18, lineHeight: 1.75 }}>
                 Geen apparatuur kopen of eigen operator opleiden. Wij komen langs, scannen, en
@@ -145,7 +132,7 @@ export default function DienstenPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
@@ -155,7 +142,7 @@ export default function DienstenPage() {
                   <ArrowRight />
                 </a>
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors"
@@ -201,7 +188,7 @@ export default function DienstenPage() {
                 verloren energie.
               </p>
               <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
-                Je hebt al een onderhoudspartner? Wij vervangen die niet — wij vullen aan met
+                Je hebt al een onderhoudspartner? Wij vervangen die niet, wij vullen aan met
                 ultrasone inspectie die sneller en gerichter is dan zeepsop of handmatige
                 controle.
               </p>
@@ -230,7 +217,7 @@ export default function DienstenPage() {
                 wij.
               </p>
               <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
-                Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan, propaan — elk gas onder
+                Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan, propaan. Elk gas onder
                 druk. ATEX-gecertificeerd voor zone&nbsp;1.
               </p>
               <Link
@@ -333,12 +320,9 @@ export default function DienstenPage() {
               >
                 Weten waar je lekken zitten?
               </h2>
-              <p className="text-[#6B8FA6]" style={{ fontSize: 15 }}>
-                Een Quickscan geeft je binnen een dagdeel concreet antwoord.
-              </p>
             </div>
             <a
-              href={BOOKINGS_URL}
+              href="/contact/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md flex-shrink-0"

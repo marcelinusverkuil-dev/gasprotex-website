@@ -2,8 +2,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const BOOKINGS_URL =
-  'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
   title: 'Akoestische lekdetectie naast je vaste gasdetectie: waar zit de aanvulling? | GasProtex',
@@ -51,13 +49,6 @@ export default function AkoestischNaastVasteGasdetectiePage() {
         <div className="container-main">
 
           {/* Breadcrumb */}
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Home</Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/kennisbank/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Kennisbank</Link>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>Akoestische lekdetectie naast vaste gasdetectie</span>
-          </div>
 
           {/* Header */}
           <div style={{ maxWidth: '720px' }}>
@@ -162,7 +153,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 16, lineHeight: 1.7 }}>
               Een vaste detector geeft aan dát er gas aanwezig is, maar niet wáár het lek zit. Bij een
               alarm weet je dat er ergens in de buurt van sensor 47 een verhoogde concentratie is. Maar
-              de exacte bron — of het een flensverbinding is, een klep, een pakking of een lasnaad —
+              de exacte bron (of het een flensverbinding is, een klep, een pakking of een lasnaad)
               dat vertelt het systeem je niet. Voor reparatie moet je alsnog zoeken.
             </p>
 
@@ -323,7 +314,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
               Perslucht speelt hier ook mee: voedingsmiddelenbedrijven gebruiken grote hoeveelheden
               perslucht voor verpakking, transport en reiniging. Persluchtlekken vallen buiten het
-              bereik van gasdetectoren — het is immers lucht, geen gevaarlijk gas — maar kosten net
+              bereik van gasdetectoren (het is immers lucht, geen gevaarlijk gas), maar kosten net
               zo goed duizenden euro&apos;s per jaar aan energie.
             </p>
 
@@ -398,7 +389,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href={BOOKINGS_URL}
+                  href="/contact/"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >
