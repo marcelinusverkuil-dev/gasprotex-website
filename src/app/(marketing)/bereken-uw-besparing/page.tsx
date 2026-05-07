@@ -100,20 +100,17 @@ export default function BerekenUwBesparingPage() {
             style={{ background: '#ffffff', padding: '20px 24px' }}
           >
             <div>
-              <p className="text-[#3D5A6E] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>
+              <p className="text-[#3D5A6E] mb-1" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560 }}>
                 Deze berekening geeft een indicatie op basis van marktgemiddelden en de door u ingevulde gegevens.
                 De werkelijke kosten kunnen afwijken door factoren zoals systeemdruk, leidinglengte en het aantal lekpunten.
               </p>
             </div>
             <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
-              style={{ fontSize: 14 }}
+              href="/contact/"
+              className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
+              style={{ padding: '14px 32px' }}
             >
-              Vraag een quickscan aan
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              Vraag een Quickscan aan →
             </Link>
           </div>
         </div>

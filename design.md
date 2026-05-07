@@ -58,6 +58,7 @@ Ontbrekende tokens (gebruik hardcoded hex): `#C2DCE8`, `#0A2238`, `#3D5A6E`, `#6
 - H1 (paginakop): `font-bold text-[#0A2238]`, `fontSize: clamp(32px, 4vw, 52px)`, `lineHeight: 1.2`, `letterSpacing: -0.02em` — **geen eyebrow/label erboven**, behalve bij calculator- en artikelpagina's (zie uitzonderingen sectionlabels)
 - H2: `font-bold`, `fontSize: clamp(26px, 3vw, 38px)` of `text-4xl`
 - Body: `text-fog` op donker, `text-[#3D5A6E]` op licht, `text-lg leading-relaxed`
+- Broodtekst in witte containers: `fontSize: 15, lineHeight: 1.7` — gebruik dit consequent, nooit `fontSize: 14` voor lopende tekst
 
 ---
 
@@ -613,6 +614,28 @@ Actieve/inactieve staat:
   <span className="block font-semibold text-white" style={{ fontSize: 15 }}>Waarde</span>
   <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>Label</span>
 </button>
+```
+
+### Standaard witte CTA-container (onderaan pagina's)
+Altijd één oranje knop rechts, tekst links. Nooit twee knoppen naast elkaar. Knop heeft `flex-shrink-0` zodat hij niet krimpt op smalle schermen.
+```tsx
+<section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+  <div className="container-main">
+    <div
+      className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+      style={{ background: '#ffffff', padding: '20px 24px' }}
+    >
+      <h2 className="text-[#0A2238] font-bold text-2xl">Titel</h2>
+      <a
+        href="/contact/"
+        className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
+        style={{ padding: '14px 32px' }}
+      >
+        Label →
+      </a>
+    </div>
+  </div>
+</section>
 ```
 
 ### Lichte CTA-box (inline, na calculator)

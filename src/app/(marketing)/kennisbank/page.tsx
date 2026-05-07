@@ -46,7 +46,7 @@ export default function KennisbankPage() {
           >
             Kennisbank
           </h1>
-          <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ maxWidth: '600px' }}>
+          <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ maxWidth: '600px', marginBottom: '32px' }}>
             Praktische artikelen over lekdetectie, ATEX, ISO 11011 en energiebesparing.
             Voor HSE-managers, plant managers en onderhoudsteams.
           </p>
@@ -68,9 +68,6 @@ export default function KennisbankPage() {
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   Vragen over jouw situatie?
                 </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Plan een vrijblijvend kennismakingsgesprek. 30 minuten, zonder verplichtingen.
-                </p>
               </div>
               <a
                 href="/contact/"

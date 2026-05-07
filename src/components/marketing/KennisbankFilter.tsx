@@ -81,12 +81,13 @@ export default function KennisbankFilter() {
       </div>
 
       {/* Artikel-grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+      <div className="mt-16" style={{ marginLeft: '-12px', marginRight: '-12px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {gefilterd.map((artikel) => (
+          <div key={artikel.slug} style={{ padding: '12px' }}>
           <div
-            key={artikel.slug}
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col"
-            style={{ background: '#ffffff', padding: '32px' }}
+            style={{ background: '#ffffff', padding: '32px', height: '100%' }}
           >
             <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-3">
               {artikel.categorie}
@@ -104,7 +105,9 @@ export default function KennisbankFilter() {
               Lees meer →
             </Link>
           </div>
+          </div>
         ))}
+        </div>
       </div>
     </>
   )

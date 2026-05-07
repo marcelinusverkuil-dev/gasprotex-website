@@ -112,23 +112,15 @@ export default function CasesPage() {
               className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
               style={{ background: '#ffffff', padding: '20px 24px' }}
             >
-              <div>
-                <h2 className="font-bold text-[#0A2238] mb-1" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                  Benieuwd wat wij voor u kunnen betekenen?
-                </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Neem vrijblijvend contact met ons op voor een kennismakingsgesprek.
-                </p>
-              </div>
+              <h2 className="font-bold text-[#0A2238] text-2xl">
+                Benieuwd wat wij voor jou kunnen betekenen?
+              </h2>
               <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors flex-shrink-0"
-                style={{ fontSize: 14 }}
+                href="/contact/"
+                className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
+                style={{ padding: '14px 32px' }}
               >
-                Neem contact op
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                  <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                Plan kennismakingsgesprek →
               </Link>
             </div>
 
