@@ -6,9 +6,9 @@ const BOOKINGS_URL =
   'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
-  title: 'ATEX-zones uitgelegd: zone 2 en lekdetectie | GasProtex',
+  title: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie? | GasProtex',
   description:
-    'Zone 0, 1 en 2 bepalen welke apparatuur je in explosiegevaarlijke omgevingen mag inzetten. Wat ATEX-certificering voor lekdetectie betekent en hoe GasProtex hiermee werkt.',
+    'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
   },
@@ -18,17 +18,26 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?',
-  author: {
-    '@type': 'Person',
-    name: 'Marcelinus Verkuil',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'GasProtex',
-    url: 'https://gasprotex.nl',
-  },
-  url: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
+  description:
+    'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
+  author: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
+  publisher: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
+  datePublished: '2026-05-07',
+  dateModified: '2026-05-07',
+  mainEntityOfPage: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
 }
+
+const gasZones = [
+  { zone: 'Zone 0', beschrijving: 'Continu of langdurig aanwezig', voorbeelden: 'Binnenkant van tanks, leidingen, reactorvaten, tankventilatie-uitlaten', highlight: false },
+  { zone: 'Zone 1', beschrijving: 'Af en toe aanwezig bij normaal bedrijf', voorbeelden: 'Directe omgeving van pompen, kleppen, flenzen, aftappunten', highlight: false },
+  { zone: 'Zone 2', beschrijving: 'Zelden en kortstondig aanwezig', voorbeelden: 'Ruimere omgeving van procesinstallaties, productievloeren', highlight: true },
+]
+
+const stofZones = [
+  { zone: 'Zone 20', beschrijving: 'Continu aanwezig als wolk', voorbeelden: 'Binnenkant silo\'s, maalinstallaties', highlight: false },
+  { zone: 'Zone 21', beschrijving: 'Af en toe aanwezig bij normaal bedrijf', voorbeelden: 'Directe omgeving van vulpunten, transportbanden', highlight: false },
+  { zone: 'Zone 22', beschrijving: 'Zelden en kortstondig aanwezig', voorbeelden: 'Ruimere omgeving van stofverwerkende installaties', highlight: true },
+]
 
 export default function AtexZonesPage() {
   return (
@@ -44,13 +53,9 @@ export default function AtexZonesPage() {
 
           {/* Breadcrumb */}
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Home
-            </Link>
+            <Link href="/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Home</Link>
             <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
-            <Link href="/kennisbank/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>
-              Kennisbank
-            </Link>
+            <Link href="/kennisbank/" className="text-[#6B8FA6] hover:text-[#0A2238] transition-colors" style={{ fontSize: 13 }}>Kennisbank</Link>
             <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>/</span>
             <span className="text-[#6B8FA6]" style={{ fontSize: 13 }}>ATEX-zones uitgelegd</span>
           </div>
@@ -58,7 +63,7 @@ export default function AtexZonesPage() {
           {/* Header */}
           <div style={{ maxWidth: '720px' }}>
             <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-4">
-              ATEX & Compliance
+              ATEX &amp; Compliance
             </p>
             <h1
               className="font-bold text-[#0A2238] mb-6"
@@ -66,159 +71,253 @@ export default function AtexZonesPage() {
             >
               ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
             </h1>
-            <p className="text-[#3D5A6E] text-lg leading-relaxed">
+            <p className="text-[#6B8FA6] mb-6" style={{ fontSize: 13 }}>
+              GasProtex · 7 mei 2026 · 5 minuten leestijd
+            </p>
+            <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ fontStyle: 'italic' }}>
               In de petrochemie, chemie en voedingsmiddelenindustrie kom je ze overal tegen: ATEX-zones.
-              Ze bepalen welke apparatuur je mag inzetten — en dus ook welke camera's voor lekdetectie
-              geschikt zijn. Niet elke ultrasone camera is ATEX-gecertificeerd. Dit artikel legt uit wat
-              ATEX-zones zijn en wat zone 2-certificering voor lekdetectie betekent.
+              Ze bepalen welke apparatuur je mag inzetten, en dus ook welke camera&apos;s voor lekdetectie
+              geschikt zijn. Niet elke akoestische camera is ATEX-gecertificeerd. Dit artikel legt uit wat
+              ATEX-zones zijn, hoe ze zijn ingedeeld en wat zone 2-certificering voor lekdetectie betekent.
             </p>
           </div>
 
-          {/* Body */}
+          {/* Artikel-body */}
           <div style={{ maxWidth: '720px', marginTop: '48px' }}>
 
-            <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
+            <h2 className="text-[#0A2238] font-bold mt-8 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Wat is ATEX?
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              ATEX staat voor <em>ATmosphère EXplosible</em> — explosieve atmosfeer. De Europese ATEX-richtlijn
-              (2014/34/EU) bepaalt welke apparatuur in omgevingen met explosiegevaar gebruikt mag worden.
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              ATEX staat voor <em>ATmosphère EXplosible</em> — explosieve atmosfeer. Er zijn twee Europese
+              ATEX-richtlijnen: ATEX 114 (2014/34/EU) bepaalt welke apparatuur in omgevingen met
+              explosiegevaar gebruikt mag worden. ATEX 153 (1999/92/EG) richt zich op de werkgever en
+              verplicht tot zonering, risicobeoordeling en het gebruik van gecertificeerde apparatuur.
               Het gaat om locaties waar ontvlambare gassen, dampen of stof aanwezig kunnen zijn.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
-              Fabrikanten moeten hun apparatuur laten certificeren voor de specifieke zone waar het ingezet
-              wordt. Gebruikers zijn verplicht te werken met gecertificeerde apparatuur — en dat geldt ook
-              voor meetapparatuur die tijdelijk wordt meegebracht, zoals een ultrasone camera voor lekdetectie.
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              Fabrikanten moeten hun apparatuur laten certificeren voor de specifieke zone waar het
+              ingezet wordt. Gebruikers zijn verplicht te werken met gecertificeerde apparatuur. Dat
+              geldt ook voor meetapparatuur die tijdelijk wordt meegebracht, zoals een akoestische
+              camera voor lekdetectie.
             </p>
 
-            <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
-              Zone 0, 1 en 2: wat is het verschil?
+            <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
+              Zone 0, 1 en 2: de indeling voor gas en damp
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              Voor gas en damp worden drie zones onderscheiden:
-            </p>
 
-            <div
-              className="rounded-md overflow-hidden mt-4"
-              style={{ border: '1px solid rgba(10,34,56,0.1)' }}
-            >
-              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                <thead>
-                  <tr style={{ background: '#F4F7FA' }}>
-                    <th className="text-left text-[#0A2238] font-semibold" style={{ padding: '12px 16px', fontSize: 14 }}>Zone</th>
-                    <th className="text-left text-[#0A2238] font-semibold" style={{ padding: '12px 16px', fontSize: 14 }}>Frequentie</th>
-                    <th className="text-left text-[#0A2238] font-semibold" style={{ padding: '12px 16px', fontSize: 14 }}>Voorbeelden</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style={{ borderTop: '1px solid rgba(10,34,56,0.08)' }}>
-                    <td className="text-[#0A2238] font-medium" style={{ padding: '12px 16px', fontSize: 14 }}>Zone 0</td>
-                    <td className="text-[#3D5A6E]" style={{ padding: '12px 16px', fontSize: 14 }}>Continu aanwezig</td>
-                    <td className="text-[#3D5A6E]" style={{ padding: '12px 16px', fontSize: 14 }}>Binnenkant tanks, leidingen</td>
-                  </tr>
-                  <tr style={{ borderTop: '1px solid rgba(10,34,56,0.08)' }}>
-                    <td className="text-[#0A2238] font-medium" style={{ padding: '12px 16px', fontSize: 14 }}>Zone 1</td>
-                    <td className="text-[#3D5A6E]" style={{ padding: '12px 16px', fontSize: 14 }}>Af en toe aanwezig</td>
-                    <td className="text-[#3D5A6E]" style={{ padding: '12px 16px', fontSize: 14 }}>Directe omgeving van pompen, kleppen, flenzen</td>
-                  </tr>
-                  <tr style={{ borderTop: '1px solid rgba(10,34,56,0.08)' }}>
-                    <td className="text-[#0A2238] font-medium" style={{ padding: '12px 16px', fontSize: 14 }}>Zone 2</td>
-                    <td className="text-[#3D5A6E]" style={{ padding: '12px 16px', fontSize: 14 }}>Zelden aanwezig</td>
-                    <td className="text-[#3D5A6E]" style={{ padding: '12px 16px', fontSize: 14 }}>Ruimere omgeving van procesinstallaties</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <div className="rounded-md overflow-hidden" style={{ border: '1px solid rgba(10,34,56,0.1)', minWidth: '480px' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ background: '#0A2238' }}>
+                      {['Zone', 'Explosieve atmosfeer', 'Voorbeelden'].map((h) => (
+                        <th key={h} className="text-left text-white font-semibold" style={{ padding: '10px 14px', fontSize: 13 }}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {gasZones.map((rij) => (
+                      <tr key={rij.zone} style={{ borderTop: '1px solid rgba(10,34,56,0.08)', background: rij.highlight ? '#E8F1FB' : 'transparent' }}>
+                        <td className="text-[#0A2238] font-bold" style={{ padding: '10px 14px', fontSize: 13, whiteSpace: 'nowrap' }}>{rij.zone}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13, lineHeight: 1.5 }}>{rij.beschrijving}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13, lineHeight: 1.5 }}>{rij.voorbeelden}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
-            <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
-              Zone 2 is de meest voorkomende zone op industriële productievloeren — de ruimere omgeving
-              rond procesinstallaties waar een explosieve atmosfeer zelden optreedt. Zone 1 betreft
-              de directe nabijheid van pompen, kleppen en flenzen, en vereist strengere certificering.
+            <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              Zone 2 is de meest voorkomende zone op industriële productievloeren: de ruimere omgeving
+              rond procesinstallaties waar een explosieve atmosfeer zelden optreedt. Zone 1 betreft de
+              directe nabijheid van pompen, kleppen en flenzen en vereist strengere certificering.
+              Zone 0 is het binnenwerk van tanks en leidingen; daar komt in de praktijk geen
+              inspectie-apparatuur.
             </p>
 
-            <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
-              Waarom ATEX-certificering belangrijk is
+            <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
+              Zone 20, 21 en 22: de indeling voor stof
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              Naast gas en damp kent ATEX een aparte zonering voor brandbaar stof:
+            </p>
+
+            <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <div className="rounded-md overflow-hidden" style={{ border: '1px solid rgba(10,34,56,0.1)', minWidth: '480px' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ background: '#0A2238' }}>
+                      {['Zone', 'Explosieve atmosfeer (stof)', 'Voorbeelden'].map((h) => (
+                        <th key={h} className="text-left text-white font-semibold" style={{ padding: '10px 14px', fontSize: 13 }}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {stofZones.map((rij) => (
+                      <tr key={rij.zone} style={{ borderTop: '1px solid rgba(10,34,56,0.08)', background: rij.highlight ? '#E8F1FB' : 'transparent' }}>
+                        <td className="text-[#0A2238] font-bold" style={{ padding: '10px 14px', fontSize: 13, whiteSpace: 'nowrap' }}>{rij.zone}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13, lineHeight: 1.5 }}>{rij.beschrijving}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13, lineHeight: 1.5 }}>{rij.voorbeelden}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              Stofzones zijn relevant in de voedingsmiddelenindustrie (meel, suiker, melkpoeder),
+              houtverwerking en farmaceutische productie. De Crysound 8125 is gecertificeerd voor
+              zowel zone 2 (gas/damp) als zone 22 (stof).
+            </p>
+
+            <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
+              Waarom ATEX-certificering belangrijk is voor lekdetectie
+            </h2>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
               Apparatuur die niet ATEX-gecertificeerd is, mag een gezoneerd gebied niet in. Dat geldt
-              ook voor laptops, telefoons en meetinstrumenten. Een niet-gecertificeerde ultrasone camera
-              meenemen in een ATEX-zone is een overtreding — en een veiligheidsrisico.
+              voor laptops, telefoons en meetinstrumenten. Een niet-gecertificeerde akoestische camera
+              meenemen in een ATEX-zone is een overtreding en een veiligheidsrisico.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
-              Veel lekdetectie-dienstverleners hebben helemaal geen ATEX-certificering en werken
-              uitsluitend buiten gezoneerde gebieden. Daardoor missen ze een aanzienlijk deel
-              van de installatie.
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              Veel lekdetectie-dienstverleners hebben geen ATEX-gecertificeerde apparatuur en werken
+              uitsluitend buiten gezoneerde gebieden. Daardoor missen ze een aanzienlijk deel van de
+              installatie. Juist in de zones waar lekken het grootste veiligheidsrisico vormen, wordt
+              dan niet gemeten.
+            </p>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Lekdetectie methoden vergeleken
+              </Link>
+              {' '}— ATEX-geschiktheid is een van de acht criteria waarop methoden worden vergeleken.
             </p>
 
-            <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
-              De Crysound 8125: gecertificeerd voor zone 2
+            <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
+              De Crysound 8125: gecertificeerd voor zone 2 en zone 22
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              De Crysound 8125 die GasProtex inzet is ATEX-gecertificeerd voor zone 2 (gas en damp)
-              en zone 22 (stof). Het is 's werelds eerste TÜV-gecertificeerde intrinsiek veilige
-              akoestische camera — conform ATEX en IECEx. Dat betekent dat we mogen meten in de meeste
-              industriële productieomgevingen, ook waar andere aanbieders niet mogen komen.
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              De Crysound 8125 die GasProtex inzet is ATEX-gecertificeerd voor zone 2 (gas en damp) en
+              zone 22 (stof). Het is de eerste TÜV-gecertificeerde intrinsiek veilige akoestische camera,
+              conform ATEX en IECEx. Dat betekent dat we mogen meten in de meeste industriële
+              productieomgevingen, ook waar andere aanbieders niet mogen komen.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mt-4" style={{ fontSize: 16 }}>
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
               Voor zone 1-gebieden (direct rond reactoren, kleppen en leidingdoorvoeren) is strengere
-              apparatuur vereist. We zijn hierover eerlijk: zone 2 dekt de meeste productievloeren,
-              maar niet de zwaarste risicozones. GasProtex is daarnaast VCA-vol gecertificeerd en
-              bekend met de VNCI-handreiking voor tijdelijke mobiele apparatuur in ATEX-gezoneerde gebieden.
+              apparatuur vereist. We zijn hierover direct: zone 2 dekt de meeste productievloeren, maar
+              niet de zwaarste risicozones. In de praktijk is circa 80% van alle ATEX-zones
+              geclassificeerd als zone 2 of zone 22. Bij twijfel over de zonering van jouw installatie
+              denken we graag mee.
             </p>
 
-            <h2 className="text-[#0A2238] text-2xl font-bold mt-8 mb-4">
-              Conclusie
+            <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
+              De VNCI-handreiking: kader voor mobiele apparatuur
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16 }}>
-              ATEX-zones bepalen wat er in een industriële omgeving mag worden ingezet. Zone 2-certificering
-              dekt de meeste productievloeren en is al een significante drempel — de meeste ultrasone
-              camera's voor lekdetectie hebben geen ATEX-certificering. Voor zone 1-omgevingen is
-              zwaardere certificering nodig; dat zeggen we er eerlijk bij.
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              De VNCI heeft samen met Vemobin, VOTOB, NOVE en Deltalinqs de ATEX-handreiking Industrie
+              opgesteld (gepubliceerd via Veiligheid Voorop). Deze handreiking geeft bedrijven handvatten
+              bij het selecteren van tijdelijke mobiele apparatuur voor gebruik in ATEX-gezoneerde gebieden.
+            </p>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+              Onder voorwaarden biedt de handreiking ruimte voor maatwerk in zone 2 en zone 22, onder
+              begeleiding van een ATEX-deskundige. De inzet van de Crysound 8125 past binnen dit kader.
+            </p>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Akoestische lekdetectie naast je vaste gasdetectie
+              </Link>
+              {' '}— voor meer achtergrond over hoe akoestische detectie werkt in ATEX-omgevingen.
             </p>
 
-            {/* CTA */}
-            <div style={{ borderTop: '1px solid rgba(10,34,56,0.1)', marginTop: '48px', paddingTop: '32px' }}>
-              <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
-                Vragen over je eigen installatie?{' '}
+            <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
+              Wat past bij jouw situatie?
+            </h2>
+
+            <div className="space-y-6">
+              <div>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                  Je hebt ATEX-zones en wilt weten of lekdetectie daar mogelijk is.
+                </p>
+                <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Met zone 2/22-certificering dekken we de meeste productieomgevingen. Lees meer over onze{' '}
+                  <Link href="/diensten/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">aanpak</Link>.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                  Je wilt weten wat je lekken kosten.
+                </p>
+                <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Gebruik onze{' '}
+                  <Link href="/bereken-uw-besparing/perslucht/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">persluchtcalculator</Link>.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                  Je wilt eerst sparren over de zonering van jouw installatie.
+                </p>
+                <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Plan een{' '}
+                  <Link href="/contact/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">kennismakingsgesprek</Link>.
+                </p>
+              </div>
+            </div>
+
+            {/* Footer-tekst */}
+            <p className="mt-12" style={{ fontSize: 13, color: '#6B8FA6', fontStyle: 'italic', lineHeight: 1.7 }}>
+              GasProtex is specialist in gas- en persluchtlekdetectie voor de Nederlandse industrie.
+              ATEX-gecertificeerd (zone 2/22). VCA-vol.
+            </p>
+
+            {/* CTA-blok */}
+            <div className="rounded-md mt-12" style={{ background: '#0A2238', padding: '48px' }}>
+              <h2 className="font-bold text-white mb-3" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
+                Wil je weten waar jouw lekken zitten?
+              </h2>
+              <p className="text-[#7AADCC] mb-8" style={{ fontSize: 15 }}>
+                Een Quickscan geeft je in een dagdeel een compleet beeld van je perslucht- of gassysteem.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
                   href={BOOKINGS_URL}
-                  className="text-[#1E87B4] font-semibold hover:text-[#F07830] transition-colors"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
+                  style={{ padding: '14px 32px' }}
                 >
-                  Plan een gratis kennismakingsgesprek →
+                  Vraag een Quickscan aan →
                 </a>
-              </p>
+                <Link
+                  href="/contact/"
+                  className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
+                  style={{ fontSize: 14, paddingTop: '14px' }}
+                >
+                  Of plan een gratis kennismakingsgesprek
+                </Link>
+              </div>
             </div>
 
             {/* Gerelateerde artikelen */}
             <div style={{ marginTop: '64px' }}>
               <h2 className="text-[#0A2238] font-bold text-xl mb-6">Gerelateerde artikelen</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="block">
-                  <div
-                    className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6"
-                    style={{ background: '#ffffff' }}
-                  >
-                    <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Perslucht</p>
+                <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="block">
+                  <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
+                    <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Gaslekdetectie</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
-                      Wat kost een persluchtlek per jaar?
+                      Lekdetectie methoden vergeleken: welke past bij jouw situatie?
                     </h3>
-                    <span className="text-[#F07830] text-sm font-semibold hover:text-[#C4631E] transition-colors">
-                      Lees meer →
-                    </span>
+                    <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
-                <Link href="/sectoren/petrochemie-chemie/" className="block">
-                  <div
-                    className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6"
-                    style={{ background: '#ffffff' }}
-                  >
-                    <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Sector</p>
+                <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="block">
+                  <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
+                    <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Gaslekdetectie</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
-                      Lekdetectie voor petrochemie en chemie
+                      Welke gassen kun je met akoestische lekdetectie opsporen?
                     </h3>
-                    <span className="text-[#F07830] text-sm font-semibold hover:text-[#C4631E] transition-colors">
-                      Bekijk sectorpagina →
-                    </span>
+                    <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
               </div>

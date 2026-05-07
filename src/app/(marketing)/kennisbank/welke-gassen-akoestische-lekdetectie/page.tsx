@@ -152,6 +152,12 @@ export default function WelkeGassenPage() {
               productieruimtes en technische gangen valt vaak buiten die bewaking. Een periodieke
               akoestische inspectie brengt lekken in kaart die buiten het bereik van vaste sensoren zitten.
             </p>
+            <p className="mb-8 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/atex-zones-uitgelegd/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
+              </Link>
+            </p>
 
             <h3 className="text-[#0A2238] font-bold mb-3" style={{ fontSize: 19, lineHeight: 1.3 }}>F-gassen (koudemiddelen)</h3>
             <p className="text-[#3D5A6E] leading-relaxed mb-8" style={{ fontSize: 16, lineHeight: 1.7 }}>

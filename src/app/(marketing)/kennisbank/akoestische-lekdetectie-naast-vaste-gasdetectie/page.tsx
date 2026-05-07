@@ -278,11 +278,17 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               handreiking ruimte voor maatwerk in zone 2 en zone 22, onder begeleiding van een
               ATEX-deskundige.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
               De Crysound 8125, de akoestische camera waarmee GasProtex werkt, is ATEX-gecertificeerd
               voor zone 2 en zone 22. Dat betekent dat inspecties in explosiegevaarlijke zones direct
               uitvoerbaar zijn, zonder dezonering of aanvullende maatregelen. Dit past binnen het kader
               van de VNCI-handreiking.
+            </p>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/atex-zones-uitgelegd/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
+              </Link>
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
