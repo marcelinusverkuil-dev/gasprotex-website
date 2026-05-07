@@ -24,9 +24,11 @@ const navLinks = [
 function DropdownMenu({
   label,
   items,
+  active = false,
 }: {
   label: string
   items: { label: string; href: string }[]
+  active?: boolean
 }) {
   const [open, setOpen] = useState(false)
 
@@ -37,8 +39,8 @@ function DropdownMenu({
       onMouseLeave={() => setOpen(false)}
     >
       <button
-        className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap flex items-center gap-1"
-        style={{ letterSpacing: '1px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+        className="font-display font-semibold text-sm uppercase hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap flex items-center gap-1"
+        style={{ color: active ? '#F07830' : '#C2DCE8', background: 'none', border: 'none', cursor: 'pointer', padding: 0, letterSpacing: '1px' }}
         aria-expanded={open}
       >
         {label}
@@ -133,20 +135,23 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-5 list-none">
-            <DropdownMenu label="Diensten" items={dienstenDropdown} />
-            <DropdownMenu label="Sectoren" items={sectorenDropdown} />
+            <DropdownMenu label="Diensten" items={dienstenDropdown} active={pathname.startsWith('/diensten')} />
+            <DropdownMenu label="Sectoren" items={sectorenDropdown} active={pathname.startsWith('/sectoren')} />
 
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap"
-                  style={{ letterSpacing: '1px' }}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname.startsWith(link.href)
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-display font-semibold text-sm uppercase hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap"
+                    style={{ letterSpacing: '1px', color: active ? '#F07830' : '#C2DCE8' }}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
 
             <li>
               <a
@@ -239,17 +244,20 @@ export default function Navbar() {
 
           <div style={{ height: 8 }} />
 
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors py-2"
-              style={{ letterSpacing: '2px' }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = pathname.startsWith(link.href)
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="font-display font-semibold text-sm tracking-widest uppercase hover:text-[#F07830] transition-colors py-2"
+                style={{ letterSpacing: '2px', color: active ? '#F07830' : '#C2DCE8' }}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
 
           <a
             href="https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink"
