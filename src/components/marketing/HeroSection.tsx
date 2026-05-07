@@ -11,7 +11,7 @@ export default function HeroSection() {
         alt="Industriële installatie met persluchtleidingen"
         fill
         className="object-cover object-center"
-        style={{ filter: 'brightness(0.9)' }}
+        style={{  }}
         priority
         quality={90}
       />
