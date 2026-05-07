@@ -218,7 +218,7 @@ export default function DienstenPage() {
               </p>
               <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
                 Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan, propaan. Elk gas onder
-                druk. ATEX-gecertificeerd voor zone&nbsp;1.
+                druk. ATEX-gecertificeerd voor zone&nbsp;2.
               </p>
               <Link
                 href="/kennisbank/atex-zones-uitgelegd/"
