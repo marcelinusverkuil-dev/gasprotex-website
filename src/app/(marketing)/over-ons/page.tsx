@@ -176,7 +176,7 @@ export default function OverOnsPage() {
                   <div key={c.titel} className="flex items-start gap-4">
                     <div>
                       <p className="text-[#0A2238] font-semibold mb-1">{c.titel}</p>
-                      <p className="text-[#3D5A6E] text-sm">{c.tekst}</p>
+                      <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{c.tekst}</p>
                     </div>
                   </div>
                 ))}

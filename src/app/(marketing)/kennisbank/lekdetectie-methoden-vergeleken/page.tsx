@@ -118,10 +118,10 @@ export default function LekdetectieMethodenPage() {
             >
               Lekdetectie in de industrie: welke methode past bij jouw situatie?
             </h1>
-            <p className="text-[#6B8FA6] mb-6" style={{ fontSize: 13 }}>
+            <p className="text-[#6B8FA6] mb-6" style={{ fontSize: 15 }}>
               GasProtex · 6 mei 2026 · 6 minuten leestijd
             </p>
-            <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ fontStyle: 'italic' }}>
+            <p className="text-[#3D5A6E] text-lg leading-relaxed">
               Er zijn meerdere manieren om gas- en persluchtlekken op te sporen. Elk met eigen sterke en
               zwakke kanten. In dit artikel vergelijken we de vijf meest gebruikte methoden, met de voor-
               en nadelen. Zodat je weet welke aanpak past bij jouw installatie.
@@ -141,7 +141,7 @@ export default function LekdetectieMethodenPage() {
                 <h3 className="text-[#0A2238] font-bold mb-3" style={{ fontSize: 20 }}>
                   {m.nr} {m.naam}
                 </h3>
-                <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16 }}>
+                <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15 }}>
                   {m.intro}
                 </p>
 
@@ -156,11 +156,11 @@ export default function LekdetectieMethodenPage() {
                 </p>
 
                 <div className="rounded-md" style={{ background: '#F4F7FA', padding: '16px 20px' }}>
-                  <p className="text-[#3D5A6E]" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                  <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.6 }}>
                     <span className="font-semibold" style={{ color: '#15803d' }}>✓ Geschikt voor: </span>
                     {m.geschikt}
                   </p>
-                  <p className="text-[#3D5A6E] mt-1" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                  <p className="text-[#3D5A6E] mt-1" style={{ fontSize: 15, lineHeight: 1.6 }}>
                     <span className="font-semibold" style={{ color: '#b91c1c' }}>✕ Niet geschikt voor: </span>
                     {m.nietGeschikt}
                   </p>
@@ -181,7 +181,7 @@ export default function LekdetectieMethodenPage() {
               <h3 className="text-[#0A2238] font-bold mb-3" style={{ fontSize: 20 }}>
                 5. Akoestische lekdetectie (ultrasoon)
               </h3>
-              <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16 }}>
+              <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15 }}>
                 Een camera met een array van microfoons die geluid oppikt in het ultrasone bereik (2 tot 100 kHz).
                 Op het scherm zie je een live beeld dat aangeeft waar ultrasoon geluid vandaan komt.
               </p>
@@ -204,11 +204,11 @@ export default function LekdetectieMethodenPage() {
               </p>
 
               <div className="rounded-md" style={{ background: '#F4F7FA', padding: '16px 20px' }}>
-                <p className="text-[#3D5A6E]" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.6 }}>
                   <span className="font-semibold" style={{ color: '#15803d' }}>✓ Geschikt voor: </span>
                   Snelle, complete scan van perslucht- en gassystemen zonder productiestilstand.
                 </p>
-                <p className="text-[#3D5A6E] mt-1" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-[#3D5A6E] mt-1" style={{ fontSize: 15, lineHeight: 1.6 }}>
                   <span className="font-semibold" style={{ color: '#b91c1c' }}>✕ Niet geschikt voor: </span>
                   Vacuümlekdetectie (zonder aanvullende bron) en kleine lekken onder zeer lage druk.
                 </p>
@@ -232,7 +232,7 @@ export default function LekdetectieMethodenPage() {
                   <thead>
                     <tr style={{ background: '#F4F7FA' }}>
                       {['Methode', 'Continu', 'Tijdens productie', 'Lokalisatie', 'Gevoeligheid', 'Bereik', 'ATEX', 'Kosten'].map((h) => (
-                        <th key={h} className="text-left text-[#0A2238] font-semibold" style={{ padding: '10px 12px', fontSize: 13 }}>{h}</th>
+                        <th key={h} className="text-left text-[#0A2238] font-semibold" style={{ padding: '10px 12px', fontSize: 15 }}>{h}</th>
                       ))}
                     </tr>
                   </thead>
@@ -245,14 +245,14 @@ export default function LekdetectieMethodenPage() {
                           background: rij.highlight ? '#E8F1FB' : 'transparent',
                         }}
                       >
-                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-medium'} style={{ padding: '10px 12px', fontSize: 13, whiteSpace: 'nowrap' }}>{rij.methode}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.continu}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.productie}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.lokalisatie}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.gevoeligheid}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.bereik}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.atex}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 13 }}>{rij.kosten}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-medium'} style={{ padding: '10px 12px', fontSize: 15, whiteSpace: 'nowrap' }}>{rij.methode}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.continu}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.productie}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.lokalisatie}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.gevoeligheid}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.bereik}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.atex}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 12px', fontSize: 15 }}>{rij.kosten}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -260,7 +260,7 @@ export default function LekdetectieMethodenPage() {
               </div>
             </div>
 
-            <div className="mt-4" style={{ fontSize: 13, color: '#6B8FA6', lineHeight: 1.7 }}>
+            <div className="mt-4" style={{ fontSize: 15, color: '#6B8FA6', lineHeight: 1.7 }}>
               <p>* Voor het controleren van een enkel lek zijn de kosten laag, echter voor een heel systeem zijn de kosten hoog i.v.m. de tijd die nodig is om alle lekken te controleren.</p>
               <p className="mt-1">** Mits Ex-gecertificeerde uitvoering. Drukverliestest: met inert gas (N₂) en gecertificeerde apparatuur.</p>
             </div>
@@ -269,23 +269,23 @@ export default function LekdetectieMethodenPage() {
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Niet óf-óf, maar én-én
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               De belangrijkste conclusie: deze methoden sluiten elkaar niet uit.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Vaste gasdetectie is en blijft je eerste verdedigingslijn voor continue monitoring. Maar er
               zijn blinde vlekken, en die vul je aan met periodieke akoestische inspectie.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Zeepsop en puntmeting verdwijnen niet. Na een reparatie wil je soms bevestigen dat het lek
               gedicht is. Maar als primaire opsporingsmethode voor een heel systeem zijn ze te langzaam,
               te arbeidsintensief en niet altijd veilig.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               De drukverliestest is een goede startvraag: heb ik een probleem? Het antwoord op
               <em> waar</em> dat probleem zit, geeft een akoestische camera.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Op diezelfde productielocatie die 15% verlies had vastgesteld, bracht een akoestische scan
               meer dan 20 lekken aan het licht. Niet alleen op de kleine koppelingen waar je ze verwacht,
               maar ook in het hoofdleidingsysteem. Zonder de camera had dat hoofdleidinglek er nog steeds gezeten.
@@ -298,7 +298,7 @@ export default function LekdetectieMethodenPage() {
 
             <div className="space-y-6">
               <div>
-                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>
                   Je weet dát je lekt, maar niet waar.
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed mb-2" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -316,7 +316,7 @@ export default function LekdetectieMethodenPage() {
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>
                   Je hebt vaste gasdetectie maar vermoedt blinde vlekken.
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -328,7 +328,7 @@ export default function LekdetectieMethodenPage() {
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>
                   Je hebt nog nooit lekdetectie laten doen en wilt weten of het zinvol is.
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -341,7 +341,7 @@ export default function LekdetectieMethodenPage() {
             </div>
 
             {/* Footer-tekst */}
-            <p className="mt-12" style={{ fontSize: 13, color: '#6B8FA6', fontStyle: 'italic', lineHeight: 1.7 }}>
+            <p className="mt-12" style={{ fontSize: 15, color: '#6B8FA6', fontStyle: 'italic', lineHeight: 1.7 }}>
               GasProtex is specialist in gas- en persluchtlekdetectie voor de Nederlandse industrie.
               ATEX-gecertificeerd (zone 2/22). VCA-vol.
             </p>
@@ -368,7 +368,7 @@ export default function LekdetectieMethodenPage() {
                 <Link
                   href="/contact/"
                   className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
-                  style={{ fontSize: 14, paddingTop: '14px' }}
+                  style={{ fontSize: 15, paddingTop: '14px' }}
                 >
                   Of plan een gratis kennismakingsgesprek
                 </Link>

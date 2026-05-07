@@ -82,7 +82,7 @@ export default function CasesPage() {
                     <h2 className="font-bold text-[#0A2238] mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                       {c.title}
                     </h2>
-                    <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.8 }}>
+                    <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 15, lineHeight: 1.8 }}>
                       {c.omschrijving}
                     </p>
                     <p className="text-[#F07830]" style={{ fontSize: 15, lineHeight: 1.7 }}>

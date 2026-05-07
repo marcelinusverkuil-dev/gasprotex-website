@@ -90,7 +90,7 @@ export default function SectorenSection() {
                   <h3 className="font-bold text-[#0A2238] mb-3 group-hover:text-[#F07830] transition-colors" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
                     {s.title}
                   </h3>
-                  <p className="text-[#3D5A6E] flex-1 mb-4" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                  <p className="text-[#3D5A6E] flex-1 mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                     {s.description}
                   </p>
                   <div className="inline-flex items-center gap-2 font-semibold text-[#F07830] group-hover:gap-3 transition-all text-sm">

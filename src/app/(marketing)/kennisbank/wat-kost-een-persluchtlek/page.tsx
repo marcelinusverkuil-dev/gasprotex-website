@@ -70,10 +70,10 @@ export default function WatKostPersluchtlekPage() {
             >
               Wat kost een persluchtlek? De berekening met voorbeelden
             </h1>
-            <p className="text-[#6B8FA6] mb-6" style={{ fontSize: 13 }}>
+            <p className="text-[#6B8FA6] mb-6" style={{ fontSize: 15 }}>
               GasProtex · 7 mei 2026 · 5 minuten leestijd
             </p>
-            <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ fontStyle: 'italic' }}>
+            <p className="text-[#3D5A6E] text-lg leading-relaxed">
               Perslucht is een van de duurste energiedragers in de industrie. Toch weten veel bedrijven
               niet wat hun lekken kosten. In dit artikel rekenen we het voor: van de factoren die de kosten
               bepalen tot concrete voorbeelden per lekgrootte. Zodat je weet wat er weglekt, en wat je kunt besparen.
@@ -86,12 +86,12 @@ export default function WatKostPersluchtlekPage() {
             <h2 className="text-[#0A2238] font-bold mt-8 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Waarom perslucht zo duur is
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Van alle industrieel verbruikte elektriciteit in Nederland gaat ongeveer 10% naar persluchtopwekking.
               Bij de gemiddelde installatie vormen de energiekosten 70 tot 75% van de totale kosten over de levensduur.
               Investering en onderhoud zijn bijzaak vergeleken met de stroomrekening.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
               En daar zit het probleem: verliespercentages van 15 tot 30% zijn normaal in de industrie.
               Bij een compressor die continu draait om lekken te compenseren, betaal je letterlijk voor lucht
               die nergens terechtkomt. De compressor merkt het niet. De productie merkt het niet.
@@ -101,31 +101,31 @@ export default function WatKostPersluchtlekPage() {
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Waar hangt de kostprijs van een lek vanaf?
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               De kosten van een persluchtlek worden bepaald door een combinatie van factoren:
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">De grootte van het lek.</strong>{' '}
               Gemeten in liter per minuut. Een gaatje van 1 mm lekt bij 6 bar ongeveer 64 liter per minuut.
               Een gat van 5 mm bij 8 bar al meer dan 2.000 liter per minuut. Het verschil in kosten is enorm.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">De systeemdruk.</strong>{' '}
               Hoe hoger de druk in je systeem, hoe meer energie het kost om diezelfde lucht te comprimeren.
               Een installatie op 8 bar is duurder per gelekt volume dan een op 6 bar.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">De draaiuren van de installatie.</strong>{' '}
               De meeste industriële persluchtsystemen draaien 24 uur per dag, 365 dagen per jaar.
               Elk lek kost dan 8.760 uur per jaar geld. Bij installaties die alleen overdag draaien zijn
               de kosten per lek lager, maar het principe is hetzelfde.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">De energieprijs.</strong>{' '}
               In Nederland betaalt een gemiddeld MKB-bedrijf momenteel rond de €0,20 per kWh aan elektriciteit.
               Dit tarief verschilt per contract en per verbruiksprofiel. Hoe hoger je stroomprijs, hoe duurder elk lek.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">Het specifiek vermogen van de compressor.</strong>{' '}
               Een moderne, goed onderhouden compressor verbruikt minder energie per kubieke meter perslucht
               dan een ouder exemplaar. Standaard wordt gerekend met 0,12 kWh per m³. Bij oudere of minder
@@ -135,7 +135,7 @@ export default function WatKostPersluchtlekPage() {
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Drie voorbeelden: van klein tot groot
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Hieronder drie scenario&apos;s bij continue bedrijfsvoering (24/7, 8.760 uur per jaar) en
               een stroomprijs van €0,20 per kWh.
             </p>
@@ -147,7 +147,7 @@ export default function WatKostPersluchtlekPage() {
                   <thead>
                     <tr style={{ background: '#F4F7FA' }}>
                       {['', 'Druk', 'Lekdebiet', 'm³/jaar', 'kWh/jaar', 'Kosten/jaar'].map((h) => (
-                        <th key={h} className="text-left text-[#0A2238] font-semibold" style={{ padding: '10px 14px', fontSize: 13 }}>{h}</th>
+                        <th key={h} className="text-left text-[#0A2238] font-semibold" style={{ padding: '10px 14px', fontSize: 15 }}>{h}</th>
                       ))}
                     </tr>
                   </thead>
@@ -160,12 +160,12 @@ export default function WatKostPersluchtlekPage() {
                           background: rij.highlight ? '#E8F1FB' : 'transparent',
                         }}
                       >
-                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-medium'} style={{ padding: '10px 14px', fontSize: 13, whiteSpace: 'nowrap' }}>{rij.label}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.druk}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.debiet}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.m3}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.kwh}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-semibold'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.kosten}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-medium'} style={{ padding: '10px 14px', fontSize: 15, whiteSpace: 'nowrap' }}>{rij.label}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.druk}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.debiet}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.m3}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.kwh}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-semibold'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.kosten}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -176,12 +176,12 @@ export default function WatKostPersluchtlekPage() {
               Rekenmethode: (l/min ÷ 1.000 × 60) × 8.760 uur × 0,12 kWh/m³ × drukfactor × €0,20/kWh.
             </p>
 
-            <p className="text-[#3D5A6E] leading-relaxed mt-6 mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mt-6 mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Dat zijn de kosten van één lek. Bij een gemiddelde inspectie vinden we tien tot dertig lekken
               per locatie. Tel dat bij elkaar op en je begrijpt waarom bedrijven die voor het eerst een
               akoestische scan laten doen, schrikken van het resultaat.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Een gemiddelde productielocatie met vijftien kleine tot middelgrote lekken verliest al snel
               €12.000 tot €30.000 per jaar aan ongebruikte perslucht. Dat is geld dat letterlijk de lucht ingaat.
             </p>
@@ -189,7 +189,7 @@ export default function WatKostPersluchtlekPage() {
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               De CO₂-impact
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-6" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Naast de financiële kosten is er de milieubelasting. Per verbruikte kWh stoot een gemiddelde
               Nederlandse stroomproducent 0,22 kg CO₂ uit. In de drie voorbeelden hierboven:
             </p>
@@ -201,7 +201,7 @@ export default function WatKostPersluchtlekPage() {
                   <thead>
                     <tr style={{ background: '#F4F7FA' }}>
                       {['', 'CO₂/jaar', 'Equivalent bomen', 'Equivalent auto-km'].map((h) => (
-                        <th key={h} className="text-left text-[#0A2238] font-semibold" style={{ padding: '10px 14px', fontSize: 13 }}>{h}</th>
+                        <th key={h} className="text-left text-[#0A2238] font-semibold" style={{ padding: '10px 14px', fontSize: 15 }}>{h}</th>
                       ))}
                     </tr>
                   </thead>
@@ -214,10 +214,10 @@ export default function WatKostPersluchtlekPage() {
                           background: rij.highlight ? '#E8F1FB' : 'transparent',
                         }}
                       >
-                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-medium'} style={{ padding: '10px 14px', fontSize: 13, whiteSpace: 'nowrap' }}>{rij.label}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.co2}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.bomen}</td>
-                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 13 }}>{rij.km}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-bold' : 'text-[#0A2238] font-medium'} style={{ padding: '10px 14px', fontSize: 15, whiteSpace: 'nowrap' }}>{rij.label}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.co2}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.bomen}</td>
+                        <td className={rij.highlight ? 'text-[#0A2238] font-semibold' : 'text-[#3D5A6E]'} style={{ padding: '10px 14px', fontSize: 15 }}>{rij.km}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -228,7 +228,7 @@ export default function WatKostPersluchtlekPage() {
               CO₂-factor: 0,22 kg/kWh (NL stroommix). Auto-equivalent: 6,5 km per kg CO₂. Bomen: 6 kg CO₂-opname per boom per jaar.
             </p>
 
-            <p className="text-[#3D5A6E] leading-relaxed mt-6" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mt-6" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Voor bedrijven met duurzaamheidsdoelstellingen of ESG-rapportages is persluchtlekkage een
               directe, meetbare en relatief eenvoudig te reduceren emissiebron.
             </p>
@@ -236,22 +236,22 @@ export default function WatKostPersluchtlekPage() {
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Wat de meeste bedrijven onderschatten
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               De kosten per individueel lek lijken soms beheersbaar. Maar drie factoren maken het totaalplaatje
               groter dan verwacht:
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">Aantal lekken.</strong>{' '}
               Een persluchtinstallatie met honderden koppelingen, aftakkingen, cilinders en slangaansluitingen
               heeft vrijwel altijd meerdere lekken tegelijk. Vijf kleine lekken kosten bij continue
               bedrijfsvoering samen al bijna €6.500 per jaar.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">Lekken groeien.</strong>{' '}
               Een lek dat vandaag klein is, is over zes maanden groter. Koppelingen die trillen, slijtage
               aan afdichtingen, thermische uitzetting: de debietverliezen nemen toe als je niet ingrijpt.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">De compressor compenseert.</strong>{' '}
               Zolang de compressor het verlies kan bijhouden, merkt de productie niets. Het systeem werkt
               gewoon. Maar de compressor draait langer, verbruikt meer stroom, slijt sneller en het onderhoud
@@ -263,7 +263,7 @@ export default function WatKostPersluchtlekPage() {
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Zelf rekenen of laten uitrekenen
             </h2>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Op{' '}
               <Link href="/bereken-uw-besparing/perslucht/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 gasprotex.nl/bereken-uw-besparing/perslucht/
@@ -271,7 +271,7 @@ export default function WatKostPersluchtlekPage() {
               staat onze calculator. Vul je geschatte lekdebiet, systeemdruk en stroomtarief in en je ziet
               direct wat persluchtlekkage je kost. Geen registratie nodig, direct resultaat.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 16, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               De calculator geeft een indicatie op basis van gemiddelden. Wil je weten wat de werkelijke
               lekken in jouw installatie kosten? Dan is een inspectie ter plaatse nodig. Bij een akoestische
               scan brengen we elk lek in kaart: locatie, geschat debiet, jaarlijkse kosten en herstelprioriteit.
@@ -289,7 +289,7 @@ export default function WatKostPersluchtlekPage() {
 
             <div className="space-y-6">
               <div>
-                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>
                   Je wilt eerst een indicatie van de kosten.
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -300,7 +300,7 @@ export default function WatKostPersluchtlekPage() {
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>
                   Je wilt weten waar de lekken zitten en wat ze kosten.
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -311,7 +311,7 @@ export default function WatKostPersluchtlekPage() {
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
+                <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 15 }}>
                   Je wilt eerst sparren over wat zinvol is.
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
@@ -324,7 +324,7 @@ export default function WatKostPersluchtlekPage() {
             </div>
 
             {/* Footer-tekst */}
-            <p className="mt-12" style={{ fontSize: 13, color: '#6B8FA6', fontStyle: 'italic', lineHeight: 1.7 }}>
+            <p className="mt-12" style={{ fontSize: 15, color: '#6B8FA6', fontStyle: 'italic', lineHeight: 1.7 }}>
               GasProtex is specialist in gas- en persluchtlekdetectie voor de Nederlandse industrie.
               ATEX-gecertificeerd (zone 2/22). VCA-vol.
             </p>
@@ -348,7 +348,7 @@ export default function WatKostPersluchtlekPage() {
                 <Link
                   href="/contact/"
                   className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
-                  style={{ fontSize: 14, paddingTop: '14px' }}
+                  style={{ fontSize: 15, paddingTop: '14px' }}
                 >
                   Of plan een gratis kennismakingsgesprek
                 </Link>

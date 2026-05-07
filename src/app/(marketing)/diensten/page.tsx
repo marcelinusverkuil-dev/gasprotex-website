@@ -119,11 +119,11 @@ export default function DienstenPage() {
               >
                 Gas- en persluchtlekdetectie als dienst.
               </h1>
-              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 18, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera
                 lokaliseren we elk lek, tijdens normale productie, zonder stilstand.
               </p>
-              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 18, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Geen apparatuur kopen of eigen operator opleiden. Wij komen langs, scannen, en
                 leveren een rapport met exacte locaties en euro-impact per lek.
               </p>
@@ -182,12 +182,12 @@ export default function DienstenPage() {
               >
                 20–30% perslucht gaat verloren. Bij 200&nbsp;kW is dat €15.000–€25.000 per jaar.
               </h2>
-              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Een gemiddeld productiebedrijf verliest 20–30% van zijn perslucht door lekken.
                 Bij een installatie van 200&nbsp;kW is dat €15.000–€25.000 per jaar aan
                 verloren energie.
               </p>
-              <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Je hebt al een onderhoudspartner? Wij vervangen die niet, wij vullen aan met
                 ultrasone inspectie die sneller en gerichter is dan zeepsop of handmatige
                 controle.
@@ -211,12 +211,12 @@ export default function DienstenPage() {
               >
                 Vaste detectoren hebben blinde vlekken. Wij vinden wat zij missen.
               </h2>
-              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Vaste gasdetectie ziet hoge concentraties op vaste plekken. Wat het mist: lage
                 concentraties, intermitterende lekken, blinde vlekken tussen sensors. Daar komen
                 wij.
               </p>
-              <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 16, lineHeight: 1.75 }}>
+              <p className="text-[#3D5A6E] mb-8" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Detecteerbaar: CO₂, NH₃, N₂, H₂, F-gassen, methaan, propaan. Elk gas onder
                 druk. ATEX-gecertificeerd voor zone&nbsp;2.
               </p>
@@ -282,7 +282,7 @@ export default function DienstenPage() {
               <div key={item.question}>
                 <h3
                   className="font-semibold text-[#0A2238] mb-2"
-                  style={{ fontSize: 16, lineHeight: 1.4 }}
+                  style={{ fontSize: 15, lineHeight: 1.4 }}
                 >
                   {item.question}
                 </h3>
