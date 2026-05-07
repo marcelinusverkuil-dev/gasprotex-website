@@ -146,6 +146,7 @@ Regel: **gebruik altijd `mt-8` (32px) voor spacing tussen opeenvolgende elemente
 - **Structuur desktop**: Logo (links) | nav-links + Afspraak Inplannen in één `<ul>` met `gap-5` (midden) | Klantenportaal (uiterst rechts)
 - Nav-links: `uppercase text-sm font-semibold`, `letterSpacing: 1px`, `whitespace-nowrap`
 - Geen "Offerte Aanvragen" knop in de navbar
+- **Dropdown-panels**: donkere achtergrond `#0D2A40`, geen oranje accentlijn bovenaan — enkel `border: 1px solid rgba(122,173,204,0.18)` + diepe slagschaduw
 
 ### Standaard paginaachtergrond
 De standaard achtergrond van **elke sectie** is altijd **`#ffffff` (wit)**. Uitzonderingen:

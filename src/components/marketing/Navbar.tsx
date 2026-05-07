@@ -75,7 +75,6 @@ function DropdownMenu({
           style={{
             background: '#0D2A40',
             border: '1px solid rgba(122,173,204,0.18)',
-            borderTop: '2px solid #F07830',
             boxShadow: '0 16px 40px rgba(0,0,0,0.35)',
           }}
         >
