@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -97,7 +97,7 @@ export default function BerekenUwBesparingPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: '#ffffff', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '20px 24px' }}
           >
             <div>
               <p className="text-[#3D5A6E] mb-1" style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 560 }}>

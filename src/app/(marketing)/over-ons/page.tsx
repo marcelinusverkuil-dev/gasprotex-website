@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
@@ -114,11 +114,11 @@ export default function OverOnsPage() {
       </section>
 
       {/* Sectie 2 — Wie en waarom */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '24px' }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
@@ -172,9 +172,9 @@ export default function OverOnsPage() {
       </section>
 
       {/* Sectie 3 — Certificeringen + werkwijze */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
-          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '48px' }}>
+          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '24px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             <div>
@@ -226,7 +226,7 @@ export default function OverOnsPage() {
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '20px 24px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>

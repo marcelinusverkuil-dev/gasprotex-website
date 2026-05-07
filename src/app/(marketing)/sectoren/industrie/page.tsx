@@ -1,4 +1,4 @@
-import { sectorenData } from '@/lib/sectoren-data'
+﻿import { sectorenData } from '@/lib/sectoren-data'
 import SectorPage from '@/components/marketing/SectorPage'
 import type { Metadata } from 'next'
 

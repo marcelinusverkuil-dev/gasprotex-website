@@ -9,6 +9,7 @@ const cards = [
     href: '/diensten/',
     image: '/images/home/perslucht-lekkages.jpg',
     alt: 'Perslucht lekkages detectie',
+    objectPosition: 'center center',
   },
   {
     label: 'Gaslekdetectie',
@@ -17,6 +18,7 @@ const cards = [
     href: '/diensten/',
     image: '/images/home/gaslekdetectie.jpg',
     alt: 'Akoestische gaslekdetectie',
+    objectPosition: 'center 20%',
   },
 ]
 
@@ -45,6 +47,7 @@ export default function DienstenSection() {
                     alt={card.alt}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: card.objectPosition }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>

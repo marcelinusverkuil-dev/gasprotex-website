@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
 
@@ -150,11 +150,11 @@ export default function AbonnementPage() {
       </section>
 
       {/* Sectie 2 — Drie stappen */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '24px' }}
           >
             <div className="space-y-12">
               {stappen.map((stap, i) => (
@@ -188,11 +188,11 @@ export default function AbonnementPage() {
       </section>
 
       {/* Sectie 3 — FAQ */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '24px' }}
           >
 
           <h2
@@ -224,7 +224,7 @@ export default function AbonnementPage() {
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '20px 24px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
@@ -129,11 +129,11 @@ export default function VoedingsmiddelensectorPage() {
       </section>
 
       {/* Sectie 2 — Welke lekken vinden we */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '24px' }}
           >
             <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
               Welke lekken vinden we in de voedingsmiddelensector?
@@ -154,11 +154,11 @@ export default function VoedingsmiddelensectorPage() {
       </section>
 
       {/* Sectie 3 — Concrete voorbeelden */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '24px' }}
           >
             <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
               Wat we tegenkomen in de praktijk
@@ -196,7 +196,7 @@ export default function VoedingsmiddelensectorPage() {
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '20px 24px' }}
           >
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
@@ -62,7 +62,7 @@ export default function Co2CalculatorPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-            <div className="rounded-md" style={{ background: '#ffffff', padding: '48px' }}>
+            <div className="rounded-md" style={{ background: '#ffffff', padding: '24px' }}>
               <p className="text-[#7AADCC] mb-8" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
               <div className="flex flex-col gap-6">
 

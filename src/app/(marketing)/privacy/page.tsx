@@ -1,4 +1,4 @@
-export default function PrivacyPage() {
+﻿export default function PrivacyPage() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
       <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
