@@ -36,7 +36,7 @@ export default function SectorenSection() {
   }
 
   return (
-    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+    <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
       <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
 
         <div className="mb-10">
@@ -50,7 +50,7 @@ export default function SectorenSection() {
           {/* Sectoren container */}
           <div
             className="rounded-md overflow-hidden border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-            style={{ background: '#ffffff', padding: '48px' }}
+            style={{ background: '#ffffff', padding: '24px' }}
           >
             {/* Pijltjes — alleen op kleine schermen */}
             <div className="flex items-center justify-end gap-2 mb-4 lg:hidden">
@@ -115,7 +115,7 @@ export default function SectorenSection() {
           {/* ROI banner */}
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
-            style={{ background: '#ffffff', padding: '40px 48px' }}
+            style={{ background: '#ffffff', padding: '20px 24px' }}
           >
             <div>
               <p className="font-bold text-[#0A2238] mb-1" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>

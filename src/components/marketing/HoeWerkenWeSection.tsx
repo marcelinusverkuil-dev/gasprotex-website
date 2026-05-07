@@ -18,11 +18,11 @@ const stappen = [
 
 export default function HoeWerkenWeSection() {
   return (
-    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+    <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
       <div className="container-main">
         <div
           className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-          style={{ background: '#ffffff', padding: '48px' }}
+          style={{ background: '#ffffff', padding: '24px' }}
         >
           <h2
             className="text-[#0A2238] font-bold text-3xl mb-8"

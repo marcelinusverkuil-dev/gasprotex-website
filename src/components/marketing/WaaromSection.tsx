@@ -1,10 +1,10 @@
 export default function WaaromSection() {
   return (
-    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+    <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
       <div className="container-main">
         <div
           className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-          style={{ background: '#ffffff', padding: '48px' }}
+          style={{ background: '#ffffff', padding: '24px' }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 

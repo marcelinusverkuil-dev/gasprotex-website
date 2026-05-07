@@ -22,11 +22,11 @@ const cards = [
 
 export default function DienstenSection() {
   return (
-    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '8px' }}>
+    <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
       <div className="container-main">
         <div
           className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
-          style={{ padding: '48px' }}
+          style={{ padding: '24px' }}
         >
 
           <h2
