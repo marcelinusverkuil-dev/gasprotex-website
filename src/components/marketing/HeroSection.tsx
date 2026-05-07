@@ -16,11 +16,12 @@ export default function HeroSection() {
         quality={90}
       />
 
+
       <div
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to right, rgba(10,28,48,0.92) 0%, rgba(10,28,48,0.65) 50%, rgba(10,28,48,0.10) 100%)',
+            'linear-gradient(to right, rgba(10,28,48,0.60) 0%, rgba(10,28,48,0.30) 50%, rgba(10,28,48,0.00) 100%)',
         }}
       />
 
