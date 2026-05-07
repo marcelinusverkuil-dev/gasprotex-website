@@ -178,6 +178,14 @@ export default function LekdetectieMethodenPage() {
                     {m.nietGeschikt}
                   </p>
                 </div>
+                {m.naam === 'Vaste gasdetectie (stationair)' && (
+                  <p className="mt-3 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                    Lees ook:{' '}
+                    <Link href="/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                      Akoestische lekdetectie naast je vaste gasdetectie
+                    </Link>
+                  </p>
+                )}
               </div>
             ))}
 

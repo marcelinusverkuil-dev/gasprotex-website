@@ -34,6 +34,13 @@ const artikelen = [
     preview:
       'Er zijn meerdere manieren om gas- en persluchtlekken op te sporen. Elk met eigen sterke en zwakke kanten. In dit artikel vergelijken we de vijf meest gebruikte methoden.',
   },
+  {
+    slug: 'akoestische-lekdetectie-naast-vaste-gasdetectie',
+    categorie: 'Gaslekdetectie',
+    titel: 'Akoestische lekdetectie naast je vaste gasdetectie: waar zit de aanvulling?',
+    preview:
+      'Vaste gasdetectie heeft blinde vlekken. Lees waar ze zitten en hoe akoestische lekdetectie (ultrasoon) ze aanvult. Niet als vervanging, maar als aanvulling.',
+  },
 ]
 
 export default function KennisbankFilter() {
