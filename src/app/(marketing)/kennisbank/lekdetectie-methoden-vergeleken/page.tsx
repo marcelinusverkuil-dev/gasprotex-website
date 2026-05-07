@@ -300,12 +300,18 @@ export default function LekdetectieMethodenPage() {
                 <p className="font-semibold text-[#0A2238] mb-2" style={{ fontSize: 16 }}>
                   Je weet dát je lekt, maar niet waar.
                 </p>
-                <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                <p className="text-[#3D5A6E] leading-relaxed mb-2" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische scan geeft je in een dagdeel een indicatief beeld. Wil je eerst een
                   indicatie van de kosten? Gebruik onze{' '}
                   <Link href="/bereken-uw-besparing/perslucht/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     persluchtcalculator
                   </Link>.
+                </p>
+                <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+                  Lees ook:{' '}
+                  <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                    Wat kost een persluchtlek?
+                  </Link>
                 </p>
               </div>
               <div>
