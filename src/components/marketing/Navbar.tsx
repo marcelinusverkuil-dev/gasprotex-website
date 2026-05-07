@@ -21,11 +21,90 @@ const navLinks = [
   { label: 'Contact', href: '/contact' },
 ]
 
+function DropdownMenu({
+  label,
+  items,
+}: {
+  label: string
+  items: { label: string; href: string }[]
+}) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <li
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap flex items-center gap-1"
+        style={{ letterSpacing: '1px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+        aria-expanded={open}
+      >
+        {label}
+        <svg
+          width="10"
+          height="6"
+          viewBox="0 0 10 6"
+          fill="none"
+          style={{
+            marginTop: '1px',
+            opacity: 0.7,
+            transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 200ms ease',
+          }}
+        >
+          <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+
+      {/* Altijd gerenderd — zichtbaarheid via CSS-transitie */}
+      <div
+        className="absolute top-full left-0"
+        style={{
+          minWidth: '230px',
+          paddingTop: '10px',
+          opacity: open ? 1 : 0,
+          pointerEvents: open ? 'auto' : 'none',
+          transform: open ? 'translateY(0)' : 'translateY(-6px)',
+          transition: 'opacity 160ms ease, transform 160ms ease',
+        }}
+      >
+        <div
+          className="rounded-md overflow-hidden"
+          style={{
+            background: '#0D2A40',
+            border: '1px solid rgba(122,173,204,0.18)',
+            borderTop: '2px solid #F07830',
+            boxShadow: '0 16px 40px rgba(0,0,0,0.35)',
+          }}
+        >
+          {items.map((item, i) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="flex items-center text-[#C2DCE8] hover:text-white hover:bg-white/5 transition-colors"
+              style={{
+                padding: '13px 20px',
+                fontSize: 14,
+                fontWeight: 500,
+                borderTop: i > 0 ? '1px solid rgba(122,173,204,0.1)' : undefined,
+              }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </li>
+  )
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [sectorenOpen, setSectorenOpen] = useState(false)
+  const [dienstenMobiel, setDienstenMobiel] = useState(false)
+  const [sectorenMobiel, setSectorenMobiel] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
 
@@ -55,86 +134,8 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-5 list-none">
-
-            {/* Diensten dropdown */}
-            <li
-              className="relative"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-            >
-              <button
-                className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap flex items-center gap-1"
-                style={{ letterSpacing: '1px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-              >
-                Diensten
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginTop: '1px', opacity: 0.7 }}>
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-
-              {dropdownOpen && (
-                <div
-                  className="absolute top-full left-0 pt-3"
-                  style={{ minWidth: '240px' }}
-                >
-                  <div
-                    className="rounded-md overflow-hidden shadow-xl"
-                    style={{ background: '#0A2238', border: '1px solid rgba(122,173,204,0.15)' }}
-                  >
-                    {dienstenDropdown.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-5 py-3 text-[#C2DCE8] hover:text-[#F07830] hover:bg-white/5 transition-colors"
-                        style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.5px' }}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </li>
-
-            {/* Sectoren dropdown */}
-            <li
-              className="relative"
-              onMouseEnter={() => setSectorenOpen(true)}
-              onMouseLeave={() => setSectorenOpen(false)}
-            >
-              <button
-                className="font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors duration-200 whitespace-nowrap flex items-center gap-1"
-                style={{ letterSpacing: '1px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-              >
-                Sectoren
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginTop: '1px', opacity: 0.7 }}>
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-
-              {sectorenOpen && (
-                <div
-                  className="absolute top-full left-0 pt-3"
-                  style={{ minWidth: '240px' }}
-                >
-                  <div
-                    className="rounded-md overflow-hidden shadow-xl"
-                    style={{ background: '#0A2238', border: '1px solid rgba(122,173,204,0.15)' }}
-                  >
-                    {sectorenDropdown.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-5 py-3 text-[#C2DCE8] hover:text-[#F07830] hover:bg-white/5 transition-colors"
-                        style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.5px' }}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </li>
+            <DropdownMenu label="Diensten" items={dienstenDropdown} />
+            <DropdownMenu label="Sectoren" items={sectorenDropdown} />
 
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -189,44 +190,55 @@ export default function Navbar() {
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none -translate-y-2'
         }`}
       >
-        <div className="container-main py-6 flex flex-col gap-4">
-          {/* Diensten sub-items */}
-          <span
-            className="font-display font-semibold text-xs tracking-widest uppercase text-[#7AADCC] py-1"
-            style={{ letterSpacing: '2px' }}
+        <div className="container-main py-6 flex flex-col gap-1">
+
+          {/* Diensten */}
+          <button
+            onClick={() => setDienstenMobiel(!dienstenMobiel)}
+            className="flex items-center justify-between w-full text-left font-display font-semibold text-xs tracking-widest uppercase text-[#7AADCC] py-3"
+            style={{ letterSpacing: '2px', background: 'none', border: 'none', cursor: 'pointer' }}
           >
             Diensten
-          </span>
-          {dienstenDropdown.map((item) => (
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+              style={{ transform: dienstenMobiel ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 200ms ease', opacity: 0.6 }}>
+              <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          {dienstenMobiel && dienstenDropdown.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors py-1 pl-3"
-              style={{ letterSpacing: '1.5px' }}
+              className="font-display font-semibold text-sm text-[#C2DCE8] hover:text-[#F07830] transition-colors py-2 pl-4"
             >
               {item.label}
             </Link>
           ))}
 
-          {/* Sectoren sub-items */}
-          <span
-            className="font-display font-semibold text-xs tracking-widest uppercase text-[#7AADCC] py-1"
-            style={{ letterSpacing: '2px' }}
+          {/* Sectoren */}
+          <button
+            onClick={() => setSectorenMobiel(!sectorenMobiel)}
+            className="flex items-center justify-between w-full text-left font-display font-semibold text-xs tracking-widest uppercase text-[#7AADCC] py-3"
+            style={{ letterSpacing: '2px', background: 'none', border: 'none', cursor: 'pointer' }}
           >
             Sectoren
-          </span>
-          {sectorenDropdown.map((item) => (
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+              style={{ transform: sectorenMobiel ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 200ms ease', opacity: 0.6 }}>
+              <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          {sectorenMobiel && sectorenDropdown.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="font-display font-semibold text-sm tracking-widest uppercase text-[#C2DCE8] hover:text-[#F07830] transition-colors py-1 pl-3"
-              style={{ letterSpacing: '1.5px' }}
+              className="font-display font-semibold text-sm text-[#C2DCE8] hover:text-[#F07830] transition-colors py-2 pl-4"
             >
               {item.label}
             </Link>
           ))}
+
+          <div style={{ height: 8 }} />
 
           {navLinks.map((link) => (
             <Link
