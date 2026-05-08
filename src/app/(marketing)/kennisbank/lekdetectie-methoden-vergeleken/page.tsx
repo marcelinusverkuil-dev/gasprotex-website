@@ -41,8 +41,9 @@ const jsonLd = {
     name: 'GasProtex',
     logo: { '@type': 'ImageObject', url: 'https://gasprotex.nl/images/gasprotex-logo.png' },
   },
-  datePublished: '2026-05-06',
-  dateModified: '2026-05-06',
+  image: 'https://gasprotex.nl/images/gasprotex-logo.png',
+  datePublished: '2026-05-06T09:00:00+02:00',
+  dateModified: '2026-05-06T09:00:00+02:00',
   mainEntityOfPage: 'https://gasprotex.nl/kennisbank/lekdetectie-methoden-vergeleken/',
   inLanguage: 'nl-NL',
 }

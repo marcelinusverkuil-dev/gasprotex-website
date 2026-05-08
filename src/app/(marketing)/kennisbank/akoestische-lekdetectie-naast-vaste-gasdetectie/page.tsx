@@ -31,14 +31,15 @@ const jsonLd = {
   headline: 'Akoestische lekdetectie naast je vaste gasdetectie: waar zit de aanvulling?',
   description:
     'Vaste gasdetectie heeft blinde vlekken. Lees waar ze zitten en hoe akoestische lekdetectie (ultrasoon) ze aanvult.',
+  image: 'https://gasprotex.nl/images/gasprotex-logo.png',
   author: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
   publisher: {
     '@type': 'Organization',
     name: 'GasProtex',
     logo: { '@type': 'ImageObject', url: 'https://gasprotex.nl/images/gasprotex-logo.png' },
   },
-  datePublished: '2026-05-07',
-  dateModified: '2026-05-07',
+  datePublished: '2026-05-07T09:00:00+02:00',
+  dateModified: '2026-05-07T09:00:00+02:00',
   mainEntityOfPage: 'https://gasprotex.nl/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/',
   inLanguage: 'nl-NL',
 }

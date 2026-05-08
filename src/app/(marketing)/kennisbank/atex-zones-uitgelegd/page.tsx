@@ -31,14 +31,15 @@ const jsonLd = {
   headline: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?',
   description:
     'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
+  image: 'https://gasprotex.nl/images/gasprotex-logo.png',
   author: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
   publisher: {
     '@type': 'Organization',
     name: 'GasProtex',
     logo: { '@type': 'ImageObject', url: 'https://gasprotex.nl/images/gasprotex-logo.png' },
   },
-  datePublished: '2026-05-07',
-  dateModified: '2026-05-07',
+  datePublished: '2026-05-07T09:00:00+02:00',
+  dateModified: '2026-05-07T09:00:00+02:00',
   mainEntityOfPage: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
   inLanguage: 'nl-NL',
 }

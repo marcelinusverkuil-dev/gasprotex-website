@@ -38,6 +38,7 @@ export default function RootLayout({
               legalName: 'GasProtex B.V.',
               url: 'https://gasprotex.nl',
               logo: 'https://gasprotex.nl/images/gasprotex-logo.png',
+              image: 'https://gasprotex.nl/images/gasprotex-logo.png',
               description: 'Specialist in akoestische gas- en persluchtlekdetectie als dienst voor industrie en voedingsmiddelensector. ATEX-gecertificeerd.',
               telephone: '+31613055282',
               areaServed: { '@type': 'Country', name: 'Nederland' },
