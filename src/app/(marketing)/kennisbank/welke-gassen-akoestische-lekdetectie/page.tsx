@@ -201,6 +201,12 @@ export default function WelkeGassenPage() {
               belangrijk deel op methaanlekken. Akoestische detectie wordt hierbij ingezet als snelle
               screeningsmethode om grote aantallen componenten te scannen.
             </p>
+            <p className="mb-8 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/lekdetectie-normen-industriele-gassen/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Lekdetectie-normen voor industriële gassen: van LDAR tot NTA 8399
+              </Link>
+            </p>
 
             <h3 className="text-[#0A2238] font-bold mb-3" style={{ fontSize: 19, lineHeight: 1.3 }}>Propaan, butaan en andere koolwaterstoffen</h3>
             <p className="text-[#3D5A6E] leading-relaxed mb-8" style={{ fontSize: 15, lineHeight: 1.7 }}>

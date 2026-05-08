@@ -35,6 +35,13 @@ const artikelen = [
       'Van compressorkamer tot pneumatische cilinder: dit zijn de tien meest voorkomende leklocaties in een persluchtsysteem. Met praktische tips om lekken te voorkomen.',
   },
   {
+    slug: 'lekdetectie-normen-industriele-gassen',
+    categorie: 'Gaslekdetectie',
+    titel: 'Lekdetectie-normen voor industriële gassen: van LDAR tot NTA 8399',
+    preview:
+      'Overzicht van LDAR, EPA Method 21, NTA 8399, PGS-13 en de EU Methaanverordening. Hoe akoestische lekdetectie past in het normenlandschap voor de Nederlandse industrie.',
+  },
+  {
     slug: 'lekdetectie-methoden-vergeleken',
     categorie: 'Gaslekdetectie',
     titel: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie?',

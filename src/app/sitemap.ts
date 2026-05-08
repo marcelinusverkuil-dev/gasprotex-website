@@ -75,6 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const kennisbankSlugs = [
+    'lekdetectie-normen-industriele-gassen',
     'iso-11011-persluchtaudit',
     'atex-zones-uitgelegd',
     'wat-kost-een-persluchtlek',

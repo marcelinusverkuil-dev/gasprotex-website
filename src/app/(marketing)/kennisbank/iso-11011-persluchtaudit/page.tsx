@@ -289,6 +289,12 @@ export default function Iso11011PersluchtauditPage() {
               Voor bedrijven die werken aan ISO 50001 of die onder de EED-verplichting vallen, levert onze scan direct
               bruikbare onderbouwing.
             </p>
+            <p className="mt-4 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/lekdetectie-normen-industriele-gassen/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Lekdetectie-normen voor industriële gassen: van LDAR tot NTA 8399
+              </Link>
+            </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Wat past bij jouw situatie?

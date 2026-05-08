@@ -314,6 +314,10 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               <Link href="/kennisbank/atex-zones-uitgelegd/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
               </Link>
+              {' '}·{' '}
+              <Link href="/kennisbank/lekdetectie-normen-industriele-gassen/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Lekdetectie-normen voor industriële gassen
+              </Link>
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
