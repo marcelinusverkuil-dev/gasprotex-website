@@ -126,7 +126,7 @@ export default function Navbar() {
       >
         <div
           className="container-main flex items-center justify-between"
-          style={{ height: 72, paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}
+          style={{ height: 72, paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)', gap: '16px' }}
         >
           {/* Logo */}
           <Link href="/" aria-label="GasProtex homepage" style={{ flexShrink: 0 }}>
