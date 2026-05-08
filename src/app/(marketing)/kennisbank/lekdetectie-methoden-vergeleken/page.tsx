@@ -4,9 +4,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie? | GasProtex',
+  title: 'Lekdetectie methoden vergeleken: 5 technieken | GasProtex',
   description:
-    'Vijf industriële lekdetectiemethoden vergeleken op lokalisatie, gevoeligheid, bereik en kosten. Van zeepsop tot akoestische detectie.',
+    'Vergelijking van vijf veelgebruikte methoden om gas- en persluchtlekken op te sporen. Per methode: sterke en zwakke kanten en toepassingsgebied.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/lekdetectie-methoden-vergeleken/',
   },

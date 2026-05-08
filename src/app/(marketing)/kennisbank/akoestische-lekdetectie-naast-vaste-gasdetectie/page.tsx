@@ -4,9 +4,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Akoestische lekdetectie naast je vaste gasdetectie: waar zit de aanvulling? | GasProtex',
+  title: 'Akoestische lekdetectie naast vaste gasdetectie | GasProtex',
   description:
-    'Vaste gasdetectie heeft blinde vlekken. Lees waar ze zitten en hoe akoestische lekdetectie (ultrasoon) ze aanvult. Inclusief vergelijkingstabel.',
+    'Vaste gasdetectie heeft blinde vlekken. Waar ze zitten en hoe akoestische lekdetectie ze aanvult, niet als vervanging maar als aanvulling.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/',
   },

@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Gas- en persluchtlekdetectie als dienst | GasProtex',
   description:
-    'Ultrasone gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Rapport met euro-impact per lek. Vraag een Quickscan aan.',
+    'Ultrasone lekdetectie zonder productiestilstand. Wij vinden elk lek, leveren een rapport met euro-impact per lek. ATEX-gecertificeerd, VCA-vol.',
   alternates: {
     canonical: 'https://gasprotex.nl/diensten/',
   },

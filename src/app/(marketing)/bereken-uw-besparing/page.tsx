@@ -2,8 +2,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Bereken uw besparing – GasProtex',
-  description: 'Bereken wat gaslekken u kosten: perslucht, stikstof, waterstof of CO₂. GasProtex detecteert lekken in alle industriële gassystemen.',
+  title: 'Bereken besparing perslucht en gaslekken | GasProtex',
+  description: 'Bereken in 2 minuten wat persluchtlekken jouw bedrijf per jaar kosten. Op basis van compressorvermogen, druk en bedrijfstijd.',
   alternates: {
     canonical: 'https://gasprotex.nl/bereken-uw-besparing/',
   },

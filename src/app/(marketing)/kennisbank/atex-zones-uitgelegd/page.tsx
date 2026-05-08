@@ -4,9 +4,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie? | GasProtex',
+  title: 'ATEX-zones uitgelegd: zone 0, 1 en 2 | GasProtex',
   description:
-    'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
+    'Zone 0, 1 en 2 bepalen welke apparatuur je mag inzetten. Wat ATEX-certificering voor lekdetectie betekent en waarom het ertoe doet.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
   },

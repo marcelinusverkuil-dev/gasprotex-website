@@ -5,9 +5,9 @@ import KennisbankFilter from '@/components/marketing/KennisbankFilter'
 
 
 export const metadata: Metadata = {
-  title: 'Kennisbank | Lekdetectie, ATEX, ISO | GasProtex',
+  title: 'Kennisbank lekdetectie, ATEX en perslucht | GasProtex',
   description:
-    'Artikelen over gas- en persluchtlekdetectie, ATEX-zones, ISO 11011, persluchtkosten en meer. Praktische kennis voor industrie en voedingsmiddelensector.',
+    'Praktische artikelen over lekdetectie, ATEX-zones, ISO 11011 en energiebesparing. Voor HSE-managers, plant managers en onderhoudsteams.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/',
   },

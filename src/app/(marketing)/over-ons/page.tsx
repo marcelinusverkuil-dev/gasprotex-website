@@ -6,9 +6,9 @@ const BOOKINGS_URL =
   'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
-  title: 'Over GasProtex — Specialist in lekdetectie | Marcelinus Verkuil',
+  title: 'Over GasProtex, specialist in lekdetectie als dienst',
   description:
-    '10+ jaar ervaring in industriële instrumentatie en lekdetectie. Bij Hitma de apparatuur-kant, bij GasProtex de dienst-kant. ATEX-gecertificeerd.',
+    'Marcelinus Verkuil, 10+ jaar ervaring in industriële instrumentatie en lekdetectie. Specialist met focus op lekdetectie als dienst. ATEX-gecertificeerd.',
   alternates: {
     canonical: 'https://gasprotex.nl/over-ons/',
   },

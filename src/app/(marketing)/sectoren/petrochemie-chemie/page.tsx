@@ -5,9 +5,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie voor petrochemie en chemie | ATEX | GasProtex',
+  title: 'Lekdetectie petrochemie en chemie, ATEX zone 2 | GasProtex',
   description:
-    'ATEX-gecertificeerde lekdetectie voor chemie, petrochemie en tankterminals. Zone 2 inspectie. Levert input voor BRZO-rapportage en F-gassenverordening.',
+    'ATEX-gecertificeerde lekdetectie voor BRZO-bedrijven, chemieclusters en tankterminals. Input voor BRZO-rapportage en F-gassenverordening.',
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
   },

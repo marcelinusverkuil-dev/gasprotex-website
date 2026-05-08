@@ -7,9 +7,9 @@ const BOOKINGS_URL =
   'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
 
 export const metadata: Metadata = {
-  title: 'Contact | GasProtex',
+  title: 'Contact en Quickscan aanvragen | GasProtex',
   description:
-    'Neem contact op met GasProtex. Plan een gesprek via Outlook Bookings, bel direct, of stuur een e-mail.',
+    'Vraag een Quickscan aan of plan een vrijblijvend kennismakingsgesprek. Werkgebied heel Nederland. ATEX-gecertificeerd, VCA-vol.',
   alternates: {
     canonical: 'https://gasprotex.nl/contact/',
   },

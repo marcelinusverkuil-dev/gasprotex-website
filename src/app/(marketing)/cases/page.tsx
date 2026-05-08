@@ -2,8 +2,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cases – GasProtex',
-  description: 'Bekijk onze cases en ervaringen van klanten met akoestische gaslekdetectie.',
+  title: 'Cases en praktijkvoorbeelden lekdetectie | GasProtex',
+  description: 'Praktijkvoorbeelden uit zuivel, brouwerij, vleesverwerking en chemie. Gevonden lekken, behaalde besparingen en compliance-input.',
   alternates: {
     canonical: 'https://gasprotex.nl/cases/',
   },

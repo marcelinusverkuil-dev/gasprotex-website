@@ -5,9 +5,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie voor voedingsmiddelenindustrie | GasProtex',
+  title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
   description:
-    'Specialist in lekdetectie voor de voedingsmiddelensector. Perslucht, CO₂, ammoniak-koeling en stikstof-verpakking. ATEX-gecertificeerd. Vraag een scan aan.',
+    'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof. Vraag een scan aan.',
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
   },

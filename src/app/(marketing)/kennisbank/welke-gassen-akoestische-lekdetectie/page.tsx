@@ -4,9 +4,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Welke gassen kun je met akoestische lekdetectie opsporen? | GasProtex',
+  title: 'Welke gassen kun je met akoestisch detecteren? | GasProtex',
   description:
-    'Akoestische lekdetectie werkt op elk gas onder druk. Van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
+    'Akoestische lekdetectie werkt op elk gas onder druk: van perslucht tot waterstof, ammoniak en methaan. Per gastype toepassing, risico en sector.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/welke-gassen-akoestische-lekdetectie/',
   },

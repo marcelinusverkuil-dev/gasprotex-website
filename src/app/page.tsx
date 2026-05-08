@@ -9,9 +9,9 @@ import ContactCTASection from '@/components/marketing/ContactCTASection'
 import Footer from '@/components/marketing/Footer'
 
 export const metadata: Metadata = {
-  title: 'GasProtex — Gas- en persluchtlekdetectie als dienst',
+  title: 'Gaslekdetectie en persluchtlekdetectie | GasProtex',
   description:
-    'Specialist in gaslekdetectie en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Vraag een Quickscan aan.',
+    'Specialist in akoestische gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Quickscan vanaf een dagdeel.',
   alternates: {
     canonical: 'https://gasprotex.nl/',
   },

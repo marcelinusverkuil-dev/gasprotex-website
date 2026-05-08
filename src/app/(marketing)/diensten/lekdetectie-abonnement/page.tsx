@@ -4,9 +4,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie-abonnement | Quickscan tot doorlopend | GasProtex',
+  title: 'Lekdetectie-abonnement met jaarlijkse opvolging | GasProtex',
   description:
-    'Begin met een Quickscan. Daarna beslis je zelf of je verder wilt. Van eenmalige scan tot doorlopend abonnement met klantportaal en jaarlijkse herhaling.',
+    'Quickscan, audit en jaarlijkse herhaling. Klantportaal met status per lek, QR-code op locatie. Voor industrie en voedingsmiddelensector.',
   alternates: {
     canonical: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/',
   },

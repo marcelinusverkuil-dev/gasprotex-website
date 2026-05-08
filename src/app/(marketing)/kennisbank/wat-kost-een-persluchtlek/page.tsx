@@ -4,9 +4,9 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Wat kost een persluchtlek? De berekening met voorbeelden | GasProtex',
+  title: 'Wat kost een persluchtlek per jaar? | GasProtex',
   description:
-    'Wat kost een persluchtlek per jaar? Concrete berekeningen per lekgrootte bij 24/7 bedrijfsvoering. Met CO₂-impact en besparingstips.',
+    'Een lek van 1 mm kost al 500 tot 1500 euro per jaar. Hoe je de kosten zelf berekent en welke lekkage-oorzaken het meest voorkomen.',
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek/',
   },
