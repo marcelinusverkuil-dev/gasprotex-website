@@ -130,7 +130,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" aria-label="GasProtex homepage">
-            <img src="/images/gasprotex-logo.png" alt="GasProtex" style={{ height: '44px', width: 'auto' }} />
+            <img src="/images/gasprotex-logo-transparent.svg" alt="GasProtex" style={{ height: '44px', width: 'auto' }} />
           </Link>
 
           {/* Desktop nav */}
