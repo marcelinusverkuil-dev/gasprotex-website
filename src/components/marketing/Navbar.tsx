@@ -166,14 +166,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Klantenportaal rechts */}
-          <a
-            href="https://portaal.gasprotex.nl/login"
-            className="hidden lg:inline-flex items-center self-center font-display font-semibold text-sm uppercase text-[#C2DCE8] hover:text-white transition-colors whitespace-nowrap"
-            style={{ letterSpacing: '1px' }}
-          >
-            Klantenportaal
-          </a>
+          {/* Klantenportaal — tijdelijk verborgen */}
 
           {/* Mobile hamburger */}
           <button
