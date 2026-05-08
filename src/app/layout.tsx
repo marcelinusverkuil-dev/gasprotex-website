@@ -7,15 +7,6 @@ export const metadata: Metadata = {
   title: 'GasProtex – Akoestische Gaslekdetectie | Nederland',
   description:
     'GasProtex detecteert gaslekken 10x sneller met akoestische camera-technologie. Non-invasief, ATEX gecertificeerd, zonder productiestilstand. Voor de Nederlandse industrie.',
-  keywords: [
-    'gaslekdetectie',
-    'akoestische camera',
-    'ultrasone lekdetectie',
-    'perslucht inspectie',
-    'ATEX',
-    'chemische industrie',
-    'gaslek Nederland',
-  ],
   openGraph: {
     title: 'GasProtex – Akoestische Gaslekdetectie',
     description: "Gaslekken gevonden. Risico's gereduceerd. 10x sneller dan traditioneel.",
