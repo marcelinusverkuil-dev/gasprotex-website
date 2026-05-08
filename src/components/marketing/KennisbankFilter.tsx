@@ -20,7 +20,14 @@ const artikelen = [
     preview:
       'Een lek van 1 mm kost al €500–€1.500 per jaar. Bij twintig lekken loopt dat snel op tot tienduizenden euro\'s. Hoe je de kosten zelf berekent en wat de meest voorkomende lekkage-oorzaken zijn.',
   },
-{
+  {
+    slug: 'waar-zitten-persluchtlekken',
+    categorie: 'Perslucht',
+    titel: 'Persluchtsysteem in kaart: waar lekken meestal zitten',
+    preview:
+      'Van compressorkamer tot pneumatische cilinder: dit zijn de tien meest voorkomende leklocaties in een persluchtsysteem. Met praktische tips om lekken te voorkomen.',
+  },
+  {
     slug: 'lekdetectie-methoden-vergeleken',
     categorie: 'Gaslekdetectie',
     titel: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie?',

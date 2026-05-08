@@ -343,6 +343,10 @@ export default function LekdetectieMethodenPage() {
                   <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     Wat kost een persluchtlek?
                   </Link>
+                  {' '}·{' '}
+                  <Link href="/kennisbank/waar-zitten-persluchtlekken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                    Waar zitten persluchtlekken meestal?
+                  </Link>
                 </p>
               </div>
               <div>

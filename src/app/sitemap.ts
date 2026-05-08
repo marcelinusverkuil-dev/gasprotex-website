@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const kennisbankSlugs = [
     'atex-zones-uitgelegd',
     'wat-kost-een-persluchtlek',
+    'waar-zitten-persluchtlekken',
     'lekdetectie-methoden-vergeleken',
     'akoestische-lekdetectie-naast-vaste-gasdetectie',
     'welke-gassen-akoestische-lekdetectie',

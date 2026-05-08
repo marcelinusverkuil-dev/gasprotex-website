@@ -276,6 +276,12 @@ export default function WatKostPersluchtlekPage() {
               heeft vrijwel altijd meerdere lekken tegelijk. Vijf kleine lekken kosten bij continue
               bedrijfsvoering samen al bijna €6.500 per jaar.
             </p>
+            <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/waar-zitten-persluchtlekken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Waar zitten persluchtlekken meestal?
+              </Link>
+            </p>
             <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">Lekken groeien.</strong>{' '}
               Een lek dat vandaag klein is, is over zes maanden groter. Koppelingen die trillen, slijtage
