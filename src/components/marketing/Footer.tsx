@@ -2,20 +2,17 @@
 
 const nav = {
   Diensten: [
-    { label: 'Quickscan', href: '/diensten#quickscan' },
-    { label: 'Fabrieksaudit', href: '/diensten#audit' },
-    { label: 'Serviceabonnement', href: '/diensten#abonnement' },
+    { label: 'Gas- en persluchtlekdetectie', href: '/diensten/' },
+    { label: 'Lekdetectie-abonnement', href: '/diensten/lekdetectie-abonnement/' },
   ],
   Sectoren: [
-    { label: 'Petrochemie & Chemie', href: '/sectoren/chemie' },
-    { label: 'Food & Beverage', href: '/sectoren/food' },
-    { label: 'Energie & Utilities', href: '/sectoren/energie' },
-    { label: 'Algemene Industrie', href: '/sectoren/industrie' },
+    { label: 'Voedingsmiddelensector', href: '/sectoren/voedingsmiddelensector/' },
+    { label: 'Petrochemie & Chemie', href: '/sectoren/petrochemie-chemie/' },
   ],
   Bedrijf: [
-    { label: 'Over GasProtex', href: '/over-ons' },
-    { label: 'Cases', href: '/cases' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Over GasProtex', href: '/over-ons/' },
+    { label: 'Cases', href: '/cases/' },
+    { label: 'Contact', href: '/contact/' },
     { label: 'Klantportaal', href: 'https://portaal.gasprotex.nl/login' },
   ],
 }
@@ -79,14 +76,9 @@ export default function Footer() {
             © {new Date().getFullYear()} GasProtex B.V. — Alle rechten voorbehouden.
           </p>
           <div className="flex items-center gap-10">
-            {[
-              { label: 'Privacybeleid', href: '/privacy' },
-              { label: 'Algemene Voorwaarden', href: '/voorwaarden' },
-            ].map((l) => (
-              <Link key={l.label} href={l.href} className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
-                {l.label}
-              </Link>
-            ))}
+            <Link href="/privacy/" className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
+              Privacybeleid
+            </Link>
           </div>
         </div>
       </div>
