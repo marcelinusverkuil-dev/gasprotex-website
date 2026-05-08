@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/contact/',
   },
+  openGraph: {
+    title: 'Contact | GasProtex',
+    description: 'Neem contact op met GasProtex. Plan een gesprek, bel direct of stuur een bericht. Quickscan aanvragen kan ook direct.',
+    url: 'https://gasprotex.nl/contact/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Contact | GasProtex',
+    description: 'Plan een gesprek, bel direct of stuur een bericht. Quickscan aanvragen kan ook direct.',
+  },
 }
 
 const jsonLd = {

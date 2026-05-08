@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/welke-gassen-akoestische-lekdetectie/',
   },
+  openGraph: {
+    title: 'Welke gassen kun je met akoestische lekdetectie opsporen? | GasProtex',
+    description: 'Akoestische lekdetectie werkt op elk gas onder druk. Van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
+    url: 'https://gasprotex.nl/kennisbank/welke-gassen-akoestische-lekdetectie/',
+    type: 'article',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Welke gassen kun je met akoestische lekdetectie opsporen? | GasProtex',
+    description: 'Akoestische lekdetectie werkt op elk gas onder druk. Van perslucht tot waterstof, ammoniak en methaan.',
+  },
 }
 
 const jsonLd = {

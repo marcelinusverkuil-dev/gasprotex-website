@@ -4,6 +4,22 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Cases – GasProtex',
   description: 'Bekijk onze cases en ervaringen van klanten met akoestische gaslekdetectie.',
+  alternates: {
+    canonical: 'https://gasprotex.nl/cases/',
+  },
+  openGraph: {
+    title: 'Cases | GasProtex',
+    description: 'Bekijk onze cases en ervaringen van klanten met akoestische gaslekdetectie.',
+    url: 'https://gasprotex.nl/cases/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Cases | GasProtex',
+    description: 'Bekijk onze cases en ervaringen van klanten met akoestische gaslekdetectie.',
+  },
 }
 
 const cases = [

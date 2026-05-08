@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/lekdetectie-methoden-vergeleken/',
   },
+  openGraph: {
+    title: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie? | GasProtex',
+    description: 'Vijf industriële lekdetectiemethoden vergeleken op lokalisatie, gevoeligheid, bereik en kosten. Van zeepsop tot akoestische detectie.',
+    url: 'https://gasprotex.nl/kennisbank/lekdetectie-methoden-vergeleken/',
+    type: 'article',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie? | GasProtex',
+    description: 'Vijf industriële lekdetectiemethoden vergeleken op lokalisatie, gevoeligheid, bereik en kosten.',
+  },
 }
 
 const jsonLd = {

@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
   },
+  openGraph: {
+    title: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie? | GasProtex',
+    description: 'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
+    url: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
+    type: 'article',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie? | GasProtex',
+    description: 'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
+  },
 }
 
 const jsonLd = {

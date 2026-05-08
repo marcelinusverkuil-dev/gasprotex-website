@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
   },
+  openGraph: {
+    title: 'Lekdetectie voor petrochemie en chemie, ATEX zone 2 | GasProtex',
+    description: 'ATEX-gecertificeerde lekdetectie voor BRZO-bedrijven, chemieclusters en tankterminals. Levert input voor BRZO-rapportage, F-gassenverordening en ESG.',
+    url: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'ATEX-gecertificeerde lekdetectie voor petrochemie en chemie | GasProtex',
+    description: 'Voor BRZO-bedrijven, chemieclusters en tankterminals. Input voor BRZO, F-gassenverordening en ESG-rapportage.',
+  },
 }
 
 const jsonLd = {

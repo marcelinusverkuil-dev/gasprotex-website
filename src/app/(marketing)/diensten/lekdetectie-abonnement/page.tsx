@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/',
   },
+  openGraph: {
+    title: 'Lekdetectie-abonnement: Quickscan, audit en jaarlijkse opvolging | GasProtex',
+    description: 'Van Quickscan naar doorlopend abonnement. Jaarlijkse herhaling met klantportaal, status per lek en QR-codes op locatie. Voor industrie en voedingsmiddelensector.',
+    url: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Lekdetectie-abonnement met klantportaal en QR-tracking | GasProtex',
+    description: 'Van Quickscan naar doorlopend abonnement. Jaarlijkse opvolging met klantportaal en QR-codes per lek.',
+  },
 }
 
 const stappen = [

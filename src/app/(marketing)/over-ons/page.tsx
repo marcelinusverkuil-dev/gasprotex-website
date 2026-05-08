@@ -12,6 +12,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/over-ons/',
   },
+  openGraph: {
+    title: 'Over GasProtex — Specialist in lekdetectie | Marcelinus Verkuil',
+    description: '10+ jaar ervaring in industriële instrumentatie en lekdetectie. Bij Hitma de apparatuur-kant, bij GasProtex de dienst-kant. ATEX-gecertificeerd.',
+    url: 'https://gasprotex.nl/over-ons/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Over GasProtex — Specialist in lekdetectie | Marcelinus Verkuil',
+    description: '10+ jaar ervaring in industriële instrumentatie en lekdetectie. ATEX-gecertificeerd.',
+  },
 }
 
 const jsonLd = {

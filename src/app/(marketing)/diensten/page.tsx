@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/diensten/',
   },
+  openGraph: {
+    title: 'Gas- en persluchtlekdetectie als dienst | GasProtex',
+    description: 'Wij vinden lekken die je niet hoort, ziet of ruikt. Ultrasone inspectie tijdens normale productie, zonder stilstand. Rapport met euro-impact per lek.',
+    url: 'https://gasprotex.nl/diensten/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Gas- en persluchtlekdetectie als dienst | GasProtex',
+    description: 'Wij vinden lekken die je niet hoort, ziet of ruikt. Ultrasone inspectie tijdens normale productie, zonder stilstand. Rapport met euro-impact per lek.',
+  },
 }
 
 const faqItems = [

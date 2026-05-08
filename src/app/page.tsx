@@ -15,6 +15,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/',
   },
+  openGraph: {
+    title: 'Gaslekdetectie en persluchtlekdetectie als dienst | GasProtex',
+    description: 'Specialist in akoestische gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Quickscan vanaf een dagdeel.',
+    url: 'https://gasprotex.nl/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Gaslekdetectie en persluchtlekdetectie als dienst | GasProtex',
+    description: 'Specialist in akoestische gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Quickscan vanaf een dagdeel.',
+  },
 }
 
 const jsonLd = {

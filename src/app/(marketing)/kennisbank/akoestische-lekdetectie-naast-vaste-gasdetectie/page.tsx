@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/',
   },
+  openGraph: {
+    title: 'Akoestische lekdetectie naast je vaste gasdetectie: waar zit de aanvulling? | GasProtex',
+    description: 'Vaste gasdetectie heeft blinde vlekken. Lees waar ze zitten en hoe akoestische lekdetectie (ultrasoon) ze aanvult. Inclusief vergelijkingstabel.',
+    url: 'https://gasprotex.nl/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/',
+    type: 'article',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Akoestische lekdetectie naast je vaste gasdetectie | GasProtex',
+    description: 'Vaste gasdetectie heeft blinde vlekken. Hoe akoestische lekdetectie (ultrasoon) ze aanvult.',
+  },
 }
 
 const jsonLd = {

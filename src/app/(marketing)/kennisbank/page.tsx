@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/',
   },
+  openGraph: {
+    title: 'Kennisbank lekdetectie, ATEX en perslucht | GasProtex',
+    description: 'Praktische artikelen over gas- en persluchtlekdetectie, ATEX-zones, ISO 11011 en energiebesparing. Voor HSE-managers, plant managers en onderhoudsteams.',
+    url: 'https://gasprotex.nl/kennisbank/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Kennisbank lekdetectie, ATEX en perslucht | GasProtex',
+    description: 'Praktische artikelen over gas- en persluchtlekdetectie, ATEX-zones, ISO 11011 en energiebesparing. Voor HSE-managers, plant managers en onderhoudsteams.',
+  },
 }
 
 const jsonLd = {

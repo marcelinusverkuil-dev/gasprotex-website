@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek/',
   },
+  openGraph: {
+    title: 'Wat kost een persluchtlek? De berekening met voorbeelden | GasProtex',
+    description: 'Wat kost een persluchtlek per jaar? Concrete berekeningen per lekgrootte bij 24/7 bedrijfsvoering. Met CO₂-impact en besparingstips.',
+    url: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek/',
+    type: 'article',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Wat kost een persluchtlek? De berekening met voorbeelden | GasProtex',
+    description: 'Wat kost een persluchtlek per jaar? Concrete berekeningen per lekgrootte bij 24/7 bedrijfsvoering.',
+  },
 }
 
 const jsonLd = {

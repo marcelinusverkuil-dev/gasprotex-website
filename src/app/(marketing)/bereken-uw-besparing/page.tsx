@@ -4,6 +4,22 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Bereken uw besparing – GasProtex',
   description: 'Bereken wat gaslekken u kosten: perslucht, stikstof, waterstof of CO₂. GasProtex detecteert lekken in alle industriële gassystemen.',
+  alternates: {
+    canonical: 'https://gasprotex.nl/bereken-uw-besparing/',
+  },
+  openGraph: {
+    title: 'Bereken jouw besparing op perslucht en gaslekken | GasProtex',
+    description: 'Bereken in 2 minuten wat persluchtlekken jouw productiebedrijf per jaar kosten. Op basis van compressorvermogen, druk en bedrijfstijd.',
+    url: 'https://gasprotex.nl/bereken-uw-besparing/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Bereken jouw besparing op perslucht en gaslekken | GasProtex',
+    description: 'Bereken in 2 minuten wat persluchtlekken jouw bedrijf per jaar kosten.',
+  },
 }
 
 const gassen = [

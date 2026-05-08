@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
   },
+  openGraph: {
+    title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
+    description: 'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak (NH3) en stikstof. ATEX-gecertificeerd.',
+    url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
+    description: 'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof.',
+  },
 }
 
 const jsonLd = {

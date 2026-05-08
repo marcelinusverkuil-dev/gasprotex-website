@@ -1,4 +1,27 @@
-﻿export default function PrivacyPage() {
+﻿import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacybeleid | GasProtex',
+  description: 'Privacybeleid van GasProtex. Hoe wij omgaan met persoonsgegevens die via het contactformulier, klantenportaal en websitebezoek worden verzameld.',
+  alternates: {
+    canonical: 'https://gasprotex.nl/privacy/',
+  },
+  openGraph: {
+    title: 'Privacybeleid | GasProtex',
+    description: 'Hoe GasProtex omgaat met persoonsgegevens van bezoekers, contactpersonen en klanten.',
+    url: 'https://gasprotex.nl/privacy/',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'GasProtex',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacybeleid | GasProtex',
+    description: 'Hoe GasProtex omgaat met persoonsgegevens van bezoekers, contactpersonen en klanten.',
+  },
+}
+
+export default function PrivacyPage() {
   return (
     <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
       <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
