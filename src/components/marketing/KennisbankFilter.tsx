@@ -20,14 +20,7 @@ const artikelen = [
     preview:
       'Een lek van 1 mm kost al €500–€1.500 per jaar. Bij twintig lekken loopt dat snel op tot tienduizenden euro\'s. Hoe je de kosten zelf berekent en wat de meest voorkomende lekkage-oorzaken zijn.',
   },
-  {
-    slug: 'ultrasone-vs-traditionele-lekdetectie',
-    categorie: 'Gaslekdetectie',
-    titel: 'Ultrasone vs. traditionele lekdetectie: wat is het verschil?',
-    preview:
-      'Zeepsop, vaste detectoren, sniffer-buizen: allemaal worden ze nog gebruikt. Wat ultrasone detectie anders maakt en wanneer je welke methode inzet.',
-  },
-  {
+{
     slug: 'lekdetectie-methoden-vergeleken',
     categorie: 'Gaslekdetectie',
     titel: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie?',
