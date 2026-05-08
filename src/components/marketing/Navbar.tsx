@@ -129,12 +129,12 @@ export default function Navbar() {
           style={{ height: 72, paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}
         >
           {/* Logo */}
-          <Link href="/" aria-label="GasProtex homepage">
+          <Link href="/" aria-label="GasProtex homepage" style={{ flexShrink: 0 }}>
             <img src="/images/gasprotex-logo.png" alt="GasProtex" style={{ height: '44px', width: 'auto' }} />
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-5 list-none">
+          <ul className="hidden lg:flex items-center gap-3 list-none">
             <DropdownMenu label="Diensten" items={dienstenDropdown} active={pathname.startsWith('/diensten')} />
             <DropdownMenu label="Sectoren" items={sectorenDropdown} active={pathname.startsWith('/sectoren')} />
 
@@ -167,7 +167,7 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop: Bel ons + Klantenportaal */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-3" style={{ flexShrink: 0 }}>
             <a
               href="tel:+31613055282"
               className="inline-flex items-center gap-2 text-[#C2DCE8] hover:text-white text-sm font-semibold whitespace-nowrap transition-colors"
