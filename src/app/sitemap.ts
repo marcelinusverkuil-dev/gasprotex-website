@@ -75,6 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const kennisbankSlugs = [
+    'iso-11011-persluchtaudit',
     'atex-zones-uitgelegd',
     'wat-kost-een-persluchtlek',
     'waar-zitten-persluchtlekken',

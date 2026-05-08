@@ -7,6 +7,13 @@ const categorieen = ['Alles', 'Perslucht', 'Gaslekdetectie', 'ATEX & Compliance'
 
 const artikelen = [
   {
+    slug: 'iso-11011-persluchtaudit',
+    categorie: 'ATEX & Compliance',
+    titel: 'ISO 11011: wat verwacht de norm en wat levert een persluchtaudit op?',
+    preview:
+      'ISO 11011 is de norm voor persluchtaudits. Hoe past lekdetectie daarin? Uitleg over de drie subsystemen, wat de norm verwacht en wat een audit je concreet oplevert.',
+  },
+  {
     slug: 'atex-zones-uitgelegd',
     categorie: 'ATEX & Compliance',
     titel: 'ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?',

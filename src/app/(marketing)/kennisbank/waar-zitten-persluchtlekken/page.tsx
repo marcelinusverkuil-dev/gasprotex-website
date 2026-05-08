@@ -253,10 +253,16 @@ export default function WaarZittenPersluchtlekkenPage() {
               Een condensaatafvoer die openstaat, blaast continu perslucht af. Dit is een van de makkelijkst te
               verhelpen lekken, maar wordt vaak over het hoofd gezien.
             </p>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
               <strong className="text-[#0A2238]">Periodiek laten inspecteren.</strong>{' '}
               Omdat lekken groeien en nieuwe lekken ontstaan, is een eenmalige inspectie niet genoeg. Een
               periodieke akoestische scan (ultrasoon) houdt het systeem in beeld.
+            </p>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/iso-11011-persluchtaudit/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                ISO 11011 en persluchtaudits
+              </Link>
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>

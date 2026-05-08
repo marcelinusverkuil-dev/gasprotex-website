@@ -317,6 +317,10 @@ export default function WatKostPersluchtlekPage() {
               <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Lekdetectie methoden vergeleken
               </Link>
+              {' '}·{' '}
+              <Link href="/kennisbank/iso-11011-persluchtaudit/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                ISO 11011 en persluchtaudits
+              </Link>
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
