@@ -30,15 +30,29 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Lekdetectie voor petrochemie en chemie',
+  url: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
+  description: 'ATEX-gecertificeerde lekdetectie voor BRZO-bedrijven, chemieclusters en tankterminals. Input voor BRZO-rapportage en F-gassenverordening.',
   provider: {
     '@type': 'Organization',
     name: 'GasProtex',
     url: 'https://gasprotex.nl',
   },
-  areaServed: 'NL',
-  description:
-    'ATEX-gecertificeerde akoestische lekdetectie voor petrochemie, chemieclusters en tankterminals. Zone 2. Input voor BRZO en F-gassenverordening.',
-  url: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
+  serviceType: 'Lekdetectie voor petrochemie en chemische industrie',
+  areaServed: { '@type': 'Country', name: 'Nederland' },
+  audience: {
+    '@type': 'BusinessAudience',
+    audienceType: 'Petrochemie, chemie, BRZO-bedrijven, tankterminals',
+  },
+}
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Sectoren', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 3, name: 'Petrochemie & Chemie', item: 'https://gasprotex.nl/sectoren/petrochemie-chemie/' },
+  ],
 }
 
 const gassen = [
@@ -77,6 +91,11 @@ export default function PetrochemieChemiePage() {
         id="petrochemie-chemie-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Sectie 1 — Hero */}

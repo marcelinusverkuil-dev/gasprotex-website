@@ -32,10 +32,25 @@ const jsonLd = {
   description:
     'Wat zijn ATEX-zones en wat betekent zone 2-certificering voor lekdetectie? Uitleg zone 0, 1, 2 en stofzones 20, 21, 22.',
   author: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
-  publisher: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'GasProtex',
+    logo: { '@type': 'ImageObject', url: 'https://gasprotex.nl/images/gasprotex-logo.png' },
+  },
   datePublished: '2026-05-07',
   dateModified: '2026-05-07',
   mainEntityOfPage: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd/',
+  inLanguage: 'nl-NL',
+}
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank' },
+    { '@type': 'ListItem', position: 3, name: 'ATEX-zones uitgelegd', item: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd' },
+  ],
 }
 
 const gasZones = [
@@ -57,6 +72,11 @@ export default function AtexZonesPage() {
         id="article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>

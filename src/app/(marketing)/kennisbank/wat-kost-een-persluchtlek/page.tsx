@@ -39,11 +39,22 @@ const jsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'GasProtex',
-    url: 'https://gasprotex.nl',
+    logo: { '@type': 'ImageObject', url: 'https://gasprotex.nl/images/gasprotex-logo.png' },
   },
   datePublished: '2026-05-07',
   dateModified: '2026-05-07',
   mainEntityOfPage: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek/',
+  inLanguage: 'nl-NL',
+}
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank' },
+    { '@type': 'ListItem', position: 3, name: 'Wat kost een persluchtlek?', item: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek' },
+  ],
 }
 
 const kostentabel = [
@@ -65,6 +76,11 @@ export default function WatKostPersluchtlekPage() {
         id="article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>

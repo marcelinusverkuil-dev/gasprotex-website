@@ -79,15 +79,29 @@ const faqJsonLd = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Gas- en persluchtlekdetectie',
+  name: 'Gas- en persluchtlekdetectie als dienst',
+  url: 'https://gasprotex.nl/diensten/',
+  description: 'Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera lokaliseren we elk lek tijdens normale productie, zonder stilstand. Rapport met euro-impact per lek.',
   provider: {
     '@type': 'Organization',
     name: 'GasProtex',
     url: 'https://gasprotex.nl',
   },
-  description:
-    'Ultrasone gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd.',
-  areaServed: 'NL',
+  serviceType: 'Gaslekdetectie en persluchtlekdetectie',
+  areaServed: { '@type': 'Country', name: 'Nederland' },
+  audience: {
+    '@type': 'BusinessAudience',
+    audienceType: 'Industrie en voedingsmiddelensector',
+  },
+}
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://gasprotex.nl/diensten/' },
+  ],
 }
 
 function ArrowRight() {
@@ -114,6 +128,10 @@ export default function DienstenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Sectie 1 — Hero (licht) */}

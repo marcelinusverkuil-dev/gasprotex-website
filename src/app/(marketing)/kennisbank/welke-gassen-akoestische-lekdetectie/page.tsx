@@ -32,10 +32,25 @@ const jsonLd = {
   description:
     'Akoestische lekdetectie werkt op elk gas onder druk. Van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
   author: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
-  publisher: { '@type': 'Organization', name: 'GasProtex', url: 'https://gasprotex.nl' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'GasProtex',
+    logo: { '@type': 'ImageObject', url: 'https://gasprotex.nl/images/gasprotex-logo.png' },
+  },
   datePublished: '2026-05-07',
   dateModified: '2026-05-07',
   mainEntityOfPage: 'https://gasprotex.nl/kennisbank/welke-gassen-akoestische-lekdetectie/',
+  inLanguage: 'nl-NL',
+}
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank' },
+    { '@type': 'ListItem', position: 3, name: 'Welke gassen kun je met akoestisch detecteren?', item: 'https://gasprotex.nl/kennisbank/welke-gassen-akoestische-lekdetectie' },
+  ],
 }
 
 const overzichtTabel = [
@@ -56,6 +71,11 @@ export default function WelkeGassenPage() {
         id="article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>

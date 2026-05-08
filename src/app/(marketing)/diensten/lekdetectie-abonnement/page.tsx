@@ -100,13 +100,25 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Lekdetectie-abonnement',
+  url: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/',
+  description: 'Quickscan, audit en jaarlijkse herhaling. Klantportaal met status per lek, QR-code op locatie. Voor industrie en voedingsmiddelensector.',
   provider: {
     '@type': 'Organization',
     name: 'GasProtex',
     url: 'https://gasprotex.nl',
   },
-  serviceType: 'Gaslekdetectie en persluchtlekdetectie',
-  url: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/',
+  serviceType: 'Lekdetectie-abonnement',
+  areaServed: { '@type': 'Country', name: 'Nederland' },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://gasprotex.nl/diensten/' },
+    { '@type': 'ListItem', position: 3, name: 'Lekdetectie-abonnement', item: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/' },
+  ],
 }
 
 export default function AbonnementPage() {
@@ -121,6 +133,11 @@ export default function AbonnementPage() {
         id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Sectie 1 — Hero */}

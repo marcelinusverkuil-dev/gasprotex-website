@@ -32,26 +32,15 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': ['Organization', 'LocalBusiness'],
-      '@id': 'https://gasprotex.nl/#organization',
-      name: 'GasProtex',
-      url: 'https://gasprotex.nl',
-      description:
-        'Specialist in gaslekdetectie en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd.',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'NL',
-      },
-      areaServed: 'NL',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        email: 'info@gasprotex.nl',
-        contactType: 'customer service',
-      },
-    },
-  ],
+  '@type': 'ProfessionalService',
+  name: 'GasProtex',
+  url: 'https://gasprotex.nl',
+  image: 'https://gasprotex.nl/images/hero-bg.jpg',
+  description: 'Specialist in akoestische gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Quickscan vanaf een dagdeel.',
+  telephone: '+31613055282',
+  priceRange: '€€',
+  areaServed: { '@type': 'Country', name: 'Nederland' },
+  serviceType: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Ultrasone lekdetectie'],
 }
 
 export default function HomePage() {

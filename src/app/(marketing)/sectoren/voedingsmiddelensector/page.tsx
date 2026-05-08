@@ -30,15 +30,29 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Lekdetectie voor de voedingsmiddelensector',
+  url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
+  description: 'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof.',
   provider: {
     '@type': 'Organization',
     name: 'GasProtex',
     url: 'https://gasprotex.nl',
   },
-  areaServed: 'NL',
-  description:
-    'Akoestische gaslekdetectie voor de voedingsmiddelenindustrie. Perslucht, CO₂, ammoniak en stikstof. ATEX-gecertificeerd.',
-  url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
+  serviceType: 'Lekdetectie voor voedingsmiddelenindustrie',
+  areaServed: { '@type': 'Country', name: 'Nederland' },
+  audience: {
+    '@type': 'BusinessAudience',
+    audienceType: 'Voedingsmiddelensector, zuivel, vleesverwerking, brouwerijen, frisdrank',
+  },
+}
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 2, name: 'Sectoren', item: 'https://gasprotex.nl/' },
+    { '@type': 'ListItem', position: 3, name: 'Voedingsmiddelensector', item: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/' },
+  ],
 }
 
 const gassen = [
@@ -89,6 +103,11 @@ export default function VoedingsmiddelensectorPage() {
         id="voedingsmiddelensector-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Sectie 1 — Hero */}

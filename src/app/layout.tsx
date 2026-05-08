@@ -28,6 +28,25 @@ export default function RootLayout({
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'GasProtex',
+              legalName: 'GasProtex B.V.',
+              url: 'https://gasprotex.nl',
+              logo: 'https://gasprotex.nl/images/gasprotex-logo.png',
+              description: 'Specialist in akoestische gas- en persluchtlekdetectie als dienst voor industrie en voedingsmiddelensector. ATEX-gecertificeerd.',
+              telephone: '+31613055282',
+              areaServed: { '@type': 'Country', name: 'Nederland' },
+              founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
+              knowsAbout: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie', 'Ultrasone lekdetectie', 'ATEX', 'ISO 11011', 'BRZO', 'F-gassenverordening'],
+              sameAs: [],
+            }),
+          }}
+        />
         {children}
         <AnalyticsWithConsent />
 <Script id="tawk-to" strategy="afterInteractive">{`
