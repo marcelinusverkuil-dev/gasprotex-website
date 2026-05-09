@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const dienstenDropdown = [
@@ -129,7 +130,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" aria-label="GasProtex homepage" style={{ flexShrink: 0 }}>
-            <img src="/images/gasprotex-logo.png" alt="GasProtex" style={{ height: '44px', width: 'auto' }} />
+            <Image src="/images/gasprotex-logo.png" alt="GasProtex" width={176} height={44} style={{ height: '44px', width: 'auto' }} priority />
           </Link>
 
           {/* Desktop nav */}
