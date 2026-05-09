@@ -156,7 +156,10 @@ export default function WelkeGassenPage() {
               detectie omzeilt dit probleem volledig: het geluid van het lek is onafhankelijk van de
               chemische eigenschappen van het gas. Met de groei van waterstof als energiedrager neemt het
               belang van betrouwbare lekdetectie toe. Waterstof is bovendien het duurste industriegas,
-              waardoor elk lek direct financieel voelbaar is.
+              waardoor elk lek direct financieel voelbaar is.{' '}
+              <Link href="/kennisbank/waterstoflekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Lees ook: Waterstoflekdetectie: waarom traditionele methoden tekortschieten
+              </Link>
             </p>
 
             <h3 className="text-[#0A2238] font-bold mb-3" style={{ fontSize: 19, lineHeight: 1.3 }}>CO₂ (kooldioxide)</h3>

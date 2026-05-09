@@ -62,6 +62,13 @@ const artikelen = [
     preview:
       'Akoestische lekdetectie werkt op elk gas onder druk: van perslucht tot waterstof, ammoniak en methaan. Per gastype: toepassing, risico en sector.',
   },
+  {
+    slug: 'waterstoflekdetectie',
+    categorie: 'Gaslekdetectie',
+    titel: 'Waterstoflekdetectie: waarom traditionele methoden tekortschieten',
+    preview:
+      'IR-sensoren zijn blind voor H₂. Katalytische sensoren hebben beperkingen. OGI werkt niet. Overzicht van detectiemethoden voor waterstof en de rol van akoestische lekdetectie.',
+  },
 ]
 
 export default function KennisbankFilter() {

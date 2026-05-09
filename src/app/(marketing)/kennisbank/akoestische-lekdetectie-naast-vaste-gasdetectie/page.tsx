@@ -253,7 +253,11 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               temperatuurverschil nodig tussen het gas en de achtergrond, wat detectie in sommige
               omstandigheden lastig maakt. En de aanschafkosten liggen boven de €80.000. Akoestische
               detectie is gastype-onafhankelijk, niet afhankelijk van temperatuurverschillen en werkt
-              op basis van het geluid van de lekbron zelf in plaats van de gaswolk.
+              op basis van het geluid van de lekbron zelf in plaats van de gaswolk. Bij waterstof is dat
+              verschil bijzonder groot: infraroodcamera&apos;s zijn volledig blind voor H₂. Meer daarover in{' '}
+              <Link href="/kennisbank/waterstoflekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Waterstoflekdetectie: waarom traditionele methoden tekortschieten
+              </Link>.
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-6" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>

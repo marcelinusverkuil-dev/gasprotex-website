@@ -263,6 +263,10 @@ export default function LekdetectieNormenIndustrieleGassenPage() {
               <strong className="text-[#0A2238]">Bij waterstof.</strong>{' '}
               Waterstof absorbeert geen IR-straling, waardoor OGI en infraroodsensoren niet werken.
               Akoestische detectie is een van de weinige methoden die H₂-lekken op afstand kan lokaliseren.
+              Lees meer:{' '}
+              <Link href="/kennisbank/waterstoflekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Waterstoflekdetectie: waarom traditionele methoden tekortschieten
+              </Link>.
             </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
