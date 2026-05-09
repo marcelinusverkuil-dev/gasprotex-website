@@ -32,15 +32,37 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': 'LocalBusiness',
+  '@id': 'https://gasprotex.nl/#business',
   name: 'GasProtex',
   url: 'https://gasprotex.nl',
-  image: 'https://gasprotex.nl/images/hero-bg.jpg',
+  image: 'https://gasprotex.nl/images/gasprotex-logo.png',
   description: 'Specialist in akoestische gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Quickscan vanaf een dagdeel.',
   telephone: '+31613055282',
+  email: 'info@gasprotex.nl',
   priceRange: '€€',
-  areaServed: { '@type': 'Country', name: 'Nederland' },
-  serviceType: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Ultrasone lekdetectie'],
+  address: { '@type': 'PostalAddress', addressCountry: 'NL' },
+  areaServed: [{ '@type': 'Country', name: 'Nederland' }],
+  serviceType: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie'],
+  knowsAbout: [
+    'Akoestische lekdetectie',
+    'Ultrasone gaslekdetectie',
+    'ATEX-gecertificeerde inspectie',
+    'Compressed air leak detection',
+    'Industrial gas detection',
+  ],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'ATEX-certificering',
+      name: 'ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof)',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'VCA-certificering',
+      name: 'VCA-vol',
+    },
+  ],
 }
 
 export default function HomePage() {

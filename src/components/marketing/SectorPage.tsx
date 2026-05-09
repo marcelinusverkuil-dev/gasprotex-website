@@ -1,9 +1,25 @@
 import Link from 'next/link'
+import Script from 'next/script'
 import type { SectorData } from '@/lib/sectoren-data'
 
 export default function SectorPage({ data: d }: { data: SectorData }) {
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+      { '@type': 'ListItem', position: 2, name: 'Sectoren', item: 'https://gasprotex.nl/sectoren/' },
+      { '@type': 'ListItem', position: 3, name: d.title, item: `https://gasprotex.nl/sectoren/${d.slug}/` },
+    ],
+  }
+
   return (
     <>
+      <Script
+        id={`breadcrumb-${d.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Witte header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
