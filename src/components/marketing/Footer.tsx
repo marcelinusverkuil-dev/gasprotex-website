@@ -11,7 +11,6 @@ const nav = {
   ],
   Bedrijf: [
     { label: 'Over GasProtex', href: '/over-ons/' },
-    { label: 'Cases', href: '/cases/' },
     { label: 'Contact', href: '/contact/' },
     { label: 'Klantportaal', href: 'https://portaal.gasprotex.nl/login' },
   ],
@@ -33,7 +32,7 @@ export default function Footer() {
 
             {/* Certifications */}
             <div className="flex flex-wrap gap-3 mt-6">
-              {['ATEX Gecertificeerd', 'ISO 50001', 'HSE Compliant'].map((cert) => (
+              {['ATEX Gecertificeerd'].map((cert) => (
                 <span
                   key={cert}
                   className="inline-block text-[#7AADCC] uppercase tracking-widest"
@@ -73,7 +72,7 @@ export default function Footer() {
       <div style={{ marginTop: 32 }}>
         <div className="container-main section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>
-            © {new Date().getFullYear()} GasProtex — Alle rechten voorbehouden.
+            © {new Date().getFullYear()} GasProtex. Alle rechten voorbehouden.
           </p>
           <div className="flex items-center gap-10">
             <Link href="/privacy/" className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
