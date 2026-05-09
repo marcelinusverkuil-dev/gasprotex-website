@@ -28,16 +28,26 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Kennisbank GasProtex',
-  url: 'https://gasprotex.nl/kennisbank/',
-  description:
-    'Praktische artikelen over gaslekdetectie, ATEX-zones, persluchtkosten en ISO 11011.',
-  publisher: {
-    '@type': 'Organization',
-    name: 'GasProtex',
-    url: 'https://gasprotex.nl',
-  },
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      name: 'Kennisbank GasProtex',
+      url: 'https://gasprotex.nl/kennisbank/',
+      description: 'Praktische artikelen over gaslekdetectie, ATEX-zones, persluchtkosten en ISO 11011.',
+      publisher: {
+        '@type': 'Organization',
+        name: 'GasProtex',
+        url: 'https://gasprotex.nl',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+        { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank/' },
+      ],
+    },
+  ],
 }
 
 export default function KennisbankPage() {

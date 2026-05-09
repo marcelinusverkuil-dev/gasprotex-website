@@ -42,6 +42,13 @@ const jsonLd = {
       url: 'https://gasprotex.nl',
       founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
     },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
+        { '@type': 'ListItem', position: 2, name: 'Over ons', item: 'https://gasprotex.nl/over-ons/' },
+      ],
+    },
   ],
 }
 

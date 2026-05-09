@@ -45,7 +45,7 @@ export default function RootLayout({
               address: { '@type': 'PostalAddress', addressCountry: 'NL' },
               areaServed: { '@type': 'Country', name: 'Nederland' },
               founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
-              knowsAbout: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie', 'Ultrasone lekdetectie', 'ATEX', 'ISO 11011', 'BRZO'],
+              knowsAbout: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie', 'ATEX', 'ISO 11011', 'BRZO'],
               sameAs: [],
             }),
           }}
