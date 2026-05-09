@@ -33,7 +33,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
+              '@type': ['LocalBusiness', 'Organization'],
               '@id': 'https://gasprotex.nl/#organization',
               name: 'GasProtex',
               url: 'https://gasprotex.nl',
@@ -42,10 +42,24 @@ export default function RootLayout({
               description: 'Specialist in akoestische gas- en persluchtlekdetectie voor de Nederlandse industrie en voedingsmiddelensector.',
               telephone: '+31613055282',
               email: 'info@gasprotex.nl',
+              priceRange: '€€',
               address: { '@type': 'PostalAddress', addressCountry: 'NL' },
-              areaServed: { '@type': 'Country', name: 'Nederland' },
+              areaServed: [{ '@type': 'Country', name: 'Nederland' }],
               founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
               knowsAbout: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie', 'ATEX', 'ISO 11011', 'BRZO'],
+              serviceType: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie'],
+              hasCredential: [
+                {
+                  '@type': 'EducationalOccupationalCredential',
+                  credentialCategory: 'ATEX-certificering',
+                  name: 'ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof)',
+                },
+                {
+                  '@type': 'EducationalOccupationalCredential',
+                  credentialCategory: 'VCA-certificering',
+                  name: 'VCA-vol',
+                },
+              ],
               sameAs: [],
             }),
           }}
