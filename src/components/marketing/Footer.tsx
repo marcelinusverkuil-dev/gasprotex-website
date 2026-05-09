@@ -73,7 +73,7 @@ export default function Footer() {
       <div style={{ marginTop: 32 }}>
         <div className="container-main section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#7AADCC]" style={{ fontSize: 13 }}>
-            © {new Date().getFullYear()} GasProtex B.V. — Alle rechten voorbehouden.
+            © {new Date().getFullYear()} GasProtex — Alle rechten voorbehouden.
           </p>
           <div className="flex items-center gap-10">
             <Link href="/privacy/" className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
