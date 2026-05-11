@@ -12,9 +12,6 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
-  env: {
-    PREVIEW_PASSWORD: process.env.PREVIEW_PASSWORD,
-  },
   images: {
     qualities: [75, 90],
   },
