@@ -146,7 +146,7 @@ export default function VoedingsmiddelensectorPage() {
 
             <div className="rounded-xl overflow-hidden" style={{ background: '#F4F7FA' }}>
               <Image
-                src="/images/sectoren/voedingsmiddelensector.jpg"
+                src="/images/sectoren/voedingsmiddelensector.png"
                 alt="Lekdetectie in de voedingsmiddelensector"
                 width={800}
                 height={600}

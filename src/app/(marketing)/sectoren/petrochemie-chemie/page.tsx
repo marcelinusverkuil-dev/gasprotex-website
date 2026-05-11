@@ -134,7 +134,7 @@ export default function PetrochemieChemiePage() {
 
             <div className="rounded-xl overflow-hidden" style={{ background: '#F4F7FA' }}>
               <Image
-                src="/images/sectoren/petrochemie-chemie.jpg"
+                src="/images/sectoren/petrochemie-chemie.png"
                 alt="Lekdetectie voor petrochemie en chemie"
                 width={800}
                 height={600}

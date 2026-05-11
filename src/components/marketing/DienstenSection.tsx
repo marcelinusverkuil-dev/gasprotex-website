@@ -7,8 +7,8 @@ const cards = [
     title: '20-30% van je perslucht gaat verloren door lekken.',
     body: 'Bij een installatie van 200 kW is dat €15.000-€25.000 per jaar. Wij vinden elk lek in een dagdeel.',
     href: '/diensten/',
-    image: '/images/home/perslucht-lekkages-4.jpg',
-    alt: 'Perslucht lekkages detectie',
+    image: '/images/home/perslucht.png',
+    alt: 'Perslucht leidingen en koppelingen',
     objectPosition: 'center center',
   },
   {
@@ -16,9 +16,9 @@ const cards = [
     title: 'Naast je vaste gasdetectie. Wij vinden wat sensoren missen.',
     body: 'ATEX-gecertificeerd (zone 2). CO₂, NH₃, N₂, H₂, methaan en meer.',
     href: '/diensten/',
-    image: '/images/home/gaslekdetectie-3.jpg',
-    alt: 'Akoestische gaslekdetectie',
-    objectPosition: 'center 20%',
+    image: '/images/home/gaslekdetectie.png',
+    alt: 'Technicus bij industriële gaslekdetectie-inspectie',
+    objectPosition: 'center center',
   },
 ]
 
