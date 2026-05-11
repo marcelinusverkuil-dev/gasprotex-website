@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof. Vraag een scan aan.',
   alternates: {
-    canonical: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
+    canonical: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
   },
   openGraph: {
     title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
@@ -199,7 +199,7 @@ export default function VoedingsmiddelensectorPage() {
             </p>
 
             <Link
-              href="/diensten/"
+              href="/diensten"
               className="inline-block text-[#F07830] hover:text-[#C4631E] font-semibold transition-colors mt-4"
               style={{ fontSize: 14 }}
             >
@@ -223,7 +223,7 @@ export default function VoedingsmiddelensectorPage() {
                 </h2>
               </div>
               <Link
-                href="/bereken-uw-besparing/perslucht/"
+                href="/bereken-uw-besparing/perslucht"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
                 style={{ padding: '14px 32px' }}
               >

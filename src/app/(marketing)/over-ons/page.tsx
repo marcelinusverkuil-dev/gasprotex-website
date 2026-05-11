@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Marcelinus Verkuil, 10+ jaar ervaring in industriële instrumentatie en lekdetectie. Specialist met focus op lekdetectie als dienst. ATEX-gecertificeerd.',
   alternates: {
-    canonical: 'https://gasprotex.nl/over-ons/',
+    canonical: 'https://gasprotex.nl/over-ons',
   },
   openGraph: {
     title: 'Over GasProtex — Specialist in lekdetectie | Marcelinus Verkuil',

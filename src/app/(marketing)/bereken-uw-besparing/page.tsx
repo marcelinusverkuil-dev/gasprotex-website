@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Bereken besparing perslucht en gaslekken | GasProtex',
   description: 'Bereken in 2 minuten wat persluchtlekken jouw bedrijf per jaar kosten. Op basis van compressorvermogen, druk en bedrijfstijd.',
   alternates: {
-    canonical: 'https://gasprotex.nl/bereken-uw-besparing/',
+    canonical: 'https://gasprotex.nl/bereken-uw-besparing',
   },
   openGraph: {
     title: 'Bereken jouw besparing op perslucht en gaslekken | GasProtex',
@@ -122,7 +122,7 @@ export default function BerekenUwBesparingPage() {
               </p>
             </div>
             <Link
-              href="/contact/"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
               style={{ padding: '14px 32px' }}
             >

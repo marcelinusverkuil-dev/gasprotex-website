@@ -19,7 +19,7 @@ export default function CalculatorSection() {
               Bereken in 2 minuten wat dat voor jouw bedrijf betekent.
             </p>
             <Link
-              href="/bereken-uw-besparing/perslucht/"
+              href="/bereken-uw-besparing/perslucht"
               className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
               style={{ padding: '14px 32px' }}
             >

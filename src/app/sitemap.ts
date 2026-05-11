@@ -7,67 +7,67 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/`,
+      url: `${baseUrl}`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/diensten/`,
+      url: `${baseUrl}/diensten`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/diensten/lekdetectie-abonnement/`,
+      url: `${baseUrl}/diensten/lekdetectie-abonnement`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/sectoren/voedingsmiddelensector/`,
+      url: `${baseUrl}/sectoren/voedingsmiddelensector`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/sectoren/petrochemie-chemie/`,
+      url: `${baseUrl}/sectoren/petrochemie-chemie`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/bereken-uw-besparing/`,
+      url: `${baseUrl}/bereken-uw-besparing`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/bereken-uw-besparing/perslucht/`,
+      url: `${baseUrl}/bereken-uw-besparing/perslucht`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kennisbank/`,
+      url: `${baseUrl}/kennisbank`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/over-ons/`,
+      url: `${baseUrl}/over-ons`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/contact/`,
+      url: `${baseUrl}/contact`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/privacy/`,
+      url: `${baseUrl}/privacy`,
       lastModified: now,
       changeFrequency: 'yearly',
       priority: 0.2,
@@ -87,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const kennisbankRoutes: MetadataRoute.Sitemap = kennisbankSlugs.map((slug) => ({
-    url: `${baseUrl}/kennisbank/${slug}/`,
+    url: `${baseUrl}/kennisbank/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.7,

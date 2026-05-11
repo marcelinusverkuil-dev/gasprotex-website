@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacybeleid | GasProtex',
   description: 'Privacybeleid van GasProtex B.V., specialist in akoestische gas- en persluchtlekdetectie als dienst voor industrie en voedingsmiddelensector.',
   alternates: {
-    canonical: 'https://gasprotex.nl/privacy/',
+    canonical: 'https://gasprotex.nl/privacy',
   },
   openGraph: {
     title: 'Privacybeleid | GasProtex',

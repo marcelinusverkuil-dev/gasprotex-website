@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'Waarom schieten IR-sensoren, katalytische sensoren en OGI tekort bij waterstof? Overzicht van H₂-detectiemethoden en de rol van akoestische lekdetectie.',
   alternates: {
-    canonical: 'https://gasprotex.nl/kennisbank/waterstoflekdetectie/',
+    canonical: 'https://gasprotex.nl/kennisbank/waterstoflekdetectie',
   },
   openGraph: {
     title: 'Waterstoflekdetectie: waarom traditionele methoden tekortschieten',
@@ -386,7 +386,7 @@ export default function WaterstoflekdetectiePage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische scan (ultrasoon) geeft je in een dagdeel een indicatief beeld. Lees meer over onze{' '}
-                  <Link href="/diensten/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/diensten" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     aanpak
                   </Link>.
                 </p>
@@ -397,7 +397,7 @@ export default function WaterstoflekdetectiePage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Lees ons overzicht:{' '}
-                  <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     Welke gassen kun je met akoestische lekdetectie opsporen?
                   </Link>
                 </p>
@@ -408,7 +408,7 @@ export default function WaterstoflekdetectiePage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Plan een{' '}
-                  <Link href="/contact/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/contact" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     kennismakingsgesprek
                   </Link>.
                 </p>
@@ -431,14 +431,14 @@ export default function WaterstoflekdetectiePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href="/contact/"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >
                   Vraag een Quickscan aan →
                 </a>
                 <Link
-                  href="/contact/"
+                  href="/contact"
                   className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
                   style={{ fontSize: 15, paddingTop: '14px' }}
                 >
@@ -451,7 +451,7 @@ export default function WaterstoflekdetectiePage() {
             <div style={{ marginTop: '64px' }}>
               <h2 className="text-[#0A2238] font-bold text-xl mb-6">Gerelateerde artikelen</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="block">
+                <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Gaslekdetectie</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
@@ -460,7 +460,7 @@ export default function WaterstoflekdetectiePage() {
                     <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
-                <Link href="/kennisbank/lekdetectie-normen-industriele-gassen/" className="block">
+                <Link href="/kennisbank/lekdetectie-normen-industriele-gassen" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Gaslekdetectie</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">

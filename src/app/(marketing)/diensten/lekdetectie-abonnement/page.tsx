@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Quickscan, audit en jaarlijkse herhaling. Klantportaal met status per lek, QR-code op locatie. Voor industrie en voedingsmiddelensector.',
   alternates: {
-    canonical: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/',
+    canonical: 'https://gasprotex.nl/diensten/lekdetectie-abonnement',
   },
   openGraph: {
     title: 'Lekdetectie-abonnement: Quickscan, audit en jaarlijkse opvolging | GasProtex',
@@ -249,7 +249,7 @@ export default function AbonnementPage() {
                 </h2>
               </div>
               <a
-                href="/contact/"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Praktische artikelen over lekdetectie, ATEX-zones, ISO 11011 en energiebesparing. Voor HSE-managers, plant managers en onderhoudsteams.',
   alternates: {
-    canonical: 'https://gasprotex.nl/kennisbank/',
+    canonical: 'https://gasprotex.nl/kennisbank',
   },
   openGraph: {
     title: 'Kennisbank lekdetectie, ATEX en perslucht | GasProtex',
@@ -93,7 +93,7 @@ export default function KennisbankPage() {
                 </h2>
               </div>
               <a
-                href="/contact/"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

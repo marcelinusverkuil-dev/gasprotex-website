@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Ultrasone lekdetectie zonder productiestilstand. Wij vinden elk lek, leveren een rapport met euro-impact per lek. ATEX-gecertificeerd, VCA-vol.',
   alternates: {
-    canonical: 'https://gasprotex.nl/diensten/',
+    canonical: 'https://gasprotex.nl/diensten',
   },
   openGraph: {
     title: 'Gas- en persluchtlekdetectie als dienst | GasProtex',
@@ -163,7 +163,7 @@ export default function DienstenPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="/contact/"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
@@ -173,7 +173,7 @@ export default function DienstenPage() {
                   <ArrowRight />
                 </a>
                 <a
-                  href="/contact/"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors"
@@ -224,7 +224,7 @@ export default function DienstenPage() {
                 controle.
               </p>
               <Link
-                href="/bereken-uw-besparing/perslucht/"
+                href="/bereken-uw-besparing/perslucht"
                 className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
                 style={{ fontSize: 14 }}
               >
@@ -252,7 +252,7 @@ export default function DienstenPage() {
                 druk. ATEX-gecertificeerd voor zone&nbsp;2.
               </p>
               <Link
-                href="/kennisbank/atex-zones-uitgelegd/"
+                href="/kennisbank/atex-zones-uitgelegd"
                 className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
                 style={{ fontSize: 14 }}
               >
@@ -353,7 +353,7 @@ export default function DienstenPage() {
               </h2>
             </div>
             <a
-              href="/contact/"
+              href="/contact"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md flex-shrink-0"

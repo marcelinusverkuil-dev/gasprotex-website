@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Vergelijking van vijf veelgebruikte methoden om gas- en persluchtlekken op te sporen. Per methode: sterke en zwakke kanten en toepassingsgebied.',
   alternates: {
-    canonical: 'https://gasprotex.nl/kennisbank/lekdetectie-methoden-vergeleken/',
+    canonical: 'https://gasprotex.nl/kennisbank/lekdetectie-methoden-vergeleken',
   },
   openGraph: {
     title: 'Lekdetectie methoden vergeleken: welke past bij jouw situatie? | GasProtex',
@@ -198,7 +198,7 @@ export default function LekdetectieMethodenPage() {
                 {m.naam === 'Vaste gasdetectie (stationair)' && (
                   <p className="mt-3 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                     Lees ook:{' '}
-                    <Link href="/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                    <Link href="/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                       Akoestische lekdetectie naast je vaste gasdetectie
                     </Link>
                   </p>
@@ -245,7 +245,7 @@ export default function LekdetectieMethodenPage() {
               </div>
               <p className="mt-3 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                 Lees ook:{' '}
-                <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                   Welke gassen kun je met akoestische lekdetectie opsporen?
                 </Link>
               </p>
@@ -334,17 +334,17 @@ export default function LekdetectieMethodenPage() {
                 <p className="text-[#3D5A6E] leading-relaxed mb-2" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische scan geeft je in een dagdeel een indicatief beeld. Wil je eerst een
                   indicatie van de kosten? Gebruik onze{' '}
-                  <Link href="/bereken-uw-besparing/perslucht/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/bereken-uw-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     persluchtcalculator
                   </Link>.
                 </p>
                 <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Lees ook:{' '}
-                  <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/kennisbank/wat-kost-een-persluchtlek" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     Wat kost een persluchtlek?
                   </Link>
                   {' '}·{' '}
-                  <Link href="/kennisbank/waar-zitten-persluchtlekken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/kennisbank/waar-zitten-persluchtlekken" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     Waar zitten persluchtlekken meestal?
                   </Link>
                 </p>
@@ -356,7 +356,7 @@ export default function LekdetectieMethodenPage() {
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische inspectie vult de gaten. Werkt naast je bestaande systeem, niet als
                   vervanging. Lees meer over onze{' '}
-                  <Link href="/diensten/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/diensten" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     aanpak
                   </Link>.
                 </p>
@@ -367,7 +367,7 @@ export default function LekdetectieMethodenPage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   We denken graag met je mee. Plan een{' '}
-                  <Link href="/contact/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/contact" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     kennismakingsgesprek
                   </Link>.
                 </p>
@@ -393,14 +393,14 @@ export default function LekdetectieMethodenPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href="/contact/"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >
                   Vraag een Quickscan aan →
                 </a>
                 <Link
-                  href="/contact/"
+                  href="/contact"
                   className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
                   style={{ fontSize: 15, paddingTop: '14px' }}
                 >
@@ -413,7 +413,7 @@ export default function LekdetectieMethodenPage() {
             <div style={{ marginTop: '64px' }}>
               <h2 className="text-[#0A2238] font-bold text-xl mb-6">Gerelateerde artikelen</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link href="/kennisbank/atex-zones-uitgelegd/" className="block">
+                <Link href="/kennisbank/atex-zones-uitgelegd" className="block">
                   <div
                     className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6"
                     style={{ background: '#ffffff' }}
@@ -425,7 +425,7 @@ export default function LekdetectieMethodenPage() {
                     <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
-                <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="block">
+                <Link href="/kennisbank/wat-kost-een-persluchtlek" className="block">
                   <div
                     className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6"
                     style={{ background: '#ffffff' }}

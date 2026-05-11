@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Vaste gasdetectie heeft blinde vlekken. Waar ze zitten en hoe akoestische lekdetectie ze aanvult, niet als vervanging maar als aanvulling.',
   alternates: {
-    canonical: 'https://gasprotex.nl/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie/',
+    canonical: 'https://gasprotex.nl/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie',
   },
   openGraph: {
     title: 'Akoestische lekdetectie naast je vaste gasdetectie: waar zit de aanvulling? | GasProtex',
@@ -202,7 +202,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             </p>
             <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Lees ook:{' '}
-              <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/lekdetectie-methoden-vergeleken" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Lekdetectie methoden vergeleken
               </Link>
             </p>
@@ -236,7 +236,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             </p>
             <p className="mt-1 mb-4 text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Lees ook:{' '}
-              <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/welke-gassen-akoestische-lekdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Welke gassen kun je met akoestische lekdetectie opsporen?
               </Link>
             </p>
@@ -255,7 +255,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               detectie is gastype-onafhankelijk, niet afhankelijk van temperatuurverschillen en werkt
               op basis van het geluid van de lekbron zelf in plaats van de gaswolk. Bij waterstof is dat
               verschil bijzonder groot: infraroodcamera&apos;s zijn volledig blind voor H₂. Meer daarover in{' '}
-              <Link href="/kennisbank/waterstoflekdetectie/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/waterstoflekdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Waterstoflekdetectie: waarom traditionele methoden tekortschieten
               </Link>.
             </p>
@@ -315,11 +315,11 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             </p>
             <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Lees ook:{' '}
-              <Link href="/kennisbank/atex-zones-uitgelegd/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/atex-zones-uitgelegd" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
               </Link>
               {' '}·{' '}
-              <Link href="/kennisbank/lekdetectie-normen-industriele-gassen/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/lekdetectie-normen-industriele-gassen" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Lekdetectie-normen voor industriële gassen
               </Link>
             </p>
@@ -376,7 +376,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             </p>
             <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Lees ook:{' '}
-              <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/wat-kost-een-persluchtlek" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 Wat kost een persluchtlek?
               </Link>
             </p>
@@ -392,7 +392,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische scan geeft je in een dagdeel een indicatief beeld. Lees meer over onze{' '}
-                  <Link href="/diensten/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">aanpak</Link>.
+                  <Link href="/diensten" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">aanpak</Link>.
                 </p>
               </div>
               <div>
@@ -401,7 +401,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Gebruik onze{' '}
-                  <Link href="/bereken-uw-besparing/perslucht/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">calculator</Link>.
+                  <Link href="/bereken-uw-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">calculator</Link>.
                 </p>
               </div>
               <div>
@@ -410,7 +410,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Plan een{' '}
-                  <Link href="/contact/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">kennismakingsgesprek</Link>.
+                  <Link href="/contact" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">kennismakingsgesprek</Link>.
                 </p>
               </div>
             </div>
@@ -431,14 +431,14 @@ export default function AkoestischNaastVasteGasdetectiePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href="/contact/"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >
                   Vraag een Quickscan aan →
                 </a>
                 <Link
-                  href="/contact/"
+                  href="/contact"
                   className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
                   style={{ fontSize: 15, paddingTop: '14px' }}
                 >
@@ -451,7 +451,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
             <div style={{ marginTop: '64px' }}>
               <h2 className="text-[#0A2238] font-bold text-xl mb-6">Gerelateerde artikelen</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="block">
+                <Link href="/kennisbank/lekdetectie-methoden-vergeleken" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Gaslekdetectie</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
@@ -460,7 +460,7 @@ export default function AkoestischNaastVasteGasdetectiePage() {
                     <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
-                <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="block">
+                <Link href="/kennisbank/wat-kost-een-persluchtlek" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Perslucht</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">

@@ -2,16 +2,16 @@
 
 const nav = {
   Diensten: [
-    { label: 'Gas- en persluchtlekdetectie', href: '/diensten/' },
-    { label: 'Lekdetectie-abonnement', href: '/diensten/lekdetectie-abonnement/' },
+    { label: 'Gas- en persluchtlekdetectie', href: '/diensten' },
+    { label: 'Lekdetectie-abonnement', href: '/diensten/lekdetectie-abonnement' },
   ],
   Sectoren: [
-    { label: 'Voedingsmiddelensector', href: '/sectoren/voedingsmiddelensector/' },
-    { label: 'Petrochemie & Chemie', href: '/sectoren/petrochemie-chemie/' },
+    { label: 'Voedingsmiddelensector', href: '/sectoren/voedingsmiddelensector' },
+    { label: 'Petrochemie & Chemie', href: '/sectoren/petrochemie-chemie' },
   ],
   Bedrijf: [
-    { label: 'Over GasProtex', href: '/over-ons/' },
-    { label: 'Contact', href: '/contact/' },
+    { label: 'Over GasProtex', href: '/over-ons' },
+    { label: 'Contact', href: '/contact' },
     { label: 'Klantportaal', href: 'https://portaal.gasprotex.nl/login' },
   ],
 }
@@ -75,7 +75,7 @@ export default function Footer() {
             © {new Date().getFullYear()} GasProtex. Alle rechten voorbehouden.
           </p>
           <div className="flex items-center gap-10">
-            <Link href="/privacy/" className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
+            <Link href="/privacy" className="text-[#7AADCC] hover:text-[#7AADCC] transition-colors" style={{ fontSize: 13 }}>
               Privacybeleid
             </Link>
           </div>

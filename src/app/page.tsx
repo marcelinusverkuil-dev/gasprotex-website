@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     'Specialist in akoestische gas- en persluchtlekdetectie voor industrie en voedingsmiddelensector. ATEX-gecertificeerd. Quickscan vanaf een dagdeel.',
   alternates: {
-    canonical: 'https://gasprotex.nl/',
+    canonical: 'https://gasprotex.nl',
   },
   openGraph: {
     title: 'Gaslekdetectie en persluchtlekdetectie als dienst | GasProtex',

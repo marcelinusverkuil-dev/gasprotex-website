@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'Waar zitten de meeste persluchtlekken? Top 10 leklocaties van compressor tot pneumatische cilinder. Met praktische tips om lekken te voorkomen.',
   alternates: {
-    canonical: 'https://gasprotex.nl/kennisbank/waar-zitten-persluchtlekken/',
+    canonical: 'https://gasprotex.nl/kennisbank/waar-zitten-persluchtlekken',
   },
   openGraph: {
     title: 'Persluchtsysteem in kaart: waar lekken meestal zitten',
@@ -260,7 +260,7 @@ export default function WaarZittenPersluchtlekkenPage() {
             </p>
             <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Lees ook:{' '}
-              <Link href="/kennisbank/iso-11011-persluchtaudit/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+              <Link href="/kennisbank/iso-11011-persluchtaudit" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                 ISO 11011 en persluchtaudits
               </Link>
             </p>
@@ -277,7 +277,7 @@ export default function WaarZittenPersluchtlekkenPage() {
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische scan (ultrasoon) geeft je in een dagdeel een indicatief beeld van je volledige
                   persluchtsysteem. Lees meer over onze{' '}
-                  <Link href="/diensten/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/diensten" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     aanpak
                   </Link>.
                 </p>
@@ -288,11 +288,11 @@ export default function WaarZittenPersluchtlekkenPage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Gebruik onze{' '}
-                  <Link href="/bereken-uw-besparing/perslucht/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/bereken-uw-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     calculator
                   </Link>.{' '}
                   Of lees ons artikel:{' '}
-                  <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/kennisbank/wat-kost-een-persluchtlek" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     Wat kost een persluchtlek?
                   </Link>
                 </p>
@@ -303,7 +303,7 @@ export default function WaarZittenPersluchtlekkenPage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Plan een{' '}
-                  <Link href="/contact/" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/contact" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     kennismakingsgesprek
                   </Link>.
                 </p>
@@ -326,14 +326,14 @@ export default function WaarZittenPersluchtlekkenPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
-                  href="/contact/"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold transition-colors rounded-md"
                   style={{ padding: '14px 32px' }}
                 >
                   Vraag een Quickscan aan →
                 </a>
                 <Link
-                  href="/contact/"
+                  href="/contact"
                   className="text-white hover:text-[#C2DCE8] transition-colors font-medium underline underline-offset-4"
                   style={{ fontSize: 15, paddingTop: '14px' }}
                 >
@@ -346,7 +346,7 @@ export default function WaarZittenPersluchtlekkenPage() {
             <div style={{ marginTop: '64px' }}>
               <h2 className="text-[#0A2238] font-bold text-xl mb-6">Gerelateerde artikelen</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link href="/kennisbank/wat-kost-een-persluchtlek/" className="block">
+                <Link href="/kennisbank/wat-kost-een-persluchtlek" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Perslucht</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
@@ -355,7 +355,7 @@ export default function WaarZittenPersluchtlekkenPage() {
                     <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
-                <Link href="/kennisbank/lekdetectie-methoden-vergeleken/" className="block">
+                <Link href="/kennisbank/lekdetectie-methoden-vergeleken" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
                     <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Gaslekdetectie</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'ATEX-gecertificeerde lekdetectie voor BRZO-bedrijven, chemieclusters en tankterminals. Input voor BRZO-rapportage en F-gassenverordening.',
   alternates: {
-    canonical: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
+    canonical: 'https://gasprotex.nl/sectoren/petrochemie-chemie',
   },
   openGraph: {
     title: 'Lekdetectie voor petrochemie en chemie, ATEX zone 2 | GasProtex',
@@ -158,7 +158,7 @@ export default function PetrochemieChemiePage() {
                   voor tijdelijke mobiele apparatuur in ATEX-gezoneerde gebieden.
                 </p>
                 <Link
-                  href="/kennisbank/atex-zones-uitgelegd/"
+                  href="/kennisbank/atex-zones-uitgelegd"
                   className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
                   style={{ fontSize: 14 }}
                 >
@@ -219,7 +219,7 @@ export default function PetrochemieChemiePage() {
             </p>
 
             <Link
-              href="/diensten/"
+              href="/diensten"
               className="inline-block text-[#F07830] hover:text-[#C4631E] font-semibold transition-colors mt-4"
               style={{ fontSize: 14 }}
             >
@@ -246,7 +246,7 @@ export default function PetrochemieChemiePage() {
                 </p>
               </div>
               <a
-                href="/contact/"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

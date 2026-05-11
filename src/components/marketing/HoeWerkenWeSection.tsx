@@ -44,7 +44,7 @@ export default function HoeWerkenWeSection() {
           </div>
 
           <a
-            href="/diensten/lekdetectie-abonnement/"
+            href="/diensten/lekdetectie-abonnement"
             className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors mt-8"
             style={{ fontSize: 14 }}
           >

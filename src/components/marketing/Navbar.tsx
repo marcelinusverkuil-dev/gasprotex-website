@@ -5,13 +5,13 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const dienstenDropdown = [
-  { label: 'Gas- en persluchtlekdetectie', href: '/diensten/' },
-  { label: 'Lekdetectie-abonnement', href: '/diensten/lekdetectie-abonnement/' },
+  { label: 'Gas- en persluchtlekdetectie', href: '/diensten' },
+  { label: 'Lekdetectie-abonnement', href: '/diensten/lekdetectie-abonnement' },
 ]
 
 const sectorenDropdown = [
-  { label: 'Voedingsmiddelensector', href: '/sectoren/voedingsmiddelensector/' },
-  { label: 'Petrochemie & Chemie', href: '/sectoren/petrochemie-chemie/' },
+  { label: 'Voedingsmiddelensector', href: '/sectoren/voedingsmiddelensector' },
+  { label: 'Petrochemie & Chemie', href: '/sectoren/petrochemie-chemie' },
 ]
 
 const navLinks = [

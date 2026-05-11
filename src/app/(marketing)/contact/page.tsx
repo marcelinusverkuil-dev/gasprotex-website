@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Vraag een Quickscan aan of plan een vrijblijvend kennismakingsgesprek. Werkgebied heel Nederland. ATEX-gecertificeerd, VCA-vol.',
   alternates: {
-    canonical: 'https://gasprotex.nl/contact/',
+    canonical: 'https://gasprotex.nl/contact',
   },
   openGraph: {
     title: 'Contact | GasProtex',
@@ -135,7 +135,7 @@ export default function ContactPage() {
                 </h2>
               </div>
               <Link
-                href="/bereken-uw-besparing/perslucht/"
+                href="/bereken-uw-besparing/perslucht"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     follow: false,
   },
   alternates: {
-    canonical: 'https://gasprotex.nl/cases/',
+    canonical: 'https://gasprotex.nl/cases',
   },
   openGraph: {
     title: 'Cases | GasProtex',
@@ -136,7 +136,7 @@ export default function CasesPage() {
                 Benieuwd wat wij voor jou kunnen betekenen?
               </h2>
               <Link
-                href="/contact/"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
                 style={{ padding: '14px 32px' }}
               >
