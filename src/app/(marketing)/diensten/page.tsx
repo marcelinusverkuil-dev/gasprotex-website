@@ -189,10 +189,11 @@ export default function DienstenPage() {
               style={{ aspectRatio: '4/3' }}
             >
               <Image
-                src="/hero-image-v2.jpg"
-                alt="Operator met Crysound ultrasone camera in industriële setting"
+                src="/images/gasprotex-technicus.png"
+                alt="GasProtex technicus voert akoestische lekdetectie uit in industriële omgeving"
                 fill
                 className="object-cover"
+                style={{ objectPosition: 'center top' }}
                 priority
               />
             </div>

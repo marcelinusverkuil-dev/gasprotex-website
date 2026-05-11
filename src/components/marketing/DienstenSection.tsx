@@ -16,9 +16,9 @@ const cards = [
     title: 'Naast je vaste gasdetectie. Wij vinden wat sensoren missen.',
     body: 'ATEX-gecertificeerd (zone 2). CO₂, NH₃, N₂, H₂, methaan en meer.',
     href: '/diensten/',
-    image: '/images/home/gasprotex-technicus.png',
-    alt: 'GasProtex technicus voert akoestische gaslekdetectie uit',
-    objectPosition: 'center center',
+    image: '/images/home/gaslekdetectie-3.jpg',
+    alt: 'Akoestische gaslekdetectie',
+    objectPosition: 'center 20%',
   },
 ]
 
