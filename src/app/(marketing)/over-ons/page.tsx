@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Over GasProtex — Specialist in lekdetectie | Marcelinus Verkuil',
-    description: '10+ jaar ervaring in industriële instrumentatie en lekdetectie. Bij Hitma de apparatuur-kant, bij GasProtex de dienst-kant. ATEX-gecertificeerd.',
+    description: '10+ jaar ervaring in industriële instrumentatie en lekdetectie. Lekdetectie als dienst: geen apparatuur-verkoop, wel het resultaat. ATEX-gecertificeerd.',
     url: 'https://gasprotex.nl/over-ons/',
     type: 'website',
     locale: 'nl_NL',
@@ -140,19 +140,17 @@ export default function OverOnsPage() {
                   Marcelinus Verkuil
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  10+ jaar ervaring in industriële instrumentatie en lekdetectie.
-                  Bij Hitma zat ik vooral aan de apparatuur-kant: verkoop en
-                  implementatie van ultrasone camera's en gasdetectiesystemen.
-                </p>
-                <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  Wat ik daar zag: bedrijven kochten apparatuur, kregen een
-                  training, en moesten het daarna zelf uitzoeken. De meeste
-                  hadden daar geen capaciteit voor. De camera verdween in de kast.
+                  Ruim 10 jaar ervaring in de Nederlandse industrie, met focus op
+                  instrumentatie, meettechniek en industriële veiligheid. Ik werkte aan
+                  de leveranciers-kant en zag van dichtbij hoe bedrijven worstelden
+                  met dezelfde uitdaging: dure apparatuur aanschaffen, een training
+                  volgen, en er daarna zelf uit moeten komen. De meeste hadden daar
+                  de tijd niet voor. De apparatuur verdween in de kast.
                 </p>
                 <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  Bij GasProtex draai ik het om. Geen apparatuur verkopen,
-                  wel de dienst leveren. Ik kom langs, vind de lekken, lever
-                  het rapport, en zorg via het klantportaal dat er ook iets mee gebeurt.
+                  Bij GasProtex draai ik het om. Geen apparatuur verkopen, wel de
+                  dienst leveren. Ik kom langs, vind de lekken, lever het rapport,
+                  en zorg via het klantportaal dat er ook iets mee gebeurt.
                 </p>
               </div>
 
@@ -162,10 +160,10 @@ export default function OverOnsPage() {
                   Apparatuur kopen lost geen lekken op.
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  De markt zit vol apparatuur-verkopers. Hitma, Sorama,
-                  Atlas Copco, Festo: allemaal leveren ze goede camera's
-                  en detectiesystemen. Maar wie komt er daadwerkelijk langs
-                  om de lekken te vinden?
+                  De markt zit vol apparatuur-verkopers. Goede camera's, geavanceerde
+                  detectiesystemen, gespecialiseerde merken. Maar wie komt er daadwerkelijk
+                  langs om de lekken te vinden? Vrijwel niemand levert lekdetectie als
+                  pure dienstverlening.
                 </p>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een ultrasone camera met ATEX-kit kost €60-100k. Plus
