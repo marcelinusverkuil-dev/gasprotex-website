@@ -35,7 +35,7 @@ export default function HeroSection() {
             letterSpacing: '-0.02em',
           }}
         >
-          Gas- en persluchtlekken.
+          Gaslekdetectie en persluchtlekdetectie als dienst.
         </h1>
 
         <p className="animate-fade-up-1 text-[#C2DCE8] text-lg">
