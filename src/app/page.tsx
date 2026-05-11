@@ -4,6 +4,7 @@ import HeroSection from '@/components/marketing/HeroSection'
 import DienstenSection from '@/components/marketing/DienstenSection'
 import CalculatorSection from '@/components/marketing/CalculatorSection'
 import HoeWerkenWeSection from '@/components/marketing/HoeWerkenWeSection'
+import WaaromGasProtexSection from '@/components/marketing/WaaromGasProtexSection'
 import ContactCTASection from '@/components/marketing/ContactCTASection'
 import Footer from '@/components/marketing/Footer'
 
@@ -38,6 +39,7 @@ export default function HomePage() {
         <DienstenSection />
         <CalculatorSection />
         <HoeWerkenWeSection />
+        <WaaromGasProtexSection />
         <ContactCTASection />
       </main>
       <Footer />
