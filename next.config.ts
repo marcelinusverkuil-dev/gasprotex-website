@@ -12,8 +12,18 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  trailingSlash: false,
   images: {
     qualities: [75, 90],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path+/',
+        destination: '/:path+',
+        permanent: true,
+      },
+    ]
   },
   async headers() {
     return [
