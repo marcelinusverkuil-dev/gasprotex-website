@@ -62,8 +62,8 @@ const certificeringen = [
     tekst: 'Veiligheidscertificering voor werken op industriële locaties.',
   },
   {
-    titel: 'Crysound-gecertificeerd',
-    tekst: 'Getraind en gecertificeerd operator op de Crysound 8125 ultrasone camera.',
+    titel: 'Crysound Authorized Partner',
+    tekst: 'Officieel partner van Crysound voor Nederland. Getraind en gecertificeerd operator op de Crysound 8125 ultrasone camera.',
   },
 ]
 
@@ -194,7 +194,17 @@ export default function OverOnsPage() {
                   <div key={c.titel} className="flex items-start gap-4">
                     <div>
                       <p className="text-[#0A2238] font-semibold mb-1">{c.titel}</p>
-                      <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{c.tekst}</p>
+                      {c.titel === 'Crysound Authorized Partner' ? (
+                        <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
+                          Officieel partner van{' '}
+                          <a href="https://www.crysound.com" target="_blank" rel="noopener" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors">
+                            Crysound
+                          </a>{' '}
+                          voor Nederland. Getraind en gecertificeerd operator op de Crysound 8125 ultrasone camera.
+                        </p>
+                      ) : (
+                        <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{c.tekst}</p>
+                      )}
                     </div>
                   </div>
                 ))}

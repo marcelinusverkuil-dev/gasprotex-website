@@ -159,7 +159,7 @@ export default function DienstenPage() {
                 leveren een rapport met exacte locaties en euro-impact per lek.
               </p>
               <p className="text-[#6B8FA6] mb-8" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                ATEX-gecertificeerd. VCA-vol. Voor industrie en voedingsmiddelensector.
+                ATEX-gecertificeerd. VCA-vol. Officieel Crysound partner. Voor industrie en voedingsmiddelensector.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
