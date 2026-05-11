@@ -1,37 +1,37 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
+  title: 'Lekdetectie in de voedingsmiddelensector | GasProtex',
   description:
-    'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof. Vraag een scan aan.',
+    'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Bespaar op perslucht en garandeer voedselveiligheid. Vraag een quickscan aan.',
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
   },
   openGraph: {
-    title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
-    description: 'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak (NH3) en stikstof. ATEX-gecertificeerd.',
-    url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
+    title: 'Lekdetectie in de voedingsmiddelensector | GasProtex',
+    description: 'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Bespaar op perslucht en garandeer voedselveiligheid.',
+    url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
     type: 'website',
     locale: 'nl_NL',
     siteName: 'GasProtex',
   },
   twitter: {
     card: 'summary',
-    title: 'Lekdetectie voor de voedingsmiddelensector | GasProtex',
-    description: 'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof.',
+    title: 'Lekdetectie in de voedingsmiddelensector | GasProtex',
+    description: 'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Vraag een quickscan aan.',
   },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Lekdetectie voor de voedingsmiddelensector',
-  url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/',
-  description: 'Specialist in lekdetectie voor zuivel, vleesverwerking, brouwerijen en frisdrank. Perslucht, CO2, ammoniak en stikstof.',
+  name: 'Lekdetectie in de voedingsmiddelensector',
+  url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
+  description: 'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Bespaar op perslucht en garandeer voedselveiligheid.',
   provider: {
     '@type': 'Organization',
     name: 'GasProtex',
@@ -49,9 +49,9 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Sectoren', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 3, name: 'Voedingsmiddelensector', item: 'https://gasprotex.nl/sectoren/voedingsmiddelensector/' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl' },
+    { '@type': 'ListItem', position: 2, name: 'Sectoren', item: 'https://gasprotex.nl/sectoren' },
+    { '@type': 'ListItem', position: 3, name: 'Voedingsmiddelensector', item: 'https://gasprotex.nl/sectoren/voedingsmiddelensector' },
   ],
 }
 
@@ -120,7 +120,7 @@ export default function VoedingsmiddelensectorPage() {
                 className="font-bold text-[#0A2238] mb-4"
                 style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
-                Lekdetectie voor de voedingsmiddelensector.
+                Lekdetectie in de voedingsmiddelensector
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed">
                 Perslucht, CO₂, ammoniak en stikstof: wij vinden de lekken
@@ -146,7 +146,7 @@ export default function VoedingsmiddelensectorPage() {
         </div>
       </section>
 
-      {/* Sectie 2 — Welke lekken vinden we */}
+      {/* Sectie 2 — Uitdaging */}
       <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
@@ -154,7 +154,7 @@ export default function VoedingsmiddelensectorPage() {
             style={{ background: '#ffffff', padding: '24px' }}
           >
             <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
-              Welke lekken vinden we in de voedingsmiddelensector?
+              Persluchtkosten en hygiëne-eisen in de food-industrie
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -171,7 +171,7 @@ export default function VoedingsmiddelensectorPage() {
         </div>
       </section>
 
-      {/* Sectie 3 — Concrete voorbeelden */}
+      {/* Sectie 3 — Hoe het werkt */}
       <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main">
           <div
@@ -179,7 +179,7 @@ export default function VoedingsmiddelensectorPage() {
             style={{ background: '#ffffff', padding: '24px' }}
           >
             <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
-              Wat we tegenkomen in de praktijk
+              Lekdetectie tijdens productie, conform HACCP
             </h2>
 
             <div>
@@ -209,8 +209,54 @@ export default function VoedingsmiddelensectorPage() {
         </div>
       </section>
 
-      {/* Sectie 4 — CTA */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+      {/* Sectie 4 — Volgende stappen */}
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
+        <div className="container-main">
+          <div
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+            style={{ background: '#ffffff', padding: '24px' }}
+          >
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-6" style={{ lineHeight: 1.2 }}>
+              Voor zuivel, brouwerij, vlees en aardappelverwerking
+            </h2>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/bereken-uw-besparing/perslucht"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Bereken uw persluchtverlies →
+                </Link>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/contact"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Vraag een quickscan voor uw productielocatie →
+                </Link>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/kennisbank/wat-kost-een-persluchtlek"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Lees: wat kost een persluchtlek per jaar →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie 5 — CTA */}
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '32px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
@@ -219,7 +265,7 @@ export default function VoedingsmiddelensectorPage() {
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
               <div>
                 <h2 className="text-[#0A2238] font-bold text-2xl">
-                  Bereken wat persluchtlekken jouw bedrijf kosten.
+                  Akoestische lekdetectie zonder productiestop of besmetting
                 </h2>
               </div>
               <Link

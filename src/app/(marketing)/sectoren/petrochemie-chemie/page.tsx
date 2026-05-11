@@ -5,15 +5,15 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie petrochemie en chemie, ATEX zone 2 | GasProtex',
+  title: 'Gaslekdetectie in petrochemie en chemie | GasProtex',
   description:
-    'ATEX-gecertificeerde lekdetectie voor BRZO-bedrijven, chemieclusters en tankterminals. Input voor BRZO-rapportage en F-gassenverordening.',
+    'ATEX-gecertificeerde akoestische gaslekdetectie voor raffinage, chemie en industriële gasproductie. Inspectie in Zone 1 en Zone 2 zonder procesonderbreking.',
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/petrochemie-chemie',
   },
   openGraph: {
-    title: 'Lekdetectie voor petrochemie en chemie, ATEX zone 2 | GasProtex',
-    description: 'ATEX-gecertificeerde lekdetectie voor BRZO-bedrijven, chemieclusters en tankterminals. Levert input voor BRZO-rapportage, F-gassenverordening en ESG.',
+    title: 'Gaslekdetectie in petrochemie en chemie | GasProtex',
+    description: 'ATEX-gecertificeerde akoestische gaslekdetectie voor raffinage, chemie en industriële gasproductie. Inspectie in Zone 1 en Zone 2 zonder procesonderbreking.',
     url: 'https://gasprotex.nl/sectoren/petrochemie-chemie/',
     type: 'website',
     locale: 'nl_NL',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'ATEX-gecertificeerde lekdetectie voor petrochemie en chemie | GasProtex',
-    description: 'Voor BRZO-bedrijven, chemieclusters en tankterminals. Input voor BRZO, F-gassenverordening en ESG-rapportage.',
+    title: 'Gaslekdetectie in petrochemie en chemie | GasProtex',
+    description: 'ATEX-gecertificeerde akoestische gaslekdetectie voor raffinage, chemie en industriële gasproductie. Inspectie in Zone 1 en Zone 2 zonder procesonderbreking.',
   },
 }
 
@@ -108,7 +108,7 @@ export default function PetrochemieChemiePage() {
                 className="font-bold text-[#0A2238] mb-4"
                 style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
               >
-                Lekdetectie voor petrochemie en chemie.
+                Gaslekdetectie in petrochemie en chemie
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed">
                 ATEX-gecertificeerd voor zone 2 en zone 22. Voor BRZO-bedrijven,
@@ -148,7 +148,7 @@ export default function PetrochemieChemiePage() {
                   ATEX zone 2 gecertificeerd
                 </p>
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
-                  Meten waar het ertoe doet.
+                  Veiligheidsrisico's en methaanemissies in ATEX-zones
                 </h2>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof): 's werelds eerste TÜV-gecertificeerde intrinsiek veilige akoestische camera. Geschikt voor de meeste industriële productieomgevingen in de chemie.
@@ -171,7 +171,7 @@ export default function PetrochemieChemiePage() {
                   Welke gassen
                 </p>
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
-                  Elk gas onder druk is meetbaar.
+                  ATEX-gecertificeerde akoestische lekdetectie zonder procesonderbreking
                 </h2>
                 <div className="space-y-3">
                   {gassen.map((gas) => (
@@ -198,7 +198,7 @@ export default function PetrochemieChemiePage() {
             style={{ background: '#ffffff', padding: '24px' }}
           >
             <h2 className="text-[#0A2238] font-bold text-2xl mb-8" style={{ lineHeight: 1.2 }}>
-              Hoe onze scan jouw compliance ondersteunt
+              Inspectie in Zone 1 en Zone 2 met akoestische lekdetectie (ultrasoon)
             </h2>
 
             <div className="space-y-6">
@@ -229,8 +229,81 @@ export default function PetrochemieChemiePage() {
         </div>
       </section>
 
-      {/* Sectie 4 — CTA */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+      {/* Sectie 4 — Voor wie */}
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
+        <div className="container-main">
+          <div
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+            style={{ background: '#ffffff', padding: '24px' }}
+          >
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
+              Voor wie wij werken
+            </h2>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Wij voeren inspecties uit bij raffinaderijen, chemiebedrijven, tankopslagbedrijven, industriële gasproducenten en waterstofproductielocaties.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie 5 — Volgende stappen */}
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
+        <div className="container-main">
+          <div
+            className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
+            style={{ background: '#ffffff', padding: '24px' }}
+          >
+            <h2 className="text-[#0A2238] font-bold text-2xl mb-6" style={{ lineHeight: 1.2 }}>
+              Volgende stappen
+            </h2>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/bereken-uw-besparing/waterstof"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Bereken de kosten van waterstoflekken →
+                </Link>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/contact"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Vraag een ATEX-quickscan aan →
+                </Link>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/kennisbank/atex-zones-uitgelegd"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Lees: ATEX-zones uitgelegd →
+                </Link>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
+                <Link
+                  href="/kennisbank/akoestische-lekdetectie-naast-vaste-gasdetectie"
+                  className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
+                  style={{ fontSize: 15 }}
+                >
+                  Lees: akoestische lekdetectie naast vaste gasdetectie →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie 6 — CTA */}
+      <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '32px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
