@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-const categorieen = ['Alles', 'Perslucht', 'Gaslekdetectie', 'ATEX & Compliance', 'Sector']
+const categorieen = ['Alles', 'Perslucht', 'Gaslekdetectie', 'ATEX & Compliance']
 
 const artikelen = [
   {

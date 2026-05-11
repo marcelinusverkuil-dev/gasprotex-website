@@ -102,8 +102,8 @@ export default function PetrochemieChemiePage() {
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main">
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+            <div className="relative">
               <h1
                 className="font-bold text-[#0A2238] mb-4"
                 style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
@@ -114,17 +114,31 @@ export default function PetrochemieChemiePage() {
                 ATEX-gecertificeerd voor zone 2 en zone 22. Voor BRZO-bedrijven,
                 chemieclusters en tankterminals in heel Nederland.
               </p>
+              <div className="flex flex-col sm:flex-row items-start gap-4 pt-8 lg:absolute lg:bottom-0 lg:left-0">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Vraag een ATEX-quickscan aan →
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Of plan een kennismakingsgesprek →
+                </a>
+              </div>
             </div>
 
-            <div
-              className="relative rounded-xl overflow-hidden"
-              style={{ aspectRatio: '4/3', background: '#F4F7FA' }}
-            >
+            <div className="rounded-xl overflow-hidden" style={{ background: '#F4F7FA' }}>
               <Image
                 src="/images/sectoren/petrochemie-chemie.jpg"
                 alt="Lekdetectie voor petrochemie en chemie"
-                fill
-                className="object-cover"
+                width={800}
+                height={600}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
