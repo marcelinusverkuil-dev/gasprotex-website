@@ -30,18 +30,6 @@ export default function Footer() {
               Sneller, veiliger, zonder productiestilstand.
             </p>
 
-            {/* Certifications */}
-            <div className="flex flex-wrap gap-3 mt-6">
-              {['ATEX Gecertificeerd'].map((cert) => (
-                <span
-                  key={cert}
-                  className="inline-block text-[#7AADCC] uppercase tracking-widest"
-                  style={{ fontSize: 10, letterSpacing: '1.5px' }}
-                >
-                  {cert}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* Nav columns */}
