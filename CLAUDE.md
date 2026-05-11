@@ -210,3 +210,28 @@ Alle secties gebruiken een consistent containerpatroon:
 
 ## Ontwerpregels
 Zie `design.md` voor het volledige design system. Geen eyebrow-labels boven H1 paginakoppen.
+
+## Kennisbank-artikelen — template
+
+**Template-bestand:** gebruik `src/app/(marketing)/kennisbank/waterstoflekdetectie/page.tsx` of `kruisgevoeligheid-vaste-gasdetectie/page.tsx` als startpunt voor nieuwe artikelen.
+
+**Vaste structuur per artikel:**
+1. Metadata + canonical (zonder trailing slash)
+2. JSON-LD: `Article` + `BreadcrumbList` via `<Script>`
+3. Hero-blok (max-width 720px): eyebrow-label (categorie, oranje), H1, datum + leestijd, intro (cursief)
+4. Artikel-body (max-width 720px, marginTop 48px): H2's, H3's, alinea's, eventueel tabel
+5. "Wat past bij jouw situatie?" — H2 met 2-3 genummerde situaties + interne links
+6. Footer-tekst (cursief, `#6B8FA6`): standaard GasProtex-signoff
+7. CTA-blok (navy `#0A2238`, padding 48px): "Wil je weten waar jouw lekken zitten?" + oranje knop + witte link
+8. Gerelateerde artikelen: 2 kaarten in grid
+
+**Tabel-styling:**
+- `overflowX: 'auto'` wrapper + `minWidth: '620px'` voor mobiel scrollen
+- Header: `background: '#0A2238'`, witte tekst, `fontSize: 13`
+- Eerste kolom: `fontWeight: 'semibold'`
+- Geaccentueerde rij (akoestisch): `background: '#EBF4FA'`, alles bold
+
+**Na aanmaken:**
+- Slug toevoegen aan `kennisbankSlugs` in `src/app/sitemap.ts`
+- Entry toevoegen aan `artikelen` array in `src/components/marketing/KennisbankFilter.tsx`
+- Cross-links vanuit gerelateerde artikelen toevoegen
