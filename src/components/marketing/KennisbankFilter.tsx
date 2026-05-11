@@ -69,6 +69,13 @@ const artikelen = [
     preview:
       'IR-sensoren zijn blind voor H₂. Katalytische sensoren hebben beperkingen. OGI werkt niet. Overzicht van detectiemethoden voor waterstof en de rol van akoestische lekdetectie.',
   },
+  {
+    slug: 'kruisgevoeligheid-vaste-gasdetectie',
+    categorie: 'Gaslekdetectie',
+    titel: 'Kruisgevoeligheid bij vaste gasdetectie: wat je mist en wat akoestische detectie wel ziet',
+    preview:
+      'Kruisgevoeligheid veroorzaakt valse alarmen en gemiste lekken bij vaste gasdetectoren. Hoe het werkt, welke combinaties voorkomen en waarom akoestische detectie dit omzeilt.',
+  },
 ]
 
 export default function KennisbankFilter() {

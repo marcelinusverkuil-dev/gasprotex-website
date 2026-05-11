@@ -214,11 +214,17 @@ export default function WaterstoflekdetectiePage() {
             <h3 className="text-[#0A2238] font-bold mt-8 mb-3" style={{ fontSize: 'clamp(18px, 2vw, 22px)', lineHeight: 1.3 }}>
               Elektrochemische sensoren: langzaam
             </h3>
-            <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
+            <p className="text-[#3D5A6E] leading-relaxed mb-2" style={{ fontSize: 15, lineHeight: 1.7 }}>
               Elektrochemische sensoren kunnen waterstof detecteren via een elektrochemische reactie.
               Ze zijn gevoelig bij lage concentraties (ppm-bereik), maar de responstijd is relatief lang
               en ze zijn gevoelig voor kruisgevoeligheid met andere gassen. De levensduur is beperkt
               (doorgaans 2–3 jaar) en ze vereisen regelmatige kalibratie.
+            </p>
+            <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/kruisgevoeligheid-vaste-gasdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Kruisgevoeligheid bij vaste gasdetectie
+              </Link>
             </p>
 
             <h3 className="text-[#0A2238] font-bold mt-8 mb-3" style={{ fontSize: 'clamp(18px, 2vw, 22px)', lineHeight: 1.3 }}>

@@ -206,6 +206,12 @@ export default function AkoestischNaastVasteGasdetectiePage() {
                 Lekdetectie methoden vergeleken
               </Link>
             </p>
+            <p className="text-[#3D5A6E] mt-2" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              Lees ook:{' '}
+              <Link href="/kennisbank/kruisgevoeligheid-vaste-gasdetectie" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                Kruisgevoeligheid bij vaste gasdetectie
+              </Link>
+            </p>
 
             <h2 className="text-[#0A2238] font-bold mt-12 mb-4" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.2 }}>
               Wat akoestische lekdetectie anders doet
