@@ -144,9 +144,6 @@ export default function PetrochemieChemiePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
               <div>
-                <p className="text-[#7AADCC] text-xs tracking-widest uppercase font-medium mb-4">
-                  ATEX zone 2 gecertificeerd
-                </p>
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-4" style={{ lineHeight: 1.2 }}>
                   Veiligheidsrisico's en methaanemissies in ATEX-zones
                 </h2>
