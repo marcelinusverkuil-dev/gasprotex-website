@@ -126,6 +126,22 @@ export default function VoedingsmiddelensectorPage() {
                 Perslucht, CO₂, ammoniak en stikstof: wij vinden de lekken
                 die je productie geld kosten of je installatie in gevaar brengen.
               </p>
+              <div className="flex flex-col sm:flex-row items-start gap-4 mt-8">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Vraag een Quickscan aan →
+                </a>
+                <a
+                  href="/bereken-uw-besparing/perslucht"
+                  className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Of bereken eerst je besparing →
+                </a>
+              </div>
             </div>
 
             <div

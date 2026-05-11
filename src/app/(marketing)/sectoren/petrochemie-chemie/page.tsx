@@ -114,6 +114,22 @@ export default function PetrochemieChemiePage() {
                 ATEX-gecertificeerd voor zone 2 en zone 22. Voor BRZO-bedrijven,
                 chemieclusters en tankterminals in heel Nederland.
               </p>
+              <div className="flex flex-col sm:flex-row items-start gap-4 mt-8">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Vraag een ATEX-quickscan aan →
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
+                  style={{ padding: '14px 32px' }}
+                >
+                  Of plan een kennismakingsgesprek →
+                </a>
+              </div>
             </div>
 
             <div
