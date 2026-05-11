@@ -41,7 +41,7 @@ export default function DienstenSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {cards.map((card) => (
               <div key={card.label}>
-                <div className="relative bg-[#F4F7FA] rounded-md overflow-hidden mb-6" style={{ aspectRatio: '4/3' }}>
+                <div className="relative bg-[#F4F7FA] rounded-md overflow-hidden mb-6" style={{ aspectRatio: '1264 / 758' }}>
                   <Image
                     src={card.image}
                     alt={card.alt}

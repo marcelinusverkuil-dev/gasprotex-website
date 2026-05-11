@@ -186,7 +186,7 @@ export default function DienstenPage() {
 
             <div
               className="relative rounded-xl overflow-hidden"
-              style={{ aspectRatio: '4/3' }}
+              style={{ aspectRatio: '1264 / 758' }}
             >
               <Image
                 src="/images/gasprotex-technicus.png"

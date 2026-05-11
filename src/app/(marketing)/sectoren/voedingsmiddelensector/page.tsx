@@ -144,13 +144,12 @@ export default function VoedingsmiddelensectorPage() {
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden" style={{ background: '#F4F7FA' }}>
+            <div className="relative rounded-xl overflow-hidden" style={{ aspectRatio: '1264 / 758', background: '#F4F7FA' }}>
               <Image
                 src="/images/sectoren/voedingsmiddelensector.png"
                 alt="Lekdetectie in de voedingsmiddelensector"
-                width={800}
-                height={600}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+                fill
+                className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
