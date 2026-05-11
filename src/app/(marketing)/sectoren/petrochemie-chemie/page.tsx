@@ -203,8 +203,8 @@ export default function PetrochemieChemiePage() {
 
             <div className="space-y-6">
               {compliance.map((item) => (
-                <div key={item.titel} className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
+                <div key={item.titel} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
                   <div>
                     <p className="text-[#0A2238] font-semibold mb-1">{item.titel}</p>
                     <p className="text-[#3D5A6E] text-sm leading-relaxed">{item.tekst}</p>
