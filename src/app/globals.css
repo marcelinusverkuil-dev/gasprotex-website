@@ -149,3 +149,35 @@ body {
   padding-left: var(--container-pad);
   padding-right: var(--container-pad);
 }
+
+/* ── CALCULATOR RANGE SLIDER ── */
+.gp-range {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(10,34,56,0.12);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.gp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #F07830;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.gp-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #F07830;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
