@@ -42,14 +42,14 @@ const faqItems = [
       'Afhankelijk van druk en debiet. Een lek van 1 mm kost al €500–€1.500 per jaar aan energie. Bij 20–30 lekken loopt dat snel op.',
   },
   {
-    question: 'Is gasdetectie met ultrasoon ATEX-gecertificeerd?',
-    answer:
-      'Ja. Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof). Dat dekt de meeste industriële productieomgevingen. Wij zijn VCA-vol gecertificeerd als operator.',
-  },
-  {
     question: 'Vervangt dit onze vaste gasdetectie?',
     answer:
       'Nee. Wij vullen aan waar vaste detectoren blinde vlekken hebben. Je bestaande systeem blijft gewoon draaien.',
+  },
+  {
+    question: 'Is gasdetectie met ultrasoon ATEX-gecertificeerd?',
+    answer:
+      'Ja. Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof). Dat dekt de meeste industriële productieomgevingen. Wij zijn VCA-vol gecertificeerd als operator.',
   },
   {
     question: 'Wat als jullie wegvallen?',
@@ -138,7 +138,7 @@ export default function DienstenPage() {
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
             <div>
               <h1
                 className="font-bold text-[#0A2238] mb-6"
@@ -154,11 +154,10 @@ export default function DienstenPage() {
                 Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera
                 lokaliseren we elk lek, tijdens normale productie, zonder stilstand.
               </p>
-              <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.75 }}>
-                Geen apparatuur kopen of eigen operator opleiden. Wij komen langs, scannen, en
-                leveren een rapport met exacte locaties en euro-impact per lek.
+              <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75, marginBottom: 15 }}>
+                Geen apparatuur kopen of eigen operator opleiden. Wij komen langs, scannen, en leveren een interactieve rapportage met exacte locaties en de impact in euro&apos;s per lek.
               </p>
-              <p className="text-[#6B8FA6] mb-8" style={{ fontSize: 15, lineHeight: 1.7 }}>
+              <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75, marginBottom: 15 }}>
                 ATEX-gecertificeerd. VCA-vol. Officieel Crysound partner. Voor industrie en voedingsmiddelensector.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -179,7 +178,7 @@ export default function DienstenPage() {
                   className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors"
                   style={{ padding: '14px 32px' }}
                 >
-                  Plan kennismakingsgesprek
+                  Maak een afspraak
                 </a>
               </div>
             </div>
@@ -269,8 +268,8 @@ export default function DienstenPage() {
       <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <h2
-            className="font-bold text-[#0A2238] mb-10"
-            style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+            className="font-bold text-[#0A2238]"
+            style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 10 }}
           >
             Wat krijg je?
           </h2>
@@ -304,12 +303,12 @@ export default function DienstenPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '24px' }}>
           <h2
-            className="font-bold text-[#0A2238] mb-10"
-            style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+            className="font-bold text-[#0A2238]"
+            style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 10 }}
           >
             Veelgestelde vragen
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-4">
             {faqItems.map((item) => (
               <div key={item.question}>
                 <h3

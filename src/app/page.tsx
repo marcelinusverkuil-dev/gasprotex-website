@@ -49,14 +49,11 @@ export default function HomePage() {
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,28,48,0.75) 0%, rgba(10,28,48,0.55) 60%, rgba(10,28,48,0.30) 100%)' }} />
           <div className="container-main relative z-10">
-            <h1 style={{ fontSize: 22, fontWeight: 500, color: 'rgba(255,255,255,0.85)', margin: '0 0 12px', letterSpacing: '-0.3px' }}>
-              Gaslekdetectie en persluchtlekdetectie als dienst.
-            </h1>
             <p style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 500, lineHeight: 1.12, margin: '0 0 20px', color: 'white', letterSpacing: '-0.8px', maxWidth: 720 }}>
-              Je weet dat er lekken zijn en wilt er grip op krijgen.
+              Je weet dat ze lekken zijn. Wij zorgen ervoor dat ze gevonden worden.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.55, color: 'rgba(255,255,255,0.78)', margin: '0 0 28px', maxWidth: 620 }}>
-              Specialist in gaslekdetectie en persluchtlekdetectie als bedrijf voor industrie en voedingsmiddelensector.
+              Specialist in gaslekdetectie en persluchtlekdetectie voor industrie en voedingsmiddelensector.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-6">
               <a
@@ -65,14 +62,16 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 style={{ background: '#F07830', color: 'white', textDecoration: 'none', padding: '13px 24px', fontSize: 14.5, fontWeight: 500, borderRadius: 6, display: 'inline-flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap', flexShrink: 0 }}
               >
-                Plan een inventarisatie →
+                Maak een afspraak →
               </a>
-              <Link
-                href="/bereken-uw-besparing/perslucht"
-                style={{ color: 'rgba(255,255,255,0.85)', fontSize: 13.5, textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.3)', paddingBottom: 1, display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap', alignSelf: 'center' }}
+              <a
+                href={BOOKINGS}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ background: 'transparent', color: 'white', textDecoration: 'none', padding: '13px 24px', fontSize: 14.5, fontWeight: 500, borderRadius: 6, border: '1px solid rgba(255,255,255,0.4)', display: 'inline-flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap', flexShrink: 0 }}
               >
-                Of bereken eerst je besparing →
-              </Link>
+                Maak een afspraak →
+              </a>
             </div>
           </div>
         </section>
@@ -111,7 +110,7 @@ export default function HomePage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5" style={{ maxWidth: 1080, margin: '0 auto' }}>
               {[
-                'Er komt een audit aan en je weet niet of je gaslekken in beeld hebt.',
+                'Er komt een audit aan en je weet niet of je alle gaslekken in beeld hebt.',
                 'Je perslucht kost meer dan vorig jaar, maar je weet niet door welke lekkages.',
                 'Je vaste gasdetectie geeft alarm. Maar waar zit het lek?',
               ].map((tekst) => (
@@ -292,7 +291,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 style={{ background: '#F07830', color: 'white', textDecoration: 'none', padding: '13px 24px', fontSize: 14.5, fontWeight: 500, borderRadius: 6, display: 'inline-flex', alignItems: 'center', gap: 8 }}
               >
-                Plan een inventarisatie →
+                Maak een afspraak →
               </a>
             </div>
           </div>
@@ -355,21 +354,21 @@ export default function HomePage() {
                 {
                   titel: 'Petrochemie en chemie',
                   tekst: 'Methaan, H₂, andere koolwaterstoffen. ATEX-omgevingen, vergunningseisen, strikte rapportageplichten.',
-                  gassen: 'CH₄ · H₂ · N₂ · Perslucht',
+                  gassen: 'Stikstof · Perslucht · CO₂ · NH3 · Methaan · Waterstof · Zuurstof · F-gassen',
                   href: '/sectoren/petrochemie-chemie',
                   src: '/images/sectoren/petrochemie-chemie.png',
                   alt: 'Lekdetectie in petrochemie en chemie',
                 },
               ].map((s) => (
-                <Link key={s.titel} href={s.href} style={{ textDecoration: 'none' }}>
-                  <div className="hover:shadow-md transition-shadow duration-200" style={{ background: 'white', borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(10,34,56,0.1)' }}>
-                    <div style={{ height: 120, position: 'relative', background: 'linear-gradient(135deg,#E8EEF3 0%,#D4DEE7 100%)' }}>
+                <Link key={s.titel} href={s.href} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                  <div className="hover:shadow-md transition-shadow duration-200" style={{ background: 'white', borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(10,34,56,0.1)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ height: 120, position: 'relative', background: 'linear-gradient(135deg,#E8EEF3 0%,#D4DEE7 100%)', flexShrink: 0 }}>
                       <Image src={s.src} alt={s.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
-                    <div style={{ padding: 24 }}>
+                    <div style={{ padding: 24, display: 'flex', flexDirection: 'column', flex: 1 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 500, color: '#0A2238', margin: '0 0 10px' }}>{s.titel}</h3>
                       <p style={{ fontSize: 14, color: 'rgba(10,34,56,0.6)', lineHeight: 1.55, margin: '0 0 16px' }}>{s.tekst}</p>
-                      <div style={{ paddingTop: 14, borderTop: '1px solid rgba(10,34,56,0.08)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
+                      <div style={{ paddingTop: 14, borderTop: '1px solid rgba(10,34,56,0.08)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, marginTop: 'auto' }}>
                         <span style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '0.5px', textTransform: 'uppercase', fontWeight: 600 }}>Veelvoorkomende gassen</span>
                         <span style={{ fontSize: 13, color: '#0A2238', fontWeight: 500 }}>{s.gassen}</span>
                       </div>
@@ -387,7 +386,7 @@ export default function HomePage() {
                 style={{ background: 'white', color: '#0A2238', border: '1px solid rgba(10,34,56,0.2)', padding: '12px 22px', fontSize: 14, fontWeight: 500, borderRadius: 6, display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}
                 className="hover:border-orange hover:text-orange transition-colors duration-200"
               >
-                Bel 06 13055282 →
+                Bel 06-13055282 →
               </a>
             </div>
           </div>
@@ -430,13 +429,13 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 style={{ fontSize: 15.5, fontWeight: 500, color: '#0A2238', margin: '0 0 6px' }}>Bel direct</h3>
-                <p style={{ fontSize: 12.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.5, margin: '0 0 12px', flex: 1 }}>Je krijgt direct iemand aan de lijn.</p>
+                <p style={{ fontSize: 12.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.5, margin: '0 0 12px' }}>Je krijgt direct iemand aan de lijn.</p>
                 <a
                   href="tel:+31613055282"
                   style={{ fontSize: 15, color: '#0A2238', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none' }}
                   className="hover:text-orange transition-colors"
                 >
-                  06 13055282
+                  06-13055282
                 </a>
               </div>
 
@@ -448,7 +447,7 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 style={{ fontSize: 15.5, fontWeight: 500, color: '#0A2238', margin: '0 0 6px' }}>WhatsApp</h3>
-                <p style={{ fontSize: 12.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.5, margin: '0 0 12px', flex: 1 }}>Werkt ook buiten kantooruren.</p>
+                <p style={{ fontSize: 12.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.5, margin: '0 0 12px' }}>Werkt ook buiten kantooruren.</p>
                 <a
                   href="https://wa.me/31613055282"
                   target="_blank"
@@ -456,7 +455,7 @@ export default function HomePage() {
                   style={{ fontSize: 15, color: '#0A2238', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none' }}
                   className="hover:text-orange transition-colors"
                 >
-                  06 13055282
+                  06-13055282
                 </a>
               </div>
 
@@ -480,14 +479,14 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 style={{ fontSize: 15.5, fontWeight: 500, color: '#0A2238', margin: '0 0 6px' }}>Plan zelf in</h3>
-                <p style={{ fontSize: 12.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.5, margin: '0 0 12px', flex: 1 }}>Kies een tijdslot dat je uitkomt.</p>
+                <p style={{ fontSize: 12.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.5, margin: '0 0 12px' }}>Kies een tijdslot dat je uitkomt.</p>
                 <a
                   href={BOOKINGS}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ background: '#0A2238', color: 'white', border: 'none', padding: '11px 16px', fontSize: 13.5, fontWeight: 500, borderRadius: 5, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, textDecoration: 'none', marginTop: 'auto' }}
+                  style={{ background: '#0A2238', color: 'white', border: 'none', padding: '11px 16px', fontSize: 13.5, fontWeight: 500, borderRadius: 5, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, textDecoration: 'none' }}
                 >
-                  Open agenda →
+                  Open de agenda →
                 </a>
               </div>
 

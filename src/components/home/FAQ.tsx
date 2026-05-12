@@ -5,7 +5,7 @@ import { useState } from 'react'
 const items = [
   {
     q: 'Wat kost een inventarisatie?',
-    a: 'De eerste afspraak duurt ongeveer 1 uur op je locatie. Je krijgt je dashboard met bevindingen, en op basis daarvan een offerte voor de hele plant. De kosten van de inventarisatie zelf bespreken we vooraf.',
+    a: 'De eerste afspraak duurt ongeveer 1,5 uur op je locatie. Je krijgt je dashboard met bevindingen, en op basis daarvan een offerte voor de hele plant. De kosten van de inventarisatie zelf bespreken we vooraf.',
   },
   {
     q: 'Wat als je geen lekken vindt?',

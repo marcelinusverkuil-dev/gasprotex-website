@@ -103,7 +103,7 @@ export default function ContactPage() {
                     className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hot text-white text-sm font-semibold rounded-md transition-colors"
                     style={{ padding: '14px 32px' }}
                   >
-                    Plan kennismakingsgesprek →
+                    Maak een afspraak →
                   </a>
                 </div>
 

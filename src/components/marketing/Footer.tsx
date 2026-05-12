@@ -12,7 +12,10 @@ const nav = {
   Bedrijf: [
     { label: 'Over GasProtex', href: '/over-ons' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Maak een afspraak', href: 'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink' },
     { label: 'Klantportaal', href: 'https://portaal.gasprotex.nl/login' },
+    { label: 'Bereken uw besparing', href: '/bereken-uw-besparing' },
+    { label: 'Kennisbank', href: '/kennisbank' },
   ],
 }
 
@@ -27,7 +30,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <p className="text-[#7AADCC] leading-relaxed max-w-xs" style={{ fontSize: 15, lineHeight: 1.8 }}>
               Akoestische gaslekdetectie voor de Nederlandse industrie.
-              Sneller, veiliger, zonder productiestilstand.
+              Sneller, veiliger en kosten besparend.
             </p>
 
             {/* Certifications */}
@@ -35,8 +38,8 @@ export default function Footer() {
               {['ATEX Gecertificeerd'].map((cert) => (
                 <span
                   key={cert}
-                  className="inline-block text-[#7AADCC] uppercase tracking-widest"
-                  style={{ fontSize: 10, letterSpacing: '1.5px' }}
+                  className="inline-block text-[#7AADCC]"
+                  style={{ fontSize: 13 }}
                 >
                   {cert}
                 </span>

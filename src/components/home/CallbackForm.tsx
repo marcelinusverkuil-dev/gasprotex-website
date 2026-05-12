@@ -18,12 +18,14 @@ export default function CallbackForm() {
   const [naam, setNaam] = useState('')
   const [bedrijf, setBedrijf] = useState('')
   const [telefoon, setTelefoon] = useState('')
+  const [honeypot, setHoneypot] = useState('')
   const [fout, setFout] = useState('')
   const [success, setSuccess] = useState(false)
   const [isPending, startTransition] = useTransition()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (honeypot) return
     setFout('')
     startTransition(async () => {
       try {
@@ -48,6 +50,7 @@ export default function CallbackForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
+      <input type="text" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} style={{ display: 'none' }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <label className="sr-only" htmlFor="cb-naam">Naam</label>
       <input id="cb-naam" value={naam} onChange={(e) => setNaam(e.target.value)} placeholder="Naam" required style={inputStyle} />
       <label className="sr-only" htmlFor="cb-bedrijf">Bedrijf</label>

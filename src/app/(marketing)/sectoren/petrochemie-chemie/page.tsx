@@ -336,7 +336,7 @@ export default function PetrochemieChemiePage() {
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 style={{ padding: '14px 32px' }}
               >
-                Plan kennismakingsgesprek →
+                Maak een afspraak →
               </a>
             </div>
           </div>
