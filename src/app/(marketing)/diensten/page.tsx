@@ -205,7 +205,7 @@ export default function DienstenPage() {
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Kaart: Perslucht */}
-            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '24px' }}>
+            <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '24px' }}>
               <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Perslucht</p>
               <h2
                 className="font-bold text-[#0A2238] mb-6"
@@ -234,7 +234,7 @@ export default function DienstenPage() {
             </div>
 
             {/* Kaart: Gevaarlijke gassen */}
-            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '24px' }}>
+            <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '24px' }}>
               <p className="text-[#7AADCC] mb-6" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Gevaarlijke gassen</p>
               <h2
                 className="font-bold text-[#0A2238] mb-6"
@@ -274,21 +274,21 @@ export default function DienstenPage() {
             Wat krijg je?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '40px' }}>
-              <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Rapport</p>
+            <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '20px' }}>
+              <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Interactieve rapportage</p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Per lek: locatie, foto, jaarverlies in euro&apos;s, herstelprioriteit.
               </p>
             </div>
 
-            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '40px' }}>
+            <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '20px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Klantportaal</p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
-                Alle lekken online. Status per lek. QR-code op de plek zelf.
+                Alle lekken online. Status per lek. QR-code op de plek van het lek zelf, die gelinkt is aan het klantenportaal.
               </p>
             </div>
 
-            <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '40px' }}>
+            <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ background: '#ffffff', padding: '20px' }}>
               <p className="text-[#7AADCC] mb-4" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Herstelplan</p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75 }}>
                 Gesorteerd op impact. Je onderhoudsteam weet direct waar te beginnen.
@@ -301,7 +301,7 @@ export default function DienstenPage() {
       {/* Sectie 4 — FAQ */}
       <section style={{ background: '#ffffff', paddingTop: '16px', paddingBottom: '4px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '24px' }}>
+          <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200" style={{ padding: '24px' }}>
           <h2
             className="font-bold text-[#0A2238]"
             style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 10 }}
@@ -339,7 +339,7 @@ export default function DienstenPage() {
       {/* Sectie 5 — CTA (licht) */}
       <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6" style={{ padding: '20px 24px' }}>
+          <div className="rounded-xl border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6" style={{ padding: '20px 24px' }}>
             <div>
               <h2
                 className="font-bold text-[#0A2238] mb-1"

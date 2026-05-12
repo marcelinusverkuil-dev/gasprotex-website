@@ -28,7 +28,7 @@ export default function Calculator() {
   }).format(verlies)
 
   return (
-    <div style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', borderRadius: 12, padding: 24 }}>
+    <div className="hover:shadow-md transition-shadow duration-200" style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', borderRadius: 12, padding: 24 }}>
 
       {/* Compressorvermogen */}
       <div style={{ marginBottom: 14 }}>

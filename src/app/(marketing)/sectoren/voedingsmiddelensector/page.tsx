@@ -5,14 +5,14 @@ import Script from 'next/script'
 
 
 export const metadata: Metadata = {
-  title: 'Lekdetectie in de voedingsmiddelensector | GasProtex',
+  title: 'Gaslekdetectie in de voedingsmiddelensector | GasProtex',
   description:
     'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Bespaar op perslucht en garandeer voedselveiligheid. Vraag een quickscan aan.',
   alternates: {
     canonical: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
   },
   openGraph: {
-    title: 'Lekdetectie in de voedingsmiddelensector | GasProtex',
+    title: 'Gaslekdetectie in de voedingsmiddelensector | GasProtex',
     description: 'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Bespaar op perslucht en garandeer voedselveiligheid.',
     url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
     type: 'website',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Lekdetectie in de voedingsmiddelensector | GasProtex',
+    title: 'Gaslekdetectie in de voedingsmiddelensector | GasProtex',
     description: 'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Vraag een quickscan aan.',
   },
 }
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Lekdetectie in de voedingsmiddelensector',
+  name: 'Gaslekdetectie in de voedingsmiddelensector',
   url: 'https://gasprotex.nl/sectoren/voedingsmiddelensector',
   description: 'Akoestische lekdetectie in food-productie zonder productiestop. Conform HACCP. Bespaar op perslucht en garandeer voedselveiligheid.',
   provider: {
@@ -117,10 +117,10 @@ export default function VoedingsmiddelensectorPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             <div className="relative">
               <h1
-                className="font-bold text-[#0A2238] mb-4"
-                style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+                className="font-bold text-[#0A2238]"
+                style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em', marginBottom: 15 }}
               >
-                Lekdetectie in de voedingsmiddelensector
+                Gaslekdetectie in de voedingsmiddelensector
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed">
                 Perslucht, CO₂, ammoniak en stikstof: wij vinden de lekken
@@ -147,7 +147,7 @@ export default function VoedingsmiddelensectorPage() {
             <div className="relative rounded-xl overflow-hidden" style={{ aspectRatio: '1264 / 758', background: '#F4F7FA' }}>
               <Image
                 src="/images/sectoren/voedingsmiddelensector.png"
-                alt="Lekdetectie in de voedingsmiddelensector"
+                alt="Gaslekdetectie in de voedingsmiddelensector"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
