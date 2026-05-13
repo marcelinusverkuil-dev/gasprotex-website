@@ -22,7 +22,7 @@ export default function WaaromSection() {
                 Apparatuur kopen of dienst inkopen?
               </h2>
               <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                Een ultrasone camera met ATEX-kit kost €60-100k, plus opleiding en jaarlijks
+                Een akoestische camera (ultrasoon) met ATEX-kit kost €60-100k, plus opleiding en jaarlijks
                 onderhoud. Een Quickscan bij ons begint bij €2.500. Voor de prijs van één eigen
                 camera doen we 24 scans of 3+ jaar abonnement.
               </p>

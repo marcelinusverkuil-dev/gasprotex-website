@@ -63,7 +63,7 @@ const certificeringen = [
   },
   {
     titel: 'Crysound Authorized Partner',
-    tekst: 'Officieel partner van Crysound voor Nederland. Getraind en gecertificeerd operator op de Crysound 8125 ultrasone camera.',
+    tekst: 'Officieel partner van Crysound voor Nederland. Getraind en gecertificeerd operator op de Crysound 8125 akoestische camera (ultrasoon).',
   },
 ]
 
@@ -166,7 +166,7 @@ export default function OverOnsPage() {
                   pure dienstverlening.
                 </p>
                 <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.7 }}>
-                  Een ultrasone camera met ATEX-kit kost €60-100k. Plus
+                  Een akoestische camera (ultrasoon) met ATEX-kit kost €60-100k. Plus
                   opleiding, kalibratie, onderhoud, operator-tijd. Voor de
                   meeste bedrijven is dat geen reële investering.
                 </p>
@@ -200,7 +200,7 @@ export default function OverOnsPage() {
                           <a href="https://www.crysound.com" target="_blank" rel="noopener" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors">
                             Crysound
                           </a>{' '}
-                          voor Nederland. Getraind en gecertificeerd operator op de Crysound 8125 ultrasone camera.
+                          voor Nederland. Getraind en gecertificeerd operator op de Crysound 8125 akoestische camera (ultrasoon).
                         </p>
                       ) : (
                         <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>{c.tekst}</p>

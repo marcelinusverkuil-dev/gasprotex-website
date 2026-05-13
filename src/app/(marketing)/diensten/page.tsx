@@ -32,9 +32,9 @@ const faqItems = [
       'Elk lek onder druk produceert ultrasone geluidsgolven. Onze camera vangt die op en toont de exacte locatie, ook in lawaaierige productieomgevingen.',
   },
   {
-    question: 'Hoe lang duurt een scan?',
+    question: 'Hoe lang duurt een Quickscan?',
     answer:
-      'Meestal een dagdeel (3–4 uur). Geen stilstand nodig: we meten tijdens normale productie.',
+      'In een dagdeel krijgen we een mooie indruk, de resultaten delen we je via het interactieve klantenportaal.',
   },
   {
     question: 'Wat kost een persluchtlek per jaar?',
@@ -44,16 +44,12 @@ const faqItems = [
   {
     question: 'Vervangt dit onze vaste gasdetectie?',
     answer:
-      'Nee. Wij vullen aan waar vaste detectoren blinde vlekken hebben. Je bestaande systeem blijft gewoon draaien.',
+      'Wij vullen aan waar vaste detectoren blinde vlekken hebben. Je bestaande systeem blijft gewoon draaien.',
   },
   {
     question: 'Is gasdetectie met ultrasoon ATEX-gecertificeerd?',
     answer:
       'Ja. Onze Crysound 8125 is ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof). Dat dekt de meeste industriële productieomgevingen. Wij zijn VCA-vol gecertificeerd als operator.',
-  },
-  {
-    question: 'Wat als jullie wegvallen?',
-    answer: 'Je data en rapportage zijn van jou. Crysound als backup bij noodgevallen.',
   },
   {
     question: 'Hoe gaat het na een Quickscan verder?',
@@ -81,7 +77,7 @@ const serviceJsonLd = {
   '@type': 'Service',
   name: 'Gas- en persluchtlekdetectie als dienst',
   url: 'https://gasprotex.nl/diensten/',
-  description: 'Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera lokaliseren we elk lek tijdens normale productie, zonder stilstand. Rapport met euro-impact per lek.',
+  description: 'Wij vinden lekken die je niet hoort, ziet of ruikt. Met een akoestische camera (ultrasoon) lokaliseren we elk lek tijdens normale productie, zonder stilstand. Rapport met euro-impact per lek.',
   provider: {
     '@type': 'Organization',
     name: 'GasProtex',
@@ -151,7 +147,7 @@ export default function DienstenPage() {
                 Gas- en persluchtlekdetectie als dienst.
               </h1>
               <p className="text-[#3D5A6E] mb-4" style={{ fontSize: 15, lineHeight: 1.75 }}>
-                Wij vinden lekken die je niet hoort, ziet of ruikt. Met een ultrasone camera
+                Wij vinden lekken die je niet hoort, ziet of ruikt. Met een akoestische camera (ultrasoon)
                 lokaliseren we elk lek, tijdens normale productie, zonder stilstand.
               </p>
               <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.75, marginBottom: 15 }}>

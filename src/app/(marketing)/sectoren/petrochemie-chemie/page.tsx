@@ -56,10 +56,10 @@ const breadcrumbJsonLd = {
 }
 
 const gassen = [
-  { tekst: 'Procesgassen: methaan, ethyleen, waterstof, H₂S' },
-  { tekst: 'F-gassen: koelinstallaties, F-gassenverordening' },
-  { tekst: 'Perslucht: instrumentatie, pneumatische aandrijving' },
-  { tekst: 'Stikstof, CO₂, ammoniak (procesgebonden)' },
+  { label: 'Procesgassen', detail: 'methaan, ethyleen, waterstof, H₂S' },
+  { label: 'F-gassen', detail: 'koelinstallaties, F-gassenverordening' },
+  { label: 'Perslucht', detail: 'instrumentatie, pneumatische aandrijving' },
+  { label: 'Stikstof, CO₂, ammoniak', detail: 'procesgebonden' },
 ]
 
 const compliance = [
@@ -188,10 +188,10 @@ export default function PetrochemieChemiePage() {
                 </h2>
                 <div className="space-y-3">
                   {gassen.map((gas) => (
-                    <div key={gas.tekst} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830] mt-2" />
-                      <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
-                        {gas.tekst}
+                    <div key={gas.label} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[#F07830]" style={{ marginTop: '7px' }} />
+                      <p className="text-[#3D5A6E]" style={{ fontSize: 15, lineHeight: 1.5 }}>
+                        <span className="font-semibold text-[#0A2238]">{gas.label}:</span> {gas.detail}
                       </p>
                     </div>
                   ))}
@@ -327,9 +327,6 @@ export default function PetrochemieChemiePage() {
                 <h2 className="text-[#0A2238] font-bold text-2xl mb-1">
                   ATEX-gecertificeerde inspectie nodig?
                 </h2>
-                <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                  Plan een vrijblijvend gesprek. We bespreken wat past bij jouw situatie.
-                </p>
               </div>
               <a
                 href="/contact"

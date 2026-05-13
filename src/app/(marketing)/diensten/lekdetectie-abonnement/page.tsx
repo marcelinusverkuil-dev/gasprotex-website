@@ -31,8 +31,7 @@ const stappen = [
     title: 'Quickscan',
     duur: 'Een dagdeel',
     body: [
-      'We komen langs voor een dagdeel en scannen je installatie met de ultrasone camera. Je krijgt een rapport met exacte locaties, geschat verlies per lek in euro\'s, en een herstelprioriteit. Geen verplichtingen daarna.',
-      'Dit is het bewijs. Als de scan niets oplevert, ben je klaar. Als het wél wat oplevert (en dat doet het vrijwel altijd) beslis je zelf wat je ermee doet.',
+      'De quickscan is een eerste inventarisatie. We komen langs voor een dagdeel en scannen een deel van installatie met de akoestische camera (ultrasoon). Je krijgt een rapport met exacte locaties, geschat verlies per lek in euro\'s, en een herstelprioriteit. Dit is in te zien in het interactieve klantenportaal.',
     ],
   },
   {
@@ -40,8 +39,8 @@ const stappen = [
     title: 'Fabrieksaudit',
     duur: '1–3 dagen',
     body: [
-      'Na de Quickscan weet je dat er lekken zijn. De Fabrieksaudit brengt je hele locatie systematisch in kaart. Elk perslucht- of gaslek wordt gelokaliseerd, gefotografeerd en voorzien van een QR-code op de plek zelf.',
-      'Het eindrapport voldoet aan ISO 11011-vereisten en levert directe input voor je energie-audit of BRZO-rapportage.',
+      'De Fabrieksaudit brengt je hele locatie systematisch in kaart. Elk perslucht- of gaslek wordt gelokaliseerd, en voorzien van een QR-code op de plek zelf, deze verwijs weer naar het portaal, waardoor een lek makkelijk terug te vinden is in de rapportage.',
+      'Het eindrapport ondersteunt de ISO 11011-vereisten en levert directe input voor je energie-audit of BRZO-rapportage.',
     ],
   },
   {
@@ -49,8 +48,8 @@ const stappen = [
     title: 'Abonnement',
     duur: 'Doorlopend, jaarlijkse herhaling',
     body: [
-      'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen: elk jaar ontstaan er nieuwe lekpunten. Met een abonnement herhalen we de scan jaarlijks en houden we je klantportaal actueel.',
-      'In het portaal zie je per lek: status (open, in herstel, opgelost), jaarverlies, trend over de jaren. Je onderhoudsteam weet altijd waar ze moeten zijn.',
+      'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen: elke keer ontstaan er nieuwe lekken. Met een abonnement herhalen we de scan periodiek en houden we je klantportaal actueel.',
+      'In het portaal zie je per lek: status van het lek, de lekkages in euro\'s en CO₂-impact, en de prioriteiten die gesteld moeten worden om ze te maken. Je onderhoudsteam weet altijd waar ze moeten zijn door de QR-code die bij het lek aanwezig is en verwijst naar het portaal.',
     ],
   },
 ]

@@ -71,7 +71,7 @@ export default function ContactPage() {
                 Contact
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed" style={{ marginBottom: '32px' }}>
-                Wil je weten wat lekdetectie voor jouw bedrijf kan betekenen?
+                Wil je weten wat gaslekdetectie voor jouw bedrijf kan betekenen?
               </p>
 
               <div className="flex flex-col gap-3">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     href="tel:+31613055282"
                     className="text-[#1E87B4] hover:text-[#F07830] font-semibold transition-colors"
                   >
-                    +31 6 1305 5282
+                    06-13055282
                   </a>
                 </div>
 

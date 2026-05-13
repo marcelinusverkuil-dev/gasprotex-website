@@ -54,24 +54,6 @@ export default function HomePage() {
             <p style={{ fontSize: 16, lineHeight: 1.55, color: 'rgba(255,255,255,0.78)', margin: '0 0 28px', maxWidth: 620 }}>
               Specialist in gaslekdetectie en persluchtlekdetectie voor industrie en voedingsmiddelensector.
             </p>
-            <div className="flex flex-col sm:flex-row items-start gap-6">
-              <a
-                href={BOOKINGS}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ background: '#F07830', color: 'white', textDecoration: 'none', padding: '13px 24px', fontSize: 14.5, fontWeight: 500, borderRadius: 6, display: 'inline-flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap', flexShrink: 0 }}
-              >
-                Maak een afspraak →
-              </a>
-              <a
-                href={BOOKINGS}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ background: 'transparent', color: 'white', textDecoration: 'none', padding: '13px 24px', fontSize: 14.5, fontWeight: 500, borderRadius: 6, border: '1px solid rgba(255,255,255,0.4)', display: 'inline-flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap', flexShrink: 0 }}
-              >
-                Maak een afspraak →
-              </a>
-            </div>
           </div>
         </section>
 
