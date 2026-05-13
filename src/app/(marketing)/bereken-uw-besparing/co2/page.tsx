@@ -136,27 +136,26 @@ export default function Co2CalculatorPage() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className="rounded-md" style={{ background: 'linear-gradient(135deg, #F07830 0%, #C4631E 100%)', padding: '20px 24px' }}>
-                <p className="text-orange-100 mb-1" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Totale kosten per jaar</p>
+              <div className="rounded-md" style={{ background: 'rgba(240,120,48,0.08)', border: '1px solid #F07830', padding: '20px 24px' }}>
+                <p style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#C4631E', marginBottom: 4 }}>Totale kosten per jaar</p>
                 <p className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.1, letterSpacing: '-0.03em' }}>
                   €{fmt(resultaat.euroJaar)}
                 </p>
-                <p className="text-orange-100 mt-2" style={{ fontSize: 13 }}>
+                <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.6)', marginTop: 8 }}>
                   {aantalTotaal} lek{aantalTotaal === 1 ? '' : 'ken'} · {fmt(resultaat.totalDebiet)} l/min totaal · {systeemdruk} bar
                 </p>
               </div>
 
-              <div className="rounded-md" style={{ background: 'linear-gradient(to bottom right, #0A2238, #1E5A8A)', padding: '28px 32px' }}>
-                <p className="text-[#7AADCC] mb-1" style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase' }}>Gasverlies</p>
+              <div className="rounded-md" style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
+                <p style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase', color: 'rgba(10,34,56,0.45)', marginBottom: 4 }}>Gasverlies</p>
                 <p className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{fmt(resultaat.m3jaar)}</p>
-                <p className="text-[#7AADCC] mt-1" style={{ fontSize: 13 }}>m³ CO₂ per jaar</p>
+                <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.5)', marginTop: 4 }}>m³ CO₂ per jaar</p>
               </div>
 
               <div className="rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
                 style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
                 <div>
-                  <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel ú lekt?</p>
-                  <p className="text-[#4A6880] mt-1" style={{ fontSize: 14 }}>Plan een gratis inspectie in. Resultaat dezelfde dag.</p>
+                  <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel lekkages u heeft?</p>
                 </div>
                 <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
                   Afspraak maken
