@@ -123,8 +123,7 @@ export default function VoedingsmiddelensectorPage() {
                 Gaslekdetectie in de voedingsmiddelensector
               </h1>
               <p className="text-[#3D5A6E] text-lg leading-relaxed">
-                Perslucht, CO₂, ammoniak en stikstof: wij vinden de lekken
-                die je productie geld kosten of je installatie in gevaar brengen.
+                Perslucht, CO₂, ammoniak en stikstof: wij vinden de lekken die mensen en productie in gevaar brengen en geld kosten.
               </p>
               <div className="flex flex-col sm:flex-row items-start gap-4 pt-8 lg:absolute lg:bottom-0 lg:left-0">
                 <a

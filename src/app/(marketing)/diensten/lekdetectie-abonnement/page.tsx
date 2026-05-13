@@ -37,7 +37,7 @@ const stappen = [
   {
     nr: 'Stap 2',
     title: 'Fabrieksaudit',
-    duur: '1–3 dagen',
+    duur: '',
     body: [
       'De Fabrieksaudit brengt je hele locatie systematisch in kaart. Elk perslucht- of gaslek wordt gelokaliseerd, en voorzien van een QR-code op de plek zelf, deze verwijs weer naar het portaal, waardoor een lek makkelijk terug te vinden is in de rapportage.',
       'Het eindrapport ondersteunt de ISO 11011-vereisten en levert directe input voor je energie-audit of BRZO-rapportage.',
@@ -46,7 +46,7 @@ const stappen = [
   {
     nr: 'Stap 3',
     title: 'Abonnement',
-    duur: 'Doorlopend, jaarlijkse herhaling',
+    duur: 'Periodieke herhaling',
     body: [
       'Lekken komen terug. Nieuwe koppelingen, slijtage, montageveranderingen: elke keer ontstaan er nieuwe lekken. Met een abonnement herhalen we de scan periodiek en houden we je klantportaal actueel.',
       'In het portaal zie je per lek: status van het lek, de lekkages in euro\'s en CO₂-impact, en de prioriteiten die gesteld moeten worden om ze te maken. Je onderhoudsteam weet altijd waar ze moeten zijn door de QR-code die bij het lek aanwezig is en verwijst naar het portaal.',
@@ -171,14 +171,14 @@ export default function AbonnementPage() {
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
             style={{ background: '#ffffff', padding: '24px' }}
           >
-            <div className="space-y-12">
-              {stappen.map((stap, i) => (
-                <div key={stap.nr}>
+            <div className="divide-y divide-[#E8EDF2]">
+              {stappen.map((stap) => (
+                <div key={stap.nr} style={{ paddingTop: '24px', paddingBottom: '24px' }}>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div>
                       <p className="text-[#F07830] text-sm font-semibold mb-2">{stap.nr}</p>
                       <h2 className="text-[#0A2238] font-bold text-2xl mb-2">{stap.title}</h2>
-                      <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>{stap.duur}</p>
+                      {stap.duur && <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>{stap.duur}</p>}
                     </div>
                     <div className="lg:col-span-2">
                       {stap.body.map((alinea, j) => (
@@ -192,9 +192,6 @@ export default function AbonnementPage() {
                       ))}
                     </div>
                   </div>
-                  {i < stappen.length - 1 && (
-                    <div className="border-t border-[#E8EDF2] mt-12" />
-                  )}
                 </div>
               ))}
             </div>
@@ -217,13 +214,9 @@ export default function AbonnementPage() {
             Veelgestelde vragen
           </h2>
 
-          <div style={{ maxWidth: '640px' }}>
+          <div className="divide-y divide-[#E8EDF2]" style={{ maxWidth: '640px' }}>
             {faqs.map((faq, i) => (
-              <div
-                key={i}
-                className="py-6"
-                style={{ borderBottom: '1px solid rgba(10,34,56,0.1)' }}
-              >
+              <div key={i} style={{ paddingTop: '24px', paddingBottom: '24px' }}>
                 <p className="font-bold text-[#0A2238] text-base mb-2">{faq.vraag}</p>
                 <p className="text-[#3D5A6E] text-sm leading-relaxed">{faq.antwoord}</p>
               </div>
@@ -235,7 +228,7 @@ export default function AbonnementPage() {
       </section>
 
       {/* Sectie 4 — CTA-banner */}
-      <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '32px' }}>
+      <section style={{ background: '#ffffff', paddingTop: '24px', paddingBottom: '24px' }}>
         <div className="container-main">
           <div
             className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"
