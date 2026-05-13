@@ -7,7 +7,7 @@ export default function HeroSection() {
       style={{ paddingTop: '100px', paddingBottom: '40px' }}
     >
       <Image
-        src="/images/hero-bg.png"
+        src="/images/hero-bg-v3.png"
         alt="GasProtex technicus met akoestische camera in industriële installatie"
         fill
         className="object-cover object-center"
