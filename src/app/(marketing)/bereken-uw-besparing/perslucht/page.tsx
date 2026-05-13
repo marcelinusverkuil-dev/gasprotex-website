@@ -19,26 +19,23 @@ const inputStyle = {
 }
 
 export default function PersluchtCalculatorPage() {
-  const [lekdebiet, setLekdebiet] = useState('10')
-  const [systeemdruk, setSysteemdruk] = useState('6')
+  const [lekdebiet, setLekdebiet] = useState(10)
+  const [systeemdruk, setSysteemdruk] = useState(6)
+  const [aantalLekken, setAantalLekken] = useState(6)
   const [bedrijfsuren, setBedrijfsuren] = useState(8760)
   const [tarief, setTarief] = useState('0.20')
   const [specificPower, setSpecificPower] = useState('0.12')
-  const [aantalLekken, setAantalLekken] = useState('6')
 
   const resultaat = useMemo(() => {
-    const debiet = parseFloat(lekdebiet) || 0
-    const bar = parseFloat(systeemdruk) || 6
     const euro = parseFloat(tarief.replace(',', '.')) || 0.20
     const sp = parseFloat(specificPower.replace(',', '.')) || 0.12
-    const aantal = parseFloat(aantalLekken) || 6
-    const m3jaar = (debiet / 1000 * 60) * bedrijfsuren
-    const drukFactor = 1 + (bar / 10)
-    const kWhJaar = m3jaar * sp * drukFactor * aantal
+    const m3jaar = (lekdebiet / 1000 * 60) * bedrijfsuren
+    const drukFactor = 1 + (systeemdruk / 10)
+    const kWhJaar = m3jaar * sp * drukFactor * aantalLekken
     const euroJaar = kWhJaar * euro
     const co2kg = kWhJaar * 0.22
     return { kWhJaar, euroJaar, co2ton: co2kg / 1000, autoKm: co2kg * 6.5 }
-  }, [lekdebiet, systeemdruk, bedrijfsuren, tarief, specificPower, aantalLekken])
+  }, [lekdebiet, systeemdruk, aantalLekken, bedrijfsuren, tarief, specificPower])
 
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
 
@@ -70,21 +67,54 @@ export default function PersluchtCalculatorPage() {
               <p className="text-[#7AADCC] mb-8" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
               <div className="flex flex-col gap-6">
 
+                {/* Lekdebiet slider */}
                 <div>
-                  <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>Lekdebiet (l/min)</label>
-                  <input type="number" min="0" value={lekdebiet} onChange={e => setLekdebiet(e.target.value)}
-                    className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} placeholder="bijv. 10" />
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                    <label htmlFor="calc-lekdebiet" className="text-[#7AADCC] font-medium" style={{ fontSize: 13 }}>Lekdebiet (l/min)</label>
+                    <span style={{ fontSize: 13.5, color: '#0A2238', fontWeight: 500 }}>{lekdebiet} l/min</span>
+                  </div>
+                  <input
+                    id="calc-lekdebiet"
+                    type="range" min={1} max={200} step={1} value={lekdebiet}
+                    onChange={e => setLekdebiet(Number(e.target.value))}
+                    className="gp-range"
+                    aria-label="Lekdebiet in liter per minuut"
+                  />
                   <p className="text-[#7AADCC] mt-1" style={{ fontSize: 12 }}>Afkomstig van detectietool of rapportage</p>
                 </div>
 
+                {/* Systeemdruk slider */}
                 <div>
-                  <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
-                    Systeemdruk (bar) <span style={{ fontSize: 12 }}>standaard: 6</span>
-                  </label>
-                  <input type="number" min="1" max="50" value={systeemdruk} onChange={e => setSysteemdruk(e.target.value)}
-                    className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                    <label htmlFor="calc-systeemdruk" className="text-[#7AADCC] font-medium" style={{ fontSize: 13 }}>Systeemdruk (bar)</label>
+                    <span style={{ fontSize: 13.5, color: '#0A2238', fontWeight: 500 }}>{systeemdruk} bar</span>
+                  </div>
+                  <input
+                    id="calc-systeemdruk"
+                    type="range" min={1} max={20} step={1} value={systeemdruk}
+                    onChange={e => setSysteemdruk(Number(e.target.value))}
+                    className="gp-range"
+                    aria-label="Systeemdruk in bar"
+                  />
                 </div>
 
+                {/* Aantal lekkages slider */}
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                    <label htmlFor="calc-lekken" className="text-[#7AADCC] font-medium" style={{ fontSize: 13 }}>Aantal lekkages</label>
+                    <span style={{ fontSize: 13.5, color: '#0A2238', fontWeight: 500 }}>{aantalLekken}</span>
+                  </div>
+                  <input
+                    id="calc-lekken"
+                    type="range" min={1} max={50} step={1} value={aantalLekken}
+                    onChange={e => setAantalLekken(Number(e.target.value))}
+                    className="gp-range"
+                    aria-label="Aantal lekkages"
+                  />
+                  <p className="text-[#7AADCC] mt-1" style={{ fontSize: 12 }}>Sectorgemiddelde: 6</p>
+                </div>
+
+                {/* Bedrijfsuren knoppen */}
                 <div>
                   <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>Bedrijfsuren per jaar</label>
                   <div className="flex gap-3">
@@ -114,14 +144,6 @@ export default function PersluchtCalculatorPage() {
                     className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
                 </div>
 
-                <div>
-                  <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
-                    Aantal lekkages <span style={{ fontSize: 12 }}>standaard: 6 (sectorgemiddelde)</span>
-                  </label>
-                  <input type="number" min="1" value={aantalLekken} onChange={e => setAantalLekken(e.target.value)}
-                    className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
-                </div>
-
               </div>
             </div>
 
@@ -132,7 +154,7 @@ export default function PersluchtCalculatorPage() {
                   €{fmt(resultaat.euroJaar)}
                 </p>
                 <p className="text-orange-100 mt-3" style={{ fontSize: 14 }}>
-                  {aantalLekken || 6} lek{Number(aantalLekken) === 1 ? '' : 'ken'} van {lekdebiet || 0} l/min bij {systeemdruk || 6} bar
+                  {aantalLekken} lek{aantalLekken === 1 ? '' : 'ken'} van {lekdebiet} l/min bij {systeemdruk} bar
                 </p>
               </div>
 
