@@ -39,8 +39,8 @@ export default function HomePage() {
         {/* ── 1. Hero ── */}
         <section className="relative overflow-hidden" style={{ paddingTop: 160, paddingBottom: 80, color: 'white', minHeight: 520 }}>
           <Image
-            src="/images/hero-bg.jpg"
-            alt="Industriële installatie met persluchtleidingen"
+            src="/images/hero-bg-v3.png"
+            alt="GasProtex technicus met tablet in industriële installatie"
             fill
             className="object-cover object-center"
             priority
