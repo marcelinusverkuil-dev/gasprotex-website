@@ -1,4 +1,4 @@
-﻿export type SectorData = {
+export type SectorData = {
   slug: string
   icon: string
   title: string
@@ -30,9 +30,9 @@ export const sectorenData: Record<string, SectorData> = {
       { titel: 'BRZO-compliance', tekst: 'Gaslekken in H₂, NH₃ of CL₂ systemen zijn direct meldingsplichtig. Onze rapportage is BRZO-proof en geschikt voor inspectie door de Omgevingsdienst.' },
       { titel: 'ATEX-zones', tekst: 'Traditionele detectiemethoden mogen in explosiegevaarlijke zones niet of beperkt worden ingezet. Onze akoestische camera werkt op veilige afstand — geen vonkrisico.' },
       { titel: 'Procesgassen', tekst: 'Waterstof, ammoniak, chloor en andere procesgassen zijn onzichtbaar en onhoorbaar. Akoestische detectie maakt de ontsnappende drukgolf zichtbaar als heatmap.' },
-      { titel: 'HSE-rapportage', tekst: 'Uw HSE-manager heeft exacte data nodig: locatie, grootte, kostenpact en CO₂-impact. Onze rapportage levert dit automatisch op.' },
+      { titel: 'HSE-rapportage', tekst: 'Je HSE-manager heeft exacte data nodig: locatie, grootte, kostenpact en CO₂-impact. Onze rapportage levert dit automatisch op.' },
     ],
-    hoeWijHelpen: 'Onze ATEX-gecertificeerde inspecteurs scannen uw gehele installatie met de akoestische camera. Elk lek verschijnt als een heatmap op het scherm — tot op 200 meter afstand, zonder toegang tot gevaarlijke zones. U ontvangt dezelfde dag een BRZO-proof rapport.',
+    hoeWijHelpen: 'Onze ATEX-gecertificeerde inspecteurs scannen je gehele installatie met de akoestische camera. Elk lek verschijnt als een heatmap op het scherm — tot op 200 meter afstand, zonder toegang tot gevaarlijke zones. Je ontvangt dezelfde dag een BRZO-proof rapport.',
     voordelen: [
       'ATEX Zone 2 gecertificeerd',
       'Detectie op 200 meter afstand',
@@ -62,15 +62,15 @@ export const sectorenData: Record<string, SectorData> = {
     hero: {
       tagline: 'Food & Beverage',
       headline: 'Stop Met Geld Door Lekken Verliezen',
-      sub: 'Perslucht is de duurste nutsvoorziening in uw fabriek. Gemiddeld 30% gaat verloren door lekken. Wij vinden ze allemaal — terwijl uw productie gewoon doorloopt.',
+      sub: 'Perslucht is de duurste nutsvoorziening in je fabriek. Gemiddeld 30% gaat verloren door lekken. Wij vinden ze allemaal — terwijl je productie gewoon doorloopt.',
     },
     uitdagingen: [
       { titel: 'Energiekosten perslucht', tekst: 'Een gemiddeld lek in perslucht kost €1.200–€1.650 per jaar. In een fabriek met tientallen lekken loopt dit snel op tot €30.000+ onnodig energieverbruik.' },
-      { titel: 'Contaminatierisico', tekst: 'Olie- en vochtcontaminatie via persluchtlekken kan uw productlijn raken. Vroege detectie voorkomt kwaliteitsproblemen en certificeringsissues.' },
-      { titel: 'CO₂-doelstellingen', tekst: 'Persluchtlekken zijn een van de grootste CO₂-bronnen in food-productie. Onze rapportage levert directe input voor uw CO₂-reductieplan.' },
-      { titel: 'ISO 50001', tekst: 'Voor ISO 50001-certificering heeft u aantoonbaar energiemanagement nodig. Onze rapportage en klantportaal leveren de bewijslast automatisch op.' },
+      { titel: 'Contaminatierisico', tekst: 'Olie- en vochtcontaminatie via persluchtlekken kan je productlijn raken. Vroege detectie voorkomt kwaliteitsproblemen en certificeringsissues.' },
+      { titel: 'CO₂-doelstellingen', tekst: 'Persluchtlekken zijn een van de grootste CO₂-bronnen in food-productie. Onze rapportage levert directe input voor je CO₂-reductieplan.' },
+      { titel: 'ISO 50001', tekst: 'Voor ISO 50001-certificering heb je aantoonbaar energiemanagement nodig. Onze rapportage en klantportaal leveren de bewijslast automatisch op.' },
     ],
-    hoeWijHelpen: 'Wij scannen uw persluchtnet, compressors, verpakkingslijnen en koelsystemen tijdens normale productie. U verliest geen productietijd. Dezelfde dag heeft u een lijst met alle lekken, gesorteerd op kostenpact — zodat uw technische dienst direct prioriteiten kan stellen.',
+    hoeWijHelpen: 'Wij scannen je persluchtnet, compressors, verpakkingslijnen en koelsystemen tijdens normale productie. Je verliest geen productietijd. Dezelfde dag heb je een lijst met alle lekken, gesorteerd op kostenpact — zodat je technische dienst direct prioriteiten kan stellen.',
     voordelen: [
       'Scannen tijdens productie',
       'Geen productieverlies',
@@ -100,7 +100,7 @@ export const sectorenData: Record<string, SectorData> = {
     hero: {
       tagline: 'Energie & Utilities',
       headline: 'Comply. Bespaar. Continueer.',
-      sub: 'Gasdistributienetwerken en nutsbedrijven opereren onder toezicht. Lekdetectie is niet optioneel — het is wettelijk verplicht. Wij leveren de data die uw toezichthouder verwacht.',
+      sub: 'Gasdistributienetwerken en nutsbedrijven opereren onder toezicht. Lekdetectie is niet optioneel — het is wettelijk verplicht. Wij leveren de data die je toezichthouder verwacht.',
     },
     uitdagingen: [
       { titel: 'Wettelijke rapportage', tekst: 'Energiebedrijven zijn verplicht gaslekken te registreren en te rapporteren aan toezichthouders zoals ACM en Omgevingsdiensten. Onze rapportage sluit hierop aan.' },
@@ -108,7 +108,7 @@ export const sectorenData: Record<string, SectorData> = {
       { titel: 'Emissiebeheer', tekst: 'Methaanemissies uit gasdistributie tellen zwaar mee in ESG-rapportages. Wij kwantificeren elke lek in m³/uur en CO₂-equivalent.' },
       { titel: 'Grootschalige infrastructuur', tekst: 'Netwerken van tientallen kilometers kunnen niet handmatig worden geïnspecteerd. Onze camera dekt grote oppervlaktes snel af.' },
     ],
-    hoeWijHelpen: 'Voor nutsbedrijven combineren wij onze akoestische camera met systematische rondgangen langs het distributienet. Per sectie wordt een heatmap gemaakt en elk afwijkend geluidsprofiel geanalyseerd. U ontvangt een rapportage die direct bruikbaar is voor uw toezichthouder.',
+    hoeWijHelpen: 'Voor nutsbedrijven combineren wij onze akoestische camera met systematische rondgangen langs het distributienet. Per sectie wordt een heatmap gemaakt en elk afwijkend geluidsprofiel geanalyseerd. Je ontvangt een rapportage die direct bruikbaar is voor je toezichthouder.',
     voordelen: [
       'Toezichthouder-klare rapportage',
       'Methaanemissie kwantificering',
@@ -138,15 +138,15 @@ export const sectorenData: Record<string, SectorData> = {
     hero: {
       tagline: 'Algemene Industrie',
       headline: 'ROI In Minder Dan 6 Maanden',
-      sub: 'Elk productiebedrijf met perslucht verliest geld. Gemiddeld 30% van uw perslucht ontsnapt ongemerkt. Een quickscan van één dag laat u direct zien wat het kost — en wat u bespaart.',
+      sub: 'Elk productiebedrijf met perslucht verliest geld. Gemiddeld 30% van je perslucht ontsnapt ongemerkt. Een quickscan van één dag laat je direct zien wat het kost — en wat je bespaart.',
     },
     uitdagingen: [
       { titel: 'Onzichtbaar energieverlies', tekst: 'Persluchtlekken zijn onhoorbaar boven de fabrieksgeluiden. Traditioneel detecteren kost dagenlang werk — akoestisch detecteren kost uren.' },
-      { titel: 'Onderhoudsprioritering', tekst: 'Niet elk lek is even urgent. Onze rapportage geeft een prioriteitenmatrix: urgentie × besparing × bereikbaarheid, zodat uw technische dienst efficiënt werkt.' },
+      { titel: 'Onderhoudsprioritering', tekst: 'Niet elk lek is even urgent. Onze rapportage geeft een prioriteitenmatrix: urgentie × besparing × bereikbaarheid, zodat je technische dienst efficiënt werkt.' },
       { titel: 'Energiebeheer', tekst: 'Stijgende energieprijzen maken persluchtoptimalisatie steeds relevanter. Lekdetectie is de snelste ROI-maatregel in energiemanagement.' },
-      { titel: 'Aantonen besparing', tekst: 'Uw directie wil bewijs van resultaat. Ons klantportaal toont open lekken, gedichte lekken en gerealiseerde besparingen in realtime.' },
+      { titel: 'Aantonen besparing', tekst: 'Je directie wil bewijs van resultaat. Ons klantportaal toont open lekken, gedichte lekken en gerealiseerde besparingen in realtime.' },
     ],
-    hoeWijHelpen: 'Wij plannen een quickscan van één dag in uw productiehal. Terwijl uw machines gewoon draaien scannen wij alle persluchtleidingen, compressors, cilinders en fittingen. Aan het einde van de dag heeft u een complete rapportage en weet u exact hoeveel u bespaart als de lekken worden gedicht.',
+    hoeWijHelpen: 'Wij plannen een quickscan van één dag in je productiehal. Terwijl je machines gewoon draaien scannen wij alle persluchtleidingen, compressors, cilinders en fittingen. Aan het einde van de dag heb je een complete rapportage en weet je exact hoeveel je bespaart als de lekken worden gedicht.',
     voordelen: [
       'Inspectie tijdens productie',
       'Rapportage dezelfde dag',

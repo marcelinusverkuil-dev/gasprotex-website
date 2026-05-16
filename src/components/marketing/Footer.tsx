@@ -14,7 +14,7 @@ const nav = {
     { label: 'Contact', href: '/contact' },
     { label: 'Maak een afspraak', href: 'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink' },
     { label: 'Klantportaal', href: 'https://portaal.gasprotex.nl/login' },
-    { label: 'Bereken uw besparing', href: '/bereken-uw-besparing' },
+    { label: 'Bereken je besparing', href: '/bereken-uw-besparing' },
     { label: 'Kennisbank', href: '/kennisbank' },
   ],
 }

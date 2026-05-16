@@ -122,7 +122,7 @@ export default function SectorenSection() {
                 Gemiddeld <span style={{ color: '#F07830' }}>30%</span> van perslucht gaat verloren door lekken.
               </p>
               <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                Één gemiddeld lek kost uw bedrijf €1.200–€1.650 per jaar. Wij vinden ze allemaal.
+                Één gemiddeld lek kost je bedrijf €1.200–€1.650 per jaar. Wij vinden ze allemaal.
               </p>
             </div>
             <Link

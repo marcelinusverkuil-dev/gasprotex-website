@@ -81,10 +81,10 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
               {/* Links: uitdagingen */}
               <div>
                 <p className="text-[#7AADCC] mb-2" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-                  Uw uitdagingen
+                  Jouw uitdagingen
                 </p>
                 <h2 className="font-bold text-[#0A2238] mb-8" style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                  Wat speelt er in uw sector?
+                  Wat speelt er in jouw sector?
                 </h2>
                 <ul className="space-y-5">
                   {d.uitdagingen.map((u) => (
@@ -150,7 +150,7 @@ export default function SectorPage({ data: d }: { data: SectorData }) {
                 Klaar voor een gratis quickscan?
               </p>
               <p className="text-[#7AADCC]" style={{ fontSize: 14 }}>
-                Wij plannen een vrijblijvende inspectie bij u op locatie.
+                Wij plannen een vrijblijvende inspectie bij je op locatie.
               </p>
             </div>
             <Link

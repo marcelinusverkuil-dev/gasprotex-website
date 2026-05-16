@@ -68,7 +68,7 @@ export default function StikstofCalculatorPage() {
             Lekkostencalculator stikstof
           </h1>
           <p className="text-[#4A6880] mt-4" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 620 }}>
-            Bereken wat stikstoflekkages u jaarlijks kosten: op basis van uw leveringsvorm en gasprijs.
+            Bereken wat stikstoflekkages je jaarlijks kosten: op basis van je leveringsvorm en gasprijs.
           </p>
         </div>
       </section>
@@ -184,7 +184,7 @@ export default function StikstofCalculatorPage() {
           <div className="mt-8 rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
             style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
             <div>
-              <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel lekkages u heeft?</p>
+              <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wil je weten hoeveel lekkages je hebt?</p>
             </div>
             <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
               Afspraak maken

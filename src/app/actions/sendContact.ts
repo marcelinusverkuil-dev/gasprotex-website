@@ -110,12 +110,12 @@ export async function sendContact(form: {
         <img src="https://gasprotex.nl/images/gasprotex-logo.png" alt="GasProtex" style="height:40px" />
       </div>
       <div style="background:#F4F7FA;padding:40px;border-radius:0 0 8px 8px">
-        <h2 style="color:#0A2238;margin:0 0 16px">Bedankt voor uw aanvraag, ${voornaam}</h2>
+        <h2 style="color:#0A2238;margin:0 0 16px">Bedankt voor je aanvraag, ${voornaam}</h2>
         <p style="color:#3D5A6E;line-height:1.7;margin:0 0 16px">
-          Wij hebben uw aanvraag in goede orde ontvangen en nemen binnen <strong>één werkdag</strong> contact met u op.
+          Wij hebben je aanvraag in goede orde ontvangen en nemen binnen <strong>één werkdag</strong> contact met je op.
         </p>
         <div style="background:#fff;border:1px solid #E8EDF2;border-radius:6px;padding:20px 24px;margin:24px 0">
-          <p style="color:#6B8FA6;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px">Uw aanvraag</p>
+          <p style="color:#6B8FA6;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px">Je aanvraag</p>
           <table style="border-collapse:collapse;width:100%">
             ${form.dienst ? `<tr><td style="padding:6px 0;color:#6B8FA6;font-size:13px;width:100px">Dienst</td><td style="padding:6px 0;color:#0A2238;font-size:13px">${e(form.dienst)}</td></tr>` : ''}
             ${form.bedrijf ? `<tr><td style="padding:6px 0;color:#6B8FA6;font-size:13px">Bedrijf</td><td style="padding:6px 0;color:#0A2238;font-size:13px">${e(form.bedrijf)}</td></tr>` : ''}
@@ -133,7 +133,7 @@ export async function sendContact(form: {
     from,
     to: form.email,
     replyTo: to,
-    subject: `Uw aanvraag bij GasProtex is ontvangen`,
+    subject: `Je aanvraag bij GasProtex is ontvangen`,
     html: bevestigingHtml,
   })
 }

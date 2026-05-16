@@ -239,7 +239,7 @@ export default function VoedingsmiddelensectorPage() {
                   className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
                   style={{ fontSize: 15 }}
                 >
-                  Bereken uw persluchtverlies →
+                  Bereken je persluchtverlies →
                 </Link>
               </div>
               <div className="flex items-start gap-3">
@@ -249,7 +249,7 @@ export default function VoedingsmiddelensectorPage() {
                   className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
                   style={{ fontSize: 15 }}
                 >
-                  Vraag een quickscan voor uw productielocatie →
+                  Vraag een quickscan voor je productielocatie →
                 </Link>
               </div>
               <div className="flex items-start gap-3">

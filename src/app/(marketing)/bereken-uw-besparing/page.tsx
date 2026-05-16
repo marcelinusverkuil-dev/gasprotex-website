@@ -34,7 +34,7 @@ const gassen = [
     slug: 'stikstof',
     titel: 'Stikstof',
     subtitel: 'PSA on-site & bulk vloeibaar',
-    omschrijving: 'Stikstof wordt breed ingezet voor inertering, verpakking en proceskoeling. Lekverliezen zijn direct zichtbaar in uw gasfactuur.',
+    omschrijving: 'Stikstof wordt breed ingezet voor inertering, verpakking en proceskoeling. Lekverliezen zijn direct zichtbaar in je gasfactuur.',
     tag: '€/m³ gebaseerd',
   },
   {
@@ -59,14 +59,14 @@ export default function BerekenUwBesparingPage() {
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Bereken uw besparing
+            Bereken je besparing
           </h1>
           <p className="font-bold text-[#0A2238]" style={{ fontSize: 18, marginTop: 48 }}>
-            Gratis calculator: bereken wat gaslekken uw bedrijf kosten
+            Gratis calculator: bereken wat gaslekken je bedrijf kosten
           </p>
           <p className="text-[#4A6880]" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 640, marginTop: 32 }}>
             GasProtex detecteert lekken in alle industriële gassystemen, van perslucht tot waterstof.
-            Selecteer uw gassoort en bereken wat lekken u jaarlijks kosten.
+            Selecteer je gassoort en bereken wat lekken je jaarlijks kosten.
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function BerekenUwBesparingPage() {
           >
             <div>
               <p className="text-[#3D5A6E] mb-1" style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560 }}>
-                Deze berekening geeft een indicatie op basis van marktgemiddelden en de door u ingevulde gegevens.
+                Deze berekening geeft een indicatie op basis van marktgemiddelden en de door jou ingevulde gegevens.
                 De werkelijke kosten kunnen afwijken door factoren zoals systeemdruk, leidinglengte en het aantal lekpunten.
               </p>
             </div>

@@ -42,7 +42,7 @@ export default function ContactForm() {
           Aanvraag ontvangen
         </h3>
         <p className="text-[#3D5A6E]" style={{ fontSize: 15 }}>
-          Bedankt, {form.naam.split(' ')[0]}. Wij nemen binnen één werkdag contact met u op.
+          Bedankt, {form.naam.split(' ')[0]}. Wij nemen binnen één werkdag contact met je op.
         </p>
       </div>
     )
@@ -61,7 +61,7 @@ export default function ContactForm() {
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <InputField label="Naam *" placeholder="Jan de Vries" required value={form.naam} onChange={set('naam')} />
-        <InputField label="Bedrijf *" placeholder="Uw Bedrijf BV" required value={form.bedrijf} onChange={set('bedrijf')} />
+        <InputField label="Bedrijf *" placeholder="Je bedrijf BV" required value={form.bedrijf} onChange={set('bedrijf')} />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <InputField label="E-mailadres *" type="email" placeholder="jan@bedrijf.nl" required value={form.email} onChange={set('email')} />
@@ -69,15 +69,15 @@ export default function ContactForm() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <SelectField label="Dienst *" required value={form.dienst} onChange={set('dienst')} options={diensten} placeholder="Kies een dienst" />
-        <SelectField label="Sector" value={form.sector} onChange={set('sector')} options={sectoren} placeholder="Kies uw sector" />
+        <SelectField label="Sector" value={form.sector} onChange={set('sector')} options={sectoren} placeholder="Kies je sector" />
       </div>
       <div>
-        <label className="block text-[#6B8FA6] font-medium mb-2" style={{ fontSize: 13 }}>Uw situatie</label>
+        <label className="block text-[#6B8FA6] font-medium mb-2" style={{ fontSize: 13 }}>Je situatie</label>
         <textarea
           rows={4}
           value={form.bericht}
           onChange={set('bericht')}
-          placeholder="Beschrijf kort uw installatie: type gassen, oppervlakte, urgentie..."
+          placeholder="Beschrijf kort je installatie: type gassen, oppervlakte, urgentie..."
           className="w-full outline-none transition-colors resize-none text-[#0A2238] placeholder-[#6B8FA6]"
           style={{ fontSize: 15, background: 'transparent', border: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', borderRadius: 0, padding: '8px 0' }}
         />
