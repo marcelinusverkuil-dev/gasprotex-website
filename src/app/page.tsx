@@ -57,103 +57,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 1B. Voorbeeldberekening ── */}
-
-        <section style={{ background: 'white', paddingTop: 36, paddingBottom: 36 }}>
-          <div className="container-main">
-            <div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
-              style={{ maxWidth: 1080, margin: '0 auto' }}
-            >
-              <div>
-                <p style={{ fontSize: 11, color: '#1E87B4', letterSpacing: '1.5px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 10px' }}>
-                  Reken het zelf na
-                </p>
-                <h2 style={{ fontSize: 26, fontWeight: 500, color: '#0A2238', margin: '0 0 12px', letterSpacing: '-0.5px', lineHeight: 1.25 }}>
-                  Wat kost persluchtlekkage een gemiddeld bedrijf?
-                </h2>
-                <p style={{ fontSize: 14.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.55, margin: 0 }}>
-                  Een voorbeeldberekening voor een middelgroot productiebedrijf. Wil je je eigen situatie doorrekenen?{' '}
-                  <Link href="/bereken-uw-besparing/perslucht" style={{ color: '#1E87B4', textDecoration: 'none', borderBottom: '1px solid rgba(30,135,180,0.4)', paddingBottom: 1 }}>
-                    Ga naar de volledige calculator.
-                  </Link>{' '}
-                  Energiebesparing op perslucht heeft directe impact op je stroomrekening.
-                </p>
-              </div>
-
-              <div
-                role="region"
-                aria-label="Voorbeeldberekening middelgroot productiebedrijf"
-                className="hover:shadow-md transition-shadow duration-200"
-                style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', borderRadius: 12, padding: 28 }}
-              >
-                {/* Card header */}
-                <p style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 4px' }}>
-                  Voorbeeldberekening
-                </p>
-                <p style={{ fontSize: 17, fontWeight: 500, color: '#0A2238', margin: '0 0 18px', letterSpacing: '-0.2px' }}>
-                  Middelgroot productiebedrijf
-                </p>
-
-                {/* Lekkages */}
-                <div style={{ borderBottom: '1px solid rgba(10,34,56,0.08)', paddingBottom: 14, marginBottom: 14 }}>
-                  {[
-                    { label: 'Kleine lekken (1 mm gat)', waarde: '15' },
-                    { label: 'Middelgrote lekken (3 mm gat)', waarde: '5' },
-                    { label: 'Grote lekken (5 mm gat)', waarde: '0' },
-                  ].map((r) => (
-                    <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 8 }}>
-                      <span style={{ fontSize: 13.5, color: 'rgba(10,34,56,0.6)' }}>{r.label}</span>
-                      <span style={{ fontSize: 14, color: '#0A2238', fontWeight: 500 }}>{r.waarde}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Aannames */}
-                <div style={{ borderBottom: '1px solid rgba(10,34,56,0.08)', paddingBottom: 14, marginBottom: 0 }}>
-                  {[
-                    { label: 'Bedrijfsuren', waarde: '2.000 per jaar' },
-                    { label: 'Systeemdruk', waarde: '6 bar' },
-                    { label: 'Stroomprijs', waarde: '€ 0,20 / kWh' },
-                  ].map((r) => (
-                    <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 8 }}>
-                      <span style={{ fontSize: 13.5, color: 'rgba(10,34,56,0.6)' }}>{r.label}</span>
-                      <span style={{ fontSize: 14, color: '#0A2238', fontWeight: 500 }}>{r.waarde}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Resultaat */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 20, borderTop: '1px solid rgba(10,34,56,0.1)', marginTop: 18, paddingTop: 18 }}>
-                  <div>
-                    <p style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '0.8px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 4px' }}>
-                      Verlies per jaar
-                    </p>
-                    <p style={{ fontSize: 28, fontWeight: 500, color: '#F07830', letterSpacing: '-0.5px', margin: 0, lineHeight: 1.1 }}>
-                      € 18.547
-                    </p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '0.8px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 4px' }}>
-                      CO₂-uitstoot
-                    </p>
-                    <p style={{ fontSize: 22, fontWeight: 500, color: '#0A2238', letterSpacing: '-0.3px', margin: 0, lineHeight: 1.1 }}>
-                      20 ton
-                    </p>
-                  </div>
-                </div>
-
-                <Link
-                  href="/bereken-uw-besparing/perslucht"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#0A2238', textDecoration: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', paddingBottom: 1, marginTop: 16 }}
-                >
-                  Naar de volledige calculator →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ── 2. Probleemspiegel ── */}
         <section style={{ background: 'white', paddingTop: 36, paddingBottom: 36 }}>
           <div className="container-main">
@@ -440,6 +343,101 @@ export default function HomePage() {
               >
                 Bel 06-13055282 →
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7B. Voorbeeldberekening ── */}
+        <section style={{ background: 'white', paddingTop: 36, paddingBottom: 36 }}>
+          <div className="container-main">
+            <div
+              className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+              style={{ maxWidth: 1080, margin: '0 auto' }}
+            >
+              <div>
+                <p style={{ fontSize: 11, color: '#1E87B4', letterSpacing: '1.5px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 10px' }}>
+                  Reken het zelf na
+                </p>
+                <h2 style={{ fontSize: 26, fontWeight: 500, color: '#0A2238', margin: '0 0 12px', letterSpacing: '-0.5px', lineHeight: 1.25 }}>
+                  Wat kost persluchtlekkage een gemiddeld bedrijf?
+                </h2>
+                <p style={{ fontSize: 14.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.55, margin: 0 }}>
+                  Een voorbeeldberekening voor een middelgroot productiebedrijf. Wil je je eigen situatie doorrekenen?{' '}
+                  <Link href="/bereken-uw-besparing/perslucht" style={{ color: '#1E87B4', textDecoration: 'none', borderBottom: '1px solid rgba(30,135,180,0.4)', paddingBottom: 1 }}>
+                    Ga naar de volledige calculator.
+                  </Link>{' '}
+                  Energiebesparing op perslucht heeft directe impact op je stroomrekening.
+                </p>
+              </div>
+
+              <div
+                role="region"
+                aria-label="Voorbeeldberekening middelgroot productiebedrijf"
+                className="hover:shadow-md transition-shadow duration-200"
+                style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', borderRadius: 12, padding: 28 }}
+              >
+                {/* Card header */}
+                <p style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 4px' }}>
+                  Voorbeeldberekening
+                </p>
+                <p style={{ fontSize: 17, fontWeight: 500, color: '#0A2238', margin: '0 0 18px', letterSpacing: '-0.2px' }}>
+                  Middelgroot productiebedrijf
+                </p>
+
+                {/* Lekkages */}
+                <div style={{ borderBottom: '1px solid rgba(10,34,56,0.08)', paddingBottom: 14, marginBottom: 14 }}>
+                  {[
+                    { label: 'Kleine lekken (1 mm gat)', waarde: '15' },
+                    { label: 'Middelgrote lekken (3 mm gat)', waarde: '5' },
+                    { label: 'Grote lekken (5 mm gat)', waarde: '0' },
+                  ].map((r) => (
+                    <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 8 }}>
+                      <span style={{ fontSize: 13.5, color: 'rgba(10,34,56,0.6)' }}>{r.label}</span>
+                      <span style={{ fontSize: 14, color: '#0A2238', fontWeight: 500 }}>{r.waarde}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Aannames */}
+                <div style={{ borderBottom: '1px solid rgba(10,34,56,0.08)', paddingBottom: 14, marginBottom: 0 }}>
+                  {[
+                    { label: 'Bedrijfsuren', waarde: '2.000 per jaar' },
+                    { label: 'Stroomprijs', waarde: '€ 0,26 / kWh' },
+                  ].map((r) => (
+                    <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 8 }}>
+                      <span style={{ fontSize: 13.5, color: 'rgba(10,34,56,0.6)' }}>{r.label}</span>
+                      <span style={{ fontSize: 14, color: '#0A2238', fontWeight: 500 }}>{r.waarde}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Resultaat */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 20, borderTop: '1px solid rgba(10,34,56,0.1)', marginTop: 18, paddingTop: 18 }}>
+                  <div>
+                    <p style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '0.8px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 4px' }}>
+                      Verlies per jaar
+                    </p>
+                    <p style={{ fontSize: 28, fontWeight: 500, color: '#F07830', letterSpacing: '-0.5px', margin: 0, lineHeight: 1.1 }}>
+                      € 15.070
+                    </p>
+                  </div>
+                  <div>
+                    <p style={{ fontSize: 11, color: 'rgba(10,34,56,0.45)', letterSpacing: '0.8px', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 4px' }}>
+                      CO₂-uitstoot
+                    </p>
+                    <p style={{ fontSize: 22, fontWeight: 500, color: '#0A2238', letterSpacing: '-0.3px', margin: 0, lineHeight: 1.1 }}>
+                      12 ton
+                    </p>
+                  </div>
+                </div>
+
+                <Link
+                  href="/bereken-uw-besparing/perslucht"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#0A2238', textDecoration: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', paddingBottom: 1, marginTop: 16 }}
+                >
+                  Naar de volledige calculator →
+                </Link>
+              </div>
             </div>
           </div>
         </section>

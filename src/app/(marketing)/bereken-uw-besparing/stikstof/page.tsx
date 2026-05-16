@@ -169,16 +169,6 @@ export default function StikstofCalculatorPage() {
                 <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.5)', marginTop: 4 }}>m³ stikstof per jaar</p>
               </div>
 
-              <div className="rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-                style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
-                <div>
-                  <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel lekkages u heeft?</p>
-                </div>
-                <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
-                  Afspraak maken
-                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -189,6 +179,17 @@ export default function StikstofCalculatorPage() {
               Kosten = (totaaldebiet ÷ 1.000 × 60) × bedrijfsuren × gasprijs.{' '}
               <span className="italic">Indicatieve m³-kostprijs op basis van gangbare industriële leveringsvormen.</span>
             </p>
+          </div>
+
+          <div className="mt-8 rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+            style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
+            <div>
+              <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel lekkages u heeft?</p>
+            </div>
+            <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
+              Afspraak maken
+              <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
           </div>
         </div>
       </section>
