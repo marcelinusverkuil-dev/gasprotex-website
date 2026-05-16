@@ -31,7 +31,6 @@ export default function WaterstofCalculatorPage() {
   const [kleineLekken, setKleineLekken] = useState(4)
   const [middelgroteLekken, setMiddelgroteLekken] = useState(2)
   const [groteLekken, setGroteLekken] = useState(0)
-  const [systeemdruk, setSysteemdruk] = useState(6)
   const [bedrijfsuren, setBedrijfsuren] = useState(2000)
   const [gasprijs, setGasprijs] = useState('0.27')
 
@@ -41,10 +40,9 @@ export default function WaterstofCalculatorPage() {
     const prijs = parseFloat(gasprijs.replace(',', '.')) || huidigType.prijs
     const totalDebiet = (kleineLekken * DEBIET.klein) + (middelgroteLekken * DEBIET.middel) + (groteLekken * DEBIET.groot)
     const m3jaar = (totalDebiet / 1000 * 60) * bedrijfsuren
-    const drukFactor = 1 + (systeemdruk / 10)
-    const euroJaar = m3jaar * drukFactor * prijs
+    const euroJaar = m3jaar * prijs
     return { totalDebiet, m3jaar, euroJaar }
-  }, [kleineLekken, middelgroteLekken, groteLekken, systeemdruk, bedrijfsuren, gasprijs, huidigType.prijs])
+  }, [kleineLekken, middelgroteLekken, groteLekken, bedrijfsuren, gasprijs, huidigType.prijs])
 
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
 
@@ -132,15 +130,6 @@ export default function WaterstofCalculatorPage() {
                 </div>
 
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <label htmlFor="calc-druk" className="text-[#7AADCC] font-medium" style={{ fontSize: 13 }}>Systeemdruk (bar)</label>
-                    <span style={{ fontSize: 13.5, color: '#0A2238', fontWeight: 500 }}>{systeemdruk} bar</span>
-                  </div>
-                  <input id="calc-druk" type="range" min={1} max={20} step={1} value={systeemdruk}
-                    onChange={e => setSysteemdruk(Number(e.target.value))} className="gp-range" aria-label="Systeemdruk in bar" />
-                </div>
-
-                <div>
                   <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>Bedrijfsuren per jaar</label>
                   <div className="flex gap-3">
                     {BEDRIJFSUREN_OPTIES.map(opt => (
@@ -171,7 +160,7 @@ export default function WaterstofCalculatorPage() {
                   €{fmt(resultaat.euroJaar)}
                 </p>
                 <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.6)', marginTop: 8 }}>
-                  {aantalTotaal} lek{aantalTotaal === 1 ? '' : 'ken'} · {fmt(resultaat.totalDebiet)} l/min totaal · {systeemdruk} bar
+                  {aantalTotaal} lek{aantalTotaal === 1 ? '' : 'ken'} · {fmt(resultaat.totalDebiet)} l/min totaal
                 </p>
               </div>
 

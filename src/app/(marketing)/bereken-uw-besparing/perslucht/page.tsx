@@ -24,22 +24,20 @@ export default function PersluchtCalculatorPage() {
   const [kleineLekken, setKleineLekken] = useState(15)
   const [middelgroteLekken, setMiddelgroteLekken] = useState(5)
   const [groteLekken, setGroteLekken] = useState(0)
-  const [systeemdruk, setSysteemdruk] = useState(6)
   const [bedrijfsuren, setBedrijfsuren] = useState(2000)
-  const [tarief, setTarief] = useState('0.20')
+  const [tarief, setTarief] = useState('0.26')
   const [specificPower, setSpecificPower] = useState('0.12')
 
   const resultaat = useMemo(() => {
-    const euro = parseFloat(tarief.replace(',', '.')) || 0.20
+    const euro = parseFloat(tarief.replace(',', '.')) || 0.26
     const sp = parseFloat(specificPower.replace(',', '.')) || 0.12
     const totalDebiet = (kleineLekken * DEBIET.klein) + (middelgroteLekken * DEBIET.middel) + (groteLekken * DEBIET.groot)
     const m3jaar = (totalDebiet / 1000 * 60) * bedrijfsuren
-    const drukFactor = 1 + (systeemdruk / 10)
-    const kWhJaar = m3jaar * sp * drukFactor
+    const kWhJaar = m3jaar * sp
     const euroJaar = kWhJaar * euro
-    const co2kg = kWhJaar * 0.22
+    const co2kg = kWhJaar * 0.21
     return { totalDebiet, kWhJaar, euroJaar, co2ton: co2kg / 1000, autoKm: co2kg * 6.5 }
-  }, [kleineLekken, middelgroteLekken, groteLekken, systeemdruk, bedrijfsuren, tarief, specificPower])
+  }, [kleineLekken, middelgroteLekken, groteLekken, bedrijfsuren, tarief, specificPower])
 
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
 
@@ -124,21 +122,6 @@ export default function PersluchtCalculatorPage() {
                   />
                 </div>
 
-                {/* Systeemdruk slider */}
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <label htmlFor="calc-systeemdruk" className="text-[#7AADCC] font-medium" style={{ fontSize: 13 }}>Systeemdruk (bar)</label>
-                    <span style={{ fontSize: 13.5, color: '#0A2238', fontWeight: 500 }}>{systeemdruk} bar</span>
-                  </div>
-                  <input
-                    id="calc-systeemdruk"
-                    type="range" min={1} max={20} step={1} value={systeemdruk}
-                    onChange={e => setSysteemdruk(Number(e.target.value))}
-                    className="gp-range"
-                    aria-label="Systeemdruk in bar"
-                  />
-                </div>
-
                 {/* Bedrijfsuren knoppen */}
                 <div>
                   <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>Bedrijfsuren per jaar</label>
@@ -155,7 +138,7 @@ export default function PersluchtCalculatorPage() {
 
                 <div>
                   <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
-                    Elektriciteitstarief (€/kWh) <span style={{ fontSize: 12 }}>standaard: 0,20</span>
+                    Elektriciteitstarief (€/kWh) <span style={{ fontSize: 12 }}>MKB NL 2026: 0,26</span>
                   </label>
                   <input type="text" inputMode="decimal" value={tarief} onChange={e => setTarief(e.target.value)}
                     className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
@@ -179,7 +162,7 @@ export default function PersluchtCalculatorPage() {
                   €{fmt(resultaat.euroJaar)}
                 </p>
                 <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.6)', marginTop: 8 }}>
-                  {aantalTotaal} lek{aantalTotaal === 1 ? '' : 'ken'} · {fmt(resultaat.totalDebiet)} l/min totaal · {systeemdruk} bar
+                  {aantalTotaal} lek{aantalTotaal === 1 ? '' : 'ken'} · {fmt(resultaat.totalDebiet)} l/min totaal
                 </p>
               </div>
 
