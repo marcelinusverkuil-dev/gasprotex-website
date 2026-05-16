@@ -1,4 +1,6 @@
+@AGENTS.md
 @design.md
+@WORKFLOW.md
 
 # GasProtex Website — Projectspecifiek
 
