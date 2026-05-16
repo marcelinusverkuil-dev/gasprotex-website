@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import { formatCO2, formatAutoKm } from '@/lib/format'
 
 const BEDRIJFSUREN_OPTIES = [
   { value: 8760, label: '24/7 continu' },
@@ -36,7 +37,7 @@ export default function PersluchtCalculatorPage() {
     const kWhJaar = m3jaar * sp
     const euroJaar = kWhJaar * euro
     const co2kg = kWhJaar * 0.21
-    return { totalDebiet, kWhJaar, euroJaar, co2ton: co2kg / 1000, autoKm: co2kg * 6.5 }
+    return { totalDebiet, kWhJaar, euroJaar, co2kg }
   }, [kleineLekken, middelgroteLekken, groteLekken, bedrijfsuren, tarief, specificPower])
 
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
@@ -169,8 +170,8 @@ export default function PersluchtCalculatorPage() {
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { label: 'Energieverbruik', value: fmt(resultaat.kWhJaar), unit: 'kWh/jaar' },
-                  { label: 'CO₂-uitstoot', value: fmt(resultaat.co2ton, 2), unit: 'ton CO₂/jaar' },
-                  { label: 'Auto-equivalent', value: fmt(resultaat.autoKm), unit: 'km/jaar' },
+                  { label: 'CO₂-uitstoot', value: formatCO2(resultaat.co2kg), unit: 'CO₂/jaar' },
+                  { label: 'Auto-equivalent', value: formatAutoKm(resultaat.co2kg), unit: 'rijden/jaar' },
                 ].map(k => (
                   <div key={k.label} className="rounded-md" style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 16px' }}>
                     <p style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase', color: 'rgba(10,34,56,0.45)', marginBottom: 4 }}>{k.label}</p>
@@ -186,7 +187,7 @@ export default function PersluchtCalculatorPage() {
           <div className="mt-12 rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
             style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
             <div>
-              <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wilt u weten hoeveel lekkages u heeft?</p>
+              <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wil je weten hoeveel lekkages je hebt?</p>
             </div>
             <Link href="/contact" className="inline-flex items-center gap-2 font-semibold flex-shrink-0 transition-colors hover:text-[#C4631E]" style={{ color: '#F07830', fontSize: 14 }}>
               Afspraak maken
