@@ -3,6 +3,14 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { formatCO2, formatAutoKm } from '@/lib/format'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Bereken je besparing', url: 'https://gasprotex.nl/bereken-je-besparing' },
+  { name: 'Perslucht', url: 'https://gasprotex.nl/bereken-je-besparing/perslucht' },
+])
 
 const BEDRIJFSUREN_OPTIES = [
   { value: 8760, label: '24/7 continu' },
@@ -46,6 +54,7 @@ export default function PersluchtCalculatorPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd} />
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <Link href="/bereken-je-besparing" className="inline-flex items-center gap-2 text-[#7AADCC] hover:text-[#3D5A6E] mb-6 transition-colors" style={{ fontSize: 13 }}>

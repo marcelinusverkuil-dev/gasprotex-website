@@ -1,5 +1,12 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Bereken je besparing', url: 'https://gasprotex.nl/bereken-je-besparing' },
+])
 
 export const metadata: Metadata = {
   title: 'Bereken besparing perslucht en gaslekken | GasProtex',
@@ -56,6 +63,7 @@ const gassen = [
 export default function BerekenUwBesparingPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd} />
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
           <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>

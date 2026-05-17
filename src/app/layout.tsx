@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import AnalyticsWithConsent from '@/components/marketing/GoogleAnalytics'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getOrganizationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'GasProtex – Akoestische Gaslekdetectie | Nederland',
@@ -28,42 +30,7 @@ export default function RootLayout({
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': ['LocalBusiness', 'Organization'],
-              '@id': 'https://gasprotex.nl/#organization',
-              name: 'GasProtex',
-              url: 'https://gasprotex.nl',
-              logo: 'https://gasprotex.nl/images/gasprotex-logo.png',
-              image: 'https://gasprotex.nl/images/gasprotex-logo.png',
-              description: 'Specialist in akoestische gas- en persluchtlekdetectie voor de Nederlandse industrie en voedingsmiddelensector.',
-              telephone: '+31613055282',
-              email: 'info@gasprotex.nl',
-              priceRange: '€€',
-              address: { '@type': 'PostalAddress', addressCountry: 'NL' },
-              areaServed: [{ '@type': 'Country', name: 'Nederland' }],
-              founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
-              knowsAbout: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie', 'ATEX', 'ISO 11011', 'BRZO'],
-              serviceType: ['Gaslekdetectie', 'Persluchtlekdetectie', 'Akoestische lekdetectie'],
-              hasCredential: [
-                {
-                  '@type': 'EducationalOccupationalCredential',
-                  credentialCategory: 'ATEX-certificering',
-                  name: 'ATEX-gecertificeerd voor zone 2 (gas) en zone 22 (stof)',
-                },
-                {
-                  '@type': 'EducationalOccupationalCredential',
-                  credentialCategory: 'VCA-certificering',
-                  name: 'VCA-vol',
-                },
-              ],
-              sameAs: [],
-            }),
-          }}
-        />
+        <JsonLd data={getOrganizationSchema()} />
         {children}
         <AnalyticsWithConsent />
         {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (

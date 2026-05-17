@@ -1,4 +1,11 @@
 ﻿import type { Metadata } from 'next'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Privacy', url: 'https://gasprotex.nl/privacy' },
+])
 
 export const metadata: Metadata = {
   title: 'Privacybeleid | GasProtex',
@@ -23,7 +30,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
+    <>
+      <JsonLd data={breadcrumbJsonLd} />
+      <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
       <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
         <div style={{ maxWidth: 800 }}>
 
@@ -114,6 +123,7 @@ export default function PrivacyPage() {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

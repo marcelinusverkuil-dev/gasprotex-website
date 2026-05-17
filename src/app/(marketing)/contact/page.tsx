@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 import ContactForm from '@/components/marketing/ContactForm'
 
 const BOOKINGS_URL =
@@ -27,34 +28,33 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
+const contactPageJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'ContactPage',
-      url: 'https://gasprotex.nl/contact/',
-      name: 'Contact GasProtex',
-    },
-    {
-      '@type': 'LocalBusiness',
-      name: 'GasProtex',
-      telephone: '+31613055282',
-      email: 'info@gasprotex.nl',
-      url: 'https://gasprotex.nl',
-      areaServed: 'NL',
-      description: 'Specialist in akoestische gaslekdetectie voor de Nederlandse industrie.',
-    },
-  ],
+  '@type': 'ContactPage',
+  url: 'https://gasprotex.nl/contact/',
+  name: 'Contact GasProtex',
 }
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'GasProtex',
+  telephone: '+31613055282',
+  email: 'info@gasprotex.nl',
+  url: 'https://gasprotex.nl',
+  areaServed: 'NL',
+  description: 'Specialist in akoestische gaslekdetectie voor de Nederlandse industrie.',
+}
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Contact', url: 'https://gasprotex.nl/contact' },
+])
 
 export default function ContactPage() {
   return (
     <>
-      <Script
-        id="contact-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={[contactPageJsonLd, localBusinessJsonLd, breadcrumbJsonLd]} />
 
       {/* Sectie 1 — Hero + contactgegevens */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>

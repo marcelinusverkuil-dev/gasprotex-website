@@ -1,6 +1,7 @@
 ﻿import Link from 'next/link'
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 const BOOKINGS_URL =
   'https://outlook.office.com/bookwithme/user/4ced7b7b91134a18840e6a4ea975b021@gasprotex.nl?anonymous&ismsaljsauthenabled&ep=plink'
@@ -27,30 +28,26 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
+const personJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Person',
-      name: 'Marcelinus Verkuil',
-      jobTitle: 'Oprichter',
-      worksFor: { '@type': 'Organization', name: 'GasProtex' },
-    },
-    {
-      '@type': 'Organization',
-      name: 'GasProtex',
-      url: 'https://gasprotex.nl',
-      founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-        { '@type': 'ListItem', position: 2, name: 'Over ons', item: 'https://gasprotex.nl/over-ons/' },
-      ],
-    },
-  ],
+  '@type': 'Person',
+  name: 'Marcelinus Verkuil',
+  jobTitle: 'Oprichter',
+  worksFor: { '@type': 'Organization', name: 'GasProtex' },
 }
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'GasProtex',
+  url: 'https://gasprotex.nl',
+  founder: { '@type': 'Person', name: 'Marcelinus Verkuil' },
+}
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Over Ons', url: 'https://gasprotex.nl/over-ons' },
+])
 
 const certificeringen = [
   {
@@ -93,11 +90,7 @@ const werkwijze = [
 export default function OverOnsPage() {
   return (
     <>
-      <Script
-        id="over-ons-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={[personJsonLd, organizationJsonLd, breadcrumbJsonLd]} />
 
       {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>

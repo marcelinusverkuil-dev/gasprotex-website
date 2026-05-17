@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from 'next'
-import Link from 'next/link'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 
 export const metadata: Metadata = {
@@ -110,34 +110,16 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'Nederland' },
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://gasprotex.nl/diensten/' },
-    { '@type': 'ListItem', position: 3, name: 'Lekdetectie-abonnement', item: 'https://gasprotex.nl/diensten/lekdetectie-abonnement/' },
-  ],
-}
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Diensten', url: 'https://gasprotex.nl/diensten' },
+  { name: 'Lekdetectie-abonnement', url: 'https://gasprotex.nl/diensten/lekdetectie-abonnement' },
+])
 
 export default function AbonnementPage() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <Script
-        id="service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={[faqSchema, serviceSchema, breadcrumbSchema]} />
 
       {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>

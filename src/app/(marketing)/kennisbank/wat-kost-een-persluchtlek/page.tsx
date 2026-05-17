@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 
 export const metadata: Metadata = {
@@ -48,15 +49,11 @@ const jsonLd = {
   inLanguage: 'nl-NL',
 }
 
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank' },
-    { '@type': 'ListItem', position: 3, name: 'Wat kost een persluchtlek?', item: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek' },
-  ],
-}
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Kennisbank', url: 'https://gasprotex.nl/kennisbank' },
+  { name: 'Wat kost een persluchtlek', url: 'https://gasprotex.nl/kennisbank/wat-kost-een-persluchtlek' },
+])
 
 const kostentabel = [
   { label: 'Klein lek (1 mm)', druk: '6 bar', debiet: '64 l/min', m3: '33.586', kwh: '6.449', kosten: '€ 1.290', highlight: false },
@@ -73,16 +70,7 @@ const co2tabel = [
 export default function WatKostPersluchtlekPage() {
   return (
     <>
-      <Script
-        id="article-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={[jsonLd, breadcrumbJsonLd]} />
 
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>
         <div className="container-main">

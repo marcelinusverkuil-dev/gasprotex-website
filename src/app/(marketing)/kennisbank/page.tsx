@@ -1,6 +1,6 @@
-﻿import Link from 'next/link'
-import type { Metadata } from 'next'
-import Script from 'next/script'
+﻿import type { Metadata } from 'next'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 import KennisbankFilter from '@/components/marketing/KennisbankFilter'
 
 
@@ -26,38 +26,28 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
+const collectionJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'CollectionPage',
-      name: 'Kennisbank GasProtex',
-      url: 'https://gasprotex.nl/kennisbank/',
-      description: 'Praktische artikelen over gaslekdetectie, ATEX-zones, persluchtkosten en ISO 11011.',
-      publisher: {
-        '@type': 'Organization',
-        name: 'GasProtex',
-        url: 'https://gasprotex.nl',
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-        { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank/' },
-      ],
-    },
-  ],
+  '@type': 'CollectionPage',
+  name: 'Kennisbank GasProtex',
+  url: 'https://gasprotex.nl/kennisbank/',
+  description: 'Praktische artikelen over gaslekdetectie, ATEX-zones, persluchtkosten en ISO 11011.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'GasProtex',
+    url: 'https://gasprotex.nl',
+  },
 }
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Kennisbank', url: 'https://gasprotex.nl/kennisbank' },
+])
 
 export default function KennisbankPage() {
   return (
     <>
-      <Script
-        id="kennisbank-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
 
       {/* Sectie 1 — Hero + filter */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '60px' }}>

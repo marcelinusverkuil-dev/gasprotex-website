@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 
 export const metadata: Metadata = {
@@ -44,15 +45,11 @@ const jsonLd = {
   inLanguage: 'nl-NL',
 }
 
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank' },
-    { '@type': 'ListItem', position: 3, name: 'ATEX-zones uitgelegd', item: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd' },
-  ],
-}
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Kennisbank', url: 'https://gasprotex.nl/kennisbank' },
+  { name: 'ATEX-zones uitgelegd', url: 'https://gasprotex.nl/kennisbank/atex-zones-uitgelegd' },
+])
 
 const gasZones = [
   { zone: 'Zone 0', beschrijving: 'Continu of langdurig aanwezig', voorbeelden: 'Binnenkant van tanks, leidingen, reactorvaten, tankventilatie-uitlaten', highlight: false },
@@ -69,16 +66,7 @@ const stofZones = [
 export default function AtexZonesPage() {
   return (
     <>
-      <Script
-        id="article-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={[jsonLd, breadcrumbJsonLd]} />
 
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>
         <div className="container-main">

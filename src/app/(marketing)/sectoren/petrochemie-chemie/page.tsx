@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 
 export const metadata: Metadata = {
@@ -45,15 +46,11 @@ const jsonLd = {
   },
 }
 
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Sectoren', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 3, name: 'Petrochemie & Chemie', item: 'https://gasprotex.nl/sectoren/petrochemie-chemie/' },
-  ],
-}
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Sectoren', url: 'https://gasprotex.nl/sectoren' },
+  { name: 'Petrochemie & Chemie', url: 'https://gasprotex.nl/sectoren/petrochemie-chemie' },
+])
 
 const gassen = [
   { label: 'Procesgassen', detail: 'methaan, ethyleen, waterstof, H₂S' },
@@ -87,16 +84,7 @@ const compliance = [
 export default function PetrochemieChemiePage() {
   return (
     <>
-      <Script
-        id="petrochemie-chemie-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={[jsonLd, breadcrumbJsonLd]} />
 
       {/* Sectie 1 — Hero */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>

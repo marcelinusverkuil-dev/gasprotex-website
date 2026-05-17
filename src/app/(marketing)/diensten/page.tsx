@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 
 export const metadata: Metadata = {
@@ -91,14 +93,10 @@ const serviceJsonLd = {
   },
 }
 
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Diensten', item: 'https://gasprotex.nl/diensten/' },
-  ],
-}
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Diensten', url: 'https://gasprotex.nl/diensten' },
+])
 
 function ArrowRight() {
   return (
@@ -117,18 +115,7 @@ function ArrowRight() {
 export default function DienstenPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={[faqJsonLd, serviceJsonLd, breadcrumbJsonLd]} />
 
       {/* Sectie 1 — Hero (licht) */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>

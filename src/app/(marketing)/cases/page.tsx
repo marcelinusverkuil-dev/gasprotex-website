@@ -1,5 +1,12 @@
 ﻿import Link from 'next/link'
 import type { Metadata } from 'next'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Cases', url: 'https://gasprotex.nl/cases' },
+])
 
 export const metadata: Metadata = {
   title: 'Cases en praktijkvoorbeelden lekdetectie | GasProtex',
@@ -74,6 +81,7 @@ const cases = [
 export default function CasesPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd} />
       {/* Header */}
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>

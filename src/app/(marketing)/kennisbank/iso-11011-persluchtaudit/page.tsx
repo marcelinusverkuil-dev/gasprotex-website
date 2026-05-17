@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import JsonLd from '@/components/marketing/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'ISO 11011: wat verwacht de norm en wat levert een persluchtaudit op? | GasProtex',
@@ -47,15 +48,11 @@ const jsonLd = {
   inLanguage: 'nl-NL',
 }
 
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gasprotex.nl/' },
-    { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: 'https://gasprotex.nl/kennisbank' },
-    { '@type': 'ListItem', position: 3, name: 'ISO 11011: wat verwacht de norm en wat levert een persluchtaudit op?', item: 'https://gasprotex.nl/kennisbank/iso-11011-persluchtaudit' },
-  ],
-}
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: 'Home', url: 'https://gasprotex.nl' },
+  { name: 'Kennisbank', url: 'https://gasprotex.nl/kennisbank' },
+  { name: 'ISO 11011 persluchtaudit', url: 'https://gasprotex.nl/kennisbank/iso-11011-persluchtaudit' },
+])
 
 const subsystemen = [
   {
@@ -81,16 +78,7 @@ const subsystemen = [
 export default function Iso11011PersluchtauditPage() {
   return (
     <>
-      <Script
-        id="article-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={[jsonLd, breadcrumbJsonLd]} />
 
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '32px' }}>
         <div className="container-main">
