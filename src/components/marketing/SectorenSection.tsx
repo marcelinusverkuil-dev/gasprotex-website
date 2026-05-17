@@ -126,7 +126,7 @@ export default function SectorenSection() {
               </p>
             </div>
             <Link
-              href="/bereken-uw-besparing"
+              href="/bereken-je-besparing"
               className="flex-shrink-0 inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
               style={{ fontSize: 14 }}
             >

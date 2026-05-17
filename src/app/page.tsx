@@ -144,7 +144,7 @@ export default function HomePage() {
                   </div>
                   <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
                     <Link
-                      href="/bereken-uw-besparing/perslucht"
+                      href="/bereken-je-besparing/perslucht"
                       style={{ background: 'white', color: '#0A2238', border: '1px solid rgba(10,34,56,0.2)', padding: '11px 18px', fontSize: 13.5, fontWeight: 500, borderRadius: 5, display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none' }}
                     >
                       Bereken je besparing →
@@ -363,7 +363,7 @@ export default function HomePage() {
                 </h2>
                 <p style={{ fontSize: 14.5, color: 'rgba(10,34,56,0.6)', lineHeight: 1.55, margin: 0 }}>
                   Een voorbeeldberekening voor een middelgroot productiebedrijf. Wil je je eigen situatie doorrekenen?{' '}
-                  <Link href="/bereken-uw-besparing/perslucht" style={{ color: '#1E87B4', textDecoration: 'none', borderBottom: '1px solid rgba(30,135,180,0.4)', paddingBottom: 1 }}>
+                  <Link href="/bereken-je-besparing/perslucht" style={{ color: '#1E87B4', textDecoration: 'none', borderBottom: '1px solid rgba(30,135,180,0.4)', paddingBottom: 1 }}>
                     Ga naar de volledige calculator.
                   </Link>{' '}
                   Energiebesparing op perslucht heeft directe impact op je stroomrekening.
@@ -432,7 +432,7 @@ export default function HomePage() {
                 </div>
 
                 <Link
-                  href="/bereken-uw-besparing/perslucht"
+                  href="/bereken-je-besparing/perslucht"
                   style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#0A2238', textDecoration: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', paddingBottom: 1, marginTop: 16 }}
                 >
                   Naar de volledige calculator →

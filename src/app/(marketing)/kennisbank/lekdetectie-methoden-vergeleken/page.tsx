@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
@@ -334,7 +334,7 @@ export default function LekdetectieMethodenPage() {
                 <p className="text-[#3D5A6E] leading-relaxed mb-2" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Een akoestische scan geeft je in een dagdeel een indicatief beeld. Wil je eerst een
                   indicatie van de kosten? Gebruik onze{' '}
-                  <Link href="/bereken-uw-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
+                  <Link href="/bereken-je-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">
                     persluchtcalculator
                   </Link>.
                 </p>

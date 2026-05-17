@@ -1,16 +1,16 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Bereken besparing perslucht en gaslekken | GasProtex',
   description: 'Bereken in 2 minuten wat persluchtlekken jouw bedrijf per jaar kosten. Op basis van compressorvermogen, druk en bedrijfstijd.',
   alternates: {
-    canonical: 'https://gasprotex.nl/bereken-uw-besparing',
+    canonical: 'https://gasprotex.nl/bereken-je-besparing',
   },
   openGraph: {
     title: 'Bereken jouw besparing op perslucht en gaslekken | GasProtex',
     description: 'Bereken in 2 minuten wat persluchtlekken jouw productiebedrijf per jaar kosten. Op basis van compressorvermogen, druk en bedrijfstijd.',
-    url: 'https://gasprotex.nl/bereken-uw-besparing/',
+    url: 'https://gasprotex.nl/bereken-je-besparing/',
     type: 'website',
     locale: 'nl_NL',
     siteName: 'GasProtex',
@@ -77,7 +77,7 @@ export default function BerekenUwBesparingPage() {
             {gassen.map((g) => (
               <Link
                 key={g.slug}
-                href={`/bereken-uw-besparing/${g.slug}`}
+                href={`/bereken-je-besparing/${g.slug}`}
                 className="group rounded-md overflow-hidden border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 block"
                 style={{ background: '#ffffff', padding: '40px 44px' }}
               >

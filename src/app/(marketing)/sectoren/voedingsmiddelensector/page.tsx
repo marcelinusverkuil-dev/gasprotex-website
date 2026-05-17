@@ -134,7 +134,7 @@ export default function VoedingsmiddelensectorPage() {
                   Vraag een Quickscan aan →
                 </a>
                 <a
-                  href="/bereken-uw-besparing/perslucht"
+                  href="/bereken-je-besparing/perslucht"
                   className="inline-flex items-center justify-center border border-[#0A2238]/25 text-[#0A2238] hover:border-[#0A2238]/50 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                   style={{ padding: '14px 32px' }}
                 >
@@ -235,7 +235,7 @@ export default function VoedingsmiddelensectorPage() {
               <div className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
                 <Link
-                  href="/bereken-uw-besparing/perslucht"
+                  href="/bereken-je-besparing/perslucht"
                   className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
                   style={{ fontSize: 15 }}
                 >
@@ -281,7 +281,7 @@ export default function VoedingsmiddelensectorPage() {
                 </h2>
               </div>
               <Link
-                href="/bereken-uw-besparing/perslucht"
+                href="/bereken-je-besparing/perslucht"
                 className="inline-flex items-center gap-2 bg-[#F07830] hover:bg-[#FF8A40] text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap flex-shrink-0"
                 style={{ padding: '14px 32px' }}
               >

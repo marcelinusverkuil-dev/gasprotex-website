@@ -104,7 +104,7 @@ export default function Calculator() {
       </div>
 
       <Link
-        href="/bereken-uw-besparing/perslucht"
+        href="/bereken-je-besparing/perslucht"
         style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#0A2238', textDecoration: 'none', borderBottom: '1px solid rgba(10,34,56,0.2)', paddingBottom: 1, marginTop: 16 }}
       >
         Naar de volledige calculator →

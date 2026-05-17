@@ -8,6 +8,11 @@ const BEDRIJFSUREN_OPTIES = [
   { value: 2000, label: '250 werkdagen' },
 ]
 
+const STIKSTOF_TYPES = [
+  { id: 'psa', label: 'PSA on-site', prijs: 0.06, omschrijving: 'Stikstof gegenereerd op locatie via drukwisseladsorptie' },
+  { id: 'bulk', label: 'Bulk vloeibaar', prijs: 0.28, omschrijving: 'Vloeibare stikstof geleverd per tankwagen' },
+]
+
 const DEBIET = { klein: 45, middel: 670, groot: 1850 }
 
 const inputStyle = {
@@ -20,41 +25,50 @@ const inputStyle = {
   color: '#0A2238',
 }
 
-export default function Co2CalculatorPage() {
+export default function StikstofCalculatorPage() {
+  const [type, setType] = useState('psa')
   const [kleineLekken, setKleineLekken] = useState(4)
   const [middelgroteLekken, setMiddelgroteLekken] = useState(2)
   const [groteLekken, setGroteLekken] = useState(0)
   const [bedrijfsuren, setBedrijfsuren] = useState(2000)
-  const [gasprijs, setGasprijs] = useState('0.15')
+  const [gasprijs, setGasprijs] = useState('0.06')
+
+  const huidigType = STIKSTOF_TYPES.find(t => t.id === type)!
 
   const resultaat = useMemo(() => {
-    const prijs = parseFloat(gasprijs.replace(',', '.')) || 0.15
+    const prijs = parseFloat(gasprijs.replace(',', '.')) || huidigType.prijs
     const totalDebiet = (kleineLekken * DEBIET.klein) + (middelgroteLekken * DEBIET.middel) + (groteLekken * DEBIET.groot)
     const m3jaar = (totalDebiet / 1000 * 60) * bedrijfsuren
     const euroJaar = m3jaar * prijs
     return { totalDebiet, m3jaar, euroJaar }
-  }, [kleineLekken, middelgroteLekken, groteLekken, bedrijfsuren, gasprijs])
+  }, [kleineLekken, middelgroteLekken, groteLekken, bedrijfsuren, gasprijs, huidigType.prijs])
 
   const fmt = (n: number, d = 0) => n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d })
 
   const aantalTotaal = kleineLekken + middelgroteLekken + groteLekken
 
+  const handleTypeChange = (id: string) => {
+    setType(id)
+    const t = STIKSTOF_TYPES.find(t => t.id === id)!
+    setGasprijs(t.prijs.toString())
+  }
+
   return (
     <>
       <section style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '40px' }}>
         <div className="container-main" style={{ paddingLeft: 'var(--container-pad)', paddingRight: 'var(--container-pad)' }}>
-          <Link href="/bereken-uw-besparing" className="inline-flex items-center gap-2 text-[#7AADCC] hover:text-[#3D5A6E] mb-6 transition-colors" style={{ fontSize: 13 }}>
+          <Link href="/bereken-je-besparing" className="inline-flex items-center gap-2 text-[#7AADCC] hover:text-[#3D5A6E] mb-6 transition-colors" style={{ fontSize: 13 }}>
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" style={{ transform: 'rotate(180deg)' }}>
               <path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             Alle gassoorten
           </Link>
-          <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>CO₂ industrieel</p>
+          <p className="text-[#7AADCC] mb-3" style={{ fontSize: 13, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Stikstof</p>
           <h1 className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
-            Lekkostencalculator CO₂
+            Lekkostencalculator stikstof
           </h1>
           <p className="text-[#4A6880] mt-4" style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 620 }}>
-            Bereken wat CO₂-lekkages je jaarlijks kosten: directe materiaalkosten op basis van je gasprijs.
+            Bereken wat stikstoflekkages je jaarlijks kosten: op basis van je leveringsvorm en gasprijs.
           </p>
         </div>
       </section>
@@ -66,6 +80,20 @@ export default function Co2CalculatorPage() {
             <div className="rounded-md" style={{ background: '#ffffff', padding: '24px' }}>
               <p className="text-[#7AADCC] mb-8" style={{ fontSize: 12, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Invoer</p>
               <div className="flex flex-col gap-6">
+
+                <div>
+                  <label className="block text-[#7AADCC] font-medium mb-2" style={{ fontSize: 13 }}>Leveringsvorm</label>
+                  <div className="flex gap-3">
+                    {STIKSTOF_TYPES.map(t => (
+                      <button key={t.id} onClick={() => handleTypeChange(t.id)} className="flex-1 rounded-md text-left transition-all"
+                        style={{ background: type === t.id ? 'rgba(240,120,48,0.1)' : '#F4F7FA', border: type === t.id ? '1px solid #F07830' : '1px solid #E8EDF2', padding: '12px 14px' }}>
+                        <span className="block font-semibold text-[#0A2238]" style={{ fontSize: 15 }}>{t.label}</span>
+                        <span className="text-[#7AADCC]" style={{ fontSize: 12 }}>gem. €{t.prijs.toFixed(2)}/m³</span>
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-[#7AADCC] mt-2" style={{ fontSize: 12 }}>{huidigType.omschrijving}</p>
+                </div>
 
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
@@ -115,7 +143,7 @@ export default function Co2CalculatorPage() {
 
                 <div>
                   <label className="block text-[#7AADCC] font-medium mb-1" style={{ fontSize: 13 }}>
-                    Gasprijs (€/m³) <span style={{ fontSize: 12 }}>standaard: 0,15</span>
+                    Gasprijs (€/m³) <span style={{ fontSize: 12 }}>aanpasbaar</span>
                   </label>
                   <input type="text" inputMode="decimal" value={gasprijs} onChange={e => setGasprijs(e.target.value)}
                     className="w-full placeholder-[#7AADCC] outline-none transition-colors" style={inputStyle} />
@@ -138,13 +166,22 @@ export default function Co2CalculatorPage() {
               <div className="rounded-md" style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
                 <p style={{ fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase', color: 'rgba(10,34,56,0.45)', marginBottom: 4 }}>Gasverlies</p>
                 <p className="font-bold text-[#0A2238]" style={{ fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{fmt(resultaat.m3jaar)}</p>
-                <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.5)', marginTop: 4 }}>m³ CO₂ per jaar</p>
+                <p style={{ fontSize: 13, color: 'rgba(10,34,56,0.5)', marginTop: 4 }}>m³ stikstof per jaar</p>
               </div>
 
             </div>
           </div>
 
-          <div className="mt-12 rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          <div className="mt-8" style={{ borderTop: '1px solid #E2E8F0', paddingTop: '32px' }}>
+            <p className="text-[#4A6880]" style={{ fontSize: 13, lineHeight: 1.8 }}>
+              <span className="font-semibold text-[#0A2238]">Rekenmethode:</span>{' '}
+              Totaaldebiet = (kleine lekken × 45) + (middelgrote × 670) + (grote × 1.850) l/min (P2-norm).
+              Kosten = (totaaldebiet ÷ 1.000 × 60) × bedrijfsuren × gasprijs.{' '}
+              <span className="italic">Indicatieve m³-kostprijs op basis van gangbare industriële leveringsvormen.</span>
+            </p>
+          </div>
+
+          <div className="mt-8 rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
             style={{ background: 'white', border: '1px solid rgba(10,34,56,0.1)', padding: '20px 24px' }}>
             <div>
               <p className="font-semibold text-[#0A2238]" style={{ fontSize: 16 }}>Wil je weten hoeveel lekkages je hebt?</p>
@@ -154,7 +191,6 @@ export default function Co2CalculatorPage() {
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M8.5 1L13 5L8.5 9M1 5H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
-
         </div>
       </section>
     </>

@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
@@ -297,7 +297,7 @@ export default function WelkeGassenPage() {
                 </p>
                 <p className="text-[#3D5A6E] leading-relaxed" style={{ fontSize: 15, lineHeight: 1.7 }}>
                   Gebruik onze{' '}
-                  <Link href="/bereken-uw-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">persluchtcalculator</Link>.
+                  <Link href="/bereken-je-besparing/perslucht" className="text-[#1E87B4] hover:text-[#0A2238] transition-colors underline-offset-2">persluchtcalculator</Link>.
                 </p>
               </div>
               <div>

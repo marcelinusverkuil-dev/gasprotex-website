@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Script from 'next/script'
@@ -273,7 +273,7 @@ export default function PetrochemieChemiePage() {
               <div className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#F07830]" style={{ marginTop: '9px' }} />
                 <Link
-                  href="/bereken-uw-besparing/waterstof"
+                  href="/bereken-je-besparing/waterstof"
                   className="text-[#1E87B4] hover:text-[#0A2238] transition-colors font-medium underline-offset-2"
                   style={{ fontSize: 15 }}
                 >

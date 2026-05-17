@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 
@@ -220,7 +220,7 @@ export default function DienstenPage() {
                 controle.
               </p>
               <Link
-                href="/bereken-uw-besparing/perslucht"
+                href="/bereken-je-besparing/perslucht"
                 className="inline-flex items-center gap-2 text-[#F07830] hover:text-[#FF8A40] font-semibold transition-colors"
                 style={{ fontSize: 14 }}
               >
