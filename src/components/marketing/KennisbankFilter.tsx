@@ -21,6 +21,13 @@ const artikelen = [
       'Zone 0, 1 en 2 bepalen welke apparatuur je mag inzetten. Niet elke camera mag in elke zone. Wat ATEX-certificering voor lekdetectie betekent en waarom het ertoe doet.',
   },
   {
+    slug: 'lekdetectie-in-atex-zones',
+    categorie: 'ATEX & Compliance',
+    titel: 'Lekdetectie in ATEX-zones: methodes en compliance',
+    preview:
+      'Vier methodes naast elkaar, wat de zone-classificatie betekent voor je keuze, en hoe akoestische camera-inspectie past in ATEX 153 en BRZO-compliance. De pillar van ons ATEX-cluster.',
+  },
+  {
     slug: 'wat-kost-een-persluchtlek',
     categorie: 'Perslucht',
     titel: 'Wat kost een persluchtlek per jaar? Rekenmethode en voorbeelden.',

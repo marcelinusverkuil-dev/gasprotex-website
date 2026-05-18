@@ -104,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'waterstoflekdetectie',
     'kruisgevoeligheid-vaste-gasdetectie',
     'akoestische-camera-kopen-of-dienst-inkopen',
+    'lekdetectie-in-atex-zones',
   ]
 
   const kennisbankRoutes: MetadataRoute.Sitemap = kennisbankSlugs.map((slug) => ({
