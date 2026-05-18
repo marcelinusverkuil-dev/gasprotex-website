@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/bereken-uw-besparing/:path*',
+        destination: '/bereken-je-besparing/:path*',
+        permanent: true,
+      },
+      {
         source: '/:path+/',
         destination: '/:path+',
         permanent: true,
