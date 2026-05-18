@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-const categorieen = ['Alles', 'Perslucht', 'Gaslekdetectie', 'ATEX & Compliance']
+const categorieen = ['Alles', 'Perslucht', 'Gaslekdetectie', 'ATEX & Compliance', 'Afwegingen']
 
 const artikelen = [
   {
@@ -29,7 +29,7 @@ const artikelen = [
   },
   {
     slug: 'akoestische-camera-kopen-of-dienst-inkopen',
-    categorie: 'Perslucht',
+    categorie: 'Afwegingen',
     titel: 'Akoestische camera kopen of dienst inkopen?',
     preview:
       'Eigen camera vanaf €40.000 plus operator en kalibratie, of dienst-inkoop vanaf €2.500 per Quickscan? Cijfers, scenario\'s en een beslismatrix voor de afweging.',
