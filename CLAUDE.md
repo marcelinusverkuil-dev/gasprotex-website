@@ -23,13 +23,9 @@ src/
         page.tsx
         lekdetectie-abonnement/page.tsx
       sectoren/
-        page.tsx            ← overzicht
         petrochemie-chemie/page.tsx
         voedingsmiddelensector/page.tsx
-      bereken-uw-besparing/
-        page.tsx
-        perslucht/ stikstof/ waterstof/ co2/
-      bereken-uw-verlies/
+      bereken-je-besparing/
         page.tsx
         perslucht/ stikstof/ waterstof/ co2/
       lekkosten-calculator/page.tsx
@@ -81,8 +77,7 @@ Nieuwe afbeeldingen horen in `public/images/` (of een logische submap). Verwijze
 | `/diensten` | ✅ klaar |
 | `/diensten/lekdetectie-abonnement` | ✅ klaar |
 | `/sectoren` | ✅ klaar |
-| `/bereken-uw-besparing` | ✅ klaar |
-| `/bereken-uw-verlies` | ✅ klaar |
+| `/bereken-je-besparing` | ✅ klaar |
 | `/lekkosten-calculator` | ✅ klaar |
 | `/kennisbank` | ✅ klaar |
 | `/over-ons` | ✅ klaar |
@@ -148,12 +143,12 @@ Sectorkaarten verwijzen naar subsectoren.
 ### `/kennisbank/atex-zones-uitgelegd`
 Kennisbankartikel over ATEX-zones.
 
-### `/bereken-uw-besparing` · `/bereken-uw-verlies`
+### `/bereken-je-besparing`
 1. Hero
 2. Vier gassoort-kaarten — Perslucht, Stikstof, Waterstof, CO₂
 3. Disclaimer banner
 
-### `/bereken-uw-besparing/perslucht` (en andere gassoorten)
+### `/bereken-je-besparing/perslucht` (en andere gassoorten)
 1. Hero + breadcrumb
 2. Calculator invoer — 6 velden (debiet, druk, bedrijfsuren, tarief, vermogen, aantal lekken)
 3. Resultaten — kosten, energieverbruik, CO₂, auto-equivalent
@@ -166,7 +161,7 @@ Kennisbankartikel over ATEX-zones.
 3. CTA banner
 
 ### `/lekkosten-calculator`
-Redirect naar `/bereken-uw-verlies/perslucht`.
+Redirect naar `/bereken-je-besparing/perslucht`.
 
 ---
 
@@ -176,7 +171,7 @@ Alle secties gebruiken een consistent containerpatroon:
 - **Container div**: `className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200"` + `style={{ padding: '48px' }}`
 - **CTA-containers** (smaller): `style={{ padding: '40px 48px' }}` ipv 48px
 - Tekst/content begint dus altijd 48px van de containerborder — consistent op alle pagina's
-- Individuele kaarten (DienstenSection, bereken-uw-besparing) zitten BINNEN een outer container
+- Individuele kaarten (DienstenSection, bereken-je-besparing) zitten BINNEN een outer container
 
 ## Secties per component (homepage)
 | Component | Bestand | Inhoud |
