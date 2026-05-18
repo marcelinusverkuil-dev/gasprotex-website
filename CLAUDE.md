@@ -24,10 +24,6 @@ src/
         lekdetectie-abonnement/page.tsx
       sectoren/
         page.tsx            ← overzicht
-        chemie/page.tsx
-        food/page.tsx
-        energie/page.tsx
-        industrie/page.tsx
         petrochemie-chemie/page.tsx
         voedingsmiddelensector/page.tsx
       bereken-uw-besparing/
@@ -50,11 +46,10 @@ src/
     auth/                   ← login/registratie (in progress)
     scan/                   ← QR-code /scan/[assetId]
   components/
-    marketing/              ← Navbar, Footer, HeroSection, SectorPage, etc.
+    marketing/              ← Navbar, Footer, HeroSection, etc.
     ui/                     ← shadcn-ui componenten
   lib/
     supabase/               ← client.ts, server.ts
-    sectoren-data.ts        ← statische data voor sectorpagina's
   types/index.ts
   actions/sendContact.ts    ← server action contactformulier
   middleware.ts             ← beschermt /portaal/*
@@ -70,10 +65,6 @@ public/
       perslucht-lekkages.jpg  ← DienstenSection, Perslucht-kaart
       gaslekdetectie.jpg      ← DienstenSection, Gaslekdetectie-kaart
     sectoren/
-      chemie.jpg
-      energie.avif
-      food.jpg
-      industrie.jpg
       voedingsmiddelensector.jpg  ← hero voedingsmiddelensector-pagina
       petrochemie-chemie.jpg      ← hero petrochemie-chemie-pagina
   hero-image.jpg
@@ -90,7 +81,6 @@ Nieuwe afbeeldingen horen in `public/images/` (of een logische submap). Verwijze
 | `/diensten` | ✅ klaar |
 | `/diensten/lekdetectie-abonnement` | ✅ klaar |
 | `/sectoren` | ✅ klaar |
-| `/sectoren/[chemie\|food\|energie\|industrie]` | ✅ klaar |
 | `/bereken-uw-besparing` | ✅ klaar |
 | `/bereken-uw-verlies` | ✅ klaar |
 | `/lekkosten-calculator` | ✅ klaar |
@@ -128,10 +118,6 @@ Opgebouwd uit losse componenten in `src/components/marketing/`:
 
 ### `/sectoren` — Overzicht
 Sectorkaarten verwijzen naar subsectoren.
-
-### `/sectoren/chemie` · `/sectoren/food` · `/sectoren/energie` · `/sectoren/industrie`
-Gebruiken `SectorPage`-template component met data uit `lib/sectoren-data.ts`.
-Afbeeldingen: `public/images/sectoren/chemie.jpg`, `food.jpg`, `energie.avif`, `industrie.jpg`
 
 ### `/sectoren/voedingsmiddelensector`
 1. Hero + breadcrumb — afbeelding: `sectoren/voedingsmiddelensector.jpg`
@@ -202,13 +188,11 @@ Alle secties gebruiken een consistent containerpatroon:
 | `HoeWerkenWeSection` | `components/marketing/HoeWerkenWeSection.tsx` | "Begin met een Quickscan" — 3 stappen |
 | `ContactCTASection` | `components/marketing/ContactCTASection.tsx` | "Weten waar je lekken zitten?" — oranje knop Bookings |
 | `KennisbankFilter` | `components/marketing/KennisbankFilter.tsx` | Filter + artikelgrid (client component) |
-| `SectorPage` | `components/marketing/SectorPage.tsx` | Template voor chemie/food/energie/industrie-sectoren |
 | `ContactForm` | `components/marketing/ContactForm.tsx` | Contactformulier met server action `sendContact` |
 
 ## Sectorpagina's
-- `/sectoren/[chemie|food|energie|industrie]` — gebruik `SectorPage`-component met data uit `lib/sectoren-data.ts`
-- `/sectoren/voedingsmiddelensector` — eigen volledige pagina (geen SectorPage template)
-- `/sectoren/petrochemie-chemie` — eigen volledige pagina (geen SectorPage template)
+- `/sectoren/voedingsmiddelensector` — eigen volledige pagina
+- `/sectoren/petrochemie-chemie` — eigen volledige pagina
 
 ## Ontwerpregels
 Zie `design.md` voor het volledige design system. Geen eyebrow-labels boven H1 paginakoppen.
