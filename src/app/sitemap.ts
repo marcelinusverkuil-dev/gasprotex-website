@@ -103,6 +103,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'welke-gassen-akoestische-lekdetectie',
     'waterstoflekdetectie',
     'kruisgevoeligheid-vaste-gasdetectie',
+    'akoestische-camera-kopen-of-dienst-inkopen',
   ]
 
   const kennisbankRoutes: MetadataRoute.Sitemap = kennisbankSlugs.map((slug) => ({

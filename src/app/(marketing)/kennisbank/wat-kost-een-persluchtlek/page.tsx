@@ -396,11 +396,11 @@ export default function WatKostPersluchtlekPage() {
                     <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>
                 </Link>
-                <Link href="/kennisbank/atex-zones-uitgelegd" className="block">
+                <Link href="/kennisbank/akoestische-camera-kopen-of-dienst-inkopen" className="block">
                   <div className="rounded-md border border-[#0A2238]/10 hover:shadow-md transition-shadow duration-200 p-6" style={{ background: '#ffffff' }}>
-                    <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">ATEX &amp; Compliance</p>
+                    <p className="text-xs tracking-widest uppercase text-[#F07830] font-medium mb-2">Afwegingen</p>
                     <h3 className="font-bold text-base text-[#0A2238] mb-3 leading-snug">
-                      ATEX-zones uitgelegd: wat betekent zone 2 voor lekdetectie?
+                      Akoestische camera kopen of dienst inkopen?
                     </h3>
                     <span className="text-[#F07830] text-sm font-semibold">Lees meer →</span>
                   </div>

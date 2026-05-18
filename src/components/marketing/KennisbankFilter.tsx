@@ -28,6 +28,13 @@ const artikelen = [
       'Een lek van 1 mm kost al €500–€1.500 per jaar. Bij twintig lekken loopt dat snel op tot tienduizenden euro\'s. Hoe je de kosten zelf berekent en wat de meest voorkomende lekkage-oorzaken zijn.',
   },
   {
+    slug: 'akoestische-camera-kopen-of-dienst-inkopen',
+    categorie: 'Perslucht',
+    titel: 'Akoestische camera kopen of dienst inkopen?',
+    preview:
+      'Eigen camera vanaf €40.000 plus operator en kalibratie, of dienst-inkoop vanaf €2.500 per Quickscan? Cijfers, scenario\'s en een beslismatrix voor de afweging.',
+  },
+  {
     slug: 'waar-zitten-persluchtlekken',
     categorie: 'Perslucht',
     titel: 'Persluchtsysteem in kaart: waar lekken meestal zitten',
